@@ -1,6 +1,6 @@
 <configs>
 <append xpath="/blocks">
-
+56546756756757
 <block name="RemainsChest">
 	<property name="Extends" value="cntLootChestHeroInsecure" param1="DescriptionKey"/>
 	<property name="CustomIcon" value="cntLootChestHero"/> <property name="CustomIconTint" value="80ff80"/>
