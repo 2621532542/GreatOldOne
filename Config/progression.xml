@@ -1,0 +1,308 @@
+<configs>
+
+<append xpath="progression/attributes">
+<attribute name="禁忌学识" name_key="禁忌学识" desc_key="对人类而言这是试图理解禁忌、古老而又不可名状存在的学识" icon="ui_game_symbol_star">
+		<level_requirements level="1"><requirement name="PlayerLevel" target="self" operation="GTE" value="1" desc_key="reqGenericPoints01"/></level_requirements>
+		<level_requirements level="2"><requirement name="PlayerLevel" target="self" operation="GTE" value="1" desc_key="reqGenericPoints01"/></level_requirements>
+		<level_requirements level="3"><requirement name="PlayerLevel" target="self" operation="GTE" value="1" desc_key="reqGenericPoints01"/></level_requirements>
+		<level_requirements level="4"><requirement name="PlayerLevel" target="self" operation="GTE" value="1" desc_key="reqGenericPoints01"/></level_requirements>
+		<level_requirements level="5"><requirement name="PlayerLevel" target="self" operation="GTE" value="1" desc_key="reqGenericPoints01"/></level_requirements>
+		<level_requirements level="6"><requirement name="PlayerLevel" target="self" operation="GTE" value="1" desc_key="reqGenericPoints02"/></level_requirements>
+		<level_requirements level="7"><requirement name="PlayerLevel" target="self" operation="GTE" value="1" desc_key="reqGenericPoints02"/></level_requirements>
+		<level_requirements level="8"><requirement name="PlayerLevel" target="self" operation="GTE" value="1" desc_key="reqGenericPoints02"/></level_requirements>
+		<level_requirements level="9"><requirement name="PlayerLevel" target="self" operation="GTE" value="1" desc_key="reqGenericPoints03"/></level_requirements>
+		<level_requirements level="10"><requirement name="PlayerLevel" target="self" operation="GTE" value="1" desc_key="reqGenericPoints03"/></level_requirements>
+		
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" value="1" level="1,2" tags="机械加工台"/>
+            <passive_effect name="RecipeTagUnlocked" operation="base_set" value="1" level="2,10" tags="机械加工台,禁忌解析台"/>			
+		</effect_group>
+		
+		<effect_group>
+			<requirement name="ItemHasTags" tags="禁忌学识"/>
+				<passive_effect name="DamageModifier" operation="perc_add" level="2,10" value="0.05,.45" tags="head"/>
+				<passive_effect name="DismemberChance" operation="base_add" level="2,10" value=".05,.45"/>
+		</effect_group>		
+	    <effect_group>
+			<effect_description level="1" desc_key="禁忌学识Lv1" desc_base="科学怪人" long_desc_key="阅读死灵之书对你造成极大的启发,你可以解锁机械加工台的制作"/>
+			<effect_description level="2" desc_key="禁忌学识Lv2" desc_base="神秘学者" long_desc_key="你隐约的感觉到一些不可名状的秘密,这使你成为一名好奇的神秘学者,可以解锁禁忌解析台的制作;提高5%的肢解率"/>
+			<effect_description level="3" desc_key="禁忌学识Lv3" desc_base="着魔专家" long_desc_key="你从这些稀奇古怪的记载里获得了许多力量，但同时那些不可名状的恐惧又在时刻折磨着你的神经;提高10%的肢解率"/>
+			<effect_description level="4" desc_key="禁忌学识Lv4" desc_base="精神恍惚" long_desc_key="你从这些稀奇古怪的记载里获得了许多力量，但同时那些不可名状的恐惧又在时刻折磨着你的神经;提高15%的肢解率"/>
+			<effect_description level="5" desc_key="禁忌学识Lv5" desc_base="疯狂思维" long_desc_key="你从这些稀奇古怪的记载里获得了许多力量，但同时那些不可名状的恐惧又在时刻折磨着你的神经;提高20%的肢解率"/>
+			<effect_description level="6" desc_key="禁忌学识Lv6" desc_base="古老呼唤" long_desc_key="你从这些稀奇古怪的记载里获得了许多力量，但同时那些不可名状的恐惧又在时刻折磨着你的神经;提高25%的肢解率"/>
+			<effect_description level="7" desc_key="禁忌学识Lv7" desc_base="疯狂信徒" long_desc_key="你从这些稀奇古怪的记载里获得了许多力量，但同时那些不可名状的恐惧又在时刻折磨着你的神经;提高30%的肢解率"/>
+			<effect_description level="8" desc_key="禁忌学识Lv8" desc_base="古神巡礼者" long_desc_key="你从这些稀奇古怪的记载里获得了许多力量，但同时那些不可名状的恐惧又在时刻折磨着你的神经;提高35%的肢解率"/>
+			<effect_description level="9" desc_key="禁忌学识Lv9" desc_base="末日使者" long_desc_key="你从这些稀奇古怪的记载里获得了许多力量，但同时那些不可名状的恐惧又在时刻折磨着你的神经;提高40%的肢解率"/>
+			<effect_description level="10" desc_key="禁忌学识Lv10" desc_base="终末降临" long_desc_key="你从这些稀奇古怪的记载里获得了许多力量，但同时那些不可名状的恐惧又在时刻折磨着你的神经;提高45%的肢解率"/>
+		</effect_group>
+</attribute>
+</append>
+
+<!--
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+									技能
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-->
+<append xpath="progression/skills">
+    <skill name="禁忌工艺技能" parent="禁忌学识" name_key="禁忌工艺" desc_key="禁忌工艺技能" icon="ui_game_symbol_star"><effect_group/></skill>
+	<skill name="恐怖信仰" parent="禁忌学识" name_key="恐怖信仰" desc_key="恐怖信仰技能" icon="ui_game_symbol_star"><effect_group/></skill>
+	<skill name="暗影禁忌" parent="禁忌学识" name_key="暗影禁忌" desc_key="古神信仰中最禁忌的存在" icon="ui_game_symbol_star"><effect_group/></skill>
+</append>
+
+<append xpath="progression/perks">
+    <perk name="拉莱耶秘仪" parent="禁忌工艺技能" name_key="拉莱耶秘仪" desc_key="研究死灵之书让你发现了拉莱耶的惊人的秘密" icon="ui_game_symbol_star">
+		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="禁忌学识" operation="GTE" value="1" desc_key="需要禁忌学识1级"/></level_requirements>
+		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="禁忌学识" operation="GTE" value="3" desc_key="需要禁忌学识3级"/></level_requirements>
+		<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="禁忌学识" operation="GTE" value="5" desc_key="需要禁忌学识5级"/></level_requirements>
+		<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="禁忌学识" operation="GTE" value="7" desc_key="需要禁忌学识7级"/></level_requirements>
+		<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="禁忌学识" operation="GTE" value="10" desc_key="需要禁忌学识10级"/></level_requirements>
+
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,2" value="1" tags="拉莱耶板甲,拉莱耶髋甲,拉莱耶护手"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="2,3" value="1" tags="拉莱耶板甲,拉莱耶髋甲,拉莱耶护手,森之黑山羊皮甲,森之黑山羊腿甲,森之黑山羊护手,信徒长袍,信徒长裙,信徒手套,圣花左轮"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="3,4" value="1" tags="拉莱耶板甲,拉莱耶髋甲,拉莱耶护手,森之黑山羊皮甲,森之黑山羊腿甲,森之黑山羊护手,信徒长袍,信徒长裙,信徒手套,八面汉剑-炎之誓,八面汉剑-雷契,八面汉剑-狂暴者,八面汉剑-冰魔,方天画戟-狂暴者,方天画戟-炎之誓,方天画戟-雷契,方天画戟-冰魔,圣花左轮"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="4,5" value="1" tags="拉莱耶板甲,拉莱耶髋甲,拉莱耶护手,森之黑山羊皮甲,森之黑山羊腿甲,森之黑山羊护手,信徒长袍,信徒长裙,信徒手套,八面汉剑-炎之誓,八面汉剑-雷契,八面汉剑-狂暴者,八面汉剑-冰魔,方天画戟-狂暴者,方天画戟-炎之誓,方天画戟-雷契,方天画戟-冰魔,机械弩-炎之誓,炎之誓-离子火花,雷契-超导增幅,冰魔-液氮枪口,圣花左轮"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="5,5" value="1" tags="拉莱耶板甲,拉莱耶髋甲,拉莱耶护手,森之黑山羊皮甲,森之黑山羊腿甲,森之黑山羊护手,信徒长袍,信徒长裙,信徒手套,八面汉剑-炎之誓,八面汉剑-雷契,八面汉剑-狂暴者,八面汉剑-冰魔,方天画戟-狂暴者,方天画戟-炎之誓,方天画戟-雷契,方天画戟-冰魔,机械弩-炎之誓,炎之誓-离子火花,雷契-超导增幅,冰魔-液氮枪口,圣花左轮,猎魔弩炮,巨型钢弩箭,巨型穿刺箭,攻城弩箭,猎魔双刃,猎魔双刃-炎之誓,猎魔双刃-雷契,猎魔双刃-冰魔,古神精油"/>
+			<!-- <passive_effect name="RecipeTagUnlocked" operation="base_set" level="4,5" value="1" tags="gunRifleT2MarksmanRifle"/> -->
+			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,5" tags="拉莱耶秘仪"/>
+		</effect_group>
+		
+		<effect_group>
+			<effect_description level="1" desc_key="拉莱耶秘仪Lv1" desc_base="拉莱耶秘仪Lv1" long_desc_key="解锁:拉莱耶板甲套装的制作;可制作等级2秘仪物品"/>
+			<effect_description level="2" desc_key="拉莱耶秘仪Lv2" desc_base="拉莱耶秘仪Lv2" long_desc_key="解锁:森之黑山羊皮甲套装,信徒套装,圣花左轮的制作;可制作等级3秘仪物品"/>
+			<effect_description level="3" desc_key="拉莱耶秘仪Lv3" desc_base="拉莱耶秘仪Lv3" long_desc_key="解锁:八面汉剑-炎之誓,八面汉剑-雷契,八面汉剑-狂暴者,八面汉剑-冰魔,方天画戟-狂暴者,方天画戟-炎之誓,方天画戟-雷契,方天画戟-冰魔;可制作等级4秘仪物品"/>
+			<effect_description level="4" desc_key="拉莱耶秘仪Lv4" desc_base="拉莱耶秘仪Lv4" long_desc_key="解锁:机械弩-炎之誓,炎之誓-离子火花,雷契-超导增幅,冰魔-液氮枪口;可制作等级5秘仪物品"/>
+			<effect_description level="5" desc_key="拉莱耶秘仪Lv5" desc_base="拉莱耶秘仪Lv5" long_desc_key="解锁:猎魔弩炮,巨型钢弩箭,巨型穿刺箭,攻城弩箭的制作,猎魔双刃,猎魔双刃-炎之誓,猎魔双刃-雷契,猎魔双刃-冰魔;可制作等级6秘仪物品;可以在化学站中萃取古神精油"/>
+		</effect_group>
+	</perk>
+	
+	 <perk name="血之秘术" parent="禁忌工艺技能" name_key="血之秘术" desc_key="血液拥有独特的能量,人类的血液也是祭祀旧日支配者很好的祭品" icon="ui_game_symbol_star">
+		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="禁忌学识" operation="GTE" value="1" desc_key="需要禁忌学识1级"/></level_requirements>
+		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="禁忌学识" operation="GTE" value="3" desc_key="需要禁忌学识3级"/></level_requirements>
+		<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="禁忌学识" operation="GTE" value="5" desc_key="需要禁忌学识5级"/></level_requirements>
+		<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="禁忌学识" operation="GTE" value="7" desc_key="需要禁忌学识7级"/></level_requirements>
+		<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="禁忌学识" operation="GTE" value="10" desc_key="需要禁忌学识10级"/></level_requirements>
+
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,2" value="1" tags="方天画戟-血欲,八面汉剑-血欲,血欲-生命导流器"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="2,3" value="1" tags="方天画戟-血欲,八面汉剑-血欲,血欲-生命导流器,机械弩-血欲"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="3,4" value="1" tags="方天画戟-血欲,八面汉剑-血欲,机械弩-血欲,血欲-生命导流器,血欲-生命虹吸,猎魔双刃-血欲"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="4,5" value="1" tags="方天画戟-血欲,八面汉剑-血欲,机械弩-血欲,血欲-生命导流器,血欲-生命虹吸,猎魔双刃-血欲"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="5,5" value="1" tags="方天画戟-血欲,八面汉剑-血欲,机械弩-血欲,血欲-生命导流器,血欲-生命虹吸,血欲-夺萃熔炉,猎魔双刃-血欲,血欲禁忌刀锋,八面汉剑-血狂乱,猎魔双刃-血狂乱,血狂乱-猩红之力"/>
+			<!-- <passive_effect name="RecipeTagUnlocked" operation="base_set" level="4,5" value="1" tags="gunRifleT2MarksmanRifle"/> -->
+			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,5" tags="血之秘术"/>
+		</effect_group>
+		
+		<!--<effect_group>
+			<requirement name="HoldingItemHasTags" tags="血伤"/>
+			<requirement name="ProgressionLevel" progression_name="血之秘术" operation="Equals" value="2"/>
+				<triggered_effect trigger="onSelfKilledOther" action="ModifyStats" stat="Health" operation="add" value="5"/>
+			<requirement name="ProgressionLevel" progression_name="血之秘术" operation="Equals" value="3"/>
+				<triggered_effect trigger="onSelfKilledOther" action="ModifyStats" stat="Health" operation="add" value="7"/>
+			<requirement name="ProgressionLevel" progression_name="血之秘术" operation="Equals" value="4"/>
+				<triggered_effect trigger="onSelfKilledOther" action="ModifyStats" stat="Health" operation="add" value="9"/>
+			<requirement name="ProgressionLevel" progression_name="血之秘术" operation="Equals" value="5"/>
+				<triggered_effect trigger="onSelfKilledOther" action="ModifyStats" stat="Health" operation="add" value="12"/>
+		</effect_group>-->
+		
+		<effect_group>
+		    <requirement name="ItemHasTags" tags="血伤"/>
+			     <passive_effect name="DamageModifier" operation="perc_add" level="1,5" value="0.06,.3"/>
+			<effect_description level="1" desc_key="血之秘术Lv1" desc_base="血之秘术Lv1" long_desc_key="你已经可以在禁忌解析台进行血欲附魔,血欲附魔武器伤害提高6%"/>
+			<effect_description level="2" desc_key="血之秘术Lv2" desc_base="血之秘术Lv2" long_desc_key="解锁血欲-生命导流器,机械弩-血欲附魔,血欲附魔武器伤害提高12%"/>
+			<effect_description level="3" desc_key="血之秘术Lv3" desc_base="血之秘术Lv3" long_desc_key="解锁猎魔双刃-血欲,血欲-生命导流器可以进行更高级附魔,血欲附魔武器伤害提高18%"/>
+			<effect_description level="4" desc_key="血之秘术Lv4" desc_base="血之秘术Lv4" long_desc_key="血欲附魔武器伤害提高24%"/>
+			<effect_description level="5" desc_key="血之秘术Lv5" desc_base="血之秘术Lv5" long_desc_key="可以进行上级【血狂乱】附魔；解锁血欲禁忌刀锋,血欲-生命虹吸可以进行终级附魔,血欲附魔武器伤害提高30%"/>
+		</effect_group>
+	</perk>
+	
+	<perk name="克苏鲁传教士" parent="恐怖信仰" name_key="克苏鲁传教士" desc_key="作为一名传教士你更加亲和火焰" icon="ui_game_symbol_star">
+		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="禁忌学识" operation="GTE" value="1" desc_key="需要禁忌学识1级"/></level_requirements>
+		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="禁忌学识" operation="GTE" value="3" desc_key="需要禁忌学识3级"/></level_requirements>
+		<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="禁忌学识" operation="GTE" value="5" desc_key="需要禁忌学识5级"/></level_requirements>
+		<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="禁忌学识" operation="GTE" value="7" desc_key="需要禁忌学识7级"/></level_requirements>
+		<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="禁忌学识" operation="GTE" value="10" desc_key="需要禁忌学识10级"/></level_requirements>
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="2,3" value="1" tags="炎之誓-加强离子火花"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="3,4" value="1" tags="炎之誓-加强离子火花"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="4,5" value="1" tags="炎之誓-加强离子火花"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="5,5" value="1" tags="炎之誓-加强离子火花,炎之誓-等离子火花,食用火焰,破晓审判,八面汉剑-炎狱,方天画戟-炎狱,炎狱-根源火种"/>
+			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,5" tags="克苏鲁传教士"/>
+		</effect_group>
+		
+		<effect_group>
+			<requirement name="ItemHasTags" tags="炎伤"/>
+			     <passive_effect name="DamageModifier" operation="perc_add" level="1,5" value="0.1,.5"/>
+				 
+			<effect_description level="1" desc_key="克苏鲁信徒" desc_base="克苏鲁信徒" long_desc_key="提高炎之誓附魔武器伤害10%"/>
+			<effect_description level="2" desc_key="克苏鲁狂热" desc_base="克苏鲁狂热" long_desc_key="提高炎之誓附魔武器伤害20%,离子火花可升级为更高级"/>
+			<effect_description level="3" desc_key="克苏鲁主教" desc_base="克苏鲁主教" long_desc_key="提高炎之誓附魔武器伤害30%"/>
+			<effect_description level="4" desc_key="大主教" desc_base="大主教" long_desc_key="提高炎之誓附魔武器伤害40%"/>
+			<effect_description level="5" desc_key="教皇" desc_base="教皇" long_desc_key="解锁传奇武器【破晓审判】的制作;可进行上级【炎狱】附魔;可制作【食用火焰】药物,提高炎之誓附魔武器伤害50%,加强离子火花可升级为更高级"/>
+		</effect_group>
+	</perk>
+	
+	<perk name="风暴崇拜" parent="恐怖信仰" name_key="风暴崇拜" desc_key="云层中的旧日之神生来就与风暴同在" icon="ui_game_symbol_star">
+		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="禁忌学识" operation="GTE" value="1" desc_key="需要禁忌学识1级"/></level_requirements>
+		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="禁忌学识" operation="GTE" value="3" desc_key="需要禁忌学识3级"/></level_requirements>
+		<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="禁忌学识" operation="GTE" value="5" desc_key="需要禁忌学识5级"/></level_requirements>
+		<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="禁忌学识" operation="GTE" value="7" desc_key="需要禁忌学识7级"/></level_requirements>
+		<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="禁忌学识" operation="GTE" value="10" desc_key="需要禁忌学识10级"/></level_requirements>
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="2,3" value="1" tags="雷契-超级电容"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="3,4" value="1" tags="雷契-超级电容,异星核心"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="4,5" value="1" tags="雷契-超级电容,异星核心"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="5,5" value="1" tags="雷契-超级电容,雷契-球状闪电,异星核心,风雷符文大剑,猎魔双刃-雷罚,八面汉剑-雷罚,方天画戟-雷罚"/>
+			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,5" tags="风暴崇拜"/>
+		</effect_group>
+		
+		<effect_group>
+			<requirement name="ItemHasTags" tags="雷伤"/>
+			     <passive_effect name="DamageModifier" operation="perc_add" level="1,5" value="0.05,.25"/>
+				 <passive_effect name="AttacksPerMinute" operation="perc_add" level="1,5" value=".03,.15"/>
+				 
+			<effect_description level="1" desc_key="风暴之子" desc_base="风暴之子" long_desc_key="提高雷契附魔武器伤害5%,攻速3%"/>
+			<effect_description level="2" desc_key="风暴骑士" desc_base="风暴骑士" long_desc_key="提高雷契附魔武器伤害10%,攻速6%;超导增幅可以升级为更高级"/>
+			<effect_description level="3" desc_key="风暴之王" desc_base="风暴之王" long_desc_key="提高雷契附魔武器伤害15%,攻速9%;解锁异星核心的制作"/>
+			<effect_description level="4" desc_key="风暴圣灵" desc_base="风暴圣灵" long_desc_key="提高雷契附魔武器伤害20%,攻速12%"/>
+			<effect_description level="5" desc_key="风暴主宰" desc_base="风暴主宰" long_desc_key="解锁【风雷符文大剑】可进行上级【雷罚】附魔;提高雷契附魔武器伤害25%,攻速15%;超级电容可以升级为更高级"/>
+		</effect_group>
+	</perk>
+	
+	<perk name="深渊克图格亚" parent="恐怖信仰" name_key="深渊克图格亚" desc_key="探索深渊的克图格亚,领悟深渊寒冰的奥秘" icon="ui_game_symbol_star">
+		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="禁忌学识" operation="GTE" value="1" desc_key="需要禁忌学识1级"/></level_requirements>
+		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="禁忌学识" operation="GTE" value="3" desc_key="需要禁忌学识3级"/></level_requirements>
+		<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="禁忌学识" operation="GTE" value="5" desc_key="需要禁忌学识5级"/></level_requirements>
+		<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="禁忌学识" operation="GTE" value="7" desc_key="需要禁忌学识7级"/></level_requirements>
+		<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="禁忌学识" operation="GTE" value="10" desc_key="需要禁忌学识10级"/></level_requirements>
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="2,3" value="1" tags="冰魔-冰冷之息"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="3,4" value="1" tags="冰魔-冰冷之息,霜冻手雷,霜冻弩箭"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="4,5" value="1" tags="冰魔-冰冷之息,霜冻手雷,霜冻弩箭"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="5,5" value="1" tags="冰魔-冰冷之息,霜冻手雷,霜冻弩箭,冰魔-极寒死神,冰帝-极冰新星,八面汉剑-冰帝,猎魔双刃-冰帝,方天画戟-冰帝"/>
+			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,5" tags="深渊克图格亚"/>
+		</effect_group>
+		
+		<effect_group>
+			 <passive_effect name="PhysicalDamageResist" operation="base_add" level="1,5" value="2,10"/>
+		</effect_group>
+		
+		<effect_group>
+			<requirement name="ItemHasTags" tags="冰伤"/>
+			     <passive_effect name="DamageModifier" operation="perc_add" level="1,5" value="0.05,.25"/>
+				 
+			<effect_description level="1" desc_key="冰冷低语" desc_base="冰冷低语" long_desc_key="提高冰魔附魔武器伤害5%,提高自身护甲2"/>
+			<effect_description level="2" desc_key="深渊寒意" desc_base="深渊寒意" long_desc_key="提高冰魔附魔武器伤害10%,,提高自身护甲4;冰魔-液氮枪口可以升级为冰魔-冰冷之息"/>
+			<effect_description level="3" desc_key="霜冻暗夜" desc_base="霜冻暗夜" long_desc_key="提高冰魔附魔武器伤害15%,提高自身护甲6;解锁霜冻手雷,霜冻弩箭的制作"/>
+			<effect_description level="4" desc_key="霜冻使者" desc_base="霜冻使者" long_desc_key="提高冰魔附魔武器伤害20%,提高自身护甲8"/>
+			<effect_description level="5" desc_key="极寒收割" desc_base="极寒收割" long_desc_key="可以进行上级【冰帝】附魔;提高冰魔附魔武器伤害25%,提高自身护甲10;冰魔-冰冷之息可以升级为冰魔-极寒死神"/>
+		</effect_group>
+	</perk>
+	
+	<perk name="狂暴之力" parent="恐怖信仰" name_key="狂暴之力" desc_key="饮用古神之血肉体得到前所未有的强化，只有疯子才会这么做！" icon="ui_game_symbol_star">
+		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="禁忌学识" operation="GTE" value="1" desc_key="需要禁忌学识1级"/></level_requirements>
+		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="禁忌学识" operation="GTE" value="3" desc_key="需要禁忌学识3级"/></level_requirements>
+		<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="禁忌学识" operation="GTE" value="5" desc_key="需要禁忌学识5级"/></level_requirements>
+		<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="禁忌学识" operation="GTE" value="7" desc_key="需要禁忌学识7级"/></level_requirements>
+		<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="禁忌学识" operation="GTE" value="10" desc_key="需要禁忌学识10级"/></level_requirements>
+		
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="5,5" value="1" tags="方天画戟-湮灭"/>
+			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,5" tags="狂暴之力"/>
+		</effect_group>
+		
+		<effect_group>
+			<requirement name="ItemHasTags" tags="狂伤"/>
+			     <passive_effect name="DamageModifier" operation="perc_add" level="1,5" value="0.06,.3"/>
+				 <passive_effect name="StaminaLoss" operation="perc_add" level="1,5" value="-.05,-.25" tags="primary,secondary"/>
+				 
+			<effect_description level="1" desc_key="疯狂之血" desc_base="疯狂之血" long_desc_key="提高狂暴者附魔武器伤害6%,攻击体力消耗下降5%"/>
+			<effect_description level="2" desc_key="诅咒缠身" desc_base="诅咒缠身" long_desc_key="提高狂暴者附魔武器伤害12%,攻击体力消耗下降10%"/>
+			<effect_description level="3" desc_key="诅咒血肉" desc_base="诅咒血肉" long_desc_key="提高狂暴者附魔武器伤害18%,攻击体力消耗下降15%"/>
+			<effect_description level="4" desc_key="恐怖转化" desc_base="恐怖转化" long_desc_key="提高狂暴者附魔武器伤害24%,攻击体力消耗下降20%"/>
+			<effect_description level="5" desc_key="古神之躯" desc_base="古神之躯" long_desc_key="提高狂暴者附魔武器伤害30%,攻击体力消耗下降25%"/>
+		</effect_group>
+	</perk>
+	
+	<perk name="钢铁意志" parent="恐怖信仰" name_key="钢铁意志" desc_key="钢铁一般的意志往往会成为抵抗旧日支配者的强有力武器" icon="ui_game_symbol_star">
+		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="禁忌学识" operation="GTE" value="1" desc_key="需要禁忌学识1级"/></level_requirements>
+		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="禁忌学识" operation="GTE" value="3" desc_key="需要禁忌学识3级"/></level_requirements>
+		<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="禁忌学识" operation="GTE" value="5" desc_key="需要禁忌学识5级"/></level_requirements>
+		<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="禁忌学识" operation="GTE" value="7" desc_key="需要禁忌学识7级"/></level_requirements>
+		<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="禁忌学识" operation="GTE" value="10" desc_key="需要禁忌学识10级"/></level_requirements>
+		
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="2,3" value="1" tags="鹰眼弹头"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="3,4" value="1" tags="鹰眼弹头,符文1911,符文沙漠秃鹫,符文-圣花左轮,符文大剑"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="4,5" value="1" tags="鹰眼弹头,符文1911,符文沙漠秃鹫,符文-圣花左轮,符文大剑"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="5,5" value="1" tags="鹰眼弹头,符文1911,符文沙漠秃鹫,符文-圣花左轮,灵魂符文-蜘蛛之靴,黑石精粹,符文大剑,湮灭符文大剑,疯狂掌握者"/>
+			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,5" tags="钢铁意志"/>
+		</effect_group>
+		<effect_group>
+		    <requirement name="EntityTagCompare" target="other" tags="古神"/>
+		         <passive_effect name="EntityDamage" operation="perc_add" value="0.5"/>
+				 <passive_effect name="DamageModifier" operation="perc_add" level="1,5" value="0.05,.25"/>
+				 
+			<effect_description level="1" desc_key="神经大条" desc_base="神经大条" long_desc_key="提高对古神生物伤害5%"/>
+			<effect_description level="2" desc_key="坚定意志" desc_base="坚定意志" long_desc_key="解锁【鹰眼弹头】的制作,提高对古神生物伤害10%"/>
+			<effect_description level="3" desc_key="自我觉醒" desc_base="自我觉醒" long_desc_key="解锁【符文大剑】【符文1911】【符文沙漠秃鹫】【符文-圣花左轮】的制作,提高对古神生物伤害15%"/>
+			<effect_description level="4" desc_key="强悍精神" desc_base="强悍精神" long_desc_key="提高对古神生物伤害20%"/>
+			<effect_description level="5" desc_key="终极意志" desc_base="终极意志" long_desc_key="解锁【湮灭符文大剑】【疯狂掌握者】；可制作【黑石精粹】药物;可进行灵魂附魔【灵魂符文-蜘蛛之靴】;提高对古神生物伤害25%"/>
+		</effect_group>
+	</perk>
+	
+	<perk name="黑暗献祭" parent="暗影禁忌" name_key="黑暗献祭" desc_key="旧日支配者的暗影本质决定了最黑暗且真实的恐惧真像" icon="ui_game_symbol_star">
+		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="禁忌学识" operation="GTE" value="1" desc_key="需要禁忌学识1级"/></level_requirements>
+		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="禁忌学识" operation="GTE" value="3" desc_key="需要禁忌学识3级"/></level_requirements>
+		<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="禁忌学识" operation="GTE" value="5" desc_key="需要禁忌学识5级"/></level_requirements>
+		<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="禁忌学识" operation="GTE" value="7" desc_key="需要禁忌学识7级"/></level_requirements>
+		<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="禁忌学识" operation="GTE" value="10" desc_key="需要禁忌学识10级"/></level_requirements>
+
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,2" value="1" tags="猎魔双刃-毒疫,毒疫弹头,强效解毒剂"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="2,3" value="1" tags="猎魔双刃-毒疫,毒疫弹头,强效解毒剂"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="3,4" value="1" tags="猎魔双刃-毒疫,毒疫弹头,黑山羊之手,强效解毒剂,恶魂封印弹匣,猛毒手雷,液态暗影"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="4,5" value="1" tags="猎魔双刃-毒疫,毒疫弹头,黑山羊之手,强效解毒剂,恶魂封印弹匣,猛毒手雷,腐蚀手雷,腐蚀弩箭,恶魂封印握把,液态暗影"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="5,5" value="1" tags="猎魔双刃-毒疫,毒疫弹头,黑山羊之手,强效解毒剂,恶魂封印弹匣,猛毒手雷,腐蚀手雷,腐蚀弩箭,恶魂封印握把,恶魂封印透镜,恶魂封印棱镜,猛毒弩箭,液态暗影,恐怖毒液弹头,猎魔双刃-腐尸毒"/>
+			<!-- <passive_effect name="RecipeTagUnlocked" operation="base_set" level="4,5" value="1" tags="gunRifleT2MarksmanRifle"/> -->
+			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,5" tags="黑暗献祭"/>
+		</effect_group>
+		<effect_group>
+		    <requirement name="ItemHasTags" tags="毒伤"/>
+			     <passive_effect name="DamageModifier" operation="perc_add" level="1,5" value="0.06,.3"/>
+			<effect_description level="1" desc_key="黑暗献祭Lv1" desc_base="黑暗献祭Lv1" long_desc_key="你已经可以在禁忌解析台进行恐怖的【毒疫附魔】和制作【毒疫弹头】,毒疫附魔武器伤害提高6%,解锁强效解毒剂制作"/>
+			<effect_description level="2" desc_key="黑暗献祭Lv2" desc_base="黑暗献祭Lv2" long_desc_key="毒疫附魔武器伤害提高12%"/>
+			<effect_description level="3" desc_key="黑暗献祭Lv3" desc_base="黑暗献祭Lv3" long_desc_key="解锁【黑山羊之手】【猛毒手雷】【恶魂封印弹匣】的制作,毒疫附魔武器伤害提高18%"/>
+			<effect_description level="4" desc_key="黑暗献祭Lv4" desc_base="黑暗献祭Lv4" long_desc_key="解锁【恶魂封印握把】【腐蚀手雷】【腐蚀弩箭】的制作,毒疫附魔武器伤害提高24%"/>
+			<effect_description level="5" desc_key="黑暗献祭Lv5" desc_base="黑暗献祭Lv5" long_desc_key="可以进行上级【腐尸毒】附魔；解锁【猛毒弩箭】【恐怖毒液弹头】【恶魂封印透镜】【恶魂封印棱镜】的制作,毒疫附魔武器伤害提高30%"/>
+		</effect_group>
+	</perk>
+	
+	<perk name="古老诅咒" parent="暗影禁忌" name_key="古老诅咒" desc_key="那些古老的诅咒低语无时无刻不在折磨着你,但善加利用竟能从中获得可怖的力量" icon="ui_game_symbol_star">
+		<level_requirements level="1"><requirement name="ProgressionLevel" progression_name="禁忌学识" operation="GTE" value="1" desc_key="需要禁忌学识1级"/></level_requirements>
+		<level_requirements level="2"><requirement name="ProgressionLevel" progression_name="禁忌学识" operation="GTE" value="3" desc_key="需要禁忌学识3级"/></level_requirements>
+		<level_requirements level="3"><requirement name="ProgressionLevel" progression_name="禁忌学识" operation="GTE" value="5" desc_key="需要禁忌学识5级"/></level_requirements>
+		<level_requirements level="4"><requirement name="ProgressionLevel" progression_name="禁忌学识" operation="GTE" value="7" desc_key="需要禁忌学识7级"/></level_requirements>
+		<level_requirements level="5"><requirement name="ProgressionLevel" progression_name="禁忌学识" operation="GTE" value="10" desc_key="需要禁忌学识10级"/></level_requirements>
+
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1,2" value="1" tags="死咒刀锋,死咒弹头"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="2,3" value="1" tags="死咒刀锋,死咒弹头"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="3,4" value="1" tags="死咒刀锋,死咒弹头,死咒弩箭"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="4,5" value="1" tags="死咒刀锋,死咒弹头,死咒弩箭,梦魇-暗影杀星"/>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="5,5" value="1" tags="死咒刀锋,死咒弹头,死咒弩箭,梦魇-暗影杀星,梦魇-深渊凝望镜,梦魇-暗影固定装置,混沌之息"/>
+			<!-- <passive_effect name="RecipeTagUnlocked" operation="base_set" level="4,5" value="1" tags="gunRifleT2MarksmanRifle"/> -->
+			<passive_effect name="CraftingTier" operation="base_add" level="1,2,3,4,5" value="1,2,3,4,5" tags="古老诅咒"/>
+		</effect_group>
+		<effect_group>
+		    <requirement name="ItemHasTags" tags="咒伤"/>
+			     <passive_effect name="DamageModifier" operation="perc_add" level="1,5" value="0.06,.3"/>
+			<effect_description level="1" desc_key="古老低语" desc_base="古老低语" long_desc_key="你已经可以在禁忌解析台制作【死咒弹头】【死咒刀锋】"/>
+			<effect_description level="2" desc_key="诅咒回响" desc_base="诅咒回响" long_desc_key="你已经可以在禁忌解析台制作【死咒弹头】【死咒刀锋】"/>
+			<effect_description level="3" desc_key="死亡之咒" desc_base="死亡之咒" long_desc_key="你已经可以在禁忌解析台制作【死咒弹头】【死咒刀锋】【死咒弩箭】"/>
+			<effect_description level="4" desc_key="深渊之音" desc_base="深渊之音" long_desc_key="你已经可以在禁忌解析台制作【死咒弹头】【死咒刀锋】【死咒弩箭】【梦魇-暗影杀星】"/>
+			<effect_description level="5" desc_key="永恒诅咒" desc_base="永恒诅咒" long_desc_key="你已经可以在禁忌解析台制作【死咒弹头】【死咒刀锋】【死咒弩箭】【梦魇-暗影杀星】【梦魇-深渊凝望镜】【梦魇-暗影固定装置】【混沌之息】"/>
+		</effect_group>
+	</perk>
+</append>
+</configs>

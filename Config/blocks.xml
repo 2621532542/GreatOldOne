@@ -1,0 +1,230 @@
+<configs>
+<append xpath="/blocks">
+
+<block name="RemainsChest">
+	<property name="Extends" value="cntLootChestHeroInsecure" param1="DescriptionKey"/>
+	<property name="CustomIcon" value="cntLootChestHero"/> <property name="CustomIconTint" value="80ff80"/>
+	<property name="Class" value="QuestLoot"/>
+	<property name="LootList" value="203"/>
+	<property name="CreativeMode" value="Dev"/>
+	<property name="Tags" value="buriedTreasure"/>
+</block>
+
+<block name="机械加工台">
+	<property name="Class" value="Workstation"/>
+	<property name="Material" value="Mmetal"/>
+	<property name="MaxDamage" value="800"/>
+	<property name="StabilitySupport" value="false"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="#@modfolder:Resources/MachiningStation.unity3d?MachiningStation.prefab"/>
+	<property name="CustomIcon" value="MStation"/>
+	<property name="ModelOffset" value="0,0,0"/>
+	<property name="DisplayType" value="blockMulti"/>
+	<property name="UnlockedBy" value="禁忌学识"/>
+	<property name="MultiBlockDim" value="2,2,1"/>
+	<property name="ImposterDontBlock" value="true"/>
+	<property name="Place" value="TowardsPlacerInverted"/>
+	<property name="OnlySimpleRotations" value="true"/>
+	<property name="IsTerrainDecoration" value="true"/>
+	<property name="HeatMapStrength" value="0"/>
+	<property name="HeatMapTime" value="1200"/>
+	<property name="HeatMapFrequency" value="25"/>
+	<property name="Stacknumber" value="1"/>
+
+	<property class="Workstation">
+		<property name="Modules" value="output"/>
+		<property name="CraftingAreaRecipes" value="机械加工台"/>
+	</property>
+	<property name="WorkstationIcon" value="ui_game_symbol_workbench"/>
+	<property name="OpenSound" value="open_workbench"/>
+	<property name="CloseSound" value="close_workbench"/>
+	<property name="WorkstationJournalTip" value="workbenchTip"/>
+
+	<property class="RepairItems">
+		<property name="resourceForgedIron" value="25"/>
+		<property name="resourceMechanicalParts" value="20"/>
+		<property name="resourceWood" value="50"/>
+	</property>
+	<drop event="Harvest" name="resourceScrapIron" count="200" tag="allHarvest"/>
+	<drop event="Harvest" name="resourceWood" count="20" tag="allHarvest"/>
+	<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
+	<drop event="Harvest" name="resourceForgedIron" count="10" tag="salvageHarvest"/>
+	<drop event="Harvest" name="resourceMechanicalParts" count="8" tag="salvageHarvest"/>
+	<drop event="Harvest" name="resourceWood" count="20" tag="salvageHarvest"/>
+	<drop event="Destroy" count="0"/>
+	<drop event="Fall" name="terrDestroyedWoodDebris" count="1" prob="0.75" stick_chance="1"/>
+	<property name="TakeDelay" value="15"/>
+	<property name="DescriptionKey" value="机械加工台可以用来加工制造高级枪械和武器"/>
+	<property name="EconomicValue" value="2000"/>
+	<property name="Group" value="Building,advBuilding"/>
+	<property name="FilterTags" value="fdecor,fother,ffurniture"/>
+	<property name="SortOrder1" value="70i0"/>
+</block>
+
+<block name="禁忌解析台">
+	<property name="Class" value="Workstation"/>
+	<property name="Material" value="Mmetal"/>
+	<property name="MaxDamage" value="800"/>
+	<property name="StabilitySupport" value="false"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="#@modfolder:Resources/Mystery desk.unity3d?Mystery desk.prefab"/>
+	<property name="CustomIcon" value="Mystery desk"/>
+	<property name="ModelOffset" value="0,0,0"/>
+	<property name="DisplayType" value="blockMulti"/>
+	<property name="UnlockedBy" value="禁忌学识"/>
+	<property name="MultiBlockDim" value="2,2,1"/>
+	<property name="ImposterDontBlock" value="true"/>
+	<property name="Place" value="TowardsPlacerInverted"/>
+	<property name="OnlySimpleRotations" value="true"/>
+	<property name="IsTerrainDecoration" value="true"/>
+	<property name="HeatMapStrength" value="0"/>
+	<property name="HeatMapTime" value="1200"/>
+	<property name="HeatMapFrequency" value="25"/>
+	<property name="Stacknumber" value="1"/>
+
+	<property class="Workstation">
+		<property name="Modules" value="output"/>
+		<property name="CraftingAreaRecipes" value="禁忌解析台"/>
+	</property>
+	<property name="WorkstationIcon" value="ui_game_symbol_workbench"/>
+	<property name="OpenSound" value="open_workbench"/>
+	<property name="CloseSound" value="close_workbench"/>
+	<property name="WorkstationJournalTip" value="workbenchTip"/>
+
+	<property class="RepairItems">
+		<property name="resourceForgedIron" value="25"/>
+		<property name="resourceMechanicalParts" value="20"/>
+		<property name="resourceWood" value="50"/>
+	</property>
+	<drop event="Harvest" name="resourceScrapIron" count="200" tag="allHarvest"/>
+	<drop event="Harvest" name="resourceWood" count="20" tag="allHarvest"/>
+	<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
+	<drop event="Harvest" name="resourceForgedIron" count="10" tag="salvageHarvest"/>
+	<drop event="Harvest" name="resourceMechanicalParts" count="8" tag="salvageHarvest"/>
+	<drop event="Harvest" name="resourceWood" count="20" tag="salvageHarvest"/>
+	<drop event="Destroy" count="0"/>
+	<drop event="Fall" name="terrDestroyedWoodDebris" count="1" prob="0.75" stick_chance="1"/>
+	<property name="TakeDelay" value="15"/>
+	<property name="DescriptionKey" value="禁忌解析台可以用来研究神秘的禁忌知识和制作附魔物品"/>
+	<property name="EconomicValue" value="2000"/>
+	<property name="Group" value="Building,advBuilding"/>
+	<property name="FilterTags" value="fdecor,fother,ffurniture"/>
+	<property name="SortOrder1" value="70i0"/>
+</block>
+
+<block name="黄衣圣器">
+    <property name="Extends" value="cobblestoneMaster"/>
+	<property name="SortOrder2" value="0050"/> <!-- SortShape -->
+	<property name="Material" value="Mmetal"/>
+	<property name="MaxDamage" value="300"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="#@modfolder:Resources/Grail1.unity3d?Grail1.prefab"/>
+	<property name="CustomIcon" value="黄衣圣器"/>
+	<property name="ModelOffset" value="0,0,0"/>
+	<property name="MultiBlockDim" value="1,1,1"/>
+	<property name="DescriptionKey" value="hysqDesc"/>
+	<property class="RepairItems"> <property name="古神结晶" value="2"/><property name="resourceForgedSteel" value="5"/> </property>
+	<property name="CustomUpgradeSound" value="place_block_metal"/>
+	<drop event="Harvest" name="古神结晶" count="2" tag="allHarvest"/>
+	<drop event="Harvest" name="resourceForgedSteel" count="4" tag="allHarvest"/>
+	<drop event="Destroy" name="古神结晶" count="1"/>
+	<drop event="Fall" name="terrDestroyedWoodDebris" count="1" prob="0.75" stick_chance="1"/>
+	<property class="UpgradeBlock">
+		<property name="ToBlock" value="黄衣圣器-召唤"/>
+		<property name="Item" value="古神结晶"/>
+		<property name="ItemCount" value="10"/>
+		<property name="UpgradeHitCount" value="4"/>
+	</property>
+	<!--<property name="HeatMapStrength" value="0"/>
+	<property name="HeatMapTime" value="1200"/>
+	<property name="HeatMapFrequency" value="25"/>-->
+	<property name="Stacknumber" value="1"/>	
+</block>
+
+<block name="黄衣圣器-召唤">
+	<property name="Extends" value="黄衣圣器"/>
+	<property name="CustomIcon" value="黄衣圣器"/>
+	<property name="Model" value="#@modfolder:Resources/Grail2.unity3d?Grail2.prefab"/>
+	<property class="UpgradeBlock">
+		<property name="ToBlock" value="黄衣圣器-完成"/>
+		<property name="Item" value="古神结晶"/>
+		<property name="ItemCount" value="20"/>
+		<property name="UpgradeHitCount" value="4"/>
+	</property>
+	<property name="DowngradeBlock" value="黄衣圣器"/>
+	<property name="SortOrder2" value="0050"/> <!-- SortShape -->
+</block>
+
+<block name="黄衣圣器-完成">
+	<property name="Extends" value="cobblestoneMaster"/>
+	<property name="SortOrder2" value="0050"/> <!-- SortShape -->
+	<property name="Material" value="Mmetal"/>
+	<property name="MaxDamage" value="500"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="#@modfolder:Resources/Grail3.unity3d?Grail3.prefab"/>
+	<property name="CustomIcon" value="黄衣圣器"/>
+	<property class="UpgradeBlock">
+		<property name="ToBlock" value="灵魂之井"/>
+		<property name="Item" value="浓缩黄衣之魂"/>
+		<property name="ItemCount" value="1"/>
+		<property name="UpgradeHitCount" value="4"/>
+	</property>
+	<property name="DowngradeBlock" value="黄衣圣器-召唤"/>
+	<property name="ModelOffset" value="0,0,0"/>
+	<property name="MultiBlockDim" value="1,1,1"/>
+	<property name="DescriptionKey" value="完成黄衣之主召唤仪式的邪恶圣杯"/>
+	<property class="RepairItems"> <property name="古神结晶" value="2"/><property name="resourceForgedSteel" value="5"/> </property>
+	<property name="CustomUpgradeSound" value="place_block_metal"/>
+	<drop event="Harvest" name="古神结晶" count="2" tag="allHarvest"/>
+	<drop event="Harvest" name="resourceForgedSteel" count="4" tag="allHarvest"/>
+	<drop event="Destroy" name="古神结晶" count="1"/>
+	<drop event="Fall" name="terrDestroyedWoodDebris" count="1" prob="0.75" stick_chance="1"/>
+</block>
+
+<block name="灵魂之井">
+	<property name="Class" value="Campfire"/>
+	<property name="Material" value="Mmetal"/>
+	<property name="Model" value="#@modfolder:Resources/Grail4.unity3d?Grail4.prefab"/>
+	<property name="CustomIcon" value="黄衣圣器"/>
+	<property name="MaxDamage" value="1000"/>
+	<property name="StabilitySupport" value="false"/> <!-- build restriction -->
+	<property name="Shape" value="ModelEntity"/>
+	<property name="ImposterDontBlock" value="true"/>
+	<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+	<property name="IsTerrainDecoration" value="true"/>
+	<property name="ModelOffset" value="0,0,0"/>
+	<property name="MultiBlockDim" value="1,1,1"/>
+	<property name="ParticleName" value="campfire"/>
+	<property name="ParticleOffset" value="0.5,0,0.5"/>
+	<property name="Stacknumber" value="1"/>
+	<property name="HeatMapStrength" value="5"/>
+	<property name="HeatMapTime" value="5000"/>
+	<property name="HeatMapFrequency" value="1000"/>
+	<property name="BuffsWhenWalkedOn" value="buffBurningEnvironment"/>
+	<property name="ActiveRadiusEffects" value="复苏区域"/>
+
+	<property class="Workstation">
+		<property name="Modules" value="tools,output,fuel,input"/>
+		<property name="CraftingAreaRecipes" value="灵魂之井"/>
+	</property>
+	<property name="WorkstationIcon" value="ui_game_symbol_campfire"/>
+	<property name="CraftActionName" value="lblContextActionCook"/>
+	<property name="CraftIcon" value="ui_game_symbol_spatula"/>
+	<property name="OpenSound" value="campfire_open"/>
+	<property name="CloseSound" value="campfire_close"/>
+	<property name="CraftSound" value="campfire_cook_click"/>
+	<property name="CraftCompleteSound" value="campfire_complete_item"/>
+	<property name="WorkstationJournalTip" value="heatMapTip"/>
+	<property name="PickupJournalEntry" value="campfireTip"/>
+	<property class="RepairItems"> <property name="古神结晶" value="4"/> </property>
+	<drop event="Destroy" name="resourceRockSmall" count="3"/>
+	<property name="Group" value="Basics,Food/Cooking,Building,advBuilding"/>
+	<property name="DescriptionKey" value="campfireDesc"/>
+	<property name="EconomicValue" value="5"/>
+	<property name="EconomicBundleSize" value="1"/>
+	<property name="SellableToTrader" value="false"/>
+	<property name="FilterTags" value="fdecor,fother,ffurniture"/>
+	<property name="SortOrder1" value="70i0"/>
+</block>
+</append> 
+</configs>

@@ -1,0 +1,1862 @@
+<configs>
+
+    <append xpath="/item_modifiers/item_modifier[@name='modGunReflexSight']">
+		<!-- Pistols -->
+		<item_property_overrides name="1911">
+			<property name="ScopeOffset" value="0,0.0961,-0.0732"/>
+			<property name="ScopeScale" value=".7,.7,.7"/>
+			<property name="ScopeCameraOffset" value="0,-.0335,0"/>
+		</item_property_overrides>
+		
+		<item_property_overrides name="符文1911">
+			<property name="ScopeOffset" value="0,0.0961,-0.0732"/>
+			<property name="ScopeScale" value=".7,.7,.7"/>
+			<property name="ScopeCameraOffset" value="0,-.0335,0"/>
+		</item_property_overrides>
+		
+		<item_property_overrides name="符文沙漠秃鹫">
+			<property name="ScopeCameraOffset" value="0,-.0145,0"/>
+		</item_property_overrides>
+		
+		<item_property_overrides name="M92F">
+			<property name="ScopeOffset" value="0,.362,-.15"/>
+			<property name="ScopeScale" value=".7,.7,.7"/>
+			<property name="ScopeCameraOffset" value="0,-.037,0"/>
+		</item_property_overrides>
+		
+		<item_property_overrides name="圣花左轮">
+			<property name="ScopeOffset" value="0,.04,0"/>
+			<property name="ScopeScale" value=".6,.6,.6"/>
+			<property name="ScopeCameraOffset" value="0,-.0249,0"/>
+		</item_property_overrides>
+		
+		<item_property_overrides name="符文-圣花左轮">
+			<property name="ScopeOffset" value="0,.04,0"/>
+			<property name="ScopeScale" value=".6,.6,.6"/>
+			<property name="ScopeCameraOffset" value="0,-.0249,0"/>
+		</item_property_overrides>
+		
+		<item_property_overrides name="猎魔弩炮">
+			<property name="ScopeOffset" value="-.06,.122,.095"/>
+			<property name="ScopeScale" value=".6,.6,.6"/>
+			<property name="ScopeCameraOffset" value="-.06,.132,.095"/>
+		</item_property_overrides>
+		
+		<item_property_overrides name="汤姆逊冲锋枪">
+			<property name="ScopeOffset" value="0,.0982,-.1249"/>
+			<property name="ScopeScale" value="1,1,1"/>
+			<property name="ScopeCameraOffset" value="0,-.0147,0"/>
+		</item_property_overrides>
+		
+		<item_property_overrides name="M16">
+			<property name="ScopeOffset" value="0,.159,0.05"/>
+			<property name="ScopeScale" value="0.4,0.4,0.4"/>
+			<property name="ScopeCameraOffset" value="0,-0.05,0.28"/>
+		</item_property_overrides>
+		
+		<item_property_overrides name="M4A1">
+			<property name="ScopeOffset" value="0,.17,0.065"/>
+			<property name="ScopeScale" value="0.4,0.4,0.4"/>
+			<property name="ScopeCameraOffset" value="0,-0.039,0.28"/>
+		</item_property_overrides>
+		
+		<item_property_overrides name="Uzi">
+			<property name="ScopeOffset" value="0,.12,-0.01"/>
+			<property name="ScopeScale" value="0.4,0.4,0.4"/>
+			<property name="ScopeCameraOffset" value="0,-0.06,0.28"/>
+		</item_property_overrides>
+		
+		<item_property_overrides name="AN94">
+			<property name="ScopeOffset" value="0,.0895,0.015"/>
+			<property name="ScopeScale" value="0.4,0.4,0.4"/>
+			<property name="ScopeCameraOffset" value="0,-0.012,0.22"/>
+		</item_property_overrides>
+		
+		<item_property_overrides name="SCAR">
+			<property name="ScopeOffset" value="0,.118,0.0295"/>
+			<property name="ScopeScale" value="0.4,0.4,0.4"/>
+			<property name="ScopeCameraOffset" value="0,-0.024,0.28"/>
+		</item_property_overrides>
+		
+		<item_property_overrides name="破晓审判">
+			<property name="ScopeOffset" value="0,.128,0.0265"/>
+			<property name="ScopeScale" value="0.4,0.4,0.4"/>
+			<property name="ScopeCameraOffset" value="0.001,-.115,0.1"/>
+		</item_property_overrides>
+	</append>
+
+    <append xpath="/item_modifiers/item_modifier[@name='modGunLaserSight']">
+		<!-- Pistols -->
+		<item_property_overrides name="1911">
+			<property name="SideOffset" value="0,.025,.05"/>
+			<property name="SideScale" value="1,1,1"/>
+		</item_property_overrides>
+		
+		<item_property_overrides name="符文1911">
+			<property name="SideOffset" value="0,.025,.05"/>
+			<property name="SideScale" value="1,1,1"/>
+		</item_property_overrides>
+		
+		<item_property_overrides name="M92F">
+			<property name="SideOffset" value="0,.04,.075"/>
+			<property name="SideScale" value="0.75,0.75,0.75"/>
+		</item_property_overrides>
+		
+		<item_property_overrides name="AWM">
+			<property name="SideOffset" value="0,.012,.42"/>
+			<property name="SideScale" value="0.75,0.75,0.75"/>
+		</item_property_overrides>
+		
+		<item_property_overrides name="M82">
+			<property name="SideOffset" value="0,-.014,.35"/>
+			<property name="SideScale" value="1,1,1"/>
+		</item_property_overrides>
+		
+		<item_property_overrides name="圣花左轮">
+			<property name="SideOffset" value="0,-.005,-.01"/>
+			<property name="SideScale" value="0.75,0.75,0.75"/>
+		</item_property_overrides>
+		
+		<item_property_overrides name="符文-圣花左轮">
+			<property name="SideOffset" value="0,-.005,-.01"/>
+			<property name="SideScale" value="0.75,0.75,0.75"/>
+		</item_property_overrides>
+		
+		<item_property_overrides name="猎魔弩炮">
+			<property name="SideOffset" value="-.039,-.084,0.663"/>
+			<property name="SideScale" value="0.75,0.75,0.75"/>
+		</item_property_overrides>
+		
+		<item_property_overrides name="汤姆逊冲锋枪">
+			<property name="SideOffset" value="0,.0358,0.2493"/>
+			<property name="SideScale" value="1,1,1"/>
+		</item_property_overrides>
+		
+		<item_property_overrides name="M16">
+			<property name="SideOffset" value="0,.0358,0.53"/>
+			<property name="SideScale" value="1,1,1"/>
+		</item_property_overrides>
+		
+		<item_property_overrides name="M4A1">
+			<property name="SideOffset" value="0,.068,0.42"/>
+			<property name="SideScale" value="1,1,1"/>
+		</item_property_overrides>
+		
+		<item_property_overrides name="Uzi">
+			<property name="SideOffset" value="0,.013,0.12"/>
+			<property name="SideScale" value="1,1,1"/>
+		</item_property_overrides>
+		
+		<item_property_overrides name="M249">
+			<property name="SideOffset" value="0,.013,0.12"/>
+			<property name="SideScale" value="1,1,1"/>
+		</item_property_overrides>
+		
+		<item_property_overrides name="AN94">
+			<property name="SideOffset" value="0,.024,0.54"/>
+			<property name="SideScale" value="1,1,1"/>
+		</item_property_overrides>
+		
+		<item_property_overrides name="SCAR">
+			<property name="SideOffset" value="0,.022,0.22"/>
+			<property name="SideScale" value="1,1,1"/>
+		</item_property_overrides>
+	</append>
+
+    <append xpath="/item_modifiers/item_modifier[@name='modGunScopeSmall']">
+		<!-- Pistols -->
+		<item_property_overrides name="1911">
+			<property name="ScopeOffset" value="0,0.0987,-0.0732"/>
+			<property name="ScopeScale" value="1,1,1"/>
+			<property name="ScopeCameraOffset" value="0,0.0971,-0.0404"/>
+		</item_property_overrides>
+		
+		<item_property_overrides name="符文1911">
+			<property name="ScopeOffset" value="0,0.0987,-0.0732"/>
+			<property name="ScopeScale" value="1,1,1"/>
+			<property name="ScopeCameraOffset" value="0,0.0971,-0.0404"/>
+		</item_property_overrides>
+		
+		<item_property_overrides name="符文沙漠秃鹫">
+			<property name="ScopeCameraOffset" value="0,-.03,-.2"/>
+		</item_property_overrides>
+		
+		<item_property_overrides name="M92F">
+			<property name="ScopeOffset" value="0,.393,-.165"/>
+			<property name="ScopeScale" value="1,1,1"/>
+			<property name="ScopeCameraOffset" value="0,-.022,0"/>
+		</item_property_overrides>
+		
+		<item_property_overrides name="圣花左轮">
+			<property name="ScopeOffset" value="0,.05,0"/>
+			<property name="ScopeScale" value="0.75,0.75,0.75"/>
+			<property name="ScopeCameraOffset" value="0,-.022,0"/>
+		</item_property_overrides>
+		
+		<item_property_overrides name="符文-圣花左轮">
+			<property name="ScopeOffset" value="0,.05,0"/>
+			<property name="ScopeScale" value="0.75,0.75,0.75"/>
+			<property name="ScopeCameraOffset" value="0,-.022,0"/>
+		</item_property_overrides>
+		
+		<item_property_overrides name="猎魔弩炮">
+			<property name="ScopeOffset" value="-.06,.122,.095"/>
+			<property name="ScopeScale" value="1,1,1"/>
+			<property name="ScopeCameraOffset" value="0,-.022,0"/>
+		</item_property_overrides>
+		
+		<item_property_overrides name="汤姆逊冲锋枪">
+			<property name="ScopeOffset" value="0,.1016,-.1249"/>
+			<property name="ScopeScale" value="1,1,1"/>
+			<property name="ScopeCameraOffset" value="0,-.022,0"/>
+		</item_property_overrides>
+		
+		<item_property_overrides name="M16">
+			<property name="ScopeOffset" value="0,.16,0.041"/>
+			<property name="ScopeScale" value="0.4,0.4,0.4"/>
+			<property name="ScopeCameraOffset" value="0,0,0"/>
+		</item_property_overrides>
+		
+		<item_property_overrides name="M4A1">
+			<property name="ScopeOffset" value="0,.18,0.041"/>
+			<property name="ScopeScale" value="0.4,0.4,0.4"/>
+			<property name="ScopeCameraOffset" value="0,0,0"/>
+		</item_property_overrides>
+		
+		<item_property_overrides name="Uzi">
+			<property name="ScopeOffset" value="0,.13,-0.06"/>
+			<property name="ScopeScale" value="0.4,0.4,0.4"/>
+			<property name="ScopeCameraOffset" value="0,0,0"/>
+		</item_property_overrides>
+		
+		<item_property_overrides name="AN94">
+			<property name="ScopeOffset" value="0,.107,0.085"/>
+			<property name="ScopeScale" value="0.4,0.4,0.4"/>
+			<property name="ScopeCameraOffset" value="0,0,0"/>
+		</item_property_overrides>
+		
+		<item_property_overrides name="SCAR">
+			<property name="ScopeOffset" value="0,.115,0.025"/>
+			<property name="ScopeScale" value="0.4,0.4,0.4"/>
+			<property name="ScopeCameraOffset" value="0,0,0"/>
+		</item_property_overrides>
+		
+		<item_property_overrides name="破晓审判">
+			<property name="ScopeOffset" value="0,.135,0.025"/>
+			<property name="ScopeScale" value="0.4,0.4,0.4"/>
+			<property name="ScopeCameraOffset" value="0,0,0"/>
+		</item_property_overrides>
+	</append>
+	
+    <append xpath="/item_modifiers/item_modifier[@name='modGunScopeMedium']">
+		<item_property_overrides name="猎魔弩炮">
+			<property name="ScopeOffset" value="-.06,.122,.095"/>
+			<property name="ScopeScale" value="1,1,1"/>
+			<property name="ScopeCameraOffset" value="0,-.022,0"/>
+		</item_property_overrides>
+		
+		<item_property_overrides name="AWM">
+			<property name="ScopeOffset" value="0,0.12,.12"/>
+			<property name="ScopeScale" value="1.3,1.3,1.3"/>
+			<property name="ScopeCameraOffset" value="0,-.022,0"/>
+		</item_property_overrides>
+		
+		<item_property_overrides name="M82">
+			<property name="ScopeOffset" value="0,.093,-.163"/>
+			<property name="ScopeScale" value="1.3,1.3,1.7"/>
+			<property name="ScopeCameraOffset" value="0,-.022,0"/>
+		</item_property_overrides>
+		
+		<item_property_overrides name="M16">
+			<property name="ScopeOffset" value="0,.15,0.045"/>
+			<property name="ScopeScale" value="0.4,0.4,0.4"/>
+			<property name="ScopeCameraOffset" value="0,0,0"/>
+		</item_property_overrides>
+		
+		<item_property_overrides name="M4A1">
+			<property name="ScopeOffset" value="0,.17,0.045"/>
+			<property name="ScopeScale" value="0.4,0.4,0.4"/>
+			<property name="ScopeCameraOffset" value="0,0,0"/>
+		</item_property_overrides>
+		
+		<item_property_overrides name="M249">
+			<property name="ScopeOffset" value="0,.18,0.038"/>
+			<property name="ScopeScale" value="0.4,0.4,0.4"/>
+			<property name="ScopeCameraOffset" value="0,0,0"/>
+		</item_property_overrides>
+		
+		<item_property_overrides name="AN94">
+			<property name="ScopeOffset" value="0,.107,0.085"/>
+			<property name="ScopeScale" value="0.4,0.4,0.4"/>
+			<property name="ScopeCameraOffset" value="0,0,0"/>
+		</item_property_overrides>
+		
+		<item_property_overrides name="SCAR">
+			<property name="ScopeOffset" value="0,.115,0.025"/>
+			<property name="ScopeScale" value="0.4,0.4,0.4"/>
+			<property name="ScopeCameraOffset" value="0,0,0"/>
+		</item_property_overrides>
+    </append>
+
+    <append xpath="/item_modifiers/item_modifier[@name='modGunScopeLarge']">
+		<item_property_overrides name="猎魔弩炮">
+			<property name="ScopeOffset" value="-.06,.06,.095"/>
+			<property name="ScopeScale" value="1,1,1"/>
+			<property name="ScopeCameraOffset" value="0,-.022,0"/>
+		</item_property_overrides>
+		
+		<item_property_overrides name="AWM">
+			<property name="ScopeOffset" value="0,0.05,.15"/>
+			<property name="ScopeScale" value="1,1,1"/>
+			<property name="ScopeCameraOffset" value="0,-.022,0"/>
+		</item_property_overrides>
+		
+		<item_property_overrides name="M82">
+			<property name="ScopeOffset" value="0,.022,-.036"/>
+			<property name="ScopeScale" value="1.3,1.3,1.7"/>
+			<property name="ScopeCameraOffset" value="0,-.022,0"/>
+		</item_property_overrides>
+    </append>
+	
+	<append xpath="/item_modifiers/item_modifier[@name='modGunSoundSuppressorSilencer']">
+		<!-- Pistols -->
+		<item_property_overrides name="1911">
+			<property name="Sound_start" value="pistol_s_fire"/>
+			<property name="BarrelOffset" value="0,0.01,-.02"/>
+			<property name="BarrelScale" value="0.7,0.7,0.7"/>
+		</item_property_overrides>
+		
+		<item_property_overrides name="符文1911">
+			<property name="Sound_start" value="pistol_s_fire"/>
+			<property name="BarrelOffset" value="0,0.01,-.02"/>
+			<property name="BarrelScale" value="0.7,0.7,0.7"/>
+		</item_property_overrides>
+		
+		<item_property_overrides name="符文沙漠秃鹫">
+			<property name="Sound_start" value="pump_shotgun_s_fire"/>
+			<property name="Sound_loop" value="pump_shotgun_s_fire"/>
+			<property name="BarrelOffset" value="0,0,0"/>
+			<property name="BarrelScale" value="1,1,1"/>
+		</item_property_overrides>
+		
+		<item_property_overrides name="M92F">
+			<property name="Sound_start" value="pistol_s_fire"/>
+			<property name="BarrelOffset" value="0,0.027,-.005"/>
+			<property name="BarrelScale" value="1,1,1"/>
+		</item_property_overrides>
+		
+		<item_property_overrides name="圣花左轮">
+			<property name="Sound_start" value="pistol_s_fire"/>
+			<property name="BarrelOffset" value="0,0,1"/>
+			<property name="BarrelScale" value="1,1,1"/>
+		</item_property_overrides>
+		
+		<item_property_overrides name="符文-圣花左轮">
+			<property name="Sound_start" value="pistol_s_fire"/>
+			<property name="BarrelOffset" value="0,0,1"/>
+			<property name="BarrelScale" value="1,1,1"/>
+		</item_property_overrides>
+		
+		<item_property_overrides name="汤姆逊冲锋枪">
+			<property name="Sound_start" value="pistol_s_fire"/>
+			<property name="BarrelOffset" value="0,0.019,0.27"/>
+			<property name="BarrelScale" value="1,1,1"/>
+		</item_property_overrides>
+		
+		<item_property_overrides name="M16">
+			<property name="Sound_start" value="pistol_s_fire"/>
+			<property name="BarrelOffset" value="0,0.038,0.69"/>
+			<property name="BarrelScale" value="1,1,1"/>
+		</item_property_overrides>
+		
+		<item_property_overrides name="M4A1">
+			<property name="Sound_start" value="pistol_s_fire"/>
+			<property name="BarrelOffset" value="0,0.067,0.49"/>
+			<property name="BarrelScale" value="1,1,1"/>
+		</item_property_overrides>
+		
+		<item_property_overrides name="Uzi">
+			<property name="Sound_start" value="pistol_s_fire"/>
+			<property name="BarrelOffset" value="0,0.023,0.01"/>
+			<property name="BarrelScale" value="1,1,1"/>
+		</item_property_overrides>
+		
+		<item_property_overrides name="M249">
+			<property name="Sound_start" value="pistol_s_fire"/>
+			<property name="BarrelOffset" value="0,0.023,0.3"/>
+			<property name="BarrelScale" value="1,1,1"/>
+		</item_property_overrides>
+		
+		<item_property_overrides name="AN94">
+			<property name="Sound_start" value="pistol_s_fire"/>
+			<property name="BarrelOffset" value="0,0.017,0.62"/>
+			<property name="BarrelScale" value="1,1,1"/>
+		</item_property_overrides>
+		
+		<item_property_overrides name="SCAR">
+			<property name="Sound_start" value="pistol_s_fire"/>
+			<property name="BarrelOffset" value="0,.02,0.3"/>
+			<property name="BarrelScale" value="1,1,1"/>
+		</item_property_overrides>
+	</append>
+	
+	<append xpath="/item_modifiers/item_modifier[@name='modGunFlashlight']">
+		<!-- Pistols -->
+		<item_property_overrides name="1911">
+			<property name="SideOffset" value="0,.025,.01"/>
+			<property name="SideScale" value=".5,.5,.5"/>
+		</item_property_overrides>
+		
+		<item_property_overrides name="符文1911">
+			<property name="SideOffset" value="0,.025,.01"/>
+			<property name="SideScale" value=".5,.5,.5"/>
+		</item_property_overrides>
+		
+		<item_property_overrides name="M92F">
+			<property name="SideOffset" value="0,.025,.01"/>
+			<property name="SideScale" value=".75,.75,.75"/>
+		</item_property_overrides>
+		
+		<item_property_overrides name="AWM">
+			<property name="SideOffset" value="0,.012,.42"/>
+			<property name="SideScale" value=".75,.75,.75"/>
+		</item_property_overrides>
+		
+		<item_property_overrides name="M82">
+			<property name="SideOffset" value="0,.007,.331"/>
+			<property name="SideScale" value="1,1,1"/>
+		</item_property_overrides>
+		
+		<item_property_overrides name="圣花左轮">
+			<property name="SideOffset" value="0,-.005,0.01"/>
+			<property name="SideScale" value=".75,.75,.75"/>
+		</item_property_overrides>
+		
+		<item_property_overrides name="符文-圣花左轮">
+			<property name="SideOffset" value="0,-.005,0.01"/>
+			<property name="SideScale" value=".75,.75,.75"/>
+		</item_property_overrides>
+		
+		<item_property_overrides name="猎魔弩炮">
+			<property name="SideOffset" value="-.039,-.084,0.663"/>
+			<property name="SideScale" value=".75,.75,.75"/>
+		</item_property_overrides>
+		
+		<item_property_overrides name="汤姆逊冲锋枪">
+			<property name="SideOffset" value="0,.033,0.2493"/>
+			<property name="SideScale" value="1,1,1"/>
+		</item_property_overrides>
+		
+		<item_property_overrides name="M16">
+			<property name="SideOffset" value="0,.0358,0.5"/>
+			<property name="SideScale" value="1,1,1"/>
+		</item_property_overrides>
+		
+		<item_property_overrides name="M4A1">
+			<property name="SideOffset" value="0,.068,0.42"/>
+			<property name="SideScale" value="1,1,1"/>
+		</item_property_overrides>
+		
+		<item_property_overrides name="Uzi">
+			<property name="SideOffset" value="0,.007,0.08"/>
+			<property name="SideScale" value="1,1,1"/>
+		</item_property_overrides>
+		
+		<item_property_overrides name="M249">
+			<property name="SideOffset" value="0,.007,0.08"/>
+			<property name="SideScale" value="1,1,1"/>
+		</item_property_overrides>
+		
+		<item_property_overrides name="AN94">
+			<property name="SideOffset" value="0,.024,0.54"/>
+			<property name="SideScale" value="1,1,1"/>
+		</item_property_overrides>
+		
+		<item_property_overrides name="SCAR">
+			<property name="SideOffset" value="0,.022,0.22"/>
+			<property name="SideScale" value="1,1,1"/>
+		</item_property_overrides>
+	</append>
+
+<append xpath="/item_modifiers">
+
+    <item_modifier name="疯狂掌握者" installable_tags="melee,perkArchery" modifier_tags="durability" blocked_tags="noMods" type="attachment">
+		<property name="UnlockedBy" value="钢铁意志"/>
+		<property name="Stacknumber" value="1"/> <property name="Group" value="Mods"/>
+		<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+		<property name="CustomIcon" value="疯狂掌握者"/>
+		<property name="DescriptionKey" value="CrazyHandDesc"/>
+
+		<effect_group tiered="false">
+		    <passive_effect name="EntityDamage" operation="base_add" value="30"/>
+			<passive_effect name="DegradationPerUse" operation="perc_add" value="-.25" tags="perkMiner69r,perkSalvageOperations,perkElectrocutioner,perkJavelinMaster,perkPummelPete,perkSkullCrusher,perkDeepCuts,perkBrawler,admin"/>
+		</effect_group>
+		<effect_group tiered="false">
+		    <requirement name="CVarCompare" cvar="CS" operation="GTE" value="0"/>
+		    <requirement name="CVarCompare" cvar="CS" operation="LT" value="2"/>
+			<requirement name="RandomRoll" seed_type="Random" target="self" min_max="0,100" operation="LTE" value="15"/>
+		    <passive_effect name="DamageModifier" operation="perc_add" value="1.5"/>
+		</effect_group>
+		<effect_group tiered="false">
+		    <requirement name="CVarCompare" cvar="CS" operation="GTE" value="2"/>
+		    <requirement name="CVarCompare" cvar="CS" operation="LT" value="4"/>
+			<requirement name="RandomRoll" seed_type="Random" target="self" min_max="0,100" operation="LTE" value="20"/>
+		    <passive_effect name="DamageModifier" operation="perc_add" value="2"/>
+		</effect_group>
+		<effect_group tiered="false">
+		    <requirement name="CVarCompare" cvar="CS" operation="GTE" value="4"/>
+		    <requirement name="CVarCompare" cvar="CS" operation="LT" value="6"/>
+			<requirement name="RandomRoll" seed_type="Random" target="self" min_max="0,100" operation="LTE" value="25"/>
+		    <passive_effect name="DamageModifier" operation="perc_add" value="2.5"/>
+		</effect_group>
+		<effect_group tiered="false">
+		    <requirement name="CVarCompare" cvar="CS" operation="GTE" value="6"/>
+		    <requirement name="CVarCompare" cvar="CS" operation="LT" value="8"/>
+			<requirement name="RandomRoll" seed_type="Random" target="self" min_max="0,100" operation="LTE" value="30"/>
+		    <passive_effect name="DamageModifier" operation="perc_add" value="3"/>
+		</effect_group>
+		<effect_group tiered="false">
+		    <requirement name="CVarCompare" cvar="CS" operation="Equals" value="8"/>
+			<requirement name="RandomRoll" seed_type="Random" target="self" min_max="0,100" operation="LTE" value="35"/>
+		    <passive_effect name="DamageModifier" operation="perc_add" value="4"/>
+		</effect_group>
+		<property name="PickupJournalEntry" value="augmentGunsTip"/>
+	</item_modifier>
+	
+	<item_modifier name="混沌之息" installable_tags="melee" modifier_tags="damageIron" blocked_tags="noMods" type="attachment">
+		<property name="UnlockedBy" value="古老诅咒"/>
+		<property name="CustomIcon" value="混沌之息"/>
+		<property name="DescriptionKey" value="Chaos01Desc"/>
+		<property name="Stacknumber" value="1"/> <property name="Group" value="Mods"/>
+		<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+		<effect_group tiered="false">
+			<passive_effect name="DamageModifier" operation="perc_add" value=".3" tags="古神"/>
+			<passive_effect name="AttacksPerMinute" operation="perc_add" value=".5"><requirement name="ProgressionLevel" progression_name="attStrength" operation="GTE" value="10"/></passive_effect>
+			<passive_effect name="EntityDamage" operation="base_add" value="50"><requirement name="ProgressionLevel" progression_name="attAgility" operation="GTE" value="10"/></passive_effect>
+		</effect_group>
+		<effect_group tiered="false">
+		    <triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="otherAOE" range="2" target_tags="zombie,animal" buff="伤害AOES">
+			    <requirement name="CVarCompare" cvar="CS" operation="GTE" value="4"/>
+			</triggered_effect>
+	    </effect_group>
+		<property name="PickupJournalEntry" value="augmentGunsTip"/>
+	</item_modifier>
+
+    <item_modifier name="炎之誓-离子火花" installable_tags="barrelAttachments,turretRanged" modifier_tags="barrelAttachment" blocked_tags="noMods" type="attachment">
+		<property name="Stacknumber" value="1"/> <property name="Group" value="Mods"/>
+		<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+		<property name="CustomIcon" value="Ionspark1"/>
+		<property name="UnlockedBy" value="拉莱耶秘仪"/>
+		<property name="DescriptionKey" value="FireMuzzle1Desc"/>
+		<!-- Muzzle brake: Directs some of the gases upwards to reduce recoil. Typically increases visibility of the gun/shooter as a result. -->
+		<effect_group tiered="false">
+			<passive_effect name="KickDegreesVerticalMin" operation="perc_add" value="-.35"/>
+			<passive_effect name="KickDegreesVerticalMax" operation="perc_add" value="-.35"/>
+			<passive_effect name="KickDegreesHorizontalMin" operation="perc_add" value="-.25"/>
+			<passive_effect name="KickDegreesHorizontalMax" operation="perc_add" value="-.25"/>
+			<passive_effect name="EntityDamage" operation="perc_add" value="0.15"/>
+			<passive_effect name="WeaponHandling" operation="perc_add" value=".08"/>
+		</effect_group>
+			<!-- <passive_effect name="DamageFalloffRange" operation="base_add" value="-5"/> -->
+		<effect_group name="new Fire Proc" tiered="false">
+			<requirement name="CVarCompare" cvar="_underwater" operation="LT" value=".93"/>
+			<requirement name="RandomRoll" seed_type="Random" target="self" min_max="0,100" operation="LTE" value="50"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" buff="buffBurningElement"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="$buffBurningElementDuration" operation="set" value="10">
+					<requirement name="ProgressionLevel" progression_name="perkFiremansAlmanacMolotov" operation="Equals" value="0"/></triggered_effect>
+				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="$buffBurningElementDuration" operation="set" value="11">
+					<requirement name="ProgressionLevel" progression_name="perkFiremansAlmanacMolotov" operation="Equals" value="1"/></triggered_effect>
+		</effect_group>
+
+		<effect_group name="always refresh existing Fire Proc" tiered="false">
+			<requirement name="CVarCompare" cvar="_underwater" operation="LT" value=".93"/>
+			<requirement name="HasBuff" target="other" buff="buffBurningElement"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" buff="buffBurningElement"/>
+				<!--default duration is 10-->
+				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="$buffBurningElementDuration" operation="set" value="11">
+					<requirement name="ProgressionLevel" progression_name="perkFiremansAlmanacMolotov" operation="Equals" value="1"/></triggered_effect>
+		</effect_group>
+		<property name="PickupJournalEntry" value="augmentGunsTip"/>
+	</item_modifier>
+	
+	<item_modifier name="炎之誓-加强离子火花" installable_tags="barrelAttachments,turretRanged" modifier_tags="barrelAttachment" blocked_tags="noMods" type="attachment">
+		<property name="Stacknumber" value="1"/> <property name="Group" value="Mods"/>
+		<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+		<property name="CustomIcon" value="Ionspark2"/>
+		<property name="UnlockedBy" value="克苏鲁传教士"/>
+		<property name="DescriptionKey" value="FireMuzzle2Desc"/>
+		<!-- Muzzle brake: Directs some of the gases upwards to reduce recoil. Typically increases visibility of the gun/shooter as a result. -->
+		<effect_group tiered="false">
+			<passive_effect name="KickDegreesVerticalMin" operation="perc_add" value="-.4"/>
+			<passive_effect name="KickDegreesVerticalMax" operation="perc_add" value="-.4"/>
+			<passive_effect name="KickDegreesHorizontalMin" operation="perc_add" value="-.3"/>
+			<passive_effect name="KickDegreesHorizontalMax" operation="perc_add" value="-.3"/>
+			<passive_effect name="EntityDamage" operation="perc_add" value="0.3"/>
+			<passive_effect name="WeaponHandling" operation="perc_add" value=".08"/>
+		</effect_group>
+			<!-- <passive_effect name="DamageFalloffRange" operation="base_add" value="-5"/> -->
+		<effect_group name="new Fire Proc" tiered="false">
+			<requirement name="CVarCompare" cvar="_underwater" operation="LT" value=".93"/>
+			<requirement name="RandomRoll" seed_type="Random" target="self" min_max="0,100" operation="LTE" value="55"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" buff="buffBurningElement"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="$buffBurningElementDuration" operation="set" value="10">
+					<requirement name="ProgressionLevel" progression_name="perkFiremansAlmanacMolotov" operation="Equals" value="0"/></triggered_effect>
+				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="$buffBurningElementDuration" operation="set" value="11">
+					<requirement name="ProgressionLevel" progression_name="perkFiremansAlmanacMolotov" operation="Equals" value="1"/></triggered_effect>
+		</effect_group>
+
+		<effect_group name="always refresh existing Fire Proc" tiered="false">
+			<requirement name="CVarCompare" cvar="_underwater" operation="LT" value=".93"/>
+			<requirement name="HasBuff" target="other" buff="buffBurningElement"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" buff="buffBurningElement"/>
+				<!--default duration is 10-->
+				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="$buffBurningElementDuration" operation="set" value="11">
+					<requirement name="ProgressionLevel" progression_name="perkFiremansAlmanacMolotov" operation="Equals" value="1"/></triggered_effect>
+		</effect_group>
+		<property name="PickupJournalEntry" value="augmentGunsTip"/>
+	</item_modifier>
+	
+	<item_modifier name="炎之誓-等离子火花" installable_tags="barrelAttachments,turretRanged" modifier_tags="barrelAttachment" blocked_tags="noMods" type="attachment">
+		<property name="Stacknumber" value="1"/> <property name="Group" value="Mods"/>
+		<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+		<property name="CustomIcon" value="Ionspark3"/>
+		<property name="UnlockedBy" value="克苏鲁传教士"/>
+		<property name="DescriptionKey" value="FireMuzzle3Desc"/>
+		<!-- Muzzle brake: Directs some of the gases upwards to reduce recoil. Typically increases visibility of the gun/shooter as a result. -->
+		<effect_group tiered="false">
+			<passive_effect name="KickDegreesVerticalMin" operation="perc_add" value="-.45"/>
+			<passive_effect name="KickDegreesVerticalMax" operation="perc_add" value="-.45"/>
+			<passive_effect name="KickDegreesHorizontalMin" operation="perc_add" value="-.35"/>
+			<passive_effect name="KickDegreesHorizontalMax" operation="perc_add" value="-.35"/>
+			<passive_effect name="EntityDamage" operation="perc_add" value="0.45"/>
+			<passive_effect name="WeaponHandling" operation="perc_add" value=".08"/>
+		</effect_group>
+			<!-- <passive_effect name="DamageFalloffRange" operation="base_add" value="-5"/> -->
+		<effect_group name="new Fire Proc" tiered="false">
+			<requirement name="CVarCompare" cvar="_underwater" operation="LT" value=".93"/>
+			<requirement name="RandomRoll" seed_type="Random" target="self" min_max="0,100" operation="LTE" value="60"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" buff="buffBurningElement"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="$buffBurningElementDuration" operation="set" value="10">
+					<requirement name="ProgressionLevel" progression_name="perkFiremansAlmanacMolotov" operation="Equals" value="0"/></triggered_effect>
+				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="$buffBurningElementDuration" operation="set" value="11">
+					<requirement name="ProgressionLevel" progression_name="perkFiremansAlmanacMolotov" operation="Equals" value="1"/></triggered_effect>
+		</effect_group>
+
+		<effect_group name="always refresh existing Fire Proc" tiered="false">
+			<requirement name="CVarCompare" cvar="_underwater" operation="LT" value=".93"/>
+			<requirement name="HasBuff" target="other" buff="buffBurningElement"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" buff="buffBurningElement"/>
+				<!--default duration is 10-->
+				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="$buffBurningElementDuration" operation="set" value="11">
+					<requirement name="ProgressionLevel" progression_name="perkFiremansAlmanacMolotov" operation="Equals" value="1"/></triggered_effect>
+		</effect_group>
+		<property name="PickupJournalEntry" value="augmentGunsTip"/>
+	</item_modifier>
+	
+	<item_modifier name="炎狱-根源火种" installable_tags="barrelAttachments,turretRanged" modifier_tags="barrelAttachment" blocked_tags="noMods" type="attachment">
+		<property name="Stacknumber" value="1"/> <property name="Group" value="Mods"/>
+		<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+		<property name="CustomIcon" value="纯净之火"/>
+		<property name="UnlockedBy" value="克苏鲁传教士"/>
+		<property name="DescriptionKey" value="FireMuzzle4Desc"/>
+		<!-- Muzzle brake: Directs some of the gases upwards to reduce recoil. Typically increases visibility of the gun/shooter as a result. -->
+		<effect_group tiered="false">
+			<passive_effect name="KickDegreesVerticalMin" operation="perc_add" value="-.45"/>
+			<passive_effect name="KickDegreesVerticalMax" operation="perc_add" value="-.45"/>
+			<passive_effect name="KickDegreesHorizontalMin" operation="perc_add" value="-.35"/>
+			<passive_effect name="KickDegreesHorizontalMax" operation="perc_add" value="-.35"/>
+			<passive_effect name="EntityDamage" operation="perc_add" value="0.45"/>
+			<passive_effect name="EntityDamage" operation="base_add" value="@FireSeat"/>
+			<passive_effect name="WeaponHandling" operation="perc_add" value=".08"/>
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyStats" stat="Health" target="other" operation="subtract" value="@FireSeat"/>
+			<triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" cvar="FireSeat" operation="add" value="0.05"/>
+		</effect_group>
+			<!-- <passive_effect name="DamageFalloffRange" operation="base_add" value="-5"/> -->
+		<effect_group name="new Fire Proc" tiered="false">
+			<requirement name="CVarCompare" cvar="_underwater" operation="LT" value=".93"/>
+			<requirement name="RandomRoll" seed_type="Random" target="self" min_max="0,100" operation="LTE" value="60"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" buff="buffBurningElement"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="$buffBurningElementDuration" operation="set" value="10">
+					<requirement name="ProgressionLevel" progression_name="perkFiremansAlmanacMolotov" operation="Equals" value="0"/></triggered_effect>
+				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="$buffBurningElementDuration" operation="set" value="11">
+					<requirement name="ProgressionLevel" progression_name="perkFiremansAlmanacMolotov" operation="Equals" value="1"/></triggered_effect>
+		</effect_group>
+
+		<effect_group name="always refresh existing Fire Proc" tiered="false">
+			<requirement name="CVarCompare" cvar="_underwater" operation="LT" value=".93"/>
+			<requirement name="HasBuff" target="other" buff="buffBurningElement"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" buff="buffBurningElement"/>
+				<!--default duration is 10-->
+				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="$buffBurningElementDuration" operation="set" value="11">
+					<requirement name="ProgressionLevel" progression_name="perkFiremansAlmanacMolotov" operation="Equals" value="1"/></triggered_effect>
+		</effect_group>
+		<property name="PickupJournalEntry" value="augmentGunsTip"/>
+	</item_modifier>
+	
+	<item_modifier name="雷契-超导增幅" installable_tags="barrelAttachments,turretRanged" modifier_tags="barrelAttachment" blocked_tags="noMods" type="attachment">
+		<property name="Stacknumber" value="1"/> <property name="Group" value="Mods"/>
+		<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+		<property name="CustomIcon" value="HEC"/>
+		<property name="UnlockedBy" value="拉莱耶秘仪"/>
+		<property name="DescriptionKey" value="ThMuzzle1Desc"/>
+		<!-- Muzzle brake: Directs some of the gases upwards to reduce recoil. Typically increases visibility of the gun/shooter as a result. -->
+		<effect_group tiered="false">
+			<passive_effect name="KickDegreesVerticalMin" operation="perc_add" value="-.35"/>
+			<passive_effect name="KickDegreesVerticalMax" operation="perc_add" value="-.35"/>
+			<passive_effect name="KickDegreesHorizontalMin" operation="perc_add" value="-.25"/>
+			<passive_effect name="KickDegreesHorizontalMax" operation="perc_add" value="-.25"/>
+			<passive_effect name="WeaponHandling" operation="perc_add" value=".08"/>
+			<passive_effect name="EntityDamage" operation="perc_add" value="0.1"/>
+			<requirement name="RandomRoll" seed_type="Random" target="self" min_max="0,100" operation="LTE" value="10"/>
+			     <triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" buff="buffShocked"/>
+		</effect_group>
+			<!-- <passive_effect name="DamageFalloffRange" operation="base_add" value="-5"/> -->
+		<property name="PickupJournalEntry" value="augmentGunsTip"/>
+	</item_modifier>
+	
+	<item_modifier name="雷契-超级电容" installable_tags="barrelAttachments,turretRanged" modifier_tags="barrelAttachment" blocked_tags="noMods" type="attachment">
+		<property name="Stacknumber" value="1"/> <property name="Group" value="Mods"/>
+		<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+		<property name="CustomIcon" value="HEC1"/>
+		<property name="UnlockedBy" value="风暴崇拜"/>
+		<property name="DescriptionKey" value="ThMuzzle2Desc"/>
+		<!-- Muzzle brake: Directs some of the gases upwards to reduce recoil. Typically increases visibility of the gun/shooter as a result. -->
+		<effect_group tiered="false">
+			<passive_effect name="KickDegreesVerticalMin" operation="perc_add" value="-.4"/>
+			<passive_effect name="KickDegreesVerticalMax" operation="perc_add" value="-.4"/>
+			<passive_effect name="KickDegreesHorizontalMin" operation="perc_add" value="-.3"/>
+			<passive_effect name="KickDegreesHorizontalMax" operation="perc_add" value="-.3"/>
+			<passive_effect name="WeaponHandling" operation="perc_add" value=".08"/>
+			<passive_effect name="EntityDamage" operation="perc_add" value="0.2"/>
+			<requirement name="RandomRoll" seed_type="Random" target="self" min_max="0,100" operation="LTE" value="20"/>
+			     <triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" buff="buffShocked"/>
+		</effect_group>
+			<!-- <passive_effect name="DamageFalloffRange" operation="base_add" value="-5"/> -->
+		<property name="PickupJournalEntry" value="augmentGunsTip"/>
+	</item_modifier>
+	
+	<item_modifier name="雷契-球状闪电" installable_tags="barrelAttachments,turretRanged" modifier_tags="barrelAttachment" blocked_tags="noMods" type="attachment">
+		<property name="Stacknumber" value="1"/> <property name="Group" value="Mods"/>
+		<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+		<property name="CustomIcon" value="HEC2"/>
+		<property name="UnlockedBy" value="风暴崇拜"/>
+		<property name="DescriptionKey" value="ThMuzzle3Desc"/>
+		<!-- Muzzle brake: Directs some of the gases upwards to reduce recoil. Typically increases visibility of the gun/shooter as a result. -->
+		<effect_group tiered="false">
+			<passive_effect name="KickDegreesVerticalMin" operation="perc_add" value="-.45"/>
+			<passive_effect name="KickDegreesVerticalMax" operation="perc_add" value="-.45"/>
+			<passive_effect name="KickDegreesHorizontalMin" operation="perc_add" value="-.35"/>
+			<passive_effect name="KickDegreesHorizontalMax" operation="perc_add" value="-.35"/>
+			<passive_effect name="WeaponHandling" operation="perc_add" value=".08"/>
+			<passive_effect name="EntityDamage" operation="perc_add" value="0.3"/>
+			<requirement name="RandomRoll" seed_type="Random" target="self" min_max="0,100" operation="LTE" value="30"/>
+			     <triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" buff="buffShocked"/>
+		</effect_group>
+			<!-- <passive_effect name="DamageFalloffRange" operation="base_add" value="-5"/> -->
+		<property name="PickupJournalEntry" value="augmentGunsTip"/>
+	</item_modifier>
+	
+	<item_modifier name="雷罚-风暴制裁" installable_tags="barrelAttachments,turretRanged" modifier_tags="barrelAttachment" blocked_tags="noMods" type="attachment">
+		<property name="Stacknumber" value="1"/> <property name="Group" value="Mods"/>
+		<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+		<property name="CustomIcon" value="风暴制裁"/>
+		<property name="DescriptionKey" value="ThMuzzle4Desc"/>
+		<!-- Muzzle brake: Directs some of the gases upwards to reduce recoil. Typically increases visibility of the gun/shooter as a result. -->
+		<effect_group tiered="false">
+			<passive_effect name="KickDegreesVerticalMin" operation="perc_add" value="-.45"/>
+			<passive_effect name="KickDegreesVerticalMax" operation="perc_add" value="-.45"/>
+			<passive_effect name="KickDegreesHorizontalMin" operation="perc_add" value="-.35"/>
+			<passive_effect name="KickDegreesHorizontalMax" operation="perc_add" value="-.35"/>
+			<passive_effect name="WeaponHandling" operation="perc_add" value=".08"/>
+			<passive_effect name="EntityDamage" operation="perc_add" value="0.3"/>
+			<requirement name="RandomRoll" seed_type="Random" target="self" min_max="0,100" operation="LTE" value="30"/>
+			     <triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="otherAOE" range="2" target_tags="zombie,animal" buff="雷罚"/>
+		</effect_group>
+		<effect_group tiered="false">
+		<requirement name="CVarCompare" cvar="CS" operation="GTE" value="0"/>
+		<requirement name="CVarCompare" cvar="CS" operation="LT" value="2"/>
+		<passive_effect name="EntityDamage" operation="base_add" value="10"/>
+	</effect_group>
+	<effect_group tiered="false">
+		<requirement name="CVarCompare" cvar="CS" operation="GTE" value="2"/>
+		<requirement name="CVarCompare" cvar="CS" operation="LT" value="4"/>
+		<passive_effect name="EntityDamage" operation="base_add" value="20"/>
+	</effect_group>
+	<effect_group tiered="false">
+		<requirement name="CVarCompare" cvar="CS" operation="GTE" value="4"/>
+		<requirement name="CVarCompare" cvar="CS" operation="LT" value="6"/>
+		<passive_effect name="EntityDamage" operation="base_add" value="30"/>
+	</effect_group>
+	<effect_group tiered="false">
+		<requirement name="CVarCompare" cvar="CS" operation="GTE" value="6"/>
+		<requirement name="CVarCompare" cvar="CS" operation="LT" value="8"/>
+		<passive_effect name="EntityDamage" operation="base_add" value="40"/>
+	</effect_group>
+	<effect_group tiered="false">
+		<requirement name="CVarCompare" cvar="CS" operation="Equals" value="8"/>
+		<passive_effect name="EntityDamage" operation="base_add" value="50"/>
+	</effect_group>
+			<!-- <passive_effect name="DamageFalloffRange" operation="base_add" value="-5"/> -->
+		<property name="PickupJournalEntry" value="augmentGunsTip"/>
+	</item_modifier>
+	
+	<item_modifier name="血欲-生命导流器" installable_tags="barrelAttachments,turretRanged" modifier_tags="barrelAttachment" blocked_tags="noMods" type="attachment">
+		<property name="Stacknumber" value="1"/> <property name="Group" value="Mods"/>
+		<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+		<property name="CustomIcon" value="Life1"/>
+		<property name="UnlockedBy" value="血之秘术"/>
+		<property name="DescriptionKey" value="BloodMuzzle1Desc"/>
+		<!-- Muzzle brake: Directs some of the gases upwards to reduce recoil. Typically increases visibility of the gun/shooter as a result. -->
+		<effect_group tiered="false">
+			<passive_effect name="KickDegreesVerticalMin" operation="perc_add" value="-.35"/>
+			<passive_effect name="KickDegreesVerticalMax" operation="perc_add" value="-.35"/>
+			<passive_effect name="KickDegreesHorizontalMin" operation="perc_add" value="-.25"/>
+			<passive_effect name="KickDegreesHorizontalMax" operation="perc_add" value="-.25"/>
+			<passive_effect name="WeaponHandling" operation="perc_add" value=".08"/>
+			<passive_effect name="EntityDamage" operation="perc_add" value="0.1"/>
+			<triggered_effect trigger="onSelfKilledOther" action="ModifyStats" stat="Health" operation="add" value="8"/>
+		</effect_group>
+			<!-- <passive_effect name="DamageFalloffRange" operation="base_add" value="-5"/> -->
+		<property name="PickupJournalEntry" value="augmentGunsTip"/>
+	</item_modifier>
+	
+	<item_modifier name="血欲-生命虹吸" installable_tags="barrelAttachments,turretRanged" modifier_tags="barrelAttachment" blocked_tags="noMods" type="attachment">
+		<property name="Stacknumber" value="1"/> <property name="Group" value="Mods"/>
+		<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+		<property name="CustomIcon" value="Life2"/>
+		<property name="UnlockedBy" value="血之秘术"/>
+		<property name="DescriptionKey" value="BloodMuzzle2Desc"/>
+		<!-- Muzzle brake: Directs some of the gases upwards to reduce recoil. Typically increases visibility of the gun/shooter as a result. -->
+		<effect_group tiered="false">
+			<passive_effect name="KickDegreesVerticalMin" operation="perc_add" value="-.4"/>
+			<passive_effect name="KickDegreesVerticalMax" operation="perc_add" value="-.4"/>
+			<passive_effect name="KickDegreesHorizontalMin" operation="perc_add" value="-.3"/>
+			<passive_effect name="KickDegreesHorizontalMax" operation="perc_add" value="-.3"/>
+			<passive_effect name="WeaponHandling" operation="perc_add" value=".08"/>
+			<passive_effect name="EntityDamage" operation="perc_add" value="0.15"/>
+			<triggered_effect trigger="onSelfKilledOther" action="ModifyStats" stat="Health" operation="add" value="12"/>
+		</effect_group>
+			<!-- <passive_effect name="DamageFalloffRange" operation="base_add" value="-5"/> -->
+		<property name="PickupJournalEntry" value="augmentGunsTip"/>
+	</item_modifier>
+	
+	<item_modifier name="血欲-夺萃熔炉" installable_tags="barrelAttachments,turretRanged" modifier_tags="barrelAttachment" blocked_tags="noMods" type="attachment">
+		<property name="Stacknumber" value="1"/> <property name="Group" value="Mods"/>
+		<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+		<property name="CustomIcon" value="Life3"/>
+		<property name="UnlockedBy" value="血之秘术"/>
+		<property name="DescriptionKey" value="BloodMuzzle3Desc"/>
+		<!-- Muzzle brake: Directs some of the gases upwards to reduce recoil. Typically increases visibility of the gun/shooter as a result. -->
+		<effect_group tiered="false">
+			<passive_effect name="KickDegreesVerticalMin" operation="perc_add" value="-.45"/>
+			<passive_effect name="KickDegreesVerticalMax" operation="perc_add" value="-.45"/>
+			<passive_effect name="KickDegreesHorizontalMin" operation="perc_add" value="-.35"/>
+			<passive_effect name="KickDegreesHorizontalMax" operation="perc_add" value="-.35"/>
+			<passive_effect name="WeaponHandling" operation="perc_add" value=".08"/>
+			<passive_effect name="EntityDamage" operation="perc_add" value="0.2"/>
+			<triggered_effect trigger="onSelfKilledOther" action="ModifyStats" stat="Health" operation="add" value="16"/>
+		</effect_group>
+			<!-- <passive_effect name="DamageFalloffRange" operation="base_add" value="-5"/> -->
+		<property name="PickupJournalEntry" value="augmentGunsTip"/>
+	</item_modifier>
+	
+	<item_modifier name="血狂乱-猩红之力" installable_tags="barrelAttachments,turretRanged" modifier_tags="barrelAttachment" blocked_tags="noMods" type="attachment">
+		<property name="Stacknumber" value="1"/> <property name="Group" value="Mods"/>
+		<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+		<property name="CustomIcon" value="猩红之力"/>
+		<property name="UnlockedBy" value="血之秘术"/>
+		<property name="DescriptionKey" value="BloodMuzzle4Desc"/>
+		<!-- Muzzle brake: Directs some of the gases upwards to reduce recoil. Typically increases visibility of the gun/shooter as a result. -->
+		<effect_group tiered="false">
+			<passive_effect name="KickDegreesVerticalMin" operation="perc_add" value="-.45"/>
+			<passive_effect name="KickDegreesVerticalMax" operation="perc_add" value="-.45"/>
+			<passive_effect name="KickDegreesHorizontalMin" operation="perc_add" value="-.35"/>
+			<passive_effect name="KickDegreesHorizontalMax" operation="perc_add" value="-.35"/>
+			<passive_effect name="WeaponHandling" operation="perc_add" value=".08"/>
+			<passive_effect name="EntityDamage" operation="perc_add" value="0.2"/>
+			<triggered_effect trigger="onSelfKilledOther" action="ModifyStats" stat="Health" operation="add" value="20"/>
+		</effect_group>
+		<effect_group tiered="false">
+		    <triggered_effect trigger="onSelfAttackedOther" action="ModifyStats" stat="Health" operation="add" value="1">
+		        <requirement name="StatComparePercCurrentToModMax" stat="health" operation="LTE" value=".3"/>
+			    <requirement name="IsAlive" target="other"/>
+	        </triggered_effect>
+	    </effect_group>
+		<effect_group tiered="false">
+		    <passive_effect name="EntityDamage" operation="base_add" value="100">
+		        <requirement name="StatComparePercCurrentToModMax" stat="health" operation="LTE" value=".4"/></passive_effect>
+	    </effect_group>
+			<!-- <passive_effect name="DamageFalloffRange" operation="base_add" value="-5"/> -->
+		<property name="PickupJournalEntry" value="augmentGunsTip"/>
+	</item_modifier>
+	
+	<item_modifier name="冰魔-液氮枪口" installable_tags="barrelAttachments,turretRanged" modifier_tags="barrelAttachment" blocked_tags="noMods" type="attachment">
+		<property name="Stacknumber" value="1"/> <property name="Group" value="Mods"/>
+		<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+		<property name="CustomIcon" value="液氮枪口"/>
+		<property name="UnlockedBy" value="拉莱耶秘仪"/>
+		<property name="DescriptionKey" value="IceMuzzle1Desc"/>
+		<!-- Muzzle brake: Directs some of the gases upwards to reduce recoil. Typically increases visibility of the gun/shooter as a result. -->
+		<item_property_overrides name="*">
+			<property name="DamageType" value="Cold"/>
+		</item_property_overrides>
+		<effect_group tiered="false">
+		    <passive_effect name="EntityDamage" operation="base_add" value="8"/>
+			<passive_effect name="KickDegreesVerticalMin" operation="perc_add" value="-.3"/>
+			<passive_effect name="KickDegreesVerticalMax" operation="perc_add" value="-.3"/>
+			<passive_effect name="KickDegreesHorizontalMin" operation="perc_add" value="-.2"/>
+			<passive_effect name="KickDegreesHorizontalMax" operation="perc_add" value="-.2"/>
+			<passive_effect name="EntityDamage" operation="perc_add" value="0.10"/>
+			<passive_effect name="WeaponHandling" operation="perc_add" value=".08"/>
+		</effect_group>
+		<effect_group tiered="false">
+			<requirement name="RandomRoll" seed_type="Random" target="self" min_max="0,100" operation="LTE" value="10"/>
+			<requirement name="NotHasBuff" target="other" buff="冻结"/>
+			     <triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" buff="霜冻"/>
+		</effect_group>
+		
+		<property name="PickupJournalEntry" value="augmentGunsTip"/>
+	</item_modifier>
+	
+	<item_modifier name="冰魔-冰冷之息" installable_tags="barrelAttachments,turretRanged" modifier_tags="barrelAttachment" blocked_tags="noMods" type="attachment">
+		<property name="Stacknumber" value="1"/> <property name="Group" value="Mods"/>
+		<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+		<property name="CustomIcon" value="冰冷之息"/>
+		<property name="UnlockedBy" value="拉莱耶秘仪"/>
+		<property name="DescriptionKey" value="IceMuzzle2Desc"/>
+		<!-- Muzzle brake: Directs some of the gases upwards to reduce recoil. Typically increases visibility of the gun/shooter as a result. -->
+		<item_property_overrides name="*">
+			<property name="DamageType" value="Cold"/>
+		</item_property_overrides>
+		<effect_group tiered="false">
+		    <passive_effect name="EntityDamage" operation="base_add" value="14"/>
+			<passive_effect name="KickDegreesVerticalMin" operation="perc_add" value="-.35"/>
+			<passive_effect name="KickDegreesVerticalMax" operation="perc_add" value="-.35"/>
+			<passive_effect name="KickDegreesHorizontalMin" operation="perc_add" value="-.25"/>
+			<passive_effect name="KickDegreesHorizontalMax" operation="perc_add" value="-.25"/>
+			<passive_effect name="EntityDamage" operation="perc_add" value="0.10"/>
+			<passive_effect name="WeaponHandling" operation="perc_add" value=".08"/>
+		</effect_group>
+		<effect_group tiered="false">
+			<requirement name="RandomRoll" seed_type="Random" target="self" min_max="0,100" operation="LTE" value="20"/>
+			<requirement name="NotHasBuff" target="other" buff="冻结"/>
+			     <triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" buff="霜冻"/>
+		</effect_group>
+		
+		<property name="PickupJournalEntry" value="augmentGunsTip"/>
+	</item_modifier>
+	
+	<item_modifier name="冰魔-极寒死神" installable_tags="barrelAttachments,turretRanged" modifier_tags="barrelAttachment" blocked_tags="noMods" type="attachment">
+		<property name="Stacknumber" value="1"/> <property name="Group" value="Mods"/>
+		<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+		<property name="CustomIcon" value="极寒死神"/>
+		<property name="UnlockedBy" value="拉莱耶秘仪"/>
+		<property name="DescriptionKey" value="IceMuzzle3Desc"/>
+		<!-- Muzzle brake: Directs some of the gases upwards to reduce recoil. Typically increases visibility of the gun/shooter as a result. -->
+		<item_property_overrides name="*">
+			<property name="DamageType" value="Cold"/>
+		</item_property_overrides>
+		<effect_group tiered="false">
+		    <passive_effect name="EntityDamage" operation="base_add" value="22"/>
+			<passive_effect name="KickDegreesVerticalMin" operation="perc_add" value="-.4"/>
+			<passive_effect name="KickDegreesVerticalMax" operation="perc_add" value="-.4"/>
+			<passive_effect name="KickDegreesHorizontalMin" operation="perc_add" value="-.3"/>
+			<passive_effect name="KickDegreesHorizontalMax" operation="perc_add" value="-.3"/>
+			<passive_effect name="EntityDamage" operation="perc_add" value="0.15"/>
+			<passive_effect name="WeaponHandling" operation="perc_add" value=".08"/>
+		</effect_group>
+		<effect_group tiered="false">
+			<requirement name="RandomRoll" seed_type="Random" target="self" min_max="0,100" operation="LTE" value="35"/>
+			<requirement name="NotHasBuff" target="other" buff="冻结"/>
+			     <triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" buff="霜冻"/>
+		</effect_group>
+		
+		<property name="PickupJournalEntry" value="augmentGunsTip"/>
+	</item_modifier>
+	
+	<item_modifier name="冰帝-极冰新星" installable_tags="barrelAttachments,turretRanged" modifier_tags="barrelAttachment" blocked_tags="noMods" type="attachment">
+		<property name="Stacknumber" value="1"/> <property name="Group" value="Mods"/>
+		<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+		<property name="CustomIcon" value="极冰新星"/>
+		<property name="UnlockedBy" value="深渊克图格亚"/>
+		<property name="DescriptionKey" value="IceMuzzle4Desc"/>
+		<!-- Muzzle brake: Directs some of the gases upwards to reduce recoil. Typically increases visibility of the gun/shooter as a result. -->
+		<item_property_overrides name="*">
+			<property name="DamageType" value="Cold"/>
+		</item_property_overrides>
+		<effect_group tiered="false">
+		    <passive_effect name="EntityDamage" operation="base_add" value="22"/>
+			<passive_effect name="KickDegreesVerticalMin" operation="perc_add" value="-.4"/>
+			<passive_effect name="KickDegreesVerticalMax" operation="perc_add" value="-.4"/>
+			<passive_effect name="KickDegreesHorizontalMin" operation="perc_add" value="-.3"/>
+			<passive_effect name="KickDegreesHorizontalMax" operation="perc_add" value="-.3"/>
+			<passive_effect name="EntityDamage" operation="perc_add" value="0.15"/>
+			<passive_effect name="WeaponHandling" operation="perc_add" value=".08"/>
+		</effect_group>
+		<effect_group tiered="false">
+			<requirement name="RandomRoll" seed_type="Random" target="self" min_max="0,100" operation="LTE" value="35"/>
+			<requirement name="NotHasBuff" target="other" buff="冻结"/>
+			    <triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="otherAOE" range="2" target_tags="zombie,animal" buff="极冰"/>
+		</effect_group>
+		<effect_group tiered="false">
+		<requirement name="CVarCompare" cvar="CS" operation="GTE" value="0"/>
+		<requirement name="CVarCompare" cvar="CS" operation="LT" value="2"/>
+		<passive_effect name="EntityDamage" operation="base_add" value="8"/>
+	</effect_group>
+	<effect_group tiered="false">
+		<requirement name="CVarCompare" cvar="CS" operation="GTE" value="2"/>
+		<requirement name="CVarCompare" cvar="CS" operation="LT" value="4"/>
+		<passive_effect name="EntityDamage" operation="base_add" value="16"/>
+	</effect_group>
+	<effect_group tiered="false">
+		<requirement name="CVarCompare" cvar="CS" operation="GTE" value="4"/>
+		<requirement name="CVarCompare" cvar="CS" operation="LT" value="6"/>
+		<passive_effect name="EntityDamage" operation="base_add" value="24"/>
+	</effect_group>
+	<effect_group tiered="false">
+		<requirement name="CVarCompare" cvar="CS" operation="GTE" value="6"/>
+		<requirement name="CVarCompare" cvar="CS" operation="LT" value="8"/>
+		<passive_effect name="EntityDamage" operation="base_add" value="32"/>
+	</effect_group>
+	<effect_group tiered="false">
+		<requirement name="CVarCompare" cvar="CS" operation="Equals" value="8"/>
+		<passive_effect name="EntityDamage" operation="base_add" value="45"/>
+	</effect_group>	
+		<property name="PickupJournalEntry" value="augmentGunsTip"/>
+	</item_modifier>
+	
+	<item_modifier name="异星核心" installable_tags="weapon,tool" modifier_tags="specialDamage" blocked_tags="noMods" type="attachment">
+		<property name="UnlockedBy" value="风暴崇拜"/>
+		<property name="CustomIcon" value="异星核心"/>
+		<property name="Stacknumber" value="1"/> <property name="Group" value="Mods"/>
+		<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+		<property name="DescriptionKey" value="ThKernelDesc"/>
+		<!--Do double damage to living enemies-->
+		<effect_group tiered="false">
+		    <passive_effect name="EntityDamage" operation="base_add" value="15"/>
+		    <passive_effect name="TargetArmor" operation="perc_add" value="-.25"/><display_value name="dTargetArmor" value="-.25"/>
+			<requirement name="EntityTagCompare" target="other" tags="player,animal"/>
+				<passive_effect name="EntityDamage" operation="perc_add" value="0.5"/>
+		</effect_group>
+		<effect_group tiered="false">
+			<requirement name="RandomRoll" seed_type="Random" target="self" min_max="0,100" operation="LTE" value="10"/>
+			     <triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" buff="buffShocked"/>
+		</effect_group>
+		<property name="PickupJournalEntry" value="augmentGunsTip"/>
+	</item_modifier>
+	
+	<item_modifier name="毒疫弹头" installable_tags="ranged" modifier_tags="crippling" blocked_tags="noMods" type="attachment">
+		<property name="UnlockedBy" value="黑暗献祭"/>
+		<property name="CustomIcon" value="毒疫弹头"/>
+		<property name="Stacknumber" value="1"/> <property name="Group" value="Mods"/>
+		<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+		<property name="DescriptionKey" value="dyBulletDesc"/>
+		<!--Each shot has a chance to cripple-->
+		<effect_group tiered="false">
+			<requirement name="EntityTagCompare" target="other" tags="walker"/>
+			<requirement name="!HoldingItemHasTags" tags="shotgun"/>
+			<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="20"/>
+				<triggered_effect trigger="onSelfDamagedOther" action="AddBuff" target="other" buff="buffInjuryCrippled01"/>
+		</effect_group>
+		<effect_group tiered="false">
+			<requirement name="EntityTagCompare" target="other" tags="walker"/>
+			<requirement name="HoldingItemHasTags" tags="shotgun"/>
+			<requirement name="RandomRoll" seed_type="Random" min_max="0,800" operation="LTE" value="20"/>
+				<triggered_effect trigger="onSelfDamagedOther" action="AddBuff" target="other" buff="buffInjuryCrippled01"/>
+		</effect_group>
+		<effect_group tiered="false">
+		    <passive_effect name="EntityDamage" operation="base_add" value="10"/>
+	        <requirement name="RandomRoll" seed_type="Random" target="self" min_max="0,100" operation="LTE" value="20"/>
+			<requirement name="!EntityTagCompare" target="other" tags="npc,vehicle,player,turret,drone"/>
+			    <triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" buff="神经毒1"/>
+	    </effect_group>
+		<property name="PickupJournalEntry" value="augmentGunsTip"/>
+	</item_modifier>
+	
+	<item_modifier name="恐怖毒液弹头" installable_tags="ranged" modifier_tags="crippling" blocked_tags="noMods" type="attachment">
+		<property name="UnlockedBy" value="黑暗献祭"/>
+		<property name="CustomIcon" value="恐怖毒液弹头"/>
+		<property name="Stacknumber" value="1"/> <property name="Group" value="Mods"/>
+		<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+		<property name="DescriptionKey" value="dyBullet2Desc"/>
+		<!--Each shot has a chance to cripple-->
+		<effect_group tiered="false">
+			<requirement name="EntityTagCompare" target="other" tags="walker"/>
+			<requirement name="!HoldingItemHasTags" tags="shotgun"/>
+			<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="20"/>
+				<triggered_effect trigger="onSelfDamagedOther" action="AddBuff" target="other" buff="buffInjuryCrippled01"/>
+		</effect_group>
+		<effect_group tiered="false">
+			<requirement name="EntityTagCompare" target="other" tags="walker"/>
+			<requirement name="HoldingItemHasTags" tags="shotgun"/>
+			<requirement name="RandomRoll" seed_type="Random" min_max="0,800" operation="LTE" value="20"/>
+				<triggered_effect trigger="onSelfDamagedOther" action="AddBuff" target="other" buff="buffInjuryCrippled01"/>
+		</effect_group>
+		<effect_group tiered="false">
+	        <requirement name="RandomRoll" seed_type="Random" target="self" min_max="0,100" operation="LTE" value="40"/>
+			<requirement name="!EntityTagCompare" target="other" tags="npc,vehicle,player,turret,drone"/>
+			    <triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" buff="恐怖毒素"/>
+	    </effect_group>
+	<effect_group tiered="false">
+		<requirement name="CVarCompare" cvar="CS" operation="GTE" value="0"/>
+		<requirement name="CVarCompare" cvar="CS" operation="LT" value="2"/>
+		<passive_effect name="EntityDamage" operation="base_add" value="16"/>
+	</effect_group>
+	<effect_group tiered="false">
+		<requirement name="CVarCompare" cvar="CS" operation="GTE" value="2"/>
+		<requirement name="CVarCompare" cvar="CS" operation="LT" value="4"/>
+		<passive_effect name="EntityDamage" operation="base_add" value="24"/>
+	</effect_group>
+	<effect_group tiered="false">
+		<requirement name="CVarCompare" cvar="CS" operation="GTE" value="4"/>
+		<requirement name="CVarCompare" cvar="CS" operation="LT" value="6"/>
+		<passive_effect name="EntityDamage" operation="base_add" value="32"/>
+	</effect_group>
+	<effect_group tiered="false">
+		<requirement name="CVarCompare" cvar="CS" operation="GTE" value="6"/>
+		<requirement name="CVarCompare" cvar="CS" operation="LT" value="8"/>
+		<passive_effect name="EntityDamage" operation="base_add" value="40"/>
+	</effect_group>
+	<effect_group tiered="false">
+		<requirement name="CVarCompare" cvar="CS" operation="Equals" value="8"/>
+		<passive_effect name="EntityDamage" operation="base_add" value="50"/>
+	</effect_group>
+		<property name="PickupJournalEntry" value="augmentGunsTip"/>
+	</item_modifier>
+	
+	<item_modifier name="死咒弹头" installable_tags="ranged" modifier_tags="crippling" blocked_tags="noMods" type="attachment">
+		<property name="UnlockedBy" value="古老诅咒"/>
+		<property name="CustomIcon" value="死咒弹头"/>
+		<property name="Stacknumber" value="1"/> <property name="Group" value="Mods"/>
+		<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+		<property name="DescriptionKey" value="szBulletDesc"/>
+		<!--Each shot has a chance to cripple-->
+		<effect_group tiered="false">
+		    <passive_effect name="EntityDamage" operation="base_add" value="20"/>
+	    </effect_group>
+		<effect_group tiered="false">
+			<requirement name="EntityTagCompare" target="other" tags="walker"/>
+			<requirement name="!HoldingItemHasTags" tags="shotgun"/>
+			<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="20"/>
+				<triggered_effect trigger="onSelfDamagedOther" action="AddBuff" target="other" buff="buffInjuryCrippled01"/>
+		</effect_group>
+		<effect_group tiered="false">
+			<requirement name="EntityTagCompare" target="other" tags="walker"/>
+			<requirement name="HoldingItemHasTags" tags="shotgun"/>
+			<requirement name="RandomRoll" seed_type="Random" min_max="0,800" operation="LTE" value="20"/>
+				<triggered_effect trigger="onSelfDamagedOther" action="AddBuff" target="other" buff="buffInjuryCrippled01"/>
+		</effect_group>
+		<effect_group tiered="false">
+		    <requirement name="RandomRoll" seed_type="Random" target="self" min_max="0,100" operation="LTE" value="10"/>
+			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" buff="死咒1">
+			    <requirement name="NotHasBuff" buff="咒术解除"/>
+			    <requirement name="NotHasBuff" buff="死咒1"/>
+			    <requirement name="NotHasBuff" buff="死咒2"/>
+			    <requirement name="NotHasBuff" buff="死咒3"/>
+			    <requirement name="NotHasBuff" buff="死咒4"/>
+			    <requirement name="NotHasBuff" buff="死咒5"/>
+			    <requirement name="NotHasBuff" buff="死咒6"/>
+			    <requirement name="NotHasBuff" buff="死咒7"/>
+			</triggered_effect>
+			<!--<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" buff="死咒2">
+			    <requirement name="NotHasBuff" buff="咒术解除"/>
+			    <requirement name="HasBuff" buff="死咒1"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" buff="死咒3">
+			    <requirement name="NotHasBuff" buff="咒术解除"/>
+			    <requirement name="HasBuff" buff="死咒2"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" buff="死咒4">
+			    <requirement name="NotHasBuff" buff="咒术解除"/>
+			    <requirement name="HasBuff" buff="死咒3"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" buff="死咒5">
+			    <requirement name="NotHasBuff" buff="咒术解除"/>
+			    <requirement name="HasBuff" buff="死咒4"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" buff="死咒6">
+			    <requirement name="NotHasBuff" buff="咒术解除"/>
+			    <requirement name="HasBuff" buff="死咒5"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" buff="死咒7">
+			    <requirement name="NotHasBuff" buff="咒术解除"/>
+			    <requirement name="HasBuff" buff="死咒6"/>
+			</triggered_effect>-->
+	    </effect_group>
+		<!--<effect_group tiered="false">
+		    <requirements compare_type="and">
+				<requirement name="NotHasBuff" buff="咒术解除"/>
+			    <requirement name="NotHasBuff" buff="死咒1"/>
+			    <requirement name="NotHasBuff" buff="死咒2"/>
+			    <requirement name="NotHasBuff" buff="死咒3"/>
+			    <requirement name="NotHasBuff" buff="死咒4"/>
+			    <requirement name="NotHasBuff" buff="死咒5"/>
+			    <requirement name="NotHasBuff" buff="死咒6"/>
+			    <requirement name="NotHasBuff" buff="死咒7"/>
+			</requirements>
+			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" buff="死咒1"/>
+	    </effect_group>-->
+		<property name="PickupJournalEntry" value="augmentGunsTip"/>
+	</item_modifier>
+	
+	<item_modifier name="鹰眼弹头" installable_tags="ranged" modifier_tags="crippling" blocked_tags="noMods" type="attachment">
+		<property name="UnlockedBy" value="钢铁意志"/>
+		<property name="CustomIcon" value="鹰眼弹头"/>
+		<property name="Stacknumber" value="1"/> <property name="Group" value="Mods"/>
+		<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+		<property name="DescriptionKey" value="yyBulletDesc"/>
+		<!--Each shot has a chance to cripple-->
+		<effect_group tiered="false">
+			<requirement name="EntityTagCompare" target="other" tags="walker"/>
+			<requirement name="!HoldingItemHasTags" tags="shotgun"/>
+			<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="20"/>
+				<triggered_effect trigger="onSelfDamagedOther" action="AddBuff" target="other" buff="buffInjuryCrippled01"/>
+		</effect_group>
+		<effect_group tiered="false">
+			<requirement name="EntityTagCompare" target="other" tags="walker"/>
+			<requirement name="HoldingItemHasTags" tags="shotgun"/>
+			<requirement name="RandomRoll" seed_type="Random" min_max="0,800" operation="LTE" value="20"/>
+				<triggered_effect trigger="onSelfDamagedOther" action="AddBuff" target="other" buff="buffInjuryCrippled01"/>
+		</effect_group>
+		<effect_group tiered="false">
+		    <passive_effect name="EntityDamage" operation="perc_add" value="0.2"/>
+	        <passive_effect name="ReloadSpeedMultiplier" operation="perc_subtract" value="0.4"/>
+			<passive_effect name="RoundsPerMinute" operation="perc_add" value="-.4"/>
+	    </effect_group>
+		<effect_group tiered="false">
+		    <triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="鹰眼30%">
+			    <requirement name="NotHasBuff" buff="鹰眼冷却"/>
+				<requirement name="NotHasBuff" buff="鹰眼30%"/>
+				<requirement name="NotHasBuff" buff="鹰眼60%"/>
+				<requirement name="NotHasBuff" buff="鹰眼100%"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="鹰眼装备1"/>
+			<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="鹰眼装备1"/>
+			<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="鹰眼30%"/>
+			<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="鹰眼60%"/>
+			<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="鹰眼100%"/>
+	    </effect_group>
+		<property name="PickupJournalEntry" value="augmentGunsTip"/>
+	</item_modifier>
+	
+	<item_modifier name="死咒刀锋" installable_tags="tool,perkBrawler,axe,shovel,perkJavelinMaster,perkDeepCuts,咒伤" modifier_tags="damage" blocked_tags="noMods" type="attachment">
+		<property name="Stacknumber" value="1"/> <property name="Group" value="Mods"/>
+		<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+		<property name="UnlockedBy" value="古老诅咒"/>
+		<property name="CustomIcon" value="死咒刀锋"/>
+		<property name="DescriptionKey" value="szBladeDesc"/>
+		<effect_group tiered="false">
+		    <passive_effect name="DegradationPerUse" operation="perc_add" value="-.4" tags="perkMiner69r,perkSalvageOperations,perkElectrocutioner,perkJavelinMaster,perkPummelPete,perkSkullCrusher,perkDeepCuts,perkBrawler,admin"/>
+			<passive_effect name="EntityDamage" operation="base_add" value="30"/>
+		</effect_group>
+		<effect_group tiered="false">
+		    <requirement name="RandomRoll" seed_type="Random" target="self" min_max="0,100" operation="LTE" value="20"/>
+			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" buff="死咒1">
+			    <requirement name="NotHasBuff" buff="咒术解除"/>
+			    <requirement name="NotHasBuff" buff="死咒1"/>
+			    <requirement name="NotHasBuff" buff="死咒2"/>
+			    <requirement name="NotHasBuff" buff="死咒3"/>
+			    <requirement name="NotHasBuff" buff="死咒4"/>
+			    <requirement name="NotHasBuff" buff="死咒5"/>
+			    <requirement name="NotHasBuff" buff="死咒6"/>
+			    <requirement name="NotHasBuff" buff="死咒7"/>
+			</triggered_effect>
+	    </effect_group>
+	</item_modifier>
+	
+	<item_modifier name="血欲禁忌刀锋" installable_tags="tool,perkBrawler,axe,shovel,perkJavelinMaster,perkDeepCuts,血伤" modifier_tags="damage" blocked_tags="noMods" type="attachment">
+		<property name="Stacknumber" value="1"/> <property name="Group" value="Mods"/>
+		<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+		<property name="UnlockedBy" value="血之秘术"/>
+		<property name="CustomIcon" value="血欲刀锋"/>
+		<property name="DescriptionKey" value="BloodBladeDesc"/>
+		<effect_group tiered="false">
+		    <passive_effect name="DegradationPerUse" operation="perc_add" value="-.4" tags="perkMiner69r,perkSalvageOperations,perkElectrocutioner,perkJavelinMaster,perkPummelPete,perkSkullCrusher,perkDeepCuts,perkBrawler,admin"/>
+			<passive_effect name="EntityDamage" operation="base_add" value="30"/>
+		</effect_group>
+		<effect_group tiered="false">
+		    <triggered_effect trigger="onSelfAttackedOther" action="ModifyStats" stat="Health" operation="add" value="1">
+			    <requirement name="IsAlive" target="other"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfKilledOther" action="ModifyStats" stat="Health" operation="add" value="3"/>
+	    </effect_group>
+		<effect_group tiered="false">
+		    <requirement name="StatComparePercCurrentToModMax" stat="health" operation="LTE" value=".2"/>
+		    <triggered_effect trigger="onSelfAttackedOther" action="ModifyStats" stat="Health" operation="add" value="2">
+			    <requirement name="IsAlive" target="other"/>
+			</triggered_effect>
+	    </effect_group>
+	</item_modifier>
+	
+	<item_modifier name="恶魂封印弹匣" installable_tags="magazine,turretRanged" modifier_tags="magazine" blocked_tags="noMods" type="attachment">
+		<property name="UnlockedBy" value="黑暗献祭"/>
+		<property name="CustomIcon" value="恶魂封印弹夹"/>
+		<property name="Stacknumber" value="1"/> <property name="Group" value="Mods"/>
+		<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+		<property name="DescriptionKey" value="Seal1Desc"/>
+		<effect_group tiered="false">
+			<passive_effect name="MagazineSize" operation="perc_add" value=".6"/>
+		</effect_group>
+		<effect_group tiered="false">
+			<requirement name="RandomRoll" seed_type="Random" target="self" min_max="0,100" operation="LTE" value="20"/>
+			    <triggered_effect trigger="onSelfAttackedOther" action="ModifyStats" target="other" stat="Health" operation="subtract" value="20"/>
+				<passive_effect name="EntityDamage" operation="perc_add" value="1.5"/>
+		</effect_group>
+		<effect_group tiered="false">
+		    <triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="恶魂封印1"/>
+		    <triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="封印之力Lv1">
+		       <requirement name="HasBuff" buff="恶魂封印2"/>
+		       <requirement name="HasBuff" buff="恶魂封印3"/>
+			   <requirement name="NotHasBuff" buff="封印之力Lv1"/>
+			   <requirement name="NotHasBuff" buff="封印之力Lv2"/>
+			   <requirement name="NotHasBuff" buff="封印之力Max"/>
+		    </triggered_effect>
+		    <triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="恶魂封印1"/>
+	    </effect_group>
+		<property name="PickupJournalEntry" value="augmentGunsTip"/>
+	</item_modifier>
+	
+	<item_modifier name="恶魂封印握把" installable_tags="bottomAttachments,turretRanged" modifier_tags="grips" blocked_tags="noMods" type="attachment">
+		<property name="UnlockedBy" value="黑暗献祭"/>
+		<property name="CustomIcon" value="恶魂封印握把"/>
+		<property name="Stacknumber" value="1"/> <property name="Group" value="Mods"/>
+		<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+		<property name="DescriptionKey" value="Seal2Desc"/>
+		<effect_group tiered="false">
+		    <passive_effect name="EntityDamage" operation="base_add" value="15"/> <!-- meleeWpnBladeT3Machete -->
+			<passive_effect name="SpreadMultiplierCrouching" operation="perc_add" value="-.15"/>
+			<passive_effect name="SpreadMultiplierHip" operation="perc_add" value="-.15"/>
+			<passive_effect name="SpreadMultiplierWalking" operation="perc_add" value="-.15"/>
+			<passive_effect name="WeaponHandling" operation="perc_add" value=".13"/>
+			<passive_effect name="WeaponHandling" operation="perc_add" value="-.08">
+				<requirement name="HasBuff" buff="buffHoldBreathAiming01"/>
+			</passive_effect>
+			<passive_effect name="KickDegreesVerticalMin" operation="perc_add" value="-.5"/>
+			<passive_effect name="KickDegreesVerticalMax" operation="perc_add" value="-.5"/>
+			<passive_effect name="KickDegreesHorizontalMin" operation="perc_add" value="-.5"/>
+			<passive_effect name="KickDegreesHorizontalMax" operation="perc_add" value="-.5"/>
+		</effect_group>
+		<effect_group tiered="false">
+		    <triggered_effect trigger="onSelfKilledOther" action="AddBuff" buff="聚焦"/>
+		</effect_group>
+		<effect_group tiered="false">
+		    <triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="恶魂封印2"/>
+		    <triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="封印之力Lv1">
+		       <requirement name="HasBuff" buff="恶魂封印1"/>
+		       <requirement name="HasBuff" buff="恶魂封印3"/>
+			   <requirement name="NotHasBuff" buff="封印之力Lv1"/>
+			   <requirement name="NotHasBuff" buff="封印之力Lv2"/>
+			   <requirement name="NotHasBuff" buff="封印之力Max"/>
+		    </triggered_effect>
+		    <triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="恶魂封印2"/>
+	    </effect_group>
+		<property name="PickupJournalEntry" value="augmentGunsTip"/>
+	</item_modifier>
+	
+	<item_modifier name="恶魂封印透镜" installable_tags="mediumTopAttachments" modifier_tags="scope" blocked_tags="noMods,noScopes,shotguns" type="attachment">
+	    <property name="Extends" value="modGunScopeMedium"/>
+		<property name="UnlockedBy" value="黑暗献祭"/>
+		<property name="CustomIcon" value="恶魂封印透镜"/>
+		<property name="Stacknumber" value="1"/> <property name="Group" value="Mods"/>
+		<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+		<property name="DescriptionKey" value="Seal3Desc"/>
+		
+		<item_property_overrides name="*">
+			<property name="CrosshairOnAim" value="true"/>
+			<property name="Zoom_overlay" value="#Other/Items?Weapons/HUD/sniper_zoom_overlay.tga"/>
+			<property name="Zoom_max_out" value="25"/>
+			<property name="Zoom_max_in" value="15"/>
+		</item_property_overrides>
+
+		<item_property_overrides name="猎魔弩炮">
+			<property name="ScopeOffset" value="-.06,.122,.095"/>
+			<property name="ScopeScale" value="1,1,1"/>
+			<property name="ScopeCameraOffset" value="0,-.022,0"/>
+		</item_property_overrides>
+		
+		<item_property_overrides name="AWM">
+			<property name="ScopeOffset" value="0,0.12,.12"/>
+			<property name="ScopeScale" value="1.3,1.3,1.3"/>
+			<property name="ScopeCameraOffset" value="0,-.022,0"/>
+		</item_property_overrides>
+		
+		<item_property_overrides name="M82">
+			<property name="ScopeOffset" value="0,.093,-.163"/>
+			<property name="ScopeScale" value="1.3,1.3,1.3"/>
+			<property name="ScopeCameraOffset" value="0,-.022,0"/>
+		</item_property_overrides>
+		
+		<item_property_overrides name="gunMGT1AK47">
+			<property name="ScopeOffset" value="0,.085,-.14"/>
+			<property name="ScopeScale" value="1,1,1"/>
+			<property name="ScopeCameraOffset" value="0,-.022,0"/>
+		</item_property_overrides>
+
+		<item_property_overrides name="gunMGT2TacticalAR">
+			<property name="ScopeOffset" value="0,0.1,-0.117"/>
+			<property name="ScopeScale" value="1,1,1"/>
+			<property name="ScopeCameraOffset" value="0,-.022,0"/>
+		</item_property_overrides>
+
+		<item_property_overrides name="gunHandgunT3SMG5">
+			<property name="ScopeOffset" value="-.0012,.098,-.2405"/>
+			<property name="ScopeScale" value=".8,.8,.8"/>
+			<property name="ScopeCameraOffset" value="0,0,0"/>
+		</item_property_overrides>
+
+		<item_property_overrides name="gunRifleT1HuntingRifle">
+			<property name="ScopeOffset" value="-.0018,.075,.015"/>
+			<property name="ScopeScale" value="1,1,1"/>
+			<property name="ScopeCameraOffset" value="0,-.0238,0"/>
+		</item_property_overrides>
+
+		<item_property_overrides name="gunRifleT2MarksmanRifle">
+			<property name="ScopeOffset" value="-.0018,.07,-.10"/>
+			<property name="ScopeScale" value="1.6,1.6,1.6"/>
+			<property name="ScopeCameraOffset" value="0,0,0"/>
+		</item_property_overrides>
+
+		<item_property_overrides name="gunBowT1IronCrossbow">
+			<property name="ScopeOffset" value="0,.061,-.0761"/>
+			<property name="ScopeScale" value=".9,.9,.9"/>
+			<property name="ScopeCameraOffset" value="0,0,0"/>
+		</item_property_overrides>
+		<item_property_overrides name="gunBowT3CompoundCrossbow">
+			<property name="ScopeOffset" value="0,.092,-.06"/>
+			<property name="ScopeScale" value=".9,.9,.9"/>
+		</item_property_overrides>
+		<item_property_overrides name="M16">
+			<property name="ScopeOffset" value="0,.15,0.045"/>
+			<property name="ScopeScale" value="0.4,0.4,0.4"/>
+			<property name="ScopeCameraOffset" value="0,0,0"/>
+		</item_property_overrides>
+		<item_property_overrides name="M4A1">
+			<property name="ScopeOffset" value="0,.15,0.045"/>
+			<property name="ScopeScale" value="0.4,0.4,0.4"/>
+			<property name="ScopeCameraOffset" value="0,0,0"/>
+		</item_property_overrides>
+		<item_property_overrides name="M249">
+			<property name="ScopeOffset" value="0,.18,0.038"/>
+			<property name="ScopeScale" value="0.4,0.4,0.4"/>
+			<property name="ScopeCameraOffset" value="0,0,0"/>
+		</item_property_overrides>
+		<item_property_overrides name="AN94">
+			<property name="ScopeOffset" value="0,.107,0.085"/>
+			<property name="ScopeScale" value="0.4,0.4,0.4"/>
+			<property name="ScopeCameraOffset" value="0,0,0"/>
+		</item_property_overrides>
+		<item_property_overrides name="SCAR">
+			<property name="ScopeOffset" value="0,.115,0.025"/>
+			<property name="ScopeScale" value="0.4,0.4,0.4"/>
+			<property name="ScopeCameraOffset" value="0,0,0"/>
+		</item_property_overrides>
+
+		<!-- visible attachment: scope x4 -->
+		<effect_group>
+			<requirement name="StatComparePercCurrentToMax" target="other" stat="Health" operation="GTE" value=".8"/>
+				<passive_effect name="EntityDamage" operation="perc_add" value=".5"/>
+			    <triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" target_tags="walker" buff="buffInjuryStunned02"/>
+		</effect_group>
+		<effect_group tiered="false" name="external attachment prefab (old way)">
+			<requirement name="!HoldingItemHasTags" tags="attachmentsIncluded"/>
+				<triggered_effect trigger="onSelfHoldingItemCreated" action="AttachPrefabToHeldItem" prefab="#Other/Items?Mods/Scopes/scope_4xPrefab.prefab" parent_transform="Attachments/Scope"/>
+		</effect_group>
+		<effect_group tiered="false" name="internal attachment prefab (A19)">
+			<requirement name="HoldingItemHasTags" tags="attachmentsIncluded"/>
+				<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="true" parent_transform="#HeldItemRoot" transform_path="scope"/>
+		</effect_group>
+
+		<effect_group tiered="false" name="mod effects">
+			<passive_effect name="SpreadMultiplierAiming" operation="perc_add" value="-.18" tags="perkGunslinger,perkDeadEye,perkMachineGunner,perkArchery,admin"/>
+			<passive_effect name="SpreadMultiplierAiming" operation="perc_add" value="-.18" tags="perkDeadEye,perkArchery,admin">
+				<requirement name="ItemHasTags" tags="perkDeadEye,crossbow"/></passive_effect>
+			<passive_effect name="EntityDamage" operation="perc_add" value=".1">
+				<requirement name="ProgressionLevel" progression_name="perkSniperDamage" operation="Equals" value="1"/>
+				<requirement name="HasBuff" buff="buffHoldBreathAiming01"/>
+			</passive_effect>
+		</effect_group>
+		<effect_group tiered="false">
+		    <triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="恶魂封印3"/>
+		    <triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="封印之力Lv1">
+		       <requirement name="HasBuff" buff="恶魂封印1"/>
+		       <requirement name="HasBuff" buff="恶魂封印2"/>
+			   <requirement name="NotHasBuff" buff="封印之力Lv1"/>
+			   <requirement name="NotHasBuff" buff="封印之力Lv2"/>
+			   <requirement name="NotHasBuff" buff="封印之力Max"/>
+		    </triggered_effect>
+		    <triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="恶魂封印3"/>
+	    </effect_group>
+		<property name="PickupJournalEntry" value="augmentGunsTip"/>
+	</item_modifier>
+	
+	<item_modifier name="梦魇-暗影杀星" installable_tags="gun" modifier_tags="barrelAttachment" blocked_tags="noMods,noSilencer" type="attachment">
+		<property name="UnlockedBy" value="古老诅咒"/>
+		<property name="CustomIcon" value="梦魇-暗影杀星"/>
+		<property name="DescriptionKey" value="Shadow01-1Desc"/>
+		<property name="Stacknumber" value="1"/> <property name="Group" value="Mods"/>
+		<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+		<!--Decreases sound footprint by x% -->
+		<item_property_overrides name="*">
+			<property name="Sound_start" value="pistol_s_fire"/>
+			<property name="Sound_end" value=""/>
+			<property name="Sound_loop" value="pistol_s_fire"/>
+		</item_property_overrides>
+
+		<item_property_overrides name="gunHandgunT1Pistol">
+			<property name="Sound_start" value="pistol_s_fire"/>
+			<property name="BarrelOffset" value="0,-.006,.127"/>
+			<property name="BarrelScale" value="1,1,1"/>
+		</item_property_overrides>
+
+		<item_property_overrides name="gunHandgunT3SMG5">
+			<property name="Sound_start" value="mp5_s_fire"/>
+			<property name="Sound_end" value="silencefiller"/>
+			<property name="Sound_loop" value="mp5_s_fire"/>
+			<property name="BarrelOffset" value="0,0,0"/>
+			<property name="BarrelScale" value="1,1,1"/>
+		</item_property_overrides>
+
+		<item_property_overrides name="gunHandgunT3DesertVulture">
+			<property name="Sound_start" value="pump_shotgun_s_fire"/>
+			<property name="Sound_loop" value="pump_shotgun_s_fire"/>
+			<property name="BarrelOffset" value="0,0,0"/>
+			<property name="BarrelScale" value="1,1,1"/>
+		</item_property_overrides>
+
+		<item_property_overrides name="gunShotgunT1DoubleBarrel">
+			<property name="Sound_start" value="pump_shotgun_s_fire"/>
+		</item_property_overrides>
+
+		<item_property_overrides name="gunShotgunT2PumpShotgun">
+			<property name="Sound_start" value="pump_shotgun_s_fire"/>
+			<property name="BarrelOffset" value="0,-.0322,.4516"/>
+			<property name="BarrelScale" value="1.1,1.1,1.5"/>
+		</item_property_overrides>
+
+		<item_property_overrides name="gunShotgunT3AutoShotgun">
+			<property name="Sound_start" value="pump_shotgun_s_fire"/>
+			<property name="Sound_loop" value="pump_shotgun_s_fire"/>
+			<property name="BarrelOffset" value="0,-.0322,.4516"/>
+			<property name="BarrelScale" value="1.1,1.1,1.5"/>
+		</item_property_overrides>
+
+		<item_property_overrides name="gunRifleT1HuntingRifle">
+			<property name="Sound_start" value="hunting_rifle_s_fire"/>
+			<property name="BarrelOffset" value="0,-.009,.551"/>
+			<property name="BarrelScale" value="1,1,1"/>
+		</item_property_overrides>
+
+		<item_property_overrides name="gunRifleT2MarksmanRifle">
+			<property name="Sound_start" value="sniperrifle_s_fire"/>
+			<property name="Sound_loop" value="sniperrifle_s_fire"/>
+			<property name="BarrelOffset" value="0,-.02,.2182"/>
+			<property name="BarrelScale" value=".88,.88,.88"/>
+		</item_property_overrides>
+
+		<item_property_overrides name="gunRifleT3SniperRifle">
+			<property name="Sound_start" value="sniperrifle_s_fire"/>
+			<property name="Sound_loop" value="sniperrifle_s_fire"/>
+			<property name="BarrelOffset" value="0,-.02,.2182"/>
+			<property name="BarrelScale" value=".88,.88,.88"/>
+		</item_property_overrides>
+
+		<item_property_overrides name="gunMGT1AK47">
+			<property name="Sound_start" value="ak47_s_fire"/>
+			<property name="Sound_end" value="silencefiller"/>
+			<property name="Sound_loop" value="ak47_s_fire"/>
+			<property name="BarrelOffset" value="-.001,-.0197,.3197"/>
+			<property name="BarrelScale" value="1,1,1"/>
+		</item_property_overrides>
+
+		<item_property_overrides name="gunMGT2TacticalAR">
+			<property name="Sound_start" value="ak47_s_fire"/>
+			<property name="Sound_end" value="silencefiller"/>
+			<property name="Sound_loop" value="ak47_s_fire"/>
+			<property name="BarrelOffset" value="0,.005,.275"/>
+			<property name="BarrelScale" value="1,1,1"/>
+		</item_property_overrides>
+
+		<item_property_overrides name="gunMGT3M60">
+			<property name="Sound_start" value="m60_s_fire"/>
+			<property name="Sound_end" value="silencefiller"/>
+			<property name="Sound_loop" value="m60_s_fire"/>
+			<property name="BarrelOffset" value="0,-.005,.31"/>
+		</item_property_overrides>
+		
+		<item_property_overrides name="1911">
+			<property name="Sound_start" value="pistol_s_fire"/>
+			<property name="BarrelOffset" value="0,0.01,-.02"/>
+			<property name="BarrelScale" value="0.7,0.7,0.7"/>
+		</item_property_overrides>
+		
+		<item_property_overrides name="符文1911">
+			<property name="Sound_start" value="pistol_s_fire"/>
+			<property name="BarrelOffset" value="0,0.01,-.02"/>
+			<property name="BarrelScale" value="0.7,0.7,0.7"/>
+		</item_property_overrides>
+		
+		<item_property_overrides name="符文沙漠秃鹫">
+			<property name="Sound_start" value="pump_shotgun_s_fire"/>
+			<property name="Sound_loop" value="pump_shotgun_s_fire"/>
+			<property name="BarrelOffset" value="0,0,0"/>
+			<property name="BarrelScale" value="1,1,1"/>
+		</item_property_overrides>
+		
+		<item_property_overrides name="M92F">
+			<property name="Sound_start" value="pistol_s_fire"/>
+			<property name="BarrelOffset" value="0,0.027,-.005"/>
+			<property name="BarrelScale" value="1,1,1"/>
+		</item_property_overrides>
+		
+		<item_property_overrides name="圣花左轮">
+			<property name="Sound_start" value="pistol_s_fire"/>
+			<property name="BarrelOffset" value="0,0,1"/>
+			<property name="BarrelScale" value="1,1,1"/>
+		</item_property_overrides>
+		
+		<item_property_overrides name="符文-圣花左轮">
+			<property name="Sound_start" value="pistol_s_fire"/>
+			<property name="BarrelOffset" value="0,0,1"/>
+			<property name="BarrelScale" value="1,1,1"/>
+		</item_property_overrides>
+		
+		<item_property_overrides name="汤姆逊冲锋枪">
+			<property name="Sound_start" value="pistol_s_fire"/>
+			<property name="BarrelOffset" value="0,0.019,0.27"/>
+			<property name="BarrelScale" value="1,1,1"/>
+		</item_property_overrides>
+		
+		<item_property_overrides name="M16">
+			<property name="Sound_start" value="pistol_s_fire"/>
+			<property name="BarrelOffset" value="0,0.038,0.69"/>
+			<property name="BarrelScale" value="1,1,1"/>
+		</item_property_overrides>
+		
+		<item_property_overrides name="M4A1">
+			<property name="Sound_start" value="pistol_s_fire"/>
+			<property name="BarrelOffset" value="0,0.067,0.49"/>
+			<property name="BarrelScale" value="1,1,1"/>
+		</item_property_overrides>
+		
+		<item_property_overrides name="Uzi">
+			<property name="Sound_start" value="pistol_s_fire"/>
+			<property name="BarrelOffset" value="0,0.023,0.01"/>
+			<property name="BarrelScale" value="1,1,1"/>
+		</item_property_overrides>
+		
+		<item_property_overrides name="M249">
+			<property name="Sound_start" value="pistol_s_fire"/>
+			<property name="BarrelOffset" value="0,0.023,0.3"/>
+			<property name="BarrelScale" value="1,1,1"/>
+		</item_property_overrides>
+		
+		<item_property_overrides name="AN94">
+			<property name="Sound_start" value="pistol_s_fire"/>
+			<property name="BarrelOffset" value="0,0.017,0.62"/>
+			<property name="BarrelScale" value="1,1,1"/>
+		</item_property_overrides>
+		
+		<item_property_overrides name="SCAR">
+			<property name="Sound_start" value="pistol_s_fire"/>
+			<property name="BarrelOffset" value="0,.02,0.3"/>
+			<property name="BarrelScale" value="1,1,1"/>
+		</item_property_overrides>
+
+		<!-- visible attachment: silencer -->
+		<effect_group tiered="false" name="external attachment prefab (old way)">
+			<requirement name="!HoldingItemHasTags" tags="dBarrel"/>
+			<requirement name="!HoldingItemHasTags" tags="attachmentsIncluded"/>
+				<triggered_effect trigger="onSelfHoldingItemCreated" action="AttachPrefabToHeldItem" prefab="#Other/Items?Mods/Barrels/SilencerPrefab.prefab" parent_transform="Attachments/Barrel"/>
+		</effect_group>
+		<effect_group tiered="false" name="internal attachment prefab (A19)">
+			<requirement name="HoldingItemHasTags" tags="attachmentsIncluded"/>
+				<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="true" parent_transform="#HeldItemRoot" transform_path="silencer"/>
+		</effect_group>
+
+		<effect_group tiered="false" name="mod effects">
+			<passive_effect name="EntityDamage" operation="perc_add" value="-.15">
+				<requirement name="ProgressionLevel" progression_name="perkUrbanCombatComplete" operation="LT" value="1"/>
+			</passive_effect>
+			<passive_effect name="DamageFalloffRange" operation="perc_add" value="-.2"/>
+			<passive_effect name="MaxRange" operation="perc_add" value="-.25"/>
+		</effect_group>
+		<effect_group tiered="false" name="mod effects">
+		    <passive_effect name="DamageModifier" operation="perc_add" value="2" tags="head"/>
+			<passive_effect name="DismemberChance" operation="base_add" value=".1"/>
+		</effect_group>
+		<effect_group tiered="false">
+		    <triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="SAN装备1"/>
+		    <triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="SAN装备1"/>
+			<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="灵魂熔炼">
+		       <requirement name="HasBuff" buff="SAN装备2"/>
+		       <requirement name="HasBuff" buff="SAN装备3"/>
+			   <requirement name="NotHasBuff" buff="灵魂熔炼"/>
+		    </triggered_effect>
+	    </effect_group>
+		<property name="PickupJournalEntry" value="augmentGunsTip"/>
+	</item_modifier>
+	
+	<item_modifier name="梦魇-深渊凝望镜" installable_tags="largeTopAttachments" modifier_tags="scope" blocked_tags="noMods,noScopes,shotguns" type="attachment">
+		<property name="UnlockedBy" value="古老诅咒"/>
+		<property name="CustomIcon" value="深渊凝望镜"/>
+		<property name="DescriptionKey" value="Shadow02Desc"/>
+		<property name="Stacknumber" value="1"/> <property name="Group" value="Mods"/>
+		<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+
+		<item_property_overrides name="*">
+			<property name="CrosshairOnAim" value="true"/>
+			<property name="Zoom_overlay" value="#Other/Items?Weapons/HUD/sniper_zoom_overlay.tga"/>
+			<property name="Zoom_max_out" value="20"/>
+			<property name="Zoom_max_in" value="10"/>
+		</item_property_overrides>
+
+		<item_property_overrides name="gunMGT1AK47">
+			<property name="ScopeOffset" value="0,-.0523,.1686"/>
+			<property name="ScopeScale" value="1,1,1"/>
+			<property name="ScopeCameraOffset" value="0,0,0"/>
+		</item_property_overrides>
+
+		<item_property_overrides name="gunRifleT1HuntingRifle">
+			<property name="ScopeOffset" value="-.0006,0,.14"/>
+			<property name="ScopeScale" value="1.2,1.2,1.2"/>
+			<property name="ScopeCameraOffset" value="0,-.022,0"/>
+		</item_property_overrides>
+
+		<item_property_overrides name="gunHandgunT3SMG5">
+			<property name="ScopeOffset" value="0,-.1029,-.1373"/>
+			<property name="ScopeScale" value="1,1,1"/>
+			<property name="ScopeCameraOffset" value="0,0,0"/>
+		</item_property_overrides>
+
+		<item_property_overrides name="gunRifleT2MarksmanRifle">
+			<property name="ScopeOffset" value="0,0,0"/>
+			<property name="ScopeScale" value="1,1,1"/>
+			<property name="ScopeCameraOffset" value="0,0,0"/>
+		</item_property_overrides>
+
+		<item_property_overrides name="gunBowT1IronCrossbow">
+			<property name="ScopeOffset" value="0,.061,-.0761"/>
+			<property name="ScopeScale" value=".9,.9,.9"/>
+			<property name="ScopeCameraOffset" value="0,0,0"/>
+		</item_property_overrides>
+		<item_property_overrides name="gunBowT3CompoundCrossbow">
+			<property name="ScopeOffset" value="0,.061,-.0761"/>
+			<property name="ScopeScale" value=".9,.9,.9"/>
+			<property name="ScopeCameraOffset" value="0,0,0"/>
+		</item_property_overrides>
+		<item_property_overrides name="猎魔弩炮">
+			<property name="ScopeOffset" value="-.06,.06,.095"/>
+			<property name="ScopeScale" value="1,1,1"/>
+			<property name="ScopeCameraOffset" value="0,-.022,0"/>
+		</item_property_overrides>
+		<item_property_overrides name="AWM">
+			<property name="ScopeOffset" value="0,0.05,.15"/>
+			<property name="ScopeScale" value="1,1,1"/>
+			<property name="ScopeCameraOffset" value="0,-.022,0"/>
+		</item_property_overrides>	
+		<item_property_overrides name="M82">
+			<property name="ScopeOffset" value="0,.022,-.036"/>
+			<property name="ScopeScale" value="1.3,1.3,1.7"/>
+			<property name="ScopeCameraOffset" value="0,-.022,0"/>
+		</item_property_overrides>
+
+		<!--Add scope overlay, increase zoom x amount-->
+		<!-- visible attachment: scope x8 -->
+		<effect_group tiered="false" name="external attachment prefab (old way)">
+			<requirement name="!HoldingItemHasTags" tags="attachmentsIncluded"/>
+				<triggered_effect trigger="onSelfHoldingItemCreated" action="AttachPrefabToHeldItem" prefab="#Other/Items?Mods/Scopes/scope_8xPrefab.prefab" parent_transform="Attachments/Scope"/>
+		</effect_group>
+		<effect_group tiered="false" name="internal attachment prefab (A19)">
+			<requirement name="HoldingItemHasTags" tags="attachmentsIncluded"/>
+				<triggered_effect trigger="onSelfHoldingItemCreated" action="SetTransformActive" active="true" parent_transform="#HeldItemRoot" transform_path="scope"/>
+		</effect_group>
+
+		<effect_group tiered="false" name="mod effects">
+			<passive_effect name="SpreadMultiplierAiming" operation="perc_add" value="-.25" tags="perkGunslinger,perkDeadEye,perkMachineGunner,perkArchery,admin"/>
+			<passive_effect name="SpreadMultiplierAiming" operation="perc_add" value="-.25" tags="perkDeadEye,perkArchery,admin">
+				<requirement name="ItemHasTags" tags="perkDeadEye,crossbow"/></passive_effect>
+			<passive_effect name="EntityDamage" operation="perc_add" value=".1">
+				<requirement name="ProgressionLevel" progression_name="perkSniperDamage" operation="Equals" value="1"/>
+				<requirement name="HasBuff" buff="buffHoldBreathAiming01"/>
+			</passive_effect>
+		</effect_group>
+		<effect_group tiered="false" name="mod effects">
+			<passive_effect name="DamageFalloffRange" operation="perc_add" value="0.2"/>
+			<passive_effect name="MaxRange" operation="perc_add" value="0.25"/>
+		</effect_group>
+		<effect_group tiered="false" name="mod effects">
+		    <passive_effect name="DamageModifier" operation="perc_add" value="3.5" tags="head"/>
+			<passive_effect name="DismemberChance" operation="base_add" value=".15"/>
+		</effect_group>
+		<effect_group tiered="false">
+		    <triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="SAN装备2"/>
+		    <triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="SAN装备2"/>
+			<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="灵魂熔炼">
+		       <requirement name="HasBuff" buff="SAN装备1"/>
+		       <requirement name="HasBuff" buff="SAN装备3"/>
+			   <requirement name="NotHasBuff" buff="灵魂熔炼"/>
+		    </triggered_effect>
+	    </effect_group>
+		<property name="PickupJournalEntry" value="augmentGunsTip"/>
+	</item_modifier>
+	
+	<item_modifier name="梦魇-暗影固定装置" installable_tags="bottomAttachments" modifier_tags="accuracy" blocked_tags="noMods,shortRange" type="attachment">
+		<property name="UnlockedBy" value="古老诅咒"/>
+		<property name="CustomIcon" value="梦魇脚架"/>
+		<property name="DescriptionKey" value="Shadow03Desc"/>
+		<property name="Stacknumber" value="1"/> <property name="Group" value="Mods"/>
+		<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+		<effect_group tiered="false">
+			<passive_effect name="SpreadMultiplierAiming" operation="perc_add" value="-.08"/>
+			<passive_effect name="SpreadMultiplierAiming" operation="perc_add" value="-.09">
+				<requirement name="ItemHasTags" tags="perkDeadEye,crossbow"/></passive_effect>
+			<passive_effect name="SpreadMultiplierWalking" operation="perc_add" value=".05"/>
+			<passive_effect name="SpreadMultiplierHip" operation="perc_add" value=".05"/>
+			<passive_effect name="WeaponHandling" operation="perc_add" value="-.05"/>
+			<passive_effect name="WeaponHandling" operation="perc_add" value=".35">
+				<requirement name="HasBuff" buff="buffHoldBreathAiming01"/>
+			</passive_effect>
+			<passive_effect name="EntityDamage" operation="base_add" value="30">
+				<requirement name="ItemHasTags" tags="perkDeadEye"/>
+				<requirement name="CVarCompare" cvar="CS" operation="GTE" value="0"/>
+		        <requirement name="CVarCompare" cvar="CS" operation="LT" value="2"/></passive_effect>
+			<passive_effect name="EntityDamage" operation="base_add" value="50">
+				<requirement name="ItemHasTags" tags="perkDeadEye"/>
+				<requirement name="CVarCompare" cvar="CS" operation="GTE" value="2"/>
+		        <requirement name="CVarCompare" cvar="CS" operation="LT" value="4"/></passive_effect>
+			<passive_effect name="EntityDamage" operation="base_add" value="90">
+				<requirement name="ItemHasTags" tags="perkDeadEye"/>
+				<requirement name="CVarCompare" cvar="CS" operation="GTE" value="6"/>
+		        <requirement name="CVarCompare" cvar="CS" operation="LT" value="8"/></passive_effect>
+			<passive_effect name="EntityDamage" operation="base_add" value="140">
+				<requirement name="ItemHasTags" tags="perkDeadEye"/>
+		        <requirement name="CVarCompare" cvar="CS" operation="Equals" value="8"/></passive_effect>
+			<passive_effect name="EntityDamage" operation="base_add" value="15">
+				<requirement name="ItemHasTags" tags="crossbow"/>
+				<requirement name="CVarCompare" cvar="CS" operation="GTE" value="0"/>
+		        <requirement name="CVarCompare" cvar="CS" operation="LT" value="2"/></passive_effect>
+			<passive_effect name="EntityDamage" operation="base_add" value="25">
+				<requirement name="ItemHasTags" tags="crossbow"/>
+				<requirement name="CVarCompare" cvar="CS" operation="GTE" value="2"/>
+		        <requirement name="CVarCompare" cvar="CS" operation="LT" value="4"/></passive_effect>
+			<passive_effect name="EntityDamage" operation="base_add" value="45">
+				<requirement name="ItemHasTags" tags="crossbow"/>
+				<requirement name="CVarCompare" cvar="CS" operation="GTE" value="6"/>
+		        <requirement name="CVarCompare" cvar="CS" operation="LT" value="8"/></passive_effect>
+			<passive_effect name="EntityDamage" operation="base_add" value="70">
+				<requirement name="ItemHasTags" tags="crossbow"/>
+		        <requirement name="CVarCompare" cvar="CS" operation="Equals" value="8"/></passive_effect>
+		</effect_group>
+		<effect_group tiered="false">
+		    <triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="SAN装备3"/>
+		    <triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="SAN装备3"/>
+			<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="灵魂熔炼">
+		       <requirement name="HasBuff" buff="SAN装备1"/>
+		       <requirement name="HasBuff" buff="SAN装备2"/>
+			   <requirement name="NotHasBuff" buff="灵魂熔炼"/>
+		    </triggered_effect>
+	    </effect_group>
+		<property name="PickupJournalEntry" value="augmentGunsTip"/>
+	</item_modifier>
+</append>
+</configs>			

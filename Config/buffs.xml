@@ -1,0 +1,2657 @@
+<configs>
+
+<append xpath="/buffs/buff[@name='buffStatusCheck01']">
+	   <effect_group>
+		    <triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="噩梦降临"/>
+			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="旧日之奴"/>
+       </effect_group>
+	   <effect_group>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="ToxinPoint" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="FireSeat" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="DeathCurse" operation="set" value="0"/>
+       </effect_group>
+</append>
+
+<append xpath="/buffs/buff[@name='buffIsOnFire']">
+	   <effect_group>
+		    <triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="寄生之血"/>
+			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="破裂之兆"/>
+			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="寄生破体Lv1"/>
+       </effect_group>
+</append>
+
+<append xpath="/buffs">	
+
+    <buff name="ZombieSmallmallDay21buff" hidden="true">
+		<stack_type value="ignore"/>
+		<effect_group>
+			<passive_effect name="HealthMax" operation="base_add" value="4000"/>
+			<passive_effect name="HealthMax" operation="perc_set" value="1"/>
+			<passive_effect name="EntityDamage" operation="perc_add" value="0.5"/>
+		</effect_group>
+	</buff>
+	
+	<buff name="ZombieSmallmallDay49buff" hidden="true">
+		<stack_type value="ignore"/>
+		<effect_group>
+			<passive_effect name="HealthMax" operation="base_add" value="8000"/>
+			<passive_effect name="HealthMax" operation="perc_set" value="1"/>
+			<passive_effect name="EntityDamage" operation="perc_add" value="1"/>
+		</effect_group>
+	</buff>
+	
+	<buff name="ZombieSmallmallDay98buff" hidden="true">
+		<stack_type value="ignore"/>
+		<effect_group>
+			<passive_effect name="HealthMax" operation="base_add" value="12000"/>
+			<passive_effect name="HealthMax" operation="perc_set" value="1"/>
+			<passive_effect name="EntityDamage" operation="perc_add" value="1.5"/>
+		</effect_group>
+	</buff>
+	
+	<buff name="ZombieSmallmallDay140buff" hidden="true">
+		<stack_type value="ignore"/>
+		<effect_group>
+			<passive_effect name="HealthMax" operation="base_add" value="24000"/>
+			<passive_effect name="HealthMax" operation="perc_set" value="1"/>
+			<passive_effect name="EntityDamage" operation="perc_add" value="2.5"/>
+		</effect_group>
+	</buff>
+
+    <buff name="聚焦" name_key="聚焦" description_key="击杀获得封印之力的影响,精神更加集中" tooltip_key="击杀获得封印之力的影响,精神更加集中" icon="ui_game_symbol_map_cursor" icon_color="255,255,0">
+		<stack_type value="replace"/>
+		<duration value="5"/>
+	    <effect_group tiered="false">
+		    <passive_effect name="EntityDamage" operation="base_add" value="15"/> <!-- meleeWpnBladeT3Machete -->
+			<passive_effect name="SpreadMultiplierAiming" operation="perc_add" value="-.2"/>
+			<passive_effect name="SpreadMultiplierCrouching" operation="perc_add" value="-.5"/>
+			<passive_effect name="SpreadMultiplierHip" operation="perc_add" value="-.5"/>
+			<passive_effect name="SpreadMultiplierWalking" operation="perc_add" value="-.5"/>
+			<passive_effect name="KickDegreesVerticalMin" operation="perc_add" value="-0.9"/>
+			<passive_effect name="KickDegreesVerticalMax" operation="perc_add" value="-0.5"/>
+			<passive_effect name="KickDegreesHorizontalMin" operation="perc_add" value="-0.9"/>
+			<passive_effect name="KickDegreesHorizontalMax" operation="perc_add" value="-0.5"/>
+	    </effect_group>
+	</buff>
+	
+	<buff name="古神化" name_key="buffRadiatedRegenDesc" description_key="buffRadiatedRegenDesc" tooltip_key="buffRadiatedRegenDesc" icon="ui_game_symbol_radiation" icon_color="255,0,0">
+		<stack_type value="ignore"/>
+		<update_rate value="2.5"/>
+
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="#@modfolder:Resources/boss011.unity3d?boss011.prefab" parent_transform="Head"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="10" buff="恐惧">
+			    <requirement name="NotHasBuff" target="self" buff="禁忌无效"/>
+				<requirement name="!EntityTagCompare" target="other" tags="zombie,vehicle,turret,drone"/>
+			</triggered_effect>
+		</effect_group>
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="8" buff="SAN下降大">
+			    <requirement name="NotHasBuff" target="self" buff="禁忌无效"/>
+				<requirement name="!EntityTagCompare" target="other" tags="zombie,vehicle,turret,drone"/>
+			</triggered_effect>
+		</effect_group>
+		<!--<effect_group>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="BossPower" operation="set" value="@gamestage"/>
+		</effect_group>
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="ZombieSmallmallDay21buff">
+			    <requirement name="CVarCompare" cvar="BossPower" operation="GTE" value="21"/>
+			    <requirement name="CVarCompare" cvar="BossPower" operation="LT" value="49"/>
+			</triggered_effect>
+		</effect_group>
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="ZombieSmallmallDay49buff">
+			    <requirement name="CVarCompare" cvar="BossPower" operation="GTE" value="49"/>
+			    <requirement name="CVarCompare" cvar="BossPower" operation="LT" value="98"/>
+			</triggered_effect>
+		</effect_group>
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="ZombieSmallmallDay98buff">
+			    <requirement name="CVarCompare" cvar="BossPower" operation="GTE" value="210"/>
+			    <requirement name="CVarCompare" cvar="BossPower" operation="LT" value="434"/>
+			</triggered_effect>
+		</effect_group>
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="ZombieSmallmallDay140buff">
+			    <requirement name="CVarCompare" cvar="BossPower" operation="GTE" value="434"/>
+			</triggered_effect>
+		</effect_group>-->
+	</buff>
+	
+	<buff name="触手头" name_key="buffRadiatedRegenDesc" description_key="buffRadiatedRegenDesc" tooltip_key="buffRadiatedRegenDesc" icon="ui_game_symbol_radiation" icon_color="255,0,0">
+		<stack_type value="ignore"/>
+		<update_rate value="2.5"/>
+
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="#@modfolder:Resources/TentacleHead.unity3d?TentacleHead.prefab" parent_transform="mixamorig_Head"/>
+		</effect_group>
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="8" buff="SAN下降中">
+			    <requirement name="NotHasBuff" target="self" buff="禁忌无效"/>
+				<requirement name="!EntityTagCompare" target="other" tags="zombie,vehicle,turret,drone"/>
+			</triggered_effect>
+		</effect_group>
+	</buff>
+	
+	<buff name="克苏鲁附身" name_key="buffRadiatedRegenDesc" description_key="buffRadiatedRegenDesc" tooltip_key="buffRadiatedRegenDesc" icon="ui_game_symbol_radiation" icon_color="255,0,0">
+		<stack_type value="ignore"/>
+		<duration value="2000000000"/>
+		<update_rate value="2.5"/>
+
+		<effect_group>
+		    <triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="#@modfolder:Resources/Cthulhuhead1.unity3d?Cthulhuhead1.prefab" parent_transform="Head"/>
+			<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="#@modfolder:Resources/CthulhuWing1.unity3d?CthulhuWing1.prefab" parent_transform="Spine3"/>
+		</effect_group>
+		<passive_effect name="BuffResistance" operation="base_add" value="1" tags="buffShocked,霜冻,冻结,雷罚,buffInjuryKnockdown01,buffInjuryKnockdown02,buffInjuryCrippled01,buffInjuryUnconscious"/>
+		<effect_group>
+		    <passive_effect name="RunSpeed" operation="perc_add" value="0.3"/>
+			<passive_effect name="JumpStrength" operation="perc_add" value="0.7"/>
+		</effect_group>
+		<effect_group>
+		    <triggered_effect trigger="onSelfLandJump" action="AddBuff" buff="狂乱打击"/>
+			<triggered_effect trigger="onSelfLandJump" action="AddBuff" target="selfAOE" range="6" buff="buffInjuryKnockdown02">
+				<requirement name="!EntityTagCompare" target="other" tags="zombie,vehicle,turret,drone,古神"/>
+			</triggered_effect>
+		</effect_group>
+		<effect_group>
+		    <requirement name="StatComparePercCurrentToModMax" stat="health" operation="LTE" value=".4"/>
+		    <passive_effect name="RunSpeed" operation="perc_add" value="0.8"/>
+			<passive_effect name="JumpStrength" operation="perc_add" value="1.5"/>
+		</effect_group>
+	</buff>
+	
+	<buff name="湮灭克苏鲁附身" name_key="buffRadiatedRegenDesc" description_key="buffRadiatedRegenDesc" tooltip_key="buffRadiatedRegenDesc" icon="ui_game_symbol_radiation" icon_color="255,0,0">
+		<stack_type value="ignore"/>
+		<duration value="2000000000"/>
+		<update_rate value="2.5"/>
+
+		<effect_group>
+		    <triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="#@modfolder:Resources/Cthulhuhead2.unity3d?Cthulhuhead2.prefab" parent_transform="mixamorig_Head"/>
+			<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="#@modfolder:Resources/Cthulhuwing.unity3d?Cthulhuwing.prefab" parent_transform="mixamorig_Spine2"/>
+		</effect_group>
+		<passive_effect name="BuffResistance" operation="base_add" value="1" tags="buffShocked,霜冻,冻结,雷罚,buffInjuryKnockdown01,buffInjuryKnockdown02,buffInjuryCrippled01,buffInjuryUnconscious"/>
+		<effect_group>
+		    <requirement name="NotHasBuff" target="self" buff="禁忌无效"/>
+		    <requirement name="StatComparePercCurrentToModMax" stat="health" operation="LTE" value=".5"/>
+			<passive_effect name="HealthChangeOT" operation="base_add" value="300"/>
+		</effect_group>
+		<effect_group>
+		    <requirement name="NotHasBuff" target="self" buff="禁忌无效"/>
+			<requirement name="!EntityTagCompare" tags="npc,vehicle,player,turret,drone"/>
+		    <triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="40" buff="克苏鲁生命奔涌"/>	    
+		</effect_group>
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="5" buff="SAN下降中">
+				<requirement name="!EntityTagCompare" target="other" tags="zombie,vehicle,turret,drone"/>
+			</triggered_effect>
+		</effect_group>
+		<effect_group>
+		    <requirement name="RandomRoll" seed_type="Random" target="self" min_max="0,100" operation="LTE" value="60"/>
+			<requirement name="!EntityTagCompare" target="other" tags="zombie,vehicle,turret,drone"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="8" buff="buffShocked"/>
+		</effect_group>
+	</buff>
+	
+	<buff name="狂乱打击" name_key="狂乱打击" description_key="短暂的获得恐怖的攻击速度" tooltip_key="短暂的获得恐怖的攻击速度" icon="ui_game_symbol_sneak_attack" icon_color="155,0,10">
+		<stack_type value="ignore"/>
+		<duration value="5"/>
+	    <effect_group tiered="false">
+		    <passive_effect name="AttacksPerMinute" operation="base_add" value="100"/>
+			<passive_effect name="EntityDamage" operation="base_add" value="30"/>
+	    </effect_group>
+	</buff>
+	
+	<buff name="克苏鲁生命奔涌" hidden="true">
+		<stack_type value="ignore"/>
+		<duration value="5"/>
+		<effect_group>
+			<requirement name="NotHasBuff" buff="禁忌无效"/>
+			<requirement name="!EntityTagCompare" tags="npc,vehicle,player,turret,drone"/>
+			<passive_effect name="HealthChangeOT" operation="base_add" value="300"/>
+		</effect_group>
+	</buff>
+	
+	<buff name="殉道者长袍" name_key="buffRadiatedRegenDesc" description_key="buffRadiatedRegenDesc" tooltip_key="buffRadiatedRegenDesc" icon="ui_game_symbol_radiation" icon_color="255,0,0">
+		<stack_type value="ignore"/>
+		<duration value="2000000000"/>
+		<update_rate value="2.5"/>
+
+		<effect_group>
+		<!--<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="#@modfolder:Resources/Cthulhuhead2.unity3d?Cthulhuhead2.prefab" parent_transform="mixamorig_Head"/>-->
+			<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="#@modfolder:Resources/Martyrhead.unity3d?Martyrhead.prefab" parent_transform="Head"/>
+			<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="#@modfolder:Resources/MartyrChest.unity3d?MartyrChest.prefab" parent_transform="Spine2"/>
+			<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="#@modfolder:Resources/Martyrleg.unity3d?Martyrleg.prefab" parent_transform="Hips"/>
+		<!--<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="#@modfolder:Resources/MartyrLefthand.unity3d?MartyrLefthand.prefab" parent_transform="mixamorig_LeftForeArm"/>-->
+		<!--<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="#@modfolder:Resources/MartyrRighthand.unity3d?MartyrRighthand.prefab" parent_transform="mixamorig_RightForeArm"/>-->
+		</effect_group>
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="5" buff="SAN下降中">
+				<requirement name="!EntityTagCompare" target="other" tags="zombie,vehicle,turret,drone"/>
+			</triggered_effect>
+		</effect_group>
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" target="self" buff="殉道咒袭"/>
+		</effect_group>
+	</buff>
+	
+	<buff name="殉道咒袭" hidden="true">
+		<stack_type value="ignore"/>
+	    <effect_group tiered="false">
+		    <triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="#@modfolder:Resources/SoulLight.unity3d?SoulLight.prefab" parent_transform="Spine2"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="RemoveParticleEffectFromEntity" particle="SoulLight"/>
+	    </effect_group>
+		<effect_group tiered="false">
+		    <passive_effect name="WalkSpeed" operation="perc_add" value="0.5" />
+		    <passive_effect name="RunSpeed" operation="perc_add" value="0.5" />
+			<passive_effect name="JumpStrength" operation="perc_add" value="1"/>
+			<passive_effect name="EntityDamage" operation="base_add" value="100"/>
+	    </effect_group>
+		<effect_group tiered="false">
+		    <requirement name="NotHasBuff" target="other" buff="融魂枷锁"/>
+			<requirement name="NotHasBuff" target="self" buff="禁忌无效"/>
+		    <triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="self" buff="殉道之环"/>
+			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" buff="融魂枷锁"/>
+			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" buff="融魂链接"/>
+			<triggered_effect trigger="onSelfAttackedOther" action="RemoveBuff" buff="殉道咒袭"/>	
+		</effect_group>
+	</buff>
+	
+	<buff name="殉道之环" hidden="true">
+		<stack_type value="ignore"/>
+		<update_rate value="1"/>
+		<effect_group tiered="false">
+		    <triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="#@modfolder:Resources/SoulLock.unity3d?SoulLock.prefab" parent_transform="Spine2"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="RemoveParticleEffectFromEntity" particle="SoulLock"/>
+	    </effect_group>
+	    <!--<effect_group>
+			<requirement name="!EntityTagCompare" target="other" tags="zombie,vehicle,turret,drone,古神"/>
+		    <triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="8" buff="融魂链接"/>	    
+		</effect_group>-->
+	</buff>
+	
+	<buff name="融魂枷锁" description_key="[ff0000]你的灵魂与殉道者建立了绝不可分离的链接" tooltip_key="[ff0000]你的灵魂与殉道者建立了决不可分离的链接" icon="ui_game_symbol_infection" icon_color="255,255,0">
+		<stack_type value="ignore"/>
+		<duration value="30"/>
+		<update_rate value="1"/>
+		<effect_group tiered="false">
+		    <triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="#@modfolder:Resources/SoulLock.unity3d?SoulLock.prefab" parent_transform="Hips"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="RemoveParticleEffectFromEntity" particle="SoulLock"/>
+			<triggered_effect trigger="onSelfBuffFinish" action="RemoveParticleEffectFromEntity" particle="SoulLock"/>
+	    </effect_group>
+	    <effect_group tiered="false">
+		    <passive_effect name="WalkSpeed" operation="perc_subtract" value="0.5" />
+	    </effect_group>
+		<!--<effect_group tiered="false">
+		    <requirement name="!EntityTagCompare" target="self" tags="zombie,vehicle,turret,drone,古神"/>
+			<requirement name="NotHasBuff" target="self" buff="融魂链接"/>
+		    <triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" stat="Health" operation="subtract" value="25"/>
+		</effect_group>-->
+		<effect_group tiered="false">
+		    <requirement name="EntityHasMovementTag" target="self" tags="running"/>
+		    <triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" stat="Health" operation="subtract" value="40"/>
+	    </effect_group>
+		<effect_group tiered="false">
+		    <requirement name="EntityHasMovementTag" target="self" tags="walking"/>
+		    <triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" stat="Health" operation="subtract" value="25"/>
+	    </effect_group>
+		<effect_group tiered="false">
+		    <requirement name="EntityHasMovementTag" target="self" tags="swimming"/>
+		    <triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" stat="Health" operation="subtract" value="25"/>
+	    </effect_group>
+		<effect_group tiered="false">
+		    <requirement name="EntityHasMovementTag" target="self" tags="driving"/>
+		    <triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" stat="Health" operation="subtract" value="30"/>
+	    </effect_group>
+		<effect_group tiered="false">
+		    <requirement name="EntityHasMovementTag" target="self" tags="jumping"/>
+		    <triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" stat="Health" operation="subtract" value="30"/>
+	    </effect_group>
+		<effect_group tiered="false">
+			<triggered_effect trigger="onSelfKilledOther" action="RemoveBuff" buff="融魂枷锁">
+			    <requirement name="HasBuff" target="other" buff="殉道之环"/>
+			</triggered_effect>
+		</effect_group>
+	</buff>
+	
+	<buff name="融魂链接" hidden="true">
+		<stack_type value="ignore"/>
+		<duration value="2"/>
+		<effect_group tiered="false">
+		   <passive_effect name="EntityDamage" operation="perc_subtract" value="0.5"/>
+		</effect_group>
+	</buff>
+	
+	<buff name="克苏鲁团块" name_key="buffRadiatedRegenDesc" description_key="buffRadiatedRegenDesc" tooltip_key="buffRadiatedRegenDesc" icon="ui_game_symbol_radiation" icon_color="255,0,0">
+		<stack_type value="ignore"/>
+		<duration value="2000000000"/>
+		<update_rate value="1"/>
+
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="#@modfolder:Resources/CthulhuCluster.unity3d?CthulhuCluster.prefab" parent_transform="Spine2"/>
+			<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="#@modfolder:Resources/CthulhuCluster3.unity3d?CthulhuCluster3.prefab" parent_transform="Head"/>
+			<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="#@modfolder:Resources/CthulhuCluster2.unity3d?CthulhuCluster2.prefab" parent_transform="LeftHand"/>
+			<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="#@modfolder:Resources/CthulhuCluster2.unity3d?CthulhuCluster2.prefab" parent_transform="RightHand"/>
+			<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="#@modfolder:Resources/CthulhuCluster2.unity3d?CthulhuCluster2.prefab" parent_transform="LeftFoot"/>
+			<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="#@modfolder:Resources/CthulhuCluster2.unity3d?CthulhuCluster2.prefab" parent_transform="RightFoot"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="3" buff="SAN下降小">
+				<requirement name="!EntityTagCompare" target="other" tags="zombie,vehicle,turret,drone"/>
+			</triggered_effect>
+		</effect_group>
+		<effect_group>
+			<requirement name="TimeOfDay" operation="GTE" value="21"/>
+			<requirement name="TimeOfDay" operation="LT" value="49"/>
+			<passive_effect name="EntityDamage" operation="perc_add" value="0.5"/>
+		</effect_group>
+		<effect_group>
+			<requirement name="TimeOfDay" operation="GTE" value="49"/>
+			<requirement name="TimeOfDay" operation="LT" value="98"/>
+			<passive_effect name="EntityDamage" operation="perc_add" value="1"/>
+		</effect_group>
+		<effect_group>
+			<requirement name="TimeOfDay" operation="GTE" value="98"/>
+			<requirement name="TimeOfDay" operation="LT" value="210"/>
+			<passive_effect name="EntityDamage" operation="perc_add" value="1.5"/>
+		</effect_group>
+		<effect_group>
+			<requirement name="TimeOfDay" operation="GTE" value="210"/>
+			<passive_effect name="EntityDamage" operation="perc_add" value="2.5"/>
+		</effect_group>
+	</buff>
+	
+	<buff name="上级古神" name_key="buffRadiatedRegenDesc" description_key="buffRadiatedRegenDesc" tooltip_key="buffRadiatedRegenDesc" icon="ui_game_symbol_radiation" icon_color="255,0,0">
+		<stack_type value="ignore"/>
+		<duration value="2000000000"/>
+		<update_rate value="1"/>
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="5" buff="SAN下降大">
+				<requirement name="!EntityTagCompare" target="other" tags="zombie,vehicle,turret,drone"/>
+			</triggered_effect>
+		</effect_group>
+		<effect_group>
+			<requirement name="TimeOfDay" operation="GTE" value="21"/>
+			<requirement name="TimeOfDay" operation="LT" value="49"/>
+			<passive_effect name="EntityDamage" operation="perc_add" value="0.5"/>
+		</effect_group>
+		<effect_group>
+			<requirement name="TimeOfDay" operation="GTE" value="49"/>
+			<requirement name="TimeOfDay" operation="LT" value="98"/>
+			<passive_effect name="EntityDamage" operation="perc_add" value="1"/>
+		</effect_group>
+		<effect_group>
+			<requirement name="TimeOfDay" operation="GTE" value="98"/>
+			<requirement name="TimeOfDay" operation="LT" value="210"/>
+			<passive_effect name="EntityDamage" operation="perc_add" value="1.5"/>
+		</effect_group>
+		<effect_group>
+			<requirement name="TimeOfDay" operation="GTE" value="210"/>
+			<passive_effect name="EntityDamage" operation="perc_add" value="2.5"/>
+		</effect_group>
+	</buff>
+	
+	<buff name="中级古神" name_key="buffRadiatedRegenDesc" description_key="buffRadiatedRegenDesc" tooltip_key="buffRadiatedRegenDesc" icon="ui_game_symbol_radiation" icon_color="255,0,0">
+		<stack_type value="ignore"/>
+		<duration value="2000000000"/>
+		<update_rate value="1"/>
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="5" buff="SAN下降中">
+				<requirement name="!EntityTagCompare" target="other" tags="zombie,vehicle,turret,drone"/>
+			</triggered_effect>
+		</effect_group>
+		<effect_group>
+			<requirement name="TimeOfDay" operation="GTE" value="21"/>
+			<requirement name="TimeOfDay" operation="LT" value="49"/>
+			<passive_effect name="EntityDamage" operation="perc_add" value="0.5"/>
+		</effect_group>
+		<effect_group>
+			<requirement name="TimeOfDay" operation="GTE" value="49"/>
+			<requirement name="TimeOfDay" operation="LT" value="98"/>
+			<passive_effect name="EntityDamage" operation="perc_add" value="1"/>
+		</effect_group>
+		<effect_group>
+			<requirement name="TimeOfDay" operation="GTE" value="98"/>
+			<requirement name="TimeOfDay" operation="LT" value="210"/>
+			<passive_effect name="EntityDamage" operation="perc_add" value="1.5"/>
+		</effect_group>
+		<effect_group>
+			<requirement name="TimeOfDay" operation="GTE" value="210"/>
+			<passive_effect name="EntityDamage" operation="perc_add" value="2.5"/>
+		</effect_group>
+	</buff>
+	
+	<buff name="下级古神" name_key="buffRadiatedRegenDesc" description_key="buffRadiatedRegenDesc" tooltip_key="buffRadiatedRegenDesc" icon="ui_game_symbol_radiation" icon_color="255,0,0">
+		<stack_type value="ignore"/>
+		<duration value="2000000000"/>
+		<update_rate value="1"/>
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="3" buff="SAN下降小">
+				<requirement name="!EntityTagCompare" target="other" tags="zombie,vehicle,turret,drone"/>
+			</triggered_effect>
+		</effect_group>
+		<effect_group>
+			<requirement name="TimeOfDay" operation="GTE" value="21"/>
+			<requirement name="TimeOfDay" operation="LT" value="49"/>
+			<passive_effect name="EntityDamage" operation="perc_add" value="0.5"/>
+		</effect_group>
+		<effect_group>
+			<requirement name="TimeOfDay" operation="GTE" value="49"/>
+			<requirement name="TimeOfDay" operation="LT" value="98"/>
+			<passive_effect name="EntityDamage" operation="perc_add" value="1"/>
+		</effect_group>
+		<effect_group>
+			<requirement name="TimeOfDay" operation="GTE" value="98"/>
+			<requirement name="TimeOfDay" operation="LT" value="210"/>
+			<passive_effect name="EntityDamage" operation="perc_add" value="1.5"/>
+		</effect_group>
+		<effect_group>
+			<requirement name="TimeOfDay" operation="GTE" value="210"/>
+			<passive_effect name="EntityDamage" operation="perc_add" value="2.5"/>
+		</effect_group>
+	</buff>
+	
+	<buff name="黄衣" name_key="buffRadiatedRegenDesc" description_key="buffRadiatedRegenDesc" tooltip_key="buffRadiatedRegenDesc" icon="ui_game_symbol_radiation" icon_color="255,0,0">
+		<stack_type value="ignore"/>
+		<duration value="2000000000"/>
+		<update_rate value="3"/>
+		<passive_effect name="BuffResistance" operation="base_add" value="1" tags="buffShocked,霜冻,冻结,雷罚,buffInjuryKnockdown01,buffInjuryKnockdown02,buffInjuryCrippled01,buffInjuryUnconscious"/>
+        <effect_group>
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="50" buff="SAN下降黄衣">
+				<requirement name="!EntityTagCompare" target="other" tags="zombie,vehicle,turret,drone"/>
+			</triggered_effect>
+		</effect_group>
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="#@modfolder:Resources/Ycloth1.unity3d?Ycloth1.prefab" parent_transform="Head"/>
+			<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="#@modfolder:Resources/Ycloth2.unity3d?Ycloth2.prefab" parent_transform="Spine2"/>
+		</effect_group>
+		<effect_group>
+			<requirement name="TimeOfDay" operation="GTE" value="21"/>
+			<requirement name="TimeOfDay" operation="LT" value="49"/>
+			<passive_effect name="EntityDamage" operation="perc_add" value="0.5"/>
+		</effect_group>
+		<effect_group>
+			<requirement name="TimeOfDay" operation="GTE" value="49"/>
+			<requirement name="TimeOfDay" operation="LT" value="98"/>
+			<passive_effect name="EntityDamage" operation="perc_add" value="1"/>
+		</effect_group>
+		<effect_group>
+			<requirement name="TimeOfDay" operation="GTE" value="98"/>
+			<requirement name="TimeOfDay" operation="LT" value="210"/>
+			<passive_effect name="EntityDamage" operation="perc_add" value="1.5"/>
+		</effect_group>
+		<effect_group>
+			<requirement name="TimeOfDay" operation="GTE" value="210"/>
+			<passive_effect name="EntityDamage" operation="perc_add" value="2.5"/>
+		</effect_group>
+	</buff>
+	
+	<buff name="惊吓鬼魂" name_key="buffRadiatedRegenDesc" description_key="buffRadiatedRegenDesc" tooltip_key="buffRadiatedRegenDesc" icon="ui_game_symbol_radiation" icon_color="255,0,0">
+		<stack_type value="ignore"/>
+		<duration value="2000000000"/>
+		<update_rate value="1"/>
+
+		<effect_group>
+		    <passive_effect name="PhysicalDamageResist" operation="base_add" value="2000"/>
+			<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="#@modfolder:Resources/Ghost.unity3d?Ghost.prefab" parent_transform="Spine1" local_rotation="0,0,0" local_position="0,-1,0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="惊吓一击"/>
+		</effect_group>
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="5" buff="SAN下降小">
+				<requirement name="!EntityTagCompare" target="other" tags="zombie,vehicle,turret,drone"/>
+			</triggered_effect>
+		</effect_group>
+		<effect_group>
+			<requirement name="TimeOfDay" operation="GTE" value="21"/>
+			<requirement name="TimeOfDay" operation="LT" value="49"/>
+			<passive_effect name="EntityDamage" operation="perc_add" value="0.5"/>
+		</effect_group>
+		<effect_group>
+			<requirement name="TimeOfDay" operation="GTE" value="49"/>
+			<requirement name="TimeOfDay" operation="LT" value="98"/>
+			<passive_effect name="EntityDamage" operation="perc_add" value="1"/>
+		</effect_group>
+		<effect_group>
+			<requirement name="TimeOfDay" operation="GTE" value="98"/>
+			<requirement name="TimeOfDay" operation="LT" value="210"/>
+			<passive_effect name="EntityDamage" operation="perc_add" value="1.5"/>
+		</effect_group>
+		<effect_group>
+			<requirement name="TimeOfDay" operation="GTE" value="210"/>
+			<passive_effect name="EntityDamage" operation="perc_add" value="2.5"/>
+		</effect_group>
+	</buff>
+	
+	<buff name="折磨幽魂" name_key="buffRadiatedRegenDesc" description_key="buffRadiatedRegenDesc" tooltip_key="buffRadiatedRegenDesc" icon="ui_game_symbol_radiation" icon_color="255,0,0">
+		<stack_type value="ignore"/>
+		<duration value="2000000000"/>
+		<update_rate value="1"/>
+
+		<effect_group>
+		    <passive_effect name="PhysicalDamageResist" operation="base_add" value="2000"/>
+			<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="#@modfolder:Resources/Ghost.unity3d?Ghost.prefab" parent_transform="Spine1" local_rotation="0,0,0" local_position="0,-1,0"/>
+		</effect_group>
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="5" buff="SAN下降小">
+				<requirement name="!EntityTagCompare" target="other" tags="zombie,vehicle,turret,drone"/>
+			</triggered_effect>
+		</effect_group>
+		<effect_group tiered="false">
+		    <passive_effect name="ProjectileVelocity" operation="perc_add" value="50" />
+		    <passive_effect name="WalkSpeed" operation="perc_add" value="50" />
+		    <passive_effect name="RunSpeed" operation="perc_add" value="50" />
+			<passive_effect name="EntityDamage" operation="base_add" value="100"/>
+	    </effect_group>
+	</buff>
+	
+	<buff name="惊吓一击" hidden="true">
+		<stack_type value="ignore"/>
+	    <effect_group tiered="false">
+		    <passive_effect name="ProjectileVelocity" operation="perc_add" value="50" />
+		    <passive_effect name="WalkSpeed" operation="perc_add" value="50" />
+		    <passive_effect name="RunSpeed" operation="perc_add" value="50" />
+			<passive_effect name="EntityDamage" operation="base_add" value="100"/>
+	    </effect_group>
+		<effect_group tiered="false">
+			<triggered_effect trigger="onSelfAttackedOther" action="RemoveBuff" buff="惊吓一击"/>
+			<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" buff="惊吓一击冷却"/>
+		</effect_group>
+	</buff>
+	
+	<buff name="惊吓一击冷却" hidden="true">
+		<stack_type value="ignore"/>
+		<duration value="10"/>
+		<effect_group>
+		    <triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="惊吓一击"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="AddBuff" buff="惊吓一击"/>
+		</effect_group>
+	</buff>
+
+	<buff name="污秽净化" name_key="buffRadiatedRegenBlockName" icon="ui_game_symbol_radiation" icon_color="255,255,0" hidden="true">
+		<stack_type value="replace"/><duration value="90"/>
+	</buff>
+	
+	<buff name="畸形生物飞行" name_key="buffRadiatedRegenDesc" description_key="buffRadiatedRegenDesc" tooltip_key="buffRadiatedRegenDesc" icon="ui_game_symbol_radiation" icon_color="255,0,0">
+		<stack_type value="ignore"/>
+		<duration value="2000000000"/>
+
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="#@modfolder:Resources/Dragon01head.unity3d?Dragon01head.prefab" parent_transform="Head"/>
+			<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="#@modfolder:Resources/WingL.unity3d?WingL.prefab" parent_transform="LeftWing1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="#@modfolder:Resources/WingR.unity3d?WingR.prefab" parent_transform="RightWing1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="#@modfolder:Resources/DegomTentacle.unity3d?DegomTentacle.prefab" parent_transform="Spine2"/>
+		</effect_group>
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="5" buff="SAN下降中">
+				<requirement name="!EntityTagCompare" target="other" tags="zombie,vehicle,turret,drone"/>
+			</triggered_effect>
+		</effect_group>
+		<effect_group>
+			<requirement name="TimeOfDay" operation="GTE" value="21"/>
+			<requirement name="TimeOfDay" operation="LT" value="49"/>
+			<passive_effect name="EntityDamage" operation="perc_add" value="0.5"/>
+		</effect_group>
+		<effect_group>
+			<requirement name="TimeOfDay" operation="GTE" value="49"/>
+			<requirement name="TimeOfDay" operation="LT" value="98"/>
+			<passive_effect name="EntityDamage" operation="perc_add" value="1"/>
+		</effect_group>
+		<effect_group>
+			<requirement name="TimeOfDay" operation="GTE" value="98"/>
+			<requirement name="TimeOfDay" operation="LT" value="210"/>
+			<passive_effect name="EntityDamage" operation="perc_add" value="1.5"/>
+		</effect_group>
+		<effect_group>
+			<requirement name="TimeOfDay" operation="GTE" value="210"/>
+			<passive_effect name="EntityDamage" operation="perc_add" value="2.5"/>
+		</effect_group>
+	</buff>
+	
+	<buff name="恶魔翼" name_key="buffRadiatedRegenDesc" description_key="buffRadiatedRegenDesc" tooltip_key="buffRadiatedRegenDesc" icon="ui_game_symbol_radiation" icon_color="255,0,0">
+		<stack_type value="ignore"/>
+		<duration value="2000000000"/>
+		<update_rate value="2.5"/>
+
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="#@modfolder:Resources/DemoFly.unity3d?demofly.prefab" parent_transform="Spine2"/>
+		</effect_group>
+
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffRadiatedRegen">
+				<requirement name="StatComparePercCurrentToMax" stat="health" operation="GTE" value=".8"/>
+			</triggered_effect>
+		</effect_group>
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="5" buff="SAN下降中">
+				<requirement name="!EntityTagCompare" target="other" tags="zombie,vehicle,turret,drone"/>
+			</triggered_effect>
+		</effect_group>
+		<effect_group>
+			<requirement name="TimeOfDay" operation="GTE" value="21"/>
+			<requirement name="TimeOfDay" operation="LT" value="49"/>
+			<passive_effect name="EntityDamage" operation="perc_add" value="0.5"/>
+		</effect_group>
+		<effect_group>
+			<requirement name="TimeOfDay" operation="GTE" value="49"/>
+			<requirement name="TimeOfDay" operation="LT" value="98"/>
+			<passive_effect name="EntityDamage" operation="perc_add" value="1"/>
+		</effect_group>
+		<effect_group>
+			<requirement name="TimeOfDay" operation="GTE" value="98"/>
+			<requirement name="TimeOfDay" operation="LT" value="210"/>
+			<passive_effect name="EntityDamage" operation="perc_add" value="1.5"/>
+		</effect_group>
+		<effect_group>
+			<requirement name="TimeOfDay" operation="GTE" value="210"/>
+			<passive_effect name="EntityDamage" operation="perc_add" value="2.5"/>
+		</effect_group>
+	</buff>
+	
+	<buff name="疫病生物" name_key="buffRadiatedRegenDesc" description_key="buffRadiatedRegenDesc" tooltip_key="buffRadiatedRegenDesc" icon="ui_game_symbol_radiation" icon_color="255,0,0">
+		<stack_type value="ignore"/>
+		<duration value="2000000000"/>
+		<update_rate value="0"/>
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="#@modfolder:Resources/Acid.unity3d?Acid.prefab" parent_transform="Head"/>
+		</effect_group>
+		<effect_group>
+		    <requirement name="StatComparePercCurrentToModMax" stat="health" operation="LTE" value=".5"/>
+			<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" buff="疫病之咬"/>
+		</effect_group>
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="5" buff="SAN下降中">
+				<requirement name="!EntityTagCompare" target="other" tags="zombie,vehicle,turret,drone"/>
+			</triggered_effect>
+		</effect_group>
+		<effect_group>
+			<requirement name="TimeOfDay" operation="GTE" value="21"/>
+			<requirement name="TimeOfDay" operation="LT" value="49"/>
+			<passive_effect name="EntityDamage" operation="perc_add" value="0.5"/>
+		</effect_group>
+		<effect_group>
+			<requirement name="TimeOfDay" operation="GTE" value="49"/>
+			<requirement name="TimeOfDay" operation="LT" value="98"/>
+			<passive_effect name="EntityDamage" operation="perc_add" value="1"/>
+		</effect_group>
+		<effect_group>
+			<requirement name="TimeOfDay" operation="GTE" value="98"/>
+			<requirement name="TimeOfDay" operation="LT" value="210"/>
+			<passive_effect name="EntityDamage" operation="perc_add" value="1.5"/>
+		</effect_group>
+		<effect_group>
+			<requirement name="TimeOfDay" operation="GTE" value="210"/>
+			<passive_effect name="EntityDamage" operation="perc_add" value="2.5"/>
+		</effect_group>
+	</buff>
+	<buff name="疫病之咬" name_key="buffRadiatedRegenDesc" description_key="buffRadiatedRegenDesc" tooltip_key="buffRadiatedRegenDesc" icon="ui_game_symbol_radiation" icon_color="255,0,0">
+		<stack_type value="ignore"/>
+		<duration value="2000000000"/>
+		<update_rate value="0"/>
+
+		<effect_group>
+		    <passive_effect name="AttacksPerMinute" operation="perc_add" value="0.6"/>
+			<passive_effect name="EntityDamage" operation="base_add" value="10"/>
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="600"><!--InfectionRegular-->
+			<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
+		</effect_group>
+	</buff>
+	
+	<buff name="暴血" name_key="buffRadiatedRegenDesc" description_key="buffRadiatedRegenDesc" tooltip_key="buffRadiatedRegenDesc" icon="ui_game_symbol_radiation" icon_color="255,0,0">
+		<stack_type value="ignore"/>
+		<duration value="2"/>
+		<update_rate value="0"/>
+
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="#@modfolder:Resources/Blood.unity3d?Blood.prefab" parent_transform="Spine2"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="RemoveParticleEffectFromEntity" particle="Blood"/>
+		</effect_group>
+	</buff>
+	
+	<buff name="寄生生物" name_key="buffRadiatedRegenDesc" description_key="buffRadiatedRegenDesc" tooltip_key="buffRadiatedRegenDesc" icon="ui_game_symbol_radiation" icon_color="255,0,0">
+		<stack_type value="ignore"/>
+		<duration value="2000000000"/>
+		<update_rate value="0"/>
+		<property name="ShowQuality" value="true"/>
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="#@modfolder:Resources/Tentacle.unity3d?Tentacle.prefab" parent_transform="Spine2"/>
+		</effect_group>
+		<effect_group>
+		    <requirement name="StatComparePercCurrentToModMax" stat="health" operation="LTE" value=".5"/>
+			<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" buff="暴血"/>
+			<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" buff="寄生之躯"/>
+		</effect_group>
+		<effect_group>
+			<requirement name="TimeOfDay" operation="GTE" value="21"/>
+			<requirement name="TimeOfDay" operation="LT" value="49"/>
+			<passive_effect name="EntityDamage" operation="perc_add" value="0.5"/>
+		</effect_group>
+		<effect_group>
+			<requirement name="TimeOfDay" operation="GTE" value="49"/>
+			<requirement name="TimeOfDay" operation="LT" value="98"/>
+			<passive_effect name="EntityDamage" operation="perc_add" value="1"/>
+		</effect_group>
+		<effect_group>
+			<requirement name="TimeOfDay" operation="GTE" value="98"/>
+			<requirement name="TimeOfDay" operation="LT" value="210"/>
+			<passive_effect name="EntityDamage" operation="perc_add" value="1.5"/>
+		</effect_group>
+		<effect_group>
+			<requirement name="TimeOfDay" operation="GTE" value="210"/>
+			<passive_effect name="EntityDamage" operation="perc_add" value="2.5"/>
+		</effect_group>
+	</buff>
+	
+	<buff name="梦魇寄生生物" name_key="buffRadiatedRegenDesc" description_key="buffRadiatedRegenDesc" tooltip_key="buffRadiatedRegenDesc" icon="ui_game_symbol_radiation" icon_color="255,0,0">
+		<stack_type value="ignore"/>
+		<duration value="2000000000"/>
+		<update_rate value="0"/>
+		<property name="ShowQuality" value="true"/>
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="#@modfolder:Resources/Tentacle.unity3d?Tentacle.prefab" parent_transform="Spine2"/>
+		</effect_group>
+		<effect_group>
+		    <requirement name="NotHasBuff" target="self" buff="禁忌无效"/>
+			<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" buff="暴血"/>
+	        <triggered_effect trigger="onOtherDamagedSelf" action="ModifyStats" target="other" stat="Health" operation="subtract" value="15"/>
+			    <requirement name="!EntityTagCompare" target="other" tags="turret"/>
+		</effect_group>
+		<effect_group>
+	        <triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" target="other" cvar="NL" operation="subtract" value="3"/>
+			    <!--<requirement name="CVarCompare" cvar="NL" operation="GT" value="3"/>-->
+			    <requirement name="EntityTagCompare" target="other" tags="player"/>
+		</effect_group>
+		<!--<effect_group>
+	        <triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" target="other" cvar="NL" operation="set" value="0"/>
+			    <requirement name="CVarCompare" cvar="NL" operation="LTE" value="3"/>
+			    <requirement name="EntityTagCompare" target="other" tags="player"/>
+		</effect_group>-->
+		<effect_group>
+			<passive_effect name="EntityDamage" operation="perc_add" value="10"/>
+		</effect_group>
+	</buff>
+	
+	<buff name="寄生之躯" name_key="buffRadiatedRegenDesc" description_key="buffRadiatedRegenDesc" tooltip_key="buffRadiatedRegenDesc" icon="ui_game_symbol_radiation" icon_color="255,0,0">
+		<stack_type value="ignore"/>
+		<duration value="2000000000"/>
+		<update_rate value="1"/>
+
+		<effect_group>
+			<passive_effect name="EntityDamage" operation="base_add" value="10"/>
+		</effect_group>
+		<effect_group>
+		    <requirement name="NotHasBuff" target="self" buff="禁忌无效"/>
+	        <triggered_effect trigger="onOtherDamagedSelf" action="ModifyStats" target="other" stat="Health" operation="subtract" value="5"/>
+			    <requirement name="!EntityTagCompare" target="other" tags="turret"/>
+		</effect_group>
+		<effect_group>
+	        <triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" target="other" cvar="NL" operation="subtract" value="1"/>
+			    <!--<requirement name="CVarCompare" cvar="NL" operation="GT" value="1"/>-->
+			    <requirement name="EntityTagCompare" target="other" tags="player"/>
+		</effect_group>
+		<!--<effect_group>
+	        <triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" target="other" cvar="NL" operation="set" value="0"/>
+			    <requirement name="CVarCompare" cvar="NL" operation="LTE" value="1"/>
+			    <requirement name="EntityTagCompare" target="other" tags="player"/>
+		</effect_group>-->
+	</buff>
+	
+	<buff name="黑山羊附身" name_key="buffRadiatedRegenDesc" description_key="buffRadiatedRegenDesc" tooltip_key="buffRadiatedRegenDesc" icon="ui_game_symbol_radiation" icon_color="255,0,0">
+		<stack_type value="ignore"/>
+		<duration value="2000000000"/>
+		<update_rate value="2.5"/>
+
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="#@modfolder:Resources/DemoFly.unity3d?demofly.prefab" parent_transform="Spine2"/>
+			<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="#@modfolder:Resources/Demonhead.unity3d?Demonhead1.prefab" parent_transform="Head"/>
+			<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="#@modfolder:Resources/DemonhandL.unity3d?DemonhandL.prefab" parent_transform="LeftHand"/>
+			<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="#@modfolder:Resources/DemonhandR.unity3d?DemonhandR.prefab" parent_transform="RightHand"/>
+		</effect_group>
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffRadiatedRegen">
+				<requirement name="StatComparePercCurrentToMax" stat="health" operation="GTE" value=".8"/>
+			</triggered_effect>
+		</effect_group>
+		<effect_group tiered="false">
+		    <requirement name="RandomRoll" seed_type="Random" target="self" min_max="0,100" operation="LTE" value="60"/>
+		        <triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" buff="buffInjuryBleedingTwo"/>
+	    </effect_group>
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="5" buff="SAN下降中">
+				<requirement name="!EntityTagCompare" target="other" tags="zombie,vehicle,turret,drone"/>
+			</triggered_effect>
+		</effect_group>
+		<effect_group name="血手">
+		    <requirement name="NotHasBuff" target="self" buff="禁忌无效"/>
+		    <requirement name="HasBuff" target="other" buff="buffInjuryBleedingTwo"/>
+			    <passive_effect name="EntityDamage" operation="base_add" value="30"/>
+	    </effect_group>
+		<effect_group>
+			<requirement name="TimeOfDay" operation="GTE" value="21"/>
+			<requirement name="TimeOfDay" operation="LT" value="49"/>
+			<passive_effect name="EntityDamage" operation="perc_add" value="0.5"/>
+		</effect_group>
+		<effect_group>
+			<requirement name="TimeOfDay" operation="GTE" value="49"/>
+			<requirement name="TimeOfDay" operation="LT" value="98"/>
+			<passive_effect name="EntityDamage" operation="perc_add" value="1"/>
+		</effect_group>
+		<effect_group>
+			<requirement name="TimeOfDay" operation="GTE" value="98"/>
+			<requirement name="TimeOfDay" operation="LT" value="210"/>
+			<passive_effect name="EntityDamage" operation="perc_add" value="1.5"/>
+		</effect_group>
+		<effect_group>
+			<requirement name="TimeOfDay" operation="GTE" value="210"/>
+			<passive_effect name="EntityDamage" operation="perc_add" value="2.5"/>
+		</effect_group>
+	</buff>
+	
+	<buff name="上级黑山羊附身" name_key="buffRadiatedRegenDesc" description_key="buffRadiatedRegenDesc" tooltip_key="buffRadiatedRegenDesc" icon="ui_game_symbol_radiation" icon_color="255,0,0">
+		<stack_type value="ignore"/>
+		<duration value="2000000000"/>
+		<update_rate value="2.5"/>
+
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="#@modfolder:Resources/DemoFly.unity3d?demofly.prefab" parent_transform="Spine2"/>
+			<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="#@modfolder:Resources/Demonhead.unity3d?Demonhead1.prefab" parent_transform="Head"/>
+			<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="#@modfolder:Resources/DemonhandL.unity3d?DemonhandL.prefab" parent_transform="LeftHand"/>
+			<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="#@modfolder:Resources/DemonhandR.unity3d?DemonhandR.prefab" parent_transform="RightHand"/>
+		</effect_group>
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffRadiatedRegen">
+				<requirement name="StatComparePercCurrentToMax" stat="health" operation="GTE" value=".8"/>
+			</triggered_effect>
+		</effect_group>
+		<effect_group tiered="false">
+		    <requirement name="RandomRoll" seed_type="Random" target="self" min_max="0,100" operation="LTE" value="60"/>
+		        <triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" buff="buffInjuryBleedingTwo"/>
+	    </effect_group>
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="5" buff="SAN下降大">
+				<requirement name="!EntityTagCompare" target="other" tags="zombie,vehicle,turret,drone"/>
+			</triggered_effect>
+		</effect_group>
+		<effect_group name="血手">
+		    <requirement name="HasBuff" target="other" buff="buffInjuryBleedingTwo"/>
+			    <passive_effect name="EntityDamage" operation="base_add" value="30"/>
+	    </effect_group>
+		<effect_group>
+			<requirement name="TimeOfDay" operation="GTE" value="21"/>
+			<requirement name="TimeOfDay" operation="LT" value="49"/>
+			<passive_effect name="EntityDamage" operation="perc_add" value="0.5"/>
+		</effect_group>
+		<effect_group>
+			<requirement name="TimeOfDay" operation="GTE" value="49"/>
+			<requirement name="TimeOfDay" operation="LT" value="98"/>
+			<passive_effect name="EntityDamage" operation="perc_add" value="1"/>
+		</effect_group>
+		<effect_group>
+			<requirement name="TimeOfDay" operation="GTE" value="98"/>
+			<requirement name="TimeOfDay" operation="LT" value="210"/>
+			<passive_effect name="EntityDamage" operation="perc_add" value="1.5"/>
+		</effect_group>
+		<effect_group>
+			<requirement name="TimeOfDay" operation="GTE" value="210"/>
+			<passive_effect name="EntityDamage" operation="perc_add" value="2.5"/>
+		</effect_group>
+	</buff>
+	
+	<buff name="黑山羊化身" name_key="黑山羊化身" description_key="借助丰惠母神的力量,短暂的获得黑山羊之力" tooltip_key="借助丰惠母神的力量,短暂的获得黑山羊之力" icon="ui_game_symbol_trex" icon_color="255,255,0">
+		<stack_type value="ignore"/>
+		<duration value="20"/>
+		<update_rate value="0.5"/>
+		<effect_group>
+		    <requirement name="NotHasBuff" buff="黑山羊化身冷却中"/>
+			    <triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="#@modfolder:Resources/Fly-demon.unity3d?Fly-demon.prefab" local_rotation="0,0,0" local_position="0,0,0"/>
+			    <triggered_effect trigger="onSelfBuffRemove" action="RemoveParticleEffectFromEntity" particle="Fly-demon"/>
+			    <triggered_effect trigger="onSelfJump" action="AddBuff" buff="buffJumpJetsAirborne"/>
+			    <passive_effect name="WalkSpeed" operation="perc_subtract" value=".15"/>
+			    <passive_effect name="RunSpeed" operation="perc_subtract" value=".15"/>
+			    <passive_effect name="JumpStrength" operation="perc_add" value="1.2"/>
+			    <passive_effect name="StaminaLoss" operation="perc_subtract" value=".55" tags="jumping"/>
+		</effect_group>
+		<effect_group>
+			<triggered_effect trigger="onSelfDied" action="RemoveBuff" buff="黑山羊化身"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="AddBuff" buff="黑山羊化身冷却中"/>
+		</effect_group>
+		<effect_group tiered="false">
+		    <requirement name="RandomRoll" seed_type="Random" target="self" min_max="0,100" operation="LTE" value="60"/>
+		        <triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" buff="buffInjuryBleedingTwo"/>
+	    </effect_group>
+	</buff>
+	
+	<buff name="黑山羊化身冷却中" name_key="黑山羊化身冷却中" description_key="冷却中,暂时无法进入化身状态" tooltip_key="冷却中,暂时无法进入化身状态" icon="ui_game_symbol_trex" icon_color="50,50,50">
+		<stack_type value="replace"/>
+		<duration value="45"/>
+		<effect_group>
+		    <triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="黑山羊化身"/>
+		</effect_group>
+	</buff>
+	
+	<buff name="二刀流" name_key="二刀流" description_key="使用双刀攻击速度上升，体力消耗降低" tooltip_key="使用双刀攻击速度上升，体力消耗降低" icon="ui_game_symbol_deep_cuts" icon_color="255,255,0">
+		<stack_type value="ignore"/>
+		<duration value="10"/>
+		<update_rate value="0.5"/>
+
+		<effect_group>
+			<requirement name="NotHasBuff" buff="二刀流冷却中"/>
+				<passive_effect name="AttacksPerMinute" operation="perc_add" value="0.35"/>
+				<passive_effect name="StaminaLoss" operation="perc_add" value="-.5" tags="primary"/>
+				<passive_effect name="StaminaLoss" operation="perc_add" value="-.5" tags="secondary"/>
+				<passive_effect name="ProjectileVelocity" operation="perc_add" duration="5" value=".3" />
+				<passive_effect name="WalkSpeed" operation="perc_add" duration="5" value=".3" />
+				<passive_effect name="RunSpeed" operation="perc_add" duration="5" value=".3" />
+		</effect_group>
+
+		<effect_group>
+			<triggered_effect trigger="onSelfDied" action="RemoveBuff" buff="二刀流"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="AddBuff" buff="二刀流冷却中"/>
+		</effect_group>
+	</buff>
+	
+	<buff name="二刀流冷却中" name_key="二刀流冷却中" description_key="你需要休息，无法进入二刀流" tooltip_key="你需要休息，无法进入二刀流" icon="ui_game_symbol_deep_cuts" icon_color="38,38,38">
+		<stack_type value="replace"/>
+		<duration value="60"/>
+		<effect_group>
+		    <triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="二刀流"/>
+		</effect_group>
+	</buff>
+	
+	<buff name="圣枪一击" hidden="true">
+		<stack_type value="ignore"/>
+		<duration value="2"/>
+		<effect_group>
+			<requirement name="ItemHasTags" tags="圣枪"/>
+			    <passive_effect name="RoundsPerMinute" operation="base_set" value="2000"/>
+				<passive_effect name="BurstRoundCount" operation="base_set" value="6"/>
+				<passive_effect name="SpreadDegreesVertical" operation="base_set" value="0.6" tags="perkGunslinger"/>
+		        <passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="0.6" tags="perkGunslinger"/>
+				<passive_effect name="KickDegreesVerticalMin" operation="base_set" value=".45" tags="perkGunslinger"/>
+		        <passive_effect name="KickDegreesVerticalMax" operation="base_set" value=".5" tags="perkGunslinger"/>
+		        <passive_effect name="KickDegreesHorizontalMin" operation="base_set" value="-.3" tags="perkGunslinger"/>
+		        <passive_effect name="KickDegreesHorizontalMax" operation="base_set" value=".15" tags="perkGunslinger"/>
+		</effect_group>
+	</buff>
+	
+	<buff name="潜能激发" name_key="潜能激发" description_key="疯狂的能量充满你的每一个细胞,战斗潜能大幅提升" tooltip_key="疯狂的能量充满你的每一个细胞,战斗潜能大幅提升" icon="ui_game_symbol_boxer" icon_color="255,84,0">
+		<stack_type value="ignore"/>
+		<duration value="20"/>
+		<update_rate value="1"/>
+
+		<effect_group>
+		    <passive_effect name="EntityDamage" operation="perc_add" value="1"/>
+		</effect_group>
+		<effect_group tiered="false">
+		    <requirement name="StatComparePercCurrentToModMax" stat="health" operation="GTE" value=".05"/>
+		    <passive_effect name="HealthChangeOT" operation="base_subtract" value="5"/>
+	    </effect_group>
+		<effect_group>
+		    <triggered_effect trigger="onSelfDied" action="RemoveBuff" buff="潜能激发"/>
+		</effect_group>
+	</buff>
+	
+	<buff name="硬化皮肤" name_key="硬化皮肤" description_key="大地的赐福让你的皮肤坚如磐石，但也会严重影响你的行动速度" tooltip_key="大地的赐福让你的皮肤坚如磐石，但也会严重影响你的行动速度" icon="ui_game_symbol_character" icon_color="222,0,255">
+		<stack_type value="ignore"/>
+		<duration value="20"/>
+		<update_rate value="1"/>
+
+		<effect_group>
+		    <passive_effect name="PhysicalDamageResist" operation="base_add" value="40"/>
+		    <passive_effect name="ElementalDamageResist" operation="base_add" value="40" tags="heat,electrical,cold"/>
+			<passive_effect name="BuffResistance" operation="base_add" value="1" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire,buffLaceration,buffInfectionCatch,buffInjuryStunned01CHTrigger"/>
+			<passive_effect name="AttacksPerMinute" operation="perc_add" value="-.6"/>
+			<passive_effect name="ProjectileVelocity" operation="perc_subtract" value=".5" />
+			<passive_effect name="WalkSpeed" operation="perc_subtract" value=".5" />
+			<passive_effect name="RunSpeed" operation="perc_subtract" value=".5" />
+		</effect_group>
+		<effect_group>
+		    <triggered_effect trigger="onSelfDied" action="RemoveBuff" buff="硬化皮肤"/>
+		</effect_group>
+	</buff>
+	
+	<buff name="暗影庇护" name_key="暗影庇护" description_key="暗影的庇护使你潜行效率提高100%" tooltip_key="暗影的庇护使你潜行效率提高100%" icon="ui_game_symbol_sneak_attack" icon_color="132,0,255">
+		<stack_type value="ignore"/>
+		<duration value="30"/>
+
+		<effect_group>
+		   <requirement name="CVarCompare" cvar="_crouching" operation="Equals" value="1"/>
+			<passive_effect name="LightMultiplier" operation="perc_add" value="-.65">
+				<requirement name="CVarCompare" cvar="_lightlevel" operation="LTE" value="50"/>
+			</passive_effect>
+			<passive_effect name="NoiseMultiplier" operation="perc_add" value="-1"/>
+			<passive_effect name="CrouchSpeed" operation="perc_add" value="1"/>
+			<passive_effect name="EnemySearchDuration" operation="perc_add" value="-2"/>
+		</effect_group>
+		<effect_group>
+		    <triggered_effect trigger="onSelfDied" action="RemoveBuff" buff="暗影庇护"/>
+		</effect_group>
+	</buff>
+
+	<buff name="克苏鲁守护" name_key="克苏鲁守护" description_key="克苏鲁将力量赐予最纯粹的拉莱耶战士,你将暂时不会受到伤害" tooltip_key="克苏鲁将力量赐予最纯粹的拉莱耶战士,你将暂时不会受到伤害" icon="ui_game_symbol_add" icon_color="132,0,155">
+		<stack_type value="ignore"/>
+		<duration value="10"/>
+		<update_rate value="0"/>
+		<display_value_key value="守护"/> <display_value value="xxx"/>
+		<effect_group>
+			<passive_effect name="HealthLoss" operation="base_set" value="0"/>
+			<passive_effect name="HealthLoss" operation="perc_set" value="0"/>
+			<passive_effect name="HealthLoss" operation="perc_add" value="-1.2"/>
+			<passive_effect name="ElementalDamageResist" operation="base_add" value="200" tags="cold,heat,electrical"/>
+			<passive_effect name="PhysicalDamageResist" operation="base_add" value="200"/>
+			<passive_effect name="PhysicalDamageResist" operation="base_add" value="200" tags="coredamageresist"/>
+			<passive_effect name="ElementalDamageResist" operation="base_add" value="200" tags="heat,electrical"/>
+
+			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveAllNegativeBuffs"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" stat="Stamina" operation="set" value="25000"/>
+
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$armHurtCounter" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$legHurtCounter" operation="set" value="0"/>
+
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="healAbrasionMult" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$abrasionHealthMaxBlockage" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$abrasionCounter" operation="set" value="0"/>
+		</effect_group>
+		<effect_group>
+			<triggered_effect trigger="onSelfDied" action="RemoveBuff" buff="克苏鲁守护"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="AddBuff" buff="克苏鲁守护冷却中"/>
+		</effect_group>
+	</buff>
+	
+	<buff name="克苏鲁守护冷却中" name_key="克苏鲁守护冷却中" description_key="克苏鲁暂时无法响应你的呼唤" tooltip_key="克苏鲁暂时无法响应你的呼唤" icon="ui_game_symbol_add" icon_color="55,55,55">
+		<stack_type value="replace"/>
+		<duration value="1200"/>
+		<effect_group>
+		    <triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="克苏鲁守护"/>
+		</effect_group>
+	</buff>
+	
+	<buff name="拉莱耶护甲Ⅰ" hidden="true">
+		<stack_type value="ignore"/>
+		<!--<effect_group>
+			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="拉莱耶套装Ⅱ-未达成"/>
+			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="拉莱耶套装"/>
+		</effect_group>-->
+	</buff>
+	
+	<buff name="拉莱耶护甲Ⅱ" hidden="true">
+		<stack_type value="ignore"/>
+		<!--<effect_group>
+			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="拉莱耶套装Ⅰ-未达成"/>
+			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="拉莱耶套装"/>
+		</effect_group>-->
+	</buff>
+	
+	<buff name="拉莱耶护甲Ⅲ" hidden="true">
+		<stack_type value="ignore"/>
+		<!--<effect_group>
+			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="拉莱耶套装Ⅰ-未达成"/>
+			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="拉莱耶套装"/>
+		</effect_group>-->
+	</buff>
+	
+	<buff name="拉莱耶套装" name_key="拉莱耶套装" description_key="激活拉莱耶套装效果" tooltip_key="激活拉莱耶套装效果" icon="ui_game_symbol_armor_iron" icon_color="255,138,0">
+		<stack_type value="ignore"/>
+		<effect_group tiered="false">
+		    <requirement name="NotHasBuff" buff="克苏鲁守护冷却中"/>
+		    <requirement name="StatComparePercCurrentToModMax" stat="health" operation="LTE" value=".1"/>
+		    <triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" buff="克苏鲁守护"/>
+	    </effect_group>
+	    <effect_group tiered="false">
+		    <requirement name="StatComparePercCurrentToModMax" stat="health" operation="LTE" value=".8"/>
+		    <passive_effect name="HealthChangeOT" operation="base_add" value="1"/>
+	    </effect_group>
+	</buff>
+
+    <buff name="黑山羊护甲1" hidden="true">
+		<stack_type value="ignore"/>
+	</buff>
+	
+	<buff name="黑山羊护甲2" hidden="true">
+		<stack_type value="ignore"/>
+	</buff>
+	
+	<buff name="黑山羊护甲3" hidden="true">
+		<stack_type value="ignore"/>
+	</buff>
+	
+	<buff name="黑山羊套装" name_key="黑山羊套装" description_key="激活黑山羊套装效果" tooltip_key="激活黑山羊套装效果" icon="ui_game_symbol_light_armor2" icon_color="132,0,155">
+		<stack_type value="ignore"/>
+		<effect_group tiered="false">
+		    <requirement name="NotHasBuff" buff="暗影一击冷却"/>
+		    <triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="暗影一击"/>
+	    </effect_group>
+	    <effect_group tiered="false">
+		    <requirement name="StatComparePercCurrentToModMax" stat="health" operation="LTE" value=".2"/>
+		    <requirement name="ItemHasTags" tags="weapon"/>
+			    <passive_effect name="AttacksPerMinute" operation="perc_add" value="1"/>
+	    </effect_group>
+	</buff>
+	
+	<buff name="暗影一击" name_key="暗影一击" description_key="灌注暗影的力量伺机发出致命一击" tooltip_key="灌注暗影的力量伺机发出致命一击" icon="ui_game_symbol_stealth" icon_color="132,0,255">
+		<stack_type value="ignore"/>
+		<effect_group>
+			<requirement name="ItemHasTags" tags="weapon"/>
+				<passive_effect name="EntityDamage" operation="perc_add" value="1"/>
+		</effect_group>
+
+		<effect_group name="wait until the next attack (with any weapon) has started AND ended, then remove bonus">
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="RemoveBuff" buff="暗影一击"/>
+			<!--<triggered_effect trigger="onSelfSecondaryActionEnd" action="RemoveBuff" buff="暗影一击"/>-->
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="暗影一击冷却"/>
+			<!--<triggered_effect trigger="onSelfSecondaryActionEnd" action="AddBuff" buff="暗影一击冷却"/>-->
+		</effect_group>
+	</buff>
+	
+	<buff name="暗影一击冷却" hidden="true">
+		<stack_type value="ignore"/>
+		<duration value="10"/>
+		<effect_group>
+		    <triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="暗影一击"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="AddBuff" buff="暗影一击">
+			    <requirement name="HasBuff" buff="黑山羊套装"/>
+			</triggered_effect>
+		</effect_group>
+	</buff>
+
+    <buff name="信徒护甲1" hidden="true">
+		<stack_type value="ignore"/>
+	</buff>
+	
+	<buff name="信徒护甲2" hidden="true">
+		<stack_type value="ignore"/>
+	</buff>
+	
+	<buff name="信徒护甲3" hidden="true">
+		<stack_type value="ignore"/>
+	</buff>
+	
+	<buff name="信徒套装" name_key="信徒套装" description_key="激活信徒套装效果" tooltip_key="激活信徒套装效果" icon="ui_game_symbol_light_armor" icon_color="91,211,255">
+		<stack_type value="ignore"/>
+		<update_rate value="2.5"/>
+		<effect_group tiered="false">
+		    <triggered_effect trigger="onSelfKilledOther" action="AddBuff" buff="甜蜜祭品"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="10" buff="异端守护">
+				<requirement name="!EntityTagCompare" target="other" tags="zombie,hostile,animal,npc,vehicle,turret,drone"/>
+			</triggered_effect>
+	    </effect_group>
+	    <effect_group tiered="false">
+		    <passive_effect name="WaterLossPerHealthPointGained" operation="perc_add" value="-.15"/>
+			<passive_effect name="WaterLossPerStaminaPointGained" operation="perc_add" value="-.15"/>
+			<passive_effect name="FoodLossPerStaminaPointGained" operation="perc_add" value="-.15"/>
+			<passive_effect name="HealthMax" operation="base_add" value="20"/>
+			<passive_effect name="StaminaMax" operation="base_add" value="20"/>	
+			<passive_effect name="EntityDamage" operation="base_add" value="50"/>
+			<passive_effect name="PhysicalDamageResist" operation="base_add" value="7"/>
+	    </effect_group>
+	</buff>
+	
+	<buff name="异端守护" name_key="异端守护" description_key="受到异端信仰庇护增加7点护甲，格挡10点伤害" tooltip_key="受到异端信仰庇护增加7点护甲，格挡10点伤害" icon="ui_game_symbol_light_armor" icon_color="91,211,255">
+		<stack_type value="replace"/>
+		<duration value="20"/>
+	    <effect_group tiered="false">
+		    <property name="PainResistPerHit" value="10"/>
+			<passive_effect name="PhysicalDamageResist" operation="base_add" value="7"/>
+	    </effect_group>
+	</buff>
+	
+	<buff name="甜蜜祭品" name_key="甜蜜祭品" description_key="献上祭品获得恐怖增益" tooltip_key="献上祭品获得恐怖增益" icon="ui_game_symbol_sneak_attack" icon_color="155,0,10">
+		<stack_type value="ignore"/>
+		<duration value="3"/>
+	    <effect_group tiered="false">
+		    <passive_effect name="ProjectileVelocity" operation="perc_add" value="2" />
+		    <passive_effect name="WalkSpeed" operation="perc_add" value="2" />
+		    <passive_effect name="RunSpeed" operation="perc_add" value="2" />
+			<passive_effect name="EntityDamage" operation="base_add" value="100"/>
+	    </effect_group>
+	</buff>
+	
+	<buff name="SAN装备1" hidden="true">
+		<stack_type value="ignore"/>
+		<effect_group tiered="false">
+		    <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="NL" target="self" operation="subtract" value="5">
+			   <requirement name="CVarCompare" cvar="NL" operation="GTE" value="5"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyStats" stat="Health" target="self" operation="subtract" value="15">
+			    <requirement name="CVarCompare" cvar="NL" operation="LT" value="5"/>
+			</triggered_effect>
+	    </effect_group>
+	</buff>
+	
+	<buff name="SAN装备2" hidden="true">
+		<stack_type value="ignore"/>
+		<effect_group tiered="false">
+		    <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="NL" target="self" operation="subtract" value="10">
+			    <requirement name="CVarCompare" cvar="NL" operation="GTE" value="10"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyStats" stat="Health" target="self" operation="subtract" value="25">
+			    <requirement name="CVarCompare" cvar="NL" operation="LT" value="10"/>
+			</triggered_effect>
+	    </effect_group>
+	</buff>
+	
+	<buff name="SAN装备3" hidden="true">
+		<stack_type value="ignore"/>
+		<effect_group tiered="false">
+		    <requirement name="EntityHasMovementTag" target="self" tags="running"/>
+		    <triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="NL" target="self" operation="subtract" value="0.5"/>
+	    </effect_group>
+		<effect_group tiered="false">
+		    <requirement name="EntityHasMovementTag" target="self" tags="walking"/>
+		    <triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="NL" target="self" operation="subtract" value="0.5"/>
+	    </effect_group>
+		<effect_group tiered="false">
+		    <requirement name="EntityHasMovementTag" target="self" tags="swimming"/>
+		    <triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="NL" target="self" operation="subtract" value="0.5"/>
+	    </effect_group>
+		<effect_group tiered="false">
+		    <requirement name="EntityHasMovementTag" target="self" tags="driving"/>
+		    <triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="NL" target="self" operation="subtract" value="0.5"/>
+	    </effect_group>
+		<effect_group tiered="false">
+		    <requirement name="EntityHasMovementTag" target="self" tags="jumping"/>
+		    <triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="NL" target="self" operation="subtract" value="0.5"/>
+	    </effect_group>
+	</buff>
+	
+	<buff name="灵魂熔炼" name_key="灵魂熔炼" description_key="每当杀死敌人都能抽取敌人的灵魂提升狙击枪与弓弩的伤害力,并恢复10点SAN值,但死亡后会失去所有灵魂" tooltip_key="每当杀死敌人都能抽取敌人的灵魂提升狙击枪与弓弩的伤害力,并恢复10点SAN值,但死亡后会失去所有灵魂" icon="ui_game_symbol_zombie" icon_color="0,0,255">
+		<stack_type value="ignore"/>
+		<display_value value="NumSoul"/>
+		<display_value_key value="[0000FF]灵魂[0000FF]:[FFFFFF]{0:0.00}"/>
+		<effect_group tiered="false">
+		    <triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="NumSoul" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfDied" action="RemoveBuff" buff="灵魂熔炼"/>
+			<triggered_effect trigger="onSelfKilledOther" action="ModifyCVar" cvar="NumSoul" operation="add" value="0.5"/>
+			<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" cvar="NL" operation="add" value="10">
+			    <requirement name="CVarCompare" cvar="NL" operation="LTE" value="90"/>
+	        </triggered_effect>
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="NumSoul" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfDied" action="ModifyCVar" cvar="NumSoul" operation="set" value="0"/>
+	    </effect_group>
+		
+	    <effect_group tiered="false">
+			<passive_effect name="EntityDamage" operation="base_add" value="@NumSoul">
+			    <requirement name="ItemHasTags" tags="perkDeadEye"/></passive_effect>
+			<passive_effect name="EntityDamage" operation="base_add" value="@NumSoul">
+			    <requirement name="ItemHasTags" tags="crossbow"/></passive_effect>
+	    </effect_group>
+	</buff>
+	
+	<!--<buff name="异教光环" name_key="异教光环" description_key="异教光环范围增强生命、耐力、护甲、攻击" icon="ui_game_symbol_fire" icon_color="165,0,255">
+		<stack_type value="replace"/>
+		<duration value="30"/>
+		<effect_group>
+			<passive_effect name="HealthMax" operation="base_add" value="20"/>
+			<passive_effect name="StaminaMax" operation="base_add" value="20"/>	
+			<passive_effect name="EntityDamage" operation="base_add" value="50"/>
+			<passive_effect name="PhysicalDamageResist" operation="base_add" value="7"/>
+		</effect_group>
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffRemove" action="AddBuff" buff="异教光环" target="selfAOE" target_tags="ally,party" range="20">
+			    <requirement name="HasBuff" buff="信徒套装"/>
+			</triggered_effect>
+		</effect_group>
+	</buff>-->
+
+    <buff name="恶魂封印1" hidden="true">
+		<stack_type value="ignore"/>
+	</buff>
+	
+	<buff name="恶魂封印2" hidden="true">
+		<stack_type value="ignore"/>
+	</buff>
+	
+	<buff name="恶魂封印3" hidden="true">
+		<stack_type value="ignore"/>
+	</buff>
+	
+	<!--<buff name="恶魂1" hidden="true">
+		<stack_type value="ignore"/>
+	</buff>
+	
+	<buff name="恶魂2" hidden="true">
+		<stack_type value="ignore"/>
+		<effect_group tiered="false">
+		    <triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="恶魂1"/>
+	    </effect_group>
+	</buff>
+	
+	<buff name="恶魂3" hidden="true">
+		<stack_type value="ignore"/>
+		<effect_group tiered="false">
+		    <triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="恶魂2"/>
+	    </effect_group>
+	</buff>
+	
+	<buff name="恶魂4" hidden="true">
+		<stack_type value="ignore"/>
+		<effect_group tiered="false">
+		    <triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="恶魂3"/>
+	    </effect_group>
+	</buff>
+	
+	<buff name="恶魂5" hidden="true">
+		<stack_type value="ignore"/>
+		<effect_group tiered="false">
+		    <triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="恶魂4"/>
+	    </effect_group>
+	</buff>
+	
+	<buff name="恶魂6" hidden="true">
+		<stack_type value="ignore"/>
+		<effect_group tiered="false">
+		    <triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="恶魂5"/>
+	    </effect_group>
+	</buff>
+	
+	<buff name="恶魂7" hidden="true">
+		<stack_type value="ignore"/>
+		<effect_group tiered="false">
+		    <triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="恶魂6"/>
+	    </effect_group>
+	</buff>
+	
+	<buff name="恶魂8" hidden="true">
+		<stack_type value="ignore"/>
+		<effect_group tiered="false">
+		    <triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="恶魂7"/>
+	    </effect_group>
+	</buff>
+	
+	<buff name="恶魂9" hidden="true">
+		<stack_type value="ignore"/>
+		<effect_group tiered="false">
+		    <triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="恶魂8"/>
+	    </effect_group>
+	</buff>
+	
+	<buff name="恶魂10" hidden="true">
+		<stack_type value="ignore"/>
+		<effect_group tiered="false">
+		    <triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="恶魂9"/>
+	    </effect_group>
+	</buff>-->
+	
+	<buff name="封印之力Lv1" name_key="封印之力Lv1" description_key="基础伤害额外增加50点,换弹速度上升50%" tooltip_key="获得封印之力的赐福,除非死亡否则一段时间后会更强" icon="ui_game_symbol_star" icon_color="240,180,0">
+		<stack_type value="ignore"/>
+		<duration value="3600"/>
+		<effect_group tiered="false">
+			<triggered_effect trigger="onSelfDied" action="RemoveBuff" buff="封印之力Lv1"/>
+			<triggered_effect trigger="onSelfDied" action="RemoveBuff" buff="封印之力Lv2"/>
+			<triggered_effect trigger="onSelfDied" action="RemoveBuff" buff="封印之力Max"/>
+			<!--<triggered_effect trigger="onSelfDied" action="RemoveBuff" buff="恶魂1"/><triggered_effect trigger="onSelfDied" action="RemoveBuff" buff="恶魂2"/><triggered_effect trigger="onSelfDied" action="RemoveBuff" buff="恶魂3"/>
+			<triggered_effect trigger="onSelfDied" action="RemoveBuff" buff="恶魂4"/><triggered_effect trigger="onSelfDied" action="RemoveBuff" buff="恶魂5"/><triggered_effect trigger="onSelfDied" action="RemoveBuff" buff="恶魂6"/>
+			<triggered_effect trigger="onSelfDied" action="RemoveBuff" buff="恶魂7"/><triggered_effect trigger="onSelfDied" action="RemoveBuff" buff="恶魂8"/><triggered_effect trigger="onSelfDied" action="RemoveBuff" buff="恶魂9"/><triggered_effect trigger="onSelfDied" action="RemoveBuff" buff="恶魂10"/>-->
+	    </effect_group>
+		<effect_group tiered="false">
+		    <triggered_effect trigger="onSelfBuffRemove" action="AddBuff" buff="封印之力Lv2"/>
+			<!--<triggered_effect trigger="onSelfKilledOther" action="AddBuff" buff="恶魂1"><requirement name="EntityTagCompare" target="other" tags="古神"/>
+			    <requirement name="NotHasBuff" buff="恶魂1"/><requirement name="NotHasBuff" buff="恶魂2"/><requirement name="NotHasBuff" buff="恶魂3"/>
+				<requirement name="NotHasBuff" buff="恶魂4"/><requirement name="NotHasBuff" buff="恶魂5"/><requirement name="NotHasBuff" buff="恶魂6"/>
+				<requirement name="NotHasBuff" buff="恶魂7"/><requirement name="NotHasBuff" buff="恶魂8"/><requirement name="NotHasBuff" buff="恶魂9"/><requirement name="NotHasBuff" buff="恶魂10"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfKilledOther" action="AddBuff" buff="恶魂2"><requirement name="EntityTagCompare" target="other" tags="古神"/><requirement name="HasBuff" buff="恶魂1"/></triggered_effect>
+			<triggered_effect trigger="onSelfKilledOther" action="AddBuff" buff="恶魂3"><requirement name="EntityTagCompare" target="other" tags="古神"/><requirement name="HasBuff" buff="恶魂2"/></triggered_effect>
+			<triggered_effect trigger="onSelfKilledOther" action="AddBuff" buff="恶魂4"><requirement name="EntityTagCompare" target="other" tags="古神"/><requirement name="HasBuff" buff="恶魂3"/></triggered_effect>
+			<triggered_effect trigger="onSelfKilledOther" action="AddBuff" buff="恶魂5"><requirement name="EntityTagCompare" target="other" tags="古神"/><requirement name="HasBuff" buff="恶魂4"/></triggered_effect>
+			<triggered_effect trigger="onSelfKilledOther" action="AddBuff" buff="封印之力Lv2"><requirement name="EntityTagCompare" target="other" tags="古神"/><requirement name="HasBuff" buff="恶魂5"/></triggered_effect>-->
+	    </effect_group>
+	    <effect_group tiered="false">
+			<passive_effect name="EntityDamage" operation="base_add" value="75"/>
+			<passive_effect name="ReloadSpeedMultiplier" operation="perc_add" value="0.65"/>
+	    </effect_group>
+	</buff>
+	
+	<buff name="封印之力Lv2" name_key="封印之力Lv2" description_key="基础伤害额外增加75点,换弹速度上升65%" tooltip_key="获得封印之力的赐福,除非死亡否则一段时间后会更强" icon="ui_game_symbol_star" icon_color="255,193,0">
+		<stack_type value="ignore"/>
+		<duration value="10800"/>
+		<effect_group tiered="false">
+		    <triggered_effect trigger="onSelfDied" action="RemoveBuff" buff="封印之力Lv1"/>
+			<triggered_effect trigger="onSelfDied" action="RemoveBuff" buff="封印之力Lv2"/>
+			<triggered_effect trigger="onSelfDied" action="RemoveBuff" buff="封印之力Max"/>
+	    </effect_group>
+		<effect_group tiered="false">
+		    <triggered_effect trigger="onSelfBuffRemove" action="AddBuff" buff="封印之力Max"/>
+	    </effect_group>
+	    <effect_group tiered="false">
+			<passive_effect name="EntityDamage" operation="base_add" value="75"/>
+			<passive_effect name="ReloadSpeedMultiplier" operation="perc_add" value="0.65"/>
+	    </effect_group>
+	</buff>
+	
+	<buff name="封印之力Max" name_key="封印之力Max" description_key="基础伤害额外增加100点,换弹速度上升80%" tooltip_key="获得完美的封印之力赐福,除非死亡否则力量不会消失" icon="ui_game_symbol_star" icon_color="255,250,0">
+		<stack_type value="ignore"/>
+		<effect_group tiered="false">
+			<triggered_effect trigger="onSelfDied" action="RemoveBuff" buff="封印之力Lv1"/>
+			<triggered_effect trigger="onSelfDied" action="RemoveBuff" buff="封印之力Lv2"/>
+			<triggered_effect trigger="onSelfDied" action="RemoveBuff" buff="封印之力Max"/>
+	    </effect_group>
+
+	    <effect_group tiered="false">
+			<passive_effect name="EntityDamage" operation="base_add" value="100"/>
+			<passive_effect name="ReloadSpeedMultiplier" operation="perc_add" value="0.8"/>
+	    </effect_group>
+	</buff>
+
+    <buff name="禁忌无效" hidden="true">
+		<stack_type value="ignore"/>
+		<duration value="20"/>
+		<update_rate value="0"/>
+		<effect_group>
+		    <triggered_effect trigger="onSelfDied" action="RemoveBuff" buff="禁忌无效"/>
+		</effect_group>
+	</buff>
+
+    <buff name="寄生之血" hidden="true">
+		<stack_type value="ignore"/>
+		<duration value="120"/>
+		<update_rate value="0"/>
+		<effect_group>
+			<triggered_effect trigger="onSelfDied" action="RemoveBuff" buff="寄生之血"/>
+		</effect_group>
+		<effect_group>
+		    <requirement name="NotHasBuff" target="self" buff="buffIsOnFire"/>
+			<triggered_effect trigger="onSelfBuffFinish" action="AddBuff" buff="破裂之兆"/>
+		</effect_group>
+	</buff>
+	
+	<buff name="破裂之兆" description_key="[ff0000]有些可怕的事情往往意识不到,或许可以向火焰寻求救赎" tooltip_key="[ff0000]有些可怕的事情往往意识不到,或许可以向火焰寻求救赎" icon="ui_game_symbol_infection" icon_color="235,0,0">
+		<stack_type value="ignore"/>
+		<duration value="45"/>
+		<update_rate value="1"/>
+		<effect_group>
+		    <requirement name="NotHasBuff" target="self" buff="buffIsOnFire"/>
+		    <triggered_effect trigger="onSelfBuffFinish" action="AddBuff" buff="寄生破体Lv1"/>
+		</effect_group>
+	</buff>
+	
+	<buff name="寄生破体Lv1" description_key="扭曲寄生破体而出,每秒承受20-50点伤害(SAN相关),火焰也许能救你一命" tooltip_key="[ff0000]寄生破体而出,你感到极度痛苦" icon="ui_game_symbol_infection" icon_color="235,0,0">
+		<stack_type value="ignore"/>
+		<duration value="5"/>
+		<update_rate value="1"/>
+		<effect_group>
+		    <requirement name="NotHasBuff" target="self" buff="buffIsOnFire"/>
+		    <triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="#@modfolder:Resources/TentacleA.unity3d?TentacleA.prefab" parent_transform="Spine1"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="RemoveParticleEffectFromEntity" particle="TentacleA"/>
+			<triggered_effect trigger="onSelfDied" action="RemoveBuff" buff="寄生破体"/>
+		</effect_group>
+		<effect_group>
+		    <requirement name="NotHasBuff" target="self" buff="buffIsOnFire"/>
+            <requirement name="CVarCompare" cvar="NL" operation="GTE" value="80"/>			
+		    <triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" stat="Health" operation="subtract" value="35"/>
+		</effect_group>
+		<effect_group>
+	  	    <requirement name="NotHasBuff" target="self" buff="buffIsOnFire"/>
+            <requirement name="CVarCompare" cvar="NL" operation="GTE" value="40"/>
+            <requirement name="CVarCompare" cvar="NL" operation="LT" value="80"/>			
+		    <triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" stat="Health" operation="subtract" value="50"/>
+		</effect_group>
+		<effect_group>
+		    <requirement name="NotHasBuff" target="self" buff="buffIsOnFire"/>
+            <requirement name="CVarCompare" cvar="NL" operation="LT" value="40"/>			
+		    <triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" stat="Health" operation="subtract" value="70"/>
+		</effect_group>
+	</buff>
+	
+	
+    <buff name="噩梦降临" name_key="[fd0f0f]噩梦降临" description_key="[ff0000]你的噩梦即将降临会逐渐损失SAN值.\n[00FF00]服用救赎之心方能解除诅咒." tooltip_key="[ff0000]你的噩梦即将降临会逐渐损失SAN值.[00FF00]服用救赎之心方能解除诅咒." icon="ui_game_symbol_cold" icon_color="255,0,0">
+		<stack_type value="ignore"/>
+		<update_rate value="2"/>
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyScreenEffect" effect_name="Dark" intensity="0" fade="1"/>
+		</effect_group>
+		<effect_group>
+		   <requirement name="CVarCompare" cvar="NL" operation="LT" value="50"/>
+		   <triggered_effect trigger="onSelfBuffUpdate" action="ModifyScreenEffect" effect_name="Dark" intensity=".3" fade="0.5"/>
+		</effect_group>
+		<effect_group>
+		   <requirement name="CVarCompare" cvar="NL" operation="GTE" value="50"/>
+		   <triggered_effect trigger="onSelfBuffUpdate" action="ModifyScreenEffect" effect_name="Dark" intensity="0" fade="1"/>
+		</effect_group>
+		<effect_group>
+		   <requirement name="CVarCompare" cvar="NL" operation="GTE" value="1"/>
+		   <triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="NL" operation="subtract" value="0.5"/>
+		</effect_group>
+		<effect_group>
+		   <requirement name="CVarCompare" cvar="NL" operation="LT" value="1"/>
+		   <triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="NL" operation="set" value="0"/>
+		</effect_group>
+	</buff>
+	
+	<buff name="噩梦解除" hidden="true">
+		<stack_type value="ignore"/>
+		<duration value="0.1"/>
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="噩梦降临"/>
+		</effect_group>
+	</buff>
+	
+	<buff name="旧日之奴" name_key="[fd0f0f]旧日之奴" description_key="[ff0000]死于噩梦之人被打上旧神的烙印再难以脱离噩梦...\n[00FF00]伤害降低30%.\经验获取降低50%.\资源获取降低50%.\[ff0000]旧日之奴下再次死亡将掉落意志等级！需要在禁忌解析台或灵魂之井中购买救赎." tooltip_key="[ff0000]死于噩梦之人被打上旧神的烙印再难以脱离噩梦..." icon="ui_game_symbol_near_death_trauma" icon_color="255,0,0" remove_on_death="false">
+		<stack_type value="ignore"/>
+		<effect_group>
+		    <triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="NL" operation="set" value="100"/>
+		    <passive_effect name="PlayerExpGain" operation="perc_subtract" value="0.5" />	
+			<passive_effect name="EntityDamage" operation="perc_subtract" value=".3" tags="melee"/>
+			<passive_effect name="EntityDamage" operation="perc_subtract" value=".3" tags="gun"/>
+			<passive_effect name="EntityDamage" operation="perc_subtract" value=".3" tags="perkArchery"/>
+			<passive_effect name="HarvestCount" operation="perc_subtract" value=".5" tags="oreWoodHarvest, allHarvest, cropHarvest, wildCropsHarvest, butcherHarvest, 古神结晶Harvest, 死灵之书残页Harvest"/>
+		</effect_group>
+		<!--<triggered_effect trigger="onSelfRespawn" action="ModifyCVar" cvar="CS" operation="subtract" value="1">
+			<requirement name="CVarCompare" cvar="CS" operation="GTE" value="1"/>
+			<requirement name="CVarCompare" cvar="CS" operation="LTE" value="7"/>
+		</triggered_effect>-->
+	</buff>
+	
+	<buff name="旧神救赎" hidden="true">
+		<stack_type value="ignore"/>
+		<duration value="0.1"/>
+		<effect_group>
+		    <triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="旧日之奴"/>
+			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="噩梦降临"/>
+		</effect_group>
+	</buff>
+
+    <buff name="强化理智" hidden="true">
+		<stack_type value="ignore"/>
+		<duration value="20"/>
+		<update_rate value="1"/>
+	</buff>
+	
+    <buff name="SAN下降黄衣" hidden="true">
+		<stack_type value="ignore"/>
+		<duration value="1"/>
+		<update_rate value="1"/>
+
+		<effect_group>
+		   <requirement name="CVarCompare" cvar="NL" operation="GTE" value="20"/>
+		   <triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="NL" operation="subtract" value="20"/>
+		</effect_group>
+		<effect_group>
+		   <requirement name="CVarCompare" cvar="NL" operation="LT" value="20"/>
+		   <triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="NL" operation="set" value="0"/>
+		   <triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" stat="Health" operation="subtract" value="20"/>
+		   <triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffBurningElement"/>
+		</effect_group>
+	</buff>
+
+    <buff name="SAN下降大" hidden="true">
+		<stack_type value="ignore"/>
+		<duration value="4"/>
+		<update_rate value="1"/>
+
+		<effect_group>
+		   <requirement name="CVarCompare" cvar="NL" operation="GTE" value="10"/>
+		   <triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="NL" operation="subtract" value="10"/>
+		</effect_group>
+		<effect_group>
+		   <requirement name="CVarCompare" cvar="NL" operation="LT" value="10"/>
+		   <triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="NL" operation="set" value="0"/>
+		</effect_group>
+	</buff>
+	
+	<buff name="SAN下降中" hidden="true">
+		<stack_type value="ignore"/>
+		<duration value="4"/>
+		<update_rate value="1"/>
+
+		<effect_group>
+		   <requirement name="CVarCompare" cvar="NL" operation="GTE" value="4"/>
+		   <triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="NL" operation="subtract" value="4"/>
+		</effect_group>
+		<effect_group>
+		   <requirement name="CVarCompare" cvar="NL" operation="LT" value="4"/>
+		   <triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="NL" operation="set" value="0"/>
+		</effect_group>
+	</buff>
+	
+	<buff name="SAN下降小" hidden="true">
+		<stack_type value="ignore"/>
+		<duration value="4"/>
+		<update_rate value="1"/>
+
+		<effect_group>
+		   <requirement name="CVarCompare" cvar="NL" operation="GTE" value="2"/>
+		   <triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="NL" operation="subtract" value="2"/>
+		</effect_group>
+		<effect_group>
+		   <requirement name="CVarCompare" cvar="NL" operation="LT" value="2"/>
+		   <triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="NL" operation="set" value="0"/>
+		</effect_group>
+	</buff>
+
+    <buff name="霜冻区域" hidden="true">
+		<damage_type value="cold"/>
+		<stack_type value="replace"/><duration value="1"/>
+		<effect_group>
+		    <requirement name="!EntityTagCompare" tags="npc,vehicle,player,turret,drone"/>
+			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="霜冻"/>
+		</effect_group>
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="霜冻区域"/>
+		</effect_group>
+	</buff>
+	
+	<buff name="怪物霜冻区域" hidden="true">
+		<damage_type value="cold"/>
+		<stack_type value="replace"/><duration value="1"/>
+		<effect_group>
+		    <requirement name="!EntityTagCompare" tags="zombie,vehicle,turret,drone"/>
+			<requirement name="NotHasBuff" target="other" buff="冻结"/>
+			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="霜冻"/>
+		</effect_group>
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="霜冻区域"/>
+		</effect_group>
+	</buff>
+
+    <buff name="霜冻" name_key="霜冻" description_key="霜冻会降低你的各项速度,持续受到霜冻伤害会被冻结" tooltip_key="霜冻会降低你的各项速度,持续受到霜冻伤害会被冻结" icon="ui_game_symbol_cold" icon_color="122,255,247">
+		<stack_type value="ignore"/>
+		<duration value="10"/>
+		<update_rate value="0"/>
+		<effect_group>
+		    <triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="#@modfolder:Resources/Freeze.unity3d?Freeze.prefab" parent_transform="Spine2"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="RemoveParticleEffectFromEntity" particle="Freeze"/>
+			<triggered_effect trigger="onSelfDied" action="RemoveBuff" buff="霜冻"/>
+			<passive_effect name="AttacksPerMinute" operation="perc_add" value="-.5"/>
+			<passive_effect name="ProjectileVelocity" operation="perc_subtract" value=".5" />
+			<passive_effect name="WalkSpeed" operation="perc_subtract" value=".5" />
+			<passive_effect name="RunSpeed" operation="perc_subtract" value=".5" />
+		</effect_group>
+		<effect_group>
+		    <requirement name="RandomRoll" seed_type="Random" target="self" min_max="0,100" operation="LTE" value="20"/>
+		    <triggered_effect trigger="onOtherDamagedSelf" damage_type="Cold" action="AddBuff" buff="冻结"/>
+		</effect_group>
+	</buff>
+	
+	<buff name="冻结" name_key="冻结" description_key="你被冻结!无法做出有效的动作,更容易受到致命伤" tooltip_key="你被冻结!无法做出有效的动作,更容易受到致命伤" icon="ui_game_symbol_cold" icon_color="55,102,255">
+	    <damage_type value="Cold"/>
+		<stack_type value="ignore"/>
+		<duration value="10"/>
+		<update_rate value="0"/>
+		<effect_group>
+		    <triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="#@modfolder:Resources/Frozen.unity3d?Frozen.prefab" parent_transform="Spine1" local_offset="0,-.2,0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="霜冻"/>
+			<triggered_effect trigger="onSelfDied" action="RemoveBuff" buff="冻结"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="RemoveParticleEffectFromEntity" particle="Frozen"/>
+			<passive_effect name="AttacksPerMinute" operation="base_set" value="0"/>
+			<passive_effect name="ProjectileVelocity" operation="base_set" value="0" />
+			<passive_effect name="WalkSpeed" operation="base_set" value="0" />
+			<passive_effect name="RunSpeed" operation="base_set" value="0" />
+			<passive_effect name="AttacksPerMinute" operation="perc_add" value="-1"/>
+			<passive_effect name="ProjectileVelocity" operation="perc_subtract" value="1" />
+			<passive_effect name="WalkSpeed" operation="perc_subtract" value="1" />
+			<passive_effect name="RunSpeed" operation="perc_subtract" value="1" />
+		</effect_group>
+	</buff>
+	
+	<buff name="极冰" name_key="极冰" description_key="你被冻结!无法做出有效的动作,更容易受到致命伤" tooltip_key="你被冻结!无法做出有效的动作,更容易受到致命伤" icon="ui_game_symbol_cold" icon_color="55,102,255">
+	    <damage_type value="Cold"/>
+		<stack_type value="ignore"/>
+		<duration value="10"/>
+		<update_rate value="0"/>
+		<effect_group>
+		    <triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="#@modfolder:Resources/Frozen.unity3d?Frozen.prefab" parent_transform="Spine1" local_offset="0,-.2,0"/>
+			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="霜冻"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" stat="Health" operation="subtract" value="600"/>
+			<triggered_effect trigger="onSelfDied" action="RemoveBuff" buff="冻结"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="RemoveParticleEffectFromEntity" particle="Frozen"/>
+			<passive_effect name="AttacksPerMinute" operation="base_set" value="0"/>
+			<passive_effect name="ProjectileVelocity" operation="base_set" value="0" />
+			<passive_effect name="WalkSpeed" operation="base_set" value="0" />
+			<passive_effect name="RunSpeed" operation="base_set" value="0" />
+			<passive_effect name="AttacksPerMinute" operation="perc_add" value="-1"/>
+			<passive_effect name="ProjectileVelocity" operation="perc_subtract" value="1" />
+			<passive_effect name="WalkSpeed" operation="perc_subtract" value="1" />
+			<passive_effect name="RunSpeed" operation="perc_subtract" value="1" />
+		</effect_group>
+	</buff>
+	
+	<buff name="伤害AOES" name_key="伤害AOES" hidden="true">
+		<stack_type value="ignore"/>
+		<duration value="0.1"/>
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" stat="Health" operation="subtract" value="600"/>
+		</effect_group>
+	</buff>
+	
+	<buff name="伤害AOE" name_key="伤害AOE" hidden="true">
+		<stack_type value="ignore"/>
+		<duration value="0.1"/>
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" stat="Health" operation="subtract" value="900"/>
+		</effect_group>
+	</buff>
+	
+	<buff name="伤害AOE2" name_key="伤害AOE2" hidden="true">
+		<stack_type value="ignore"/>
+		<duration value="0.1"/>
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" stat="Health" operation="subtract" value="600"/>
+		</effect_group>
+	</buff>
+
+    <buff name="祭品之印" name_key="祭品之印" description_key="被刻下祭品的灵魂烙印,放大受到的伤害" tooltip_key="被刻下祭品的灵魂烙印,放大受到的伤害" icon="ui_game_symbol_deep_cuts" icon_color="235,0,0">
+		<stack_type value="ignore"/>
+		<duration value="10"/>
+		<update_rate value="0"/>
+		<property name="ShowQuality" value="true"/>
+
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="#@modfolder:Resources/Oblation.unity3d?Oblation.prefab" parent_transform="Spine1"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="RemoveParticleEffectFromEntity" particle="Oblation"/>
+		</effect_group>
+		<effect_group>
+			<passive_effect name="EntityDamage" operation="perc_subtract" value=".15"/>
+	        <triggered_effect trigger="onOtherDamagedSelf" action="ModifyStats" stat="Health" operation="subtract" value="10"/>
+		</effect_group>
+	</buff>
+	
+    
+	<buff name="剧毒区域" hidden="true">
+		<damage_type value="Disease"/>
+		<stack_type value="replace"/><duration value="1"/>
+		<effect_group>
+		    <requirement name="!EntityTagCompare" tags="npc,vehicle,player,turret,drone"/>
+			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="毒雾"/>
+		</effect_group>
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="剧毒区域"/>
+		</effect_group>
+	</buff>
+	
+	<buff name="腐蚀区域" hidden="true">
+		<damage_type value="Disease"/>
+		<stack_type value="replace"/><duration value="1"/>
+		<effect_group>
+		    <requirement name="!EntityTagCompare" tags="npc,vehicle,player,turret,drone"/>
+			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="腐蚀"/>
+		</effect_group>
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="腐蚀区域"/>
+		</effect_group>
+	</buff>
+	
+	<buff name="腐蚀" name_key="腐蚀" description_key="腐蚀会降低你的护甲和伤害抵抗" tooltip_key="腐蚀会降低你的护甲和伤害抵抗" icon="ui_game_symbol_cardio" icon_color="60,200,0">
+		<stack_type value="ignore"/>
+		<duration value="10"/>
+		<update_rate value="0"/>
+		<property name="PainResistPerHit" value="-10"/>
+		<effect_group>
+		    <triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="#@modfolder:Resources/Corrosion.unity3d?Corrosion.prefab" parent_transform="Spine2"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="RemoveParticleEffectFromEntity" particle="Corrosion"/>
+			<triggered_effect trigger="onSelfDied" action="RemoveBuff" buff="腐蚀"/>
+			<passive_effect name="PhysicalDamageResist" operation="base_subtract" value="15"/>
+			<passive_effect name="ElementalDamageResist" operation="base_subtract" value="10" tags="heat,electrical,Disease,Cold"/>
+		</effect_group>
+	</buff>
+	
+	<buff name="毒雾单位" hidden="true">
+		<stack_type value="ignore"/>
+		<update_rate value="1"/>
+		<effect_group>
+		    <triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="#@modfolder:Resources/Duwu1-1.unity3d?Duwu1-1.prefab" parent_transform="Spine1"/>
+            <triggered_effect trigger="onSelfDied" action="RemoveBuff" buff="毒雾单位"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="RemoveParticleEffectFromEntity" particle="Duwu1-1"/>		    
+		</effect_group>
+		<effect_group>
+		    <requirement name="NotHasBuff" target="other" buff="抗毒血清"/>
+			<requirement name="NotHasBuff" target="self" buff="禁忌无效"/>
+			<requirement name="!EntityTagCompare" target="other" tags="zombie,vehicle,turret,drone"/>
+		    <triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="3" buff="慢性毒"/>	    
+		</effect_group>
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" target="selfAOE" range="5" buff="SAN下降中">
+				<requirement name="!EntityTagCompare" target="other" tags="zombie,vehicle,turret,drone"/>
+			</triggered_effect>
+		</effect_group>
+		<effect_group>
+			<requirement name="TimeOfDay" operation="GTE" value="21"/>
+			<requirement name="TimeOfDay" operation="LT" value="49"/>
+			<passive_effect name="EntityDamage" operation="perc_add" value="0.5"/>
+		</effect_group>
+		<effect_group>
+			<requirement name="TimeOfDay" operation="GTE" value="49"/>
+			<requirement name="TimeOfDay" operation="LT" value="98"/>
+			<passive_effect name="EntityDamage" operation="perc_add" value="1"/>
+		</effect_group>
+		<effect_group>
+			<requirement name="TimeOfDay" operation="GTE" value="98"/>
+			<requirement name="TimeOfDay" operation="LT" value="210"/>
+			<passive_effect name="EntityDamage" operation="perc_add" value="1.5"/>
+		</effect_group>
+		<effect_group>
+			<requirement name="TimeOfDay" operation="GTE" value="210"/>
+			<passive_effect name="EntityDamage" operation="perc_add" value="2.5"/>
+		</effect_group>
+	</buff>
+	
+	<buff name="毒雾" hidden="true">
+		<stack_type value="ignore"/>
+		<duration value="3"/>
+		<update_rate value="0"/>
+		<effect_group>
+		   <requirement name="NotHasBuff" buff="抗毒血清"/>
+			    <triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="神经毒1"/>
+			    <triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="#@modfolder:Resources/Duwu.unity3d?duwu.prefab" parent_transform="Spine1"/>
+		</effect_group>
+		<effect_group>
+		    <triggered_effect trigger="onSelfDied" action="RemoveBuff" buff="毒雾"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="RemoveParticleEffectFromEntity" particle="duwu"/>
+		</effect_group>
+	</buff>
+
+	<buff name="神经毒1" name_key="神经毒素" description_key="神经毒素会削减移动速度，一段时间后会造成毒素伤害" tooltip_key="神经毒素会削减移动速度，一段时间后会造成毒素伤害" icon="ui_game_symbol_dysentery" icon_color="20,155,20">
+		<stack_type value="ignore"/>
+		<duration value="10"/>
+		<update_rate value="1"/>
+		<effect_group>
+			<requirement name="NotHasBuff" buff="抗毒血清"/>
+			    <triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="#@modfolder:Resources/Skull.unity3d?Skull.prefab" parent_transform="Spine1"/>
+				<passive_effect name="AttacksPerMinute" operation="perc_add" value="-.2"/>
+				<passive_effect name="ProjectileVelocity" operation="perc_subtract" duration="3" value=".3" />
+				<passive_effect name="WalkSpeed" operation="perc_subtract" duration="3" value=".3" />
+				<passive_effect name="RunSpeed" operation="perc_subtract" duration="3" value=".3" />
+		        <passive_effect name="HealthChangeOT" operation="base_subtract" value="10"/>
+		</effect_group>
+		<effect_group>
+		    <requirement name="NotHasBuff" buff="抗毒血清"/>
+			<requirement name="StatComparePercCurrentToModMax" stat="health" operation="LTE" value=".8"/>
+		        <triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="神经毒1"/>
+		</effect_group>
+		<effect_group>
+		    <triggered_effect trigger="onSelfDied" action="RemoveBuff" buff="神经毒1"/>
+			<triggered_effect trigger="onSelfDied" action="RemoveBuff" buff="神经毒2"/>
+			<triggered_effect trigger="onSelfDied" action="RemoveBuff" buff="神经毒3"/>
+			<triggered_effect trigger="onSelfDied" action="RemoveBuff" buff="神经毒4"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="RemoveParticleEffectFromEntity" particle="Skull"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="AddBuff" buff="神经毒2">
+			    <requirement name="NotHasBuff" buff="抗毒血清"/>
+				<requirement name="IsAlive" target="self"/>
+			</triggered_effect>
+		</effect_group>
+	</buff>
+	
+	<buff name="神经毒2" name_key="神经毒素2" description_key="神经毒素会削减移动速度，一段时间后会造成毒素伤害" tooltip_key="神经毒素会削减移动速度，一段时间后会造成毒素伤害" icon="ui_game_symbol_dysentery" icon_color="20,155,20">
+		<stack_type value="ignore"/>
+		<duration value="10"/>
+		<update_rate value="1"/>
+		<effect_group>
+			<requirement name="NotHasBuff" buff="抗毒血清"/>
+			    <triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="#@modfolder:Resources/Skull.unity3d?Skull.prefab" parent_transform="Spine1"/>
+			    <!--<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" stat="Health" operation="subtract" value="20"/>-->
+				<passive_effect name="AttacksPerMinute" operation="perc_add" value="-.25"/>
+				<passive_effect name="ProjectileVelocity" operation="perc_subtract" duration="3" value=".35" />
+				<passive_effect name="WalkSpeed" operation="perc_subtract" duration="3" value=".35" />
+				<passive_effect name="RunSpeed" operation="perc_subtract" duration="3" value=".35" />
+				<passive_effect name="HealthChangeOT" operation="base_subtract" value="20"/>
+		</effect_group>
+		<effect_group>
+		    <requirement name="NotHasBuff" buff="抗毒血清"/>
+			<requirement name="StatComparePercCurrentToModMax" stat="health" operation="LTE" value=".6"/>
+		        <triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="神经毒2"/>
+		</effect_group>
+		<effect_group>
+		    <triggered_effect trigger="onSelfDied" action="RemoveBuff" buff="神经毒1"/>
+			<triggered_effect trigger="onSelfDied" action="RemoveBuff" buff="神经毒2"/>
+			<triggered_effect trigger="onSelfDied" action="RemoveBuff" buff="神经毒3"/>
+			<triggered_effect trigger="onSelfDied" action="RemoveBuff" buff="神经毒4"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="RemoveParticleEffectFromEntity" particle="Skull"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="AddBuff" buff="神经毒3">
+			    <requirement name="NotHasBuff" buff="抗毒血清"/>
+				<requirement name="IsAlive" target="self"/>
+			</triggered_effect>
+		</effect_group>
+	</buff>
+	<buff name="神经毒3" name_key="神经毒素3" description_key="神经毒素会削减移动速度，一段时间后会造成毒素伤害" tooltip_key="神经毒素会削减移动速度，一段时间后会造成毒素伤害" icon="ui_game_symbol_dysentery" icon_color="20,155,20">
+		<stack_type value="ignore"/>
+		<duration value="10"/>
+		<update_rate value="1"/>
+		<effect_group>
+			<requirement name="NotHasBuff" buff="抗毒血清"/>
+			    <triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="#@modfolder:Resources/Skull.unity3d?Skull.prefab" parent_transform="Spine1"/>
+				<passive_effect name="AttacksPerMinute" operation="perc_add" value="-.3"/>
+				<passive_effect name="ProjectileVelocity" operation="perc_subtract" duration="3" value=".4" />
+				<passive_effect name="WalkSpeed" operation="perc_subtract" duration="3" value=".4" />
+				<passive_effect name="RunSpeed" operation="perc_subtract" duration="3" value=".4" />
+				<passive_effect name="HealthChangeOT" operation="base_subtract" value="30"/>
+		</effect_group>
+		<effect_group>
+		    <requirement name="NotHasBuff" buff="抗毒血清"/>
+			<requirement name="StatComparePercCurrentToModMax" stat="health" operation="LTE" value=".4"/>
+		        <triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="神经毒3"/>
+		</effect_group>
+		<effect_group>
+		    <triggered_effect trigger="onSelfDied" action="RemoveBuff" buff="神经毒1"/>
+			<triggered_effect trigger="onSelfDied" action="RemoveBuff" buff="神经毒2"/>
+			<triggered_effect trigger="onSelfDied" action="RemoveBuff" buff="神经毒3"/>
+			<triggered_effect trigger="onSelfDied" action="RemoveBuff" buff="神经毒4"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="RemoveParticleEffectFromEntity" particle="Skull"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="AddBuff" buff="神经毒4">
+			    <requirement name="NotHasBuff" buff="抗毒血清"/>
+				<requirement name="IsAlive" target="self"/>
+			</triggered_effect>
+		</effect_group>
+	</buff>
+	<buff name="神经毒4" name_key="神经毒素4" description_key="神经毒素会削减移动速度，一段时间后会造成毒素伤害" tooltip_key="神经毒素会削减移动速度，一段时间后会造成毒素伤害" icon="ui_game_symbol_dysentery" icon_color="20,155,20">
+		<stack_type value="replace"/>
+		<duration value="3"/>
+		<update_rate value="1"/>
+		<effect_group>
+			<requirement name="NotHasBuff" buff="抗毒血清"/>
+			    <triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="#@modfolder:Resources/Skull.unity3d?Skull.prefab" parent_transform="Spine1"/>
+				<passive_effect name="AttacksPerMinute" operation="perc_add" value="-.3"/>
+				<passive_effect name="ProjectileVelocity" operation="perc_subtract" duration="3" value=".4" />
+				<passive_effect name="WalkSpeed" operation="perc_subtract" duration="3" value=".4" />
+				<passive_effect name="RunSpeed" operation="perc_subtract" duration="3" value=".4" />
+				<passive_effect name="HealthChangeOT" operation="base_subtract" value="50"/>
+		</effect_group>
+		<effect_group>
+		    <triggered_effect trigger="onSelfDied" action="RemoveBuff" buff="神经毒1"/>
+			<triggered_effect trigger="onSelfDied" action="RemoveBuff" buff="神经毒2"/>
+			<triggered_effect trigger="onSelfDied" action="RemoveBuff" buff="神经毒3"/>
+			<triggered_effect trigger="onSelfDied" action="RemoveBuff" buff="神经毒4"/>
+		    <triggered_effect trigger="onSelfDied" action="RemoveBuff" buff="神经毒4"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="RemoveParticleEffectFromEntity" particle="Skull"/>
+		</effect_group>
+	</buff>
+	<buff name="抗毒血清" name_key="抗毒血清" description_key="血清可以治愈你的毒素" tooltip_key="血清可以治愈你的毒素" icon="ui_game_symbol_healing_factor" icon_color="0,255,0">
+		<stack_type value="replace"/>
+		<duration value="30"/>
+		<effect_group>
+		    <triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="慢性毒"/>
+		    <triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="神经毒1"/>
+			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="神经毒2"/>
+			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="神经毒3"/>
+			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="神经毒4"/>
+		</effect_group>
+	</buff>
+	
+	<buff name="慢性毒" name_key="慢性毒" description_key="慢性毒会削减移动速度并造成毒素伤害" tooltip_key="慢性毒会削减移动速度并造成毒素伤害" icon="ui_game_symbol_dysentery" icon_color="20,155,20">
+		<stack_type value="ignore"/>
+		<duration value="5"/>
+		<update_rate value="0"/>
+
+		<effect_group>
+			<requirement name="NotHasBuff" buff="抗毒血清"/>
+			    <triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="#@modfolder:Resources/Skull.unity3d?Skull.prefab" parent_transform="Spine1"/>
+				<passive_effect name="AttacksPerMinute" operation="perc_add" value="-.2"/>
+				<passive_effect name="ProjectileVelocity" operation="perc_subtract" duration="3" value=".3" />
+				<passive_effect name="WalkSpeed" operation="perc_subtract" duration="3" value=".3" />
+				<passive_effect name="RunSpeed" operation="perc_subtract" duration="3" value=".3" />
+		</effect_group>
+		<effect_group tiered="false">
+		    <requirement name="NotHasBuff" buff="抗毒血清"/>
+		        <requirement name="StatComparePercCurrentToModMax" stat="health" operation="GTE" value=".25"/>
+		        <passive_effect name="HealthChangeOT" operation="base_subtract" value="10"/>
+	    </effect_group>
+		<effect_group>
+		    <triggered_effect trigger="onSelfDied" action="RemoveBuff" buff="慢性毒"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="RemoveParticleEffectFromEntity" particle="Skull"/>
+		</effect_group>
+	</buff>
+	
+	<buff name="恐怖毒素" name_key="恐怖毒素" description_key="恐怖毒素会削减移动速度并造成可怕的毒素伤害" tooltip_key="恐怖毒素会削减移动速度并造成可怕的毒素伤害" icon="ui_game_symbol_dysentery" icon_color="20,155,20">
+		<stack_type value="ignore"/>
+		<duration value="3"/>
+		<update_rate value="0"/>
+
+		<effect_group>
+			<requirement name="NotHasBuff" buff="抗毒血清"/>
+			    <triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="#@modfolder:Resources/Skull.unity3d?Skull.prefab" parent_transform="Spine1"/>
+				<passive_effect name="AttacksPerMinute" operation="perc_add" value="-.4"/>
+				<passive_effect name="ProjectileVelocity" operation="perc_subtract" value=".4" />
+				<passive_effect name="WalkSpeed" operation="perc_subtract" value=".4" />
+				<passive_effect name="RunSpeed" operation="perc_subtract" value=".4" />
+		</effect_group>
+		<effect_group tiered="false">
+		    <requirement name="NotHasBuff" buff="抗毒血清"/>
+		        <passive_effect name="HealthChangeOT" operation="base_subtract" value="500"/>
+	    </effect_group>
+		<effect_group>
+		    <triggered_effect trigger="onSelfBuffFinish" action="AddBuff" target="selfAOE" range="2" target_tags="zombie,animal" buff="神经毒1"/>
+			<triggered_effect trigger="onSelfBuffFinish" action="AddBuff" target="self" buff="毒雾"/>
+		    <triggered_effect trigger="onSelfDied" action="RemoveBuff" buff="恐怖毒素"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="RemoveParticleEffectFromEntity" particle="Skull"/>
+		</effect_group>
+	</buff>
+	
+	<buff name="腐尸之毒1" name_key="腐尸之毒1" description_key="腐尸之毒可能会有极高的伤害！" tooltip_key="腐尸之毒可能会有极高的伤害！" icon="ui_game_symbol_dysentery" icon_color="20,155,20">
+		<stack_type value="ignore"/>
+		<duration value="3"/>
+		<update_rate value="0"/>
+
+		<effect_group>
+			<requirement name="NotHasBuff" buff="抗毒血清"/>
+			    <triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="#@modfolder:Resources/Skull.unity3d?Skull.prefab" parent_transform="Spine1"/>
+				<passive_effect name="AttacksPerMinute" operation="perc_add" value="-.4"/>
+				<passive_effect name="ProjectileVelocity" operation="perc_subtract" value=".4" />
+				<passive_effect name="WalkSpeed" operation="perc_subtract" value=".4" />
+				<passive_effect name="RunSpeed" operation="perc_subtract" value=".4" />
+		</effect_group>
+		<effect_group tiered="false">
+		    <requirement name="NotHasBuff" buff="抗毒血清"/>
+		        <passive_effect name="HealthChangeOT" operation="base_subtract" value="200"/>
+	    </effect_group>
+		<effect_group>
+		    <triggered_effect trigger="onSelfDied" action="RemoveBuff" buff="腐尸之毒"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="RemoveParticleEffectFromEntity" particle="Skull"/>
+		</effect_group>
+	</buff>
+	<buff name="腐尸之毒2" name_key="腐尸之毒2" description_key="腐尸之毒可能会有极高的伤害！" tooltip_key="腐尸之毒可能会有极高的伤害！" icon="ui_game_symbol_dysentery" icon_color="20,155,20">
+		<stack_type value="ignore"/>
+		<duration value="3"/>
+		<update_rate value="0"/>
+
+		<effect_group>
+			<requirement name="NotHasBuff" buff="抗毒血清"/>
+			    <triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="#@modfolder:Resources/Skull.unity3d?Skull.prefab" parent_transform="Spine1"/>
+				<passive_effect name="AttacksPerMinute" operation="perc_add" value="-.4"/>
+				<passive_effect name="ProjectileVelocity" operation="perc_subtract" value=".4" />
+				<passive_effect name="WalkSpeed" operation="perc_subtract" value=".4" />
+				<passive_effect name="RunSpeed" operation="perc_subtract" value=".4" />
+		</effect_group>
+		<effect_group tiered="false">
+		    <requirement name="NotHasBuff" buff="抗毒血清"/>
+		        <passive_effect name="HealthChangeOT" operation="base_subtract" value="350"/>
+	    </effect_group>
+		<effect_group>
+		    <triggered_effect trigger="onSelfDied" action="RemoveBuff" buff="腐尸之毒"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="RemoveParticleEffectFromEntity" particle="Skull"/>
+		</effect_group>
+	</buff>
+	<buff name="腐尸之毒3" name_key="腐尸之毒3" description_key="腐尸之毒可能会有极高的伤害！" tooltip_key="腐尸之毒可能会有极高的伤害！" icon="ui_game_symbol_dysentery" icon_color="20,155,20">
+		<stack_type value="ignore"/>
+		<duration value="3"/>
+		<update_rate value="0"/>
+
+		<effect_group>
+			<requirement name="NotHasBuff" buff="抗毒血清"/>
+			    <triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="#@modfolder:Resources/Skull.unity3d?Skull.prefab" parent_transform="Spine1"/>
+				<passive_effect name="AttacksPerMinute" operation="perc_add" value="-.4"/>
+				<passive_effect name="ProjectileVelocity" operation="perc_subtract" value=".4" />
+				<passive_effect name="WalkSpeed" operation="perc_subtract" value=".4" />
+				<passive_effect name="RunSpeed" operation="perc_subtract" value=".4" />
+		</effect_group>
+		<effect_group tiered="false">
+		    <requirement name="NotHasBuff" buff="抗毒血清"/>
+		        <passive_effect name="HealthChangeOT" operation="base_subtract" value="500"/>
+	    </effect_group>
+		<effect_group>
+		    <triggered_effect trigger="onSelfDied" action="RemoveBuff" buff="腐尸之毒"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="RemoveParticleEffectFromEntity" particle="Skull"/>
+		</effect_group>
+	</buff>
+	<buff name="腐尸之毒4" name_key="腐尸之毒4" description_key="腐尸之毒可能会有极高的伤害！" tooltip_key="腐尸之毒可能会有极高的伤害！" icon="ui_game_symbol_dysentery" icon_color="20,155,20">
+		<stack_type value="ignore"/>
+		<duration value="3"/>
+		<update_rate value="0"/>
+
+		<effect_group>
+			<requirement name="NotHasBuff" buff="抗毒血清"/>
+			    <triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="#@modfolder:Resources/Skull.unity3d?Skull.prefab" parent_transform="Spine1"/>
+				<passive_effect name="AttacksPerMinute" operation="perc_add" value="-.4"/>
+				<passive_effect name="ProjectileVelocity" operation="perc_subtract" value=".4" />
+				<passive_effect name="WalkSpeed" operation="perc_subtract" value=".4" />
+				<passive_effect name="RunSpeed" operation="perc_subtract" value=".4" />
+		</effect_group>
+		<effect_group tiered="false">
+		    <requirement name="NotHasBuff" buff="抗毒血清"/>
+		        <passive_effect name="HealthChangeOT" operation="base_subtract" value="700"/>
+	    </effect_group>
+		<effect_group>
+		    <triggered_effect trigger="onSelfDied" action="RemoveBuff" buff="腐尸之毒"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="RemoveParticleEffectFromEntity" particle="Skull"/>
+		</effect_group>
+	</buff>
+	<buff name="腐尸之毒5" name_key="腐尸之毒5" description_key="腐尸之毒可能会有极高的伤害！" tooltip_key="腐尸之毒可能会有极高的伤害！" icon="ui_game_symbol_dysentery" icon_color="20,155,20">
+		<stack_type value="ignore"/>
+		<duration value="3"/>
+		<update_rate value="0"/>
+
+		<effect_group>
+			<requirement name="NotHasBuff" buff="抗毒血清"/>
+			    <triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="#@modfolder:Resources/Skull.unity3d?Skull.prefab" parent_transform="Spine1"/>
+				<passive_effect name="AttacksPerMinute" operation="perc_add" value="-.4"/>
+				<passive_effect name="ProjectileVelocity" operation="perc_subtract" value=".4" />
+				<passive_effect name="WalkSpeed" operation="perc_subtract" value=".4" />
+				<passive_effect name="RunSpeed" operation="perc_subtract" value=".4" />
+		</effect_group>
+		<effect_group tiered="false">
+		    <requirement name="NotHasBuff" buff="抗毒血清"/>
+		        <passive_effect name="HealthChangeOT" operation="base_subtract" value="900"/>
+	    </effect_group>
+		<effect_group>
+		    <triggered_effect trigger="onSelfDied" action="RemoveBuff" buff="腐尸之毒"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="RemoveParticleEffectFromEntity" particle="Skull"/>
+		</effect_group>
+	</buff>
+	
+	<buff name="恐惧" name_key="恐惧" description_key="你陷入不可抗拒的恐惧之中" tooltip_key="你陷入不可抗拒的恐惧之中" icon="ui_game_symbol_stunned" icon_color="166,76,224">
+		<stack_type value="ignore"/>
+		<duration value="5"/>
+		<update_rate value="0"/>
+
+		<effect_group>
+		    <passive_effect name="EntityDamage" operation="perc_subtract" value=".2"/>
+		    <passive_effect name="ReloadSpeedMultiplier" operation="perc_subtract" value="0.5"/>
+			<passive_effect name="ProjectileVelocity" operation="perc_subtract" value=".2" />
+			<passive_effect name="WalkSpeed" operation="perc_subtract" value=".2" />
+			<passive_effect name="RunSpeed" operation="perc_subtract" value=".2" />
+			
+			<passive_effect name="SpreadMultiplierAiming" operation="perc_add" value=".3"/>
+			<passive_effect name="SpreadMultiplierCrouching" operation="perc_add" value=".22"/>
+			<passive_effect name="SpreadMultiplierHip" operation="perc_add" value=".22"/>
+			<passive_effect name="SpreadMultiplierWalking" operation="perc_add" value=".22"/>
+			<passive_effect name="KickDegreesVerticalMin" operation="perc_add" value="0.2"/>
+			<passive_effect name="KickDegreesVerticalMax" operation="perc_add" value="0.5"/>
+			<passive_effect name="KickDegreesHorizontalMin" operation="perc_add" value="0.2"/>
+			<passive_effect name="KickDegreesHorizontalMax" operation="perc_add" value="0.5"/>
+			<passive_effect name="IncrementalSpreadMultiplier" operation="base_add" value="3.0"/>
+		</effect_group>
+		<effect_group>
+		    <triggered_effect trigger="onSelfDied" action="RemoveBuff" buff="恐惧"/>
+		</effect_group>
+	</buff>
+	
+	<!--<buff name="死咒" name_key="死咒" description_key="传说这是一种恐怖的诅咒" tooltip_key="传说这是一种恐怖的诅咒" icon="ui_game_symbol_star" icon_color="0,155,155">
+		<stack_type value="ignore"/>
+		<duration value="0.1"/>
+		<update_rate value="0"/>
+
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="死咒2">
+			    <requirement name="HasBuff" buff="死咒1"/>
+			</triggered_effect>
+				
+			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="死咒3">
+			    <requirement name="HasBuff" buff="死咒2"/>
+			</triggered_effect>
+			
+			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="死咒4">
+			    <requirement name="HasBuff" buff="死咒3"/>
+			</triggered_effect>
+			
+			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="死咒5">
+			    <requirement name="HasBuff" buff="死咒4"/>
+			</triggered_effect>
+			
+			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="死咒6">
+			    <requirement name="HasBuff" buff="死咒5"/>
+			</triggered_effect>
+			
+			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="死咒7">
+			    <requirement name="HasBuff" buff="死咒6"/>
+			</triggered_effect>
+		</effect_group>
+	</buff>-->
+	
+	<buff name="死咒1" name_key="死咒1" description_key="传说这是一种恐怖的诅咒,但目前仿佛没有什么作用" tooltip_key="传说这是一种恐怖的诅咒,但目前仿佛没有什么作用" icon="ui_game_symbol_star" icon_color="0,155,155">
+		<stack_type value="ignore"/>
+		<duration value="2"/>
+		<update_rate value="0"/>
+
+		<effect_group>
+			<requirement name="NotHasBuff" buff="咒术解除"/>
+			    <triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="#@modfolder:Resources/SZ1.unity3d?SZ1.prefab" parent_transform="Spine1"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="AddBuff" buff="死咒2"/>
+		</effect_group>
+		<effect_group>
+		    <passive_effect name="RunSpeed" operation="perc_subtract" value=".1" duration="2" />
+			<passive_effect name="WalkSpeed" operation="perc_subtract" value=".1" duration="2" />
+		    <triggered_effect trigger="onSelfDied" action="RemoveBuff" buff="死咒1"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="RemoveParticleEffectFromEntity" particle="SZ1"/>
+			<!--<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" buff="死咒2"/>-->
+		</effect_group>
+	</buff>
+	
+	<buff name="死咒2" name_key="死咒2" description_key="你的诅咒加深了,但目前仿佛没有什么作用" tooltip_key="你的诅咒加深了,但目前仿佛没有什么作用" icon="ui_game_symbol_star" icon_color="0,160,160">
+		<stack_type value="ignore"/>
+		<duration value="2"/>
+		<update_rate value="0"/>
+
+		<effect_group>
+			<requirement name="NotHasBuff" buff="咒术解除"/>
+			    <triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="#@modfolder:Resources/SZ2.unity3d?SZ2.prefab" parent_transform="Spine1"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="AddBuff" buff="死咒3"/>
+		</effect_group>
+		<effect_group>
+		    <passive_effect name="RunSpeed" operation="perc_subtract" value=".15" duration="2" />
+			<passive_effect name="WalkSpeed" operation="perc_subtract" value=".15" duration="2" />
+		    <triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="死咒1"/>
+		    <triggered_effect trigger="onSelfDied" action="RemoveBuff" buff="死咒2"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="RemoveParticleEffectFromEntity" particle="SZ2"/>
+		</effect_group>
+	</buff>
+	
+	<buff name="死咒3" name_key="死咒3" description_key="你的诅咒加深了Level-3" tooltip_key="你的诅咒加深了Level-3" icon="ui_game_symbol_star" icon_color="0,165,165">
+		<stack_type value="ignore"/>
+		<duration value="2"/>
+		<update_rate value="0"/>
+
+		<effect_group>
+			<requirement name="NotHasBuff" buff="咒术解除"/>
+			    <triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="#@modfolder:Resources/SZ3.unity3d?SZ3.prefab" parent_transform="Spine1"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="AddBuff" buff="死咒4"/>
+		</effect_group>
+		<effect_group>
+		    <passive_effect name="RunSpeed" operation="perc_subtract" value=".2" duration="2" />
+			<passive_effect name="WalkSpeed" operation="perc_subtract" value=".2" duration="2" />
+		    <triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="死咒2"/>
+			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="死咒1"/>
+		    <triggered_effect trigger="onSelfDied" action="RemoveBuff" buff="死咒3"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="RemoveParticleEffectFromEntity" particle="SZ3"/>
+		</effect_group>
+	</buff>
+	
+	<buff name="死咒4" name_key="死咒4" description_key="你的诅咒加深了Level-4" tooltip_key="你的诅咒加深了Level-4" icon="ui_game_symbol_star" icon_color="0,170,170">
+		<stack_type value="ignore"/>
+		<duration value="2"/>
+		<update_rate value="0"/>
+
+		<effect_group>
+			<requirement name="NotHasBuff" buff="咒术解除"/>
+			    <triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="#@modfolder:Resources/SZ4.unity3d?SZ4.prefab" parent_transform="Spine1"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="AddBuff" buff="死咒5"/>
+		</effect_group>
+		<effect_group>
+		    <passive_effect name="RunSpeed" operation="perc_subtract" value=".25" duration="2" />
+			<passive_effect name="WalkSpeed" operation="perc_subtract" value=".25" duration="2" />
+		    <triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="死咒3"/>
+			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="死咒1"/>
+		    <triggered_effect trigger="onSelfDied" action="RemoveBuff" buff="死咒4"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="RemoveParticleEffectFromEntity" particle="SZ4"/>
+		</effect_group>
+	</buff>
+	
+	<buff name="死咒5" name_key="死咒5" description_key="你的诅咒加深了Level-5" tooltip_key="你的诅咒加深了Level-5" icon="ui_game_symbol_star" icon_color="0,175,175">
+		<stack_type value="ignore"/>
+		<duration value="2"/>
+		<update_rate value="0"/>
+
+		<effect_group>
+			<requirement name="NotHasBuff" buff="咒术解除"/>
+			    <triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="#@modfolder:Resources/SZ5.unity3d?SZ5.prefab" parent_transform="Spine1"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="AddBuff" buff="死咒6"/>
+		</effect_group>
+		<effect_group>
+		    <passive_effect name="RunSpeed" operation="perc_subtract" value=".3" duration="2" />
+			<passive_effect name="WalkSpeed" operation="perc_subtract" value=".3" duration="2" />
+		    <triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="死咒4"/>
+			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="死咒1"/>
+		    <triggered_effect trigger="onSelfDied" action="RemoveBuff" buff="死咒5"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="RemoveParticleEffectFromEntity" particle="SZ5"/>
+		</effect_group>
+	</buff>
+	
+	<buff name="死咒6" name_key="死咒6" description_key="你的诅咒加深了Level-6,你有预感有什么不好的要发生" tooltip_key="你的诅咒加深了Level-6,你有预感有什么不好的要发生" icon="ui_game_symbol_star" icon_color="0,180,180">
+		<stack_type value="ignore"/>
+		<duration value="10"/>
+		<update_rate value="0"/>
+
+		<effect_group>
+			<requirement name="NotHasBuff" buff="咒术解除"/>
+			    <triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="#@modfolder:Resources/SZ6.unity3d?SZ6.prefab" parent_transform="Spine1"/>
+		</effect_group>
+		<effect_group>
+		    <passive_effect name="RunSpeed" operation="perc_subtract" value=".35" duration="10" />
+			<passive_effect name="WalkSpeed" operation="perc_subtract" value=".35" duration="10" />
+		    <triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="死咒5"/>
+			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="死咒1"/>
+		    <triggered_effect trigger="onSelfDied" action="RemoveBuff" buff="死咒6"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="RemoveParticleEffectFromEntity" particle="SZ6"/>
+			<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" buff="死咒7">
+			    <requirement name="StatComparePercCurrentToModMax" stat="health" operation="LTE" value=".5"/>
+			</triggered_effect>
+			<triggered_effect trigger="onOtherDamagedSelf" action="ModifyStats" stat="Health" operation="subtract" value="20"/>
+		</effect_group>
+	</buff>
+	
+	<buff name="死咒7" name_key="死咒7" description_key="受到了恐怖的诅咒，健康低于30%会直接死亡！" tooltip_key="受到了恐怖的诅咒，健康低于30%会直接死亡！" icon="ui_game_symbol_star" icon_color="240,0,0">
+		<stack_type value="ignore"/>
+		<duration value="3"/>
+		<update_rate value="0"/>
+
+		<effect_group>
+			<requirement name="NotHasBuff" buff="咒术解除"/>
+			    <triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="#@modfolder:Resources/SZ7.unity3d?SZ7.prefab" parent_transform="Spine2"/>
+		</effect_group>
+		<effect_group>
+		    <passive_effect name="RunSpeed" operation="perc_subtract" value=".4" duration="3" />
+			<passive_effect name="WalkSpeed" operation="perc_subtract" value=".4" duration="3" />
+		    <triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="死咒6"/>
+			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="死咒1"/>
+		    <triggered_effect trigger="onSelfDied" action="RemoveBuff" buff="死咒7"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="RemoveParticleEffectFromEntity" particle="SZ7"/>
+		</effect_group>
+		<effect_group>
+		    <requirement name="StatComparePercCurrentToModMax" stat="health" operation="LTE" value=".3"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyStats" stat="Health" operation="subtract" value="9999999"/>
+		</effect_group>
+	</buff>
+	
+	<buff name="粉碎性骨折" name_key="粉碎性骨折" description_key="[ff0000]你受了很重的伤！全身骨骼恐怕都已碎裂，继续累积受到一定伤害或断腿就会毙命" tooltip_key="[ff0000]你受了很重的伤！全身骨骼恐怕都已碎裂，继续累积受到一定伤害或断腿就会毙命" icon="ui_game_symbol_brokenbone" icon_color="220,0,0">
+		<!-- Note: sprinting with a broken leg could randomly rangdoll the player -->
+		<damage_type value="break"/>
+		<stack_type value="replace"/>
+		<duration value="0"/>
+		<display_value value=".legHurtDurationDisplay"/><display_value_format value="time"/>
+
+		<effect_group>
+			<passive_effect name="BuffBlink" operation="base_set" value="2" duration="0,3" tags="buffLegBroken"/>
+
+			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffBrokenLimbStatus"/>
+			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffLegSplinted"/>
+			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffLegCast"/>
+			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="buffLegSprained"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyStats" stat="Health" operation="subtract" value="100"/>
+
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$legHurtCounter" operation="set" value="1552">
+				<requirement name="CVarCompare" cvar="$legHurtCounter" operation="LT" value="1552"/></triggered_effect>
+			<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar="$legHurtCounter" operation="set" value="1552">
+				<requirement name="CVarCompare" cvar="$legHurtCounter" operation="LT" value="1552"/></triggered_effect>
+
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$legHurtCounter" operation="subtract" value="@$critHitNaturalHealingRate"/>
+		</effect_group>
+
+		<effect_group name="DisplayDuration">
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".legHurtDurationDisplay" operation="set" value="@$legHurtCounter"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".legHurtDurationDisplay" operation="divide" value="@$critHitNaturalHealingRate"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".legHurtDurationDisplay" operation="set" value="0"/>
+		</effect_group>
+
+		<effect_group name="activity makes damaged legs worse">
+			<triggered_effect trigger="onSelfJump" action="ModifyStats" stat="Health" operation="subtract" value="50"/>
+			<triggered_effect trigger="onSelfJump" action="ModifyCVar" cvar="$legHurtCounter" operation="add" value="30"/>
+			<triggered_effect trigger="onSelfJump" action="AddBuff" buff="buffLegGetsWorse"/>
+
+			<triggered_effect trigger="onSelfFallImpact" action="ModifyCVar" cvar="$legHurtCounter" operation="add" value="40">
+				<requirement name="CVarCompare" cvar="_fallSpeed" operation="GTE" value=".07"/></triggered_effect>
+			<triggered_effect trigger="onSelfFallImpact" action="AddBuff" buff="buffLegGetsWorse">
+				<requirement name="CVarCompare" cvar="_fallSpeed" operation="GTE" value=".07"/></triggered_effect>
+
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$legHurtCounter" operation="add" value="5">
+				<requirement name="EntityHasMovementTag" tags="running"/></triggered_effect>
+			<triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffLegGetsWorse">
+				<requirement name="EntityHasMovementTag" tags="running"/></triggered_effect>
+
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$legHurtCounter" operation="set" value="7208">
+				<requirement name="CVarCompare" cvar="$legHurtCounter" operation="GT" value="7208"/></triggered_effect>
+				
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyStats" stat="Health" operation="subtract" value="999999">
+				<requirement name="CVarCompare" cvar="$legHurtCounter" operation="GTE" value="7208"/></triggered_effect>
+		</effect_group>
+
+		<effect_group>
+			<requirement name="CVarCompare" cvar="$legHurtCounter" operation="LTE" value="0"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$legHurtCounter" operation="set" value="0"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".LegHurtHealthBlockage" operation="set" value="0"/>
+				<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="粉碎性骨折"/>
+		</effect_group>
+
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".LegHurtHealthBlockage" operation="set" value="@$legHurtCounter"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".LegHurtHealthBlockage" operation="divide" value="288"/> <!-- 25 @ 120m -->
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".LegHurtHealthBlockage" operation="set" value="@$legHurtCounter"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".LegHurtHealthBlockage" operation="divide" value="288"/> <!-- 25 @ 120m -->
+			<passive_effect name="HealthMaxBlockage" operation="base_add" value="@.LegHurtHealthBlockage"/>
+
+			<passive_effect name="Mobility" operation="base_add" value="-.7"/>
+			<passive_effect name="JumpStrength" operation="perc_subtract" value="0.4"/>
+		</effect_group>
+	</buff>
+
+	<buff name="鹰眼30%" name_key="鹰眼30%" description_key="你的下一击射程提高20%,精准度提高30%,附加一定冲击力和穿透力" tooltip_key="鹰眼的增益效果下,越是冷静下一击会越强" icon="ui_game_symbol_stealth" icon_color="230,160,0">
+		<stack_type value="ignore"/>
+		<duration value="5"/>
+		<effect_group tiered="false">
+		    <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="鹰眼冷却"/>
+		    <triggered_effect trigger="onSelfPrimaryActionEnd" action="RemoveBuff" buff="鹰眼30%"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="RemoveBuff" buff="鹰眼60%"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="RemoveBuff" buff="鹰眼100%"/>
+	    </effect_group>
+		<effect_group tiered="false">
+		    <requirement name="NotHasBuff" buff="鹰眼冷却"/><requirement name="HasBuff" buff="鹰眼装备1"/>
+		    <triggered_effect trigger="onSelfBuffRemove" action="AddBuff" buff="鹰眼60%"/>
+	    </effect_group>
+	    <effect_group tiered="false">
+		    <passive_effect name="DamageFalloffRange" operation="perc_add" value=".2"/>
+			<passive_effect name="MaxRange" operation="perc_add" value=".2"/>
+			<passive_effect name="EntityPenetrationCount" operation="base_set" value="5"/>
+			<passive_effect name="SpreadMultiplierAiming" operation="perc_add" value="-.1"/>
+			<passive_effect name="SpreadMultiplierCrouching" operation="perc_add" value="-.18"/>
+			<passive_effect name="SpreadMultiplierHip" operation="perc_add" value="-.18"/>
+			<passive_effect name="SpreadMultiplierWalking" operation="perc_add" value="-.18"/>
+			<passive_effect name="KickDegreesVerticalMin" operation="perc_add" value="-0.3"/>
+			<passive_effect name="KickDegreesVerticalMax" operation="perc_add" value="-0.18"/>
+			<passive_effect name="KickDegreesHorizontalMin" operation="perc_add" value="-0.3"/>
+			<passive_effect name="KickDegreesHorizontalMax" operation="perc_add" value="-0.18"/>
+			<triggered_effect trigger="onSelfAttackedOther" action="Ragdoll" target="other" duration="0" force="300"/>
+	    </effect_group>
+	</buff>
+	
+	<buff name="鹰眼60%" name_key="鹰眼60%" description_key="你的下一击射程提高30%,精准度提高60%,附加较强冲击力和穿透力" tooltip_key="鹰眼的增益效果下,越是冷静下一击会越强" icon="ui_game_symbol_stealth" icon_color="245,220,0">
+		<stack_type value="ignore"/>
+		<duration value="10"/>
+		<effect_group tiered="false">
+		    <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="鹰眼冷却"/>
+		    <triggered_effect trigger="onSelfPrimaryActionEnd" action="RemoveBuff" buff="鹰眼30%"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="RemoveBuff" buff="鹰眼60%"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="RemoveBuff" buff="鹰眼100%"/>
+	    </effect_group>
+		<effect_group tiered="false">
+		    <requirement name="NotHasBuff" buff="鹰眼冷却"/><requirement name="HasBuff" buff="鹰眼装备1"/>
+		    <triggered_effect trigger="onSelfBuffRemove" action="AddBuff" buff="鹰眼100%"/>
+	    </effect_group>
+	    <effect_group tiered="false">
+		    <passive_effect name="EntityDamage" operation="base_add" value="20"/>
+		    <passive_effect name="DamageFalloffRange" operation="perc_add" value=".3"/>
+			<passive_effect name="MaxRange" operation="perc_add" value=".3"/>
+			<passive_effect name="EntityPenetrationCount" operation="base_set" value="8"/>
+			<passive_effect name="SpreadMultiplierAiming" operation="perc_add" value="-.2"/>
+			<passive_effect name="SpreadMultiplierCrouching" operation="perc_add" value="-.36"/>
+			<passive_effect name="SpreadMultiplierHip" operation="perc_add" value="-.36"/>
+			<passive_effect name="SpreadMultiplierWalking" operation="perc_add" value="-.36"/>
+			<passive_effect name="KickDegreesVerticalMin" operation="perc_add" value="-0.6"/>
+			<passive_effect name="KickDegreesVerticalMax" operation="perc_add" value="-0.36"/>
+			<passive_effect name="KickDegreesHorizontalMin" operation="perc_add" value="-0.6"/>
+			<passive_effect name="KickDegreesHorizontalMax" operation="perc_add" value="-0.36"/>
+			<triggered_effect trigger="onSelfAttackedOther" action="Ragdoll" target="other" duration="0" force="600"/>
+	    </effect_group>
+	</buff>
+	
+	<buff name="鹰眼100%" name_key="鹰眼100%" description_key="你的下一击附加35点基础伤害,射程提高40%精准度提高90%,附加极大的冲击力和穿透力" tooltip_key="鹰眼的增益效果下,越是冷静下一击会越强" icon="ui_game_symbol_stealth" icon_color="255,255,0">
+		<stack_type value="ignore"/>
+		<effect_group tiered="false">
+		    <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="鹰眼冷却"/>
+		    <triggered_effect trigger="onSelfPrimaryActionEnd" action="RemoveBuff" buff="鹰眼30%"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="RemoveBuff" buff="鹰眼60%"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="RemoveBuff" buff="鹰眼100%"/>
+	    </effect_group>
+	    <effect_group tiered="false">
+		    <passive_effect name="EntityDamage" operation="base_add" value="45"/>
+		    <passive_effect name="DamageFalloffRange" operation="perc_add" value=".4"/>
+			<passive_effect name="MaxRange" operation="perc_add" value=".4"/>
+			<passive_effect name="EntityPenetrationCount" operation="base_set" value="12"/>
+			<passive_effect name="SpreadMultiplierAiming" operation="perc_add" value="-.3"/>
+			<passive_effect name="SpreadMultiplierCrouching" operation="perc_add" value="-.5"/>
+			<passive_effect name="SpreadMultiplierHip" operation="perc_add" value="-.5"/>
+			<passive_effect name="SpreadMultiplierWalking" operation="perc_add" value="-.5"/>
+			<passive_effect name="KickDegreesVerticalMin" operation="perc_add" value="-0.9"/>
+			<passive_effect name="KickDegreesVerticalMax" operation="perc_add" value="-0.5"/>
+			<passive_effect name="KickDegreesHorizontalMin" operation="perc_add" value="-0.9"/>
+			<passive_effect name="KickDegreesHorizontalMax" operation="perc_add" value="-0.5"/>
+			<triggered_effect trigger="onSelfAttackedOther" action="Ragdoll" target="other" duration="0" force="900"/>
+	    </effect_group>
+	</buff>
+	
+	<buff name="鹰眼冷却" hidden="true">
+		<stack_type value="ignore"/>
+		<duration value="5"/>
+		<effect_group>
+		    <triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="鹰眼30%"/>
+			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="鹰眼60%"/>
+			<triggered_effect trigger="onSelfBuffStart" action="RemoveBuff" buff="鹰眼100%"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="AddBuff" buff="鹰眼30%">
+			    <requirement name="HasBuff" buff="鹰眼装备1"/>
+			</triggered_effect>
+		</effect_group>
+	</buff>
+	
+	<buff name="鹰眼装备1" hidden="true">
+		<stack_type value="ignore"/>
+	</buff>
+	
+	<buff name="复苏区域" hidden="true">
+		<stack_type value="ignore"/>
+		<duration value=".1"/>
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="生命精髓"/>
+		</effect_group>
+	</buff>
+	
+	<buff name="生命精髓" hidden="true">
+		<stack_type value="ignore"/>
+		<duration value="5"/>
+		<update_rate value="1"/>
+		<effect_group tiered="false">
+		    <passive_effect name="HealthChangeOT" operation="base_add" value="2"/>
+	    </effect_group>
+		<effect_group>
+		    <triggered_effect trigger="onSelfDied" action="RemoveBuff" buff="生命精髓"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="RemoveParticleEffectFromEntity" particle="Skull"/>
+		</effect_group>
+	</buff>
+	
+	<buff name="破军" name_key="破军" description_key="你的下一次重击会造成大范围横扫造成300点额外伤害，并击倒周围所有敌人" icon="ui_game_symbol_gunslinger" icon_color="0,255,0" icon_blink="true">
+		<stack_type value="ignore"/>
+		<duration value="5"/>
+		<effect_group>
+			<requirement name="ItemHasTags" tags="符文巨剑"/>
+				<passive_effect name="EntityDamage" operation="perc_add" value="1"/>
+				<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" cvar="PoJunCount" operation="set" value="1"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="PoJunCount" operation="set" value="0"/>
+		</effect_group>
+
+		<effect_group name="wait until the next attack (with any weapon) has started AND ended, then remove bonus">
+			<requirement name="CVarCompare" cvar="PoJunCount" operation="GT" value="0"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="RemoveBuff" buff="破军"/>
+				<triggered_effect trigger="onSelfSecondaryActionEnd" action="RemoveBuff" buff="破军"/>
+				<triggered_effect trigger="onSelfSecondaryActionRayHit" action="AddBuff" target="otherAOE" range="3" target_tags="zombie,animal" buff="破军震击"/>
+		</effect_group>
+	</buff>
+	
+	<buff name="破军震击" name_key="破军震击" description_key="buffInjuryKnockdown01Desc" icon="ui_game_symbol_stunned" icon_color="255,128,0">
+		<damage_type value="knockdown"/>
+		<stack_type value="ignore"/>
+		<duration value="4"/>
+		<display_value value=".knockdownDisplay"/><display_value_key value="{0}"/>
+		<requirements compare_type="or">
+			<requirement name="NotHasBuff" buff="buffInjuryKnockdown01Cooldown"/>
+		</requirements>
+
+		<effect_group>
+			<passive_effect name="BuffBlink" operation="base_set" value="2" duration="0,3" tags="buffInjuryKnockdown01"/>
+
+			<passive_effect name="RunSpeed" operation="perc_set" value="0"/>
+			<passive_effect name="WalkSpeed" operation="perc_set" value="0"/>
+			<passive_effect name="CrouchSpeed" operation="perc_set" value="0"/>
+			<passive_effect name="JumpStrength" operation="perc_set" value="0"/>
+
+			<triggered_effect trigger="onSelfBuffStart" action="Ragdoll" duration="3.5">
+				<requirement name="!EntityTagCompare" tags="trader"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfBuffFinish" action="AddBuff" buff="buffInjuryKnockdown01Cooldown"/>
+            <triggered_effect trigger="onSelfBuffStart" action="ModifyStats" stat="Health" operation="subtract" value="100"/>
+			<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar=".knockdownDisplay" operation="set" value="4"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar=".knockdownDisplay" operation="add" value="-1"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar=".knockdownDisplay" operation="set" value="0"/>
+		</effect_group>
+	</buff>
+	
+	<buff name="炎狱" hidden="true">
+		<damage_type value="heat"/>
+		<stack_type value="replace"/><duration value="0"/>
+		<effect_group>
+			<requirement name="CVarCompare" cvar="$buffBurningElementDuration" operation="LTE" value="10"/>
+				<triggered_effect trigger="onSelfBuffStart" action="ModifyCVar" cvar="$buffBurningElementDuration" operation="set" value="10"/>
+				<triggered_effect trigger="onSelfBuffStack" action="ModifyCVar" cvar="$buffBurningElementDuration" operation="set" value="10"/>
+		</effect_group>
+		<effect_group>
+			<passive_effect name="BuffBlink" operation="base_set" value="2" duration="0,3" tags="buffBurningElement"/>
+
+			<triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$buffBurningElementDuration" operation="add" value="-1"/>
+			<triggered_effect trigger="onSelfBuffUpdate" action="RemoveBuff" buff="buffBurningElement">
+				<requirement name="CVarCompare" cvar="$buffBurningElementDuration" operation="LTE" value="0"/>
+			</triggered_effect>
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="$buffBurningElementDuration" operation="set" value="0"/>
+		</effect_group>
+
+		<effect_group>
+			<passive_effect name="HealthChangeOT" operation="base_subtract" value="150"/>
+			<passive_effect name="WaterChangeOT" operation="base_subtract" value="2"/>
+			<passive_effect name="HypothermalResist" operation="base_add" value="30"/>
+			<passive_effect name="HyperthermalResist" operation="base_add" value="-10"/>
+		</effect_group>
+		<effect_group>
+			<triggered_effect trigger="onSelfBuffStart" action="AddBuff" buff="buffBurningElement"/>
+		</effect_group>
+	</buff>
+	
+	<buff name="雷罚" description_key="buffShockedDesc" tooltip_key="buffShockedTooltip" icon="ui_game_symbol_electric_power" name_key="buffShockedName" icon_color="255,0,0">
+		<damage_type value="electrical"/>
+		<stack_type value="replace"/>
+		<duration value="4.5"/>
+		<effect_group>
+			<passive_effect name="BuffBlink" operation="base_set" value="2" duration="0,3" tags="buffShocked"/>
+
+			<passive_effect name="HealthChangeOT" operation="base_add" value="-100"/>
+			<passive_effect name="RunSpeed" operation="perc_subtract" value="0.9,0" duration="0,4.3"/>
+			<passive_effect name="WalkSpeed" operation="perc_subtract" value="0.9,0" duration="0,4.3"/>
+			<passive_effect name="CrouchSpeed" operation="perc_subtract" value="0.9,0" duration="0,4.3"/>
+			<passive_effect name="JumpStrength" operation="perc_subtract" value="0.9,0" duration="0,4.3"/>
+
+			<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="p_electric_shock" parent_transform="Spine1" local_offset="0,-.2,0"/>
+			<triggered_effect trigger="onSelfEnteredGame" action="AttachParticleEffectToEntity" particle="p_electric_shock" parent_transform="Spine1" local_offset="0,-.2,0"/>
+
+			<triggered_effect trigger="onSelfDied" action="RemoveParticleEffectFromEntity" particle="p_electric_shock"/>
+
+			<triggered_effect trigger="onSelfBuffFinish" action="RemoveParticleEffectFromEntity" particle="p_electric_shock"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="RemoveParticleEffectFromEntity" particle="p_electric_shock"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="ETrapHit" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfLeaveGame" action="RemoveParticleEffectFromEntity" particle="p_electric_shock"/>
+
+			<triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="electric_fence_impact"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="FadeOutSound" sound="electric_fence_impact"/>
+			<triggered_effect trigger="onSelfLeaveGame" action="StopSound" sound="electric_fence_impact"/>
+		</effect_group>
+	</buff>
+	
+	<buff name="风暴制裁" description_key="buffShockedDesc" tooltip_key="buffShockedTooltip" icon="ui_game_symbol_electric_power" name_key="buffShockedName" icon_color="255,0,0">
+		<damage_type value="electrical"/>
+		<stack_type value="replace"/>
+		<duration value="4.5"/>
+		<effect_group>
+			<passive_effect name="BuffBlink" operation="base_set" value="2" duration="0,3" tags="buffShocked"/>
+
+			<passive_effect name="HealthChangeOT" operation="base_add" value="-100"/>
+			<passive_effect name="RunSpeed" operation="perc_subtract" value="0.9,0" duration="0,4.3"/>
+			<passive_effect name="WalkSpeed" operation="perc_subtract" value="0.9,0" duration="0,4.3"/>
+			<passive_effect name="CrouchSpeed" operation="perc_subtract" value="0.9,0" duration="0,4.3"/>
+			<passive_effect name="JumpStrength" operation="perc_subtract" value="0.9,0" duration="0,4.3"/>
+            <triggered_effect trigger="onSelfBuffStart" action="ModifyStats" stat="Health" operation="subtract" value="600"/>
+
+			<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" particle="p_electric_shock" parent_transform="Spine1" local_offset="0,-.2,0"/>
+			<triggered_effect trigger="onSelfEnteredGame" action="AttachParticleEffectToEntity" particle="p_electric_shock" parent_transform="Spine1" local_offset="0,-.2,0"/>
+
+			<triggered_effect trigger="onSelfDied" action="RemoveParticleEffectFromEntity" particle="p_electric_shock"/>
+
+			<triggered_effect trigger="onSelfBuffFinish" action="RemoveParticleEffectFromEntity" particle="p_electric_shock"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="RemoveParticleEffectFromEntity" particle="p_electric_shock"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="ModifyCVar" cvar="ETrapHit" operation="set" value="0"/>
+			<triggered_effect trigger="onSelfLeaveGame" action="RemoveParticleEffectFromEntity" particle="p_electric_shock"/>
+
+			<triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="electric_fence_impact"/>
+			<triggered_effect trigger="onSelfBuffRemove" action="FadeOutSound" sound="electric_fence_impact"/>
+			<triggered_effect trigger="onSelfLeaveGame" action="StopSound" sound="electric_fence_impact"/>
+		</effect_group>
+	</buff>
+</append>
+
+</configs>

@@ -1,0 +1,72 @@
+<configs>
+<append xpath="/Sounds">
+
+
+	<SoundDataNode name="m16_fire">
+	    <AudioSource name="Sounds/AudioSource_WeaponFire"/>
+		<NetworkAudioSource name="Sounds/AudioSource_WeaponFire_Network"/>
+        <Noise ID="5" noise="60" time="3" muffled_when_crouched="0.8" heat_map_strength="0.4" heat_map_time="120"/>
+	    <AudioClip ClipName="#@modfolder:Resources/Fire.unity3d?m16fire"/>
+		<LocalCrouchVolumeScale value="0.5"/>
+		<CrouchNoiseScale value="0.5"/>
+		<NoiseScale value="1"/>
+		<MaxVoices value="10"/>
+		<MaxVoicesPerEntity value="3"/>
+		<MaxRepeatRate value="0.001"/>
+	</SoundDataNode>
+	
+	<SoundDataNode name="scar_fire">
+	    <AudioSource name="Sounds/AudioSource_WeaponFire"/>
+		<NetworkAudioSource name="Sounds/AudioSource_WeaponFire_Network"/>
+        <Noise ID="5" noise="60" time="3" muffled_when_crouched="0.8" heat_map_strength="0.3" heat_map_time="120"/>
+	    <AudioClip ClipName="#@modfolder:Resources/Fire.unity3d?scarfire"/>
+		<LocalCrouchVolumeScale value="0.5"/>
+		<CrouchNoiseScale value="0.5"/>
+		<NoiseScale value="1"/>
+		<MaxVoices value="10"/>
+		<MaxVoicesPerEntity value="3"/>
+		<MaxRepeatRate value="0.001"/>
+	</SoundDataNode>
+	
+	<SoundDataNode name="m4a1_fire">
+	    <AudioSource name="Sounds/AudioSource_WeaponFire"/>
+		<NetworkAudioSource name="Sounds/AudioSource_WeaponFire_Network"/>
+        <Noise ID="5" noise="60" time="3" muffled_when_crouched="0.8" heat_map_strength="0.3" heat_map_time="120"/>
+	    <AudioClip ClipName="#@modfolder:Resources/Fire.unity3d?m4a1fire"/>
+		<LocalCrouchVolumeScale value="0.5"/>
+		<CrouchNoiseScale value="0.5"/>
+		<NoiseScale value="1"/>
+		<MaxVoices value="10"/>
+		<MaxVoicesPerEntity value="3"/>
+		<MaxRepeatRate value="0.001"/>
+	</SoundDataNode>
+
+    <SoundDataNode name="m82_fire">
+	    <AudioSource name="Sounds/AudioSource_WeaponFire"/>
+		<NetworkAudioSource name="Sounds/AudioSource_WeaponFire_Network"/>
+        <Noise ID="5" noise="80" time="3" muffled_when_crouched="0.8" heat_map_strength="0.5" heat_map_time="120"/>
+	    <AudioClip ClipName="#@modfolder:Resources/Fire.unity3d?m82fire"/>
+		<LocalCrouchVolumeScale value="0.5"/>
+		<CrouchNoiseScale value="1"/>
+		<NoiseScale value="1"/>
+		<MaxVoices value="10"/>
+		<MaxVoicesPerEntity value="3"/>
+		<MaxRepeatRate value="0.001"/>
+	</SoundDataNode>
+
+    <SoundDataNode name="Gatling_fire">
+	    <AudioSource name="Sounds/AudioSource_WeaponFire"/>
+		<NetworkAudioSource name="Sounds/AudioSource_WeaponFire_Network"/>
+        <Noise ID="5" noise="60" time="3" muffled_when_crouched="0.8" heat_map_strength="0.5" heat_map_time="120"/>
+	    <AudioClip ClipName="#@modfolder:Resources/Fire.unity3d?chaingunfire"/>
+		<LocalCrouchVolumeScale value="0.5"/>
+		<CrouchNoiseScale value="0.5"/>
+		<NoiseScale value="1"/>
+		<MaxVoices value="10"/>
+		<MaxVoicesPerEntity value="3"/>
+		<MaxRepeatRate value="0.001"/>
+	</SoundDataNode>
+
+
+	</append>
+</configs>

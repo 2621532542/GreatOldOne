@@ -1,0 +1,41 @@
+<configs>
+	<append xpath="/ui_display_info/crafting_category_display" >
+	
+		<crafting_category_list display_type="机械加工台">
+		    <crafting_category name="Resources" icon="ui_game_symbol_resource" display_name="lblCategoryResources" />
+			<crafting_category name="All" icon="ui_game_symbol_all_blocks" display_name="All" icon_color="0,153,0"/>
+			<crafting_category name="Ammo/Weapons" icon="ui_game_symbol_knife" display_name="lblCategoryAmmoWeapons" />
+			<crafting_category name="Mods" icon="ui_game_symbol_assemble" display_name="lblCategoryMods" />
+			<crafting_category name="Clothing" icon="ui_game_symbol_shirt" display_name="lblCategoryClothing" />
+		</crafting_category_list>
+		
+		<crafting_category_list display_type="禁忌解析台">
+			<crafting_category name="Resources" icon="ui_game_symbol_resource" display_name="lblCategoryResources" />
+			<crafting_category name="Ammo/Weapons" icon="ui_game_symbol_knife" display_name="lblCategoryAmmoWeapons" />
+			<crafting_category name="Tools/Traps" icon="ui_game_symbol_tool" display_name="lblCategoryToolsTraps" />
+			<crafting_category name="Science" icon="ui_game_symbol_science" display_name="lblCategoryScience" />
+			<crafting_category name="Mods" icon="ui_game_symbol_assemble" display_name="lblCategoryMods" />
+			<crafting_category name="Clothing" icon="ui_game_symbol_shirt" display_name="lblCategoryClothing" />
+			<crafting_category name="Decor/Miscellaneous" icon="ui_game_symbol_chair" display_name="lblCategoryDecorMisc" />
+		</crafting_category_list>
+		
+		<crafting_category_list display_type="灵魂之井">
+		    <crafting_category name="Resources" icon="ui_game_symbol_resource" display_name="lblCategoryResources" />
+			<crafting_category name="Ammo/Weapons" icon="ui_game_symbol_knife" display_name="lblCategoryAmmoWeapons" />
+			<crafting_category name="Tools/Traps" icon="ui_game_symbol_tool" display_name="lblCategoryToolsTraps" />
+			<crafting_category name="CFFood/Cooking" icon="ui_game_symbol_fork" display_name="lblCategoryFood" />
+			<crafting_category name="CFDrink/Cooking" icon="ui_game_symbol_thirst" display_name="lblCategoryDrink" />
+			<crafting_category name="CFChemicals" icon="ui_game_symbol_chemistry" display_name="lblCategoryChemicals" />
+			<crafting_category name="Science" icon="ui_game_symbol_science" display_name="lblCategoryScience" />
+			<crafting_category name="Mods" icon="ui_game_symbol_assemble" display_name="lblCategoryMods" />
+			<crafting_category name="Decor/Miscellaneous" icon="ui_game_symbol_chair" display_name="lblCategoryDecorMisc" />
+		</crafting_category_list>
+
+	</append>
+	
+	<append xpath="/ui_display_info/crafting_category_display/crafting_category_list[@display_type='chemistryStation']" >
+	
+		<crafting_category name="Resources" icon="ui_game_symbol_resource" display_name="lblCategoryResources" />
+
+	</append>
+</configs>

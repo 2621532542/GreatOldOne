@@ -1,0 +1,566 @@
+<configs>
+<!-- Wild Spawns -->
+<append xpath="/entitygroups/entitygroup[@name='ZombiesAll']">
+<entity name="愚痴化身" prob=".1" /><entity name="浮游者" prob=".1" /><entity name="疯狂化身" prob=".1" /><entity name="猛毒渗透者" prob=".1" />
+<entity name="疫病魔犬" prob=".15" /><entity name="灼热恶魔" prob=".15" /><entity name="骸骨渗透者" prob=".2" /><entity name="黑山羊使者" prob=".1" />
+<entity name="臃肿寄生者" prob=".1" /><entity name="畸形浮游者" prob=".1" /><entity name="惊吓鬼魂" prob=".15" /><entity name="克苏鲁团块" prob=".2" />
+<entity name="惊骇之影" prob=".05"/><entity name="殉道者" prob=".1"/>
+</append>
+
+<append xpath="/entitygroups/entitygroup[@name='ZombiesNight']">
+<entity name="愚痴化身" prob=".2" /><entity name="浮游者" prob=".2" /><entity name="疯狂化身" prob=".15" /><entity name="猛毒渗透者" prob=".1" />
+<entity name="疫病魔犬" prob=".2" /><entity name="灼热恶魔" prob=".2" /><entity name="骸骨渗透者" prob=".25" /><entity name="黑山羊使者" prob=".15" />
+<entity name="臃肿寄生者" prob=".15" /><entity name="畸形浮游者" prob=".1" /><entity name="惊吓鬼魂" prob=".2" /><entity name="克苏鲁团块" prob=".2" />
+<entity name="惊骇之影" prob=".1"/><entity name="殉道者" prob=".15"/>
+</append>
+
+<append xpath="/entitygroups/entitygroup[@name='ZombiesWasteland']">
+<entity name="愚痴化身" prob=".2" /><entity name="浮游者" prob=".2" /><entity name="疯狂化身" prob=".15" /><entity name="猛毒渗透者" prob=".1" />
+<entity name="疫病魔犬" prob=".2" /><entity name="灼热恶魔" prob=".2" /><entity name="骸骨渗透者" prob=".25" /><entity name="黑山羊使者" prob=".15" />
+<entity name="臃肿寄生者" prob=".15" /><entity name="畸形浮游者" prob=".15" /><entity name="惊吓鬼魂" prob=".15" /><entity name="克苏鲁团块" prob=".2" />
+<entity name="惊骇之影" prob=".2"/><entity name="殉道者" prob=".15"/>
+</append>
+
+<append xpath="/entitygroups/entitygroup[@name='ZombiesWastelandNight']">
+<entity name="愚痴化身" prob=".3" /><entity name="浮游者" prob=".3" /><entity name="疯狂化身" prob=".2" /><entity name="猛毒渗透者" prob=".1" />
+<entity name="疫病魔犬" prob=".25" /><entity name="灼热恶魔" prob=".25" /><entity name="骸骨渗透者" prob=".3" /><entity name="黑山羊使者" prob=".2" />
+<entity name="臃肿寄生者" prob=".2" /><entity name="畸形浮游者" prob=".2" /><entity name="惊吓鬼魂" prob=".2" /><entity name="克苏鲁团块" prob=".2" />
+<entity name="惊骇之影" prob=".4"/><entity name="殉道者" prob=".2"/>
+</append>
+
+<append xpath="/entitygroups/entitygroup[@name='SnowZombies']">
+<entity name="疯狂化身" prob=".5" /><entity name="灼热恶魔" prob=".3" /><entity name="臃肿寄生者" prob=".3" /><entity name="惊吓鬼魂" prob=".3" /><entity name="惊骇之影" prob=".6"/>
+<entity name="殉道者" prob=".5"/>
+</append>
+<append xpath="/entitygroups/entitygroup[@name='zombieSnowGroupGS1']">
+<entity name="疯狂化身" prob=".5" /><entity name="灼热恶魔" prob=".3" /><entity name="臃肿寄生者" prob=".3" /><entity name="惊吓鬼魂" prob=".3" /><entity name="惊骇之影" prob=".6"/>
+<entity name="殉道者" prob=".5"/>
+</append>
+<append xpath="/entitygroups/entitygroup[@name='zombieSnowGroupGS50']">
+<entity name="疯狂化身" prob=".55" /><entity name="灼热恶魔" prob=".3" /><entity name="臃肿寄生者" prob=".3" /><entity name="惊吓鬼魂" prob=".3" /><entity name="惊骇之影" prob=".65"/>
+<entity name="殉道者" prob=".55"/>
+</append>
+<append xpath="/entitygroups/entitygroup[@name='zombieSnowGroupGS100']">
+<entity name="疯狂化身" prob=".55" /><entity name="灼热恶魔" prob=".3" /><entity name="臃肿寄生者" prob=".3" /><entity name="惊吓鬼魂" prob=".3" /><entity name="惊骇之影" prob=".65"/>
+<entity name="殉道者" prob=".55"/>
+</append>
+<append xpath="/entitygroups/entitygroup[@name='zombieSnowGroupGS200']">
+<entity name="疯狂化身" prob=".6" /><entity name="灼热恶魔" prob=".3" /><entity name="臃肿寄生者" prob=".3" /><entity name="惊吓鬼魂" prob=".3" /><entity name="惊骇之影" prob=".7"/>
+<entity name="殉道者" prob=".6"/>
+</append>
+<append xpath="/entitygroups/entitygroup[@name='zombieSnowGroupGS400']">
+<entity name="疯狂化身" prob=".6" /><entity name="灼热恶魔" prob=".3" /><entity name="臃肿寄生者" prob=".3" /><entity name="惊吓鬼魂" prob=".3" /><entity name="惊骇之影" prob=".7"/>
+<entity name="殉道者" prob=".6"/>
+</append>
+<append xpath="/entitygroups/entitygroup[@name='zombieSnowGroupGS800']">
+<entity name="疯狂化身" prob=".7" /><entity name="灼热恶魔" prob=".3" /><entity name="臃肿寄生者" prob=".3" /><entity name="惊吓鬼魂" prob=".3" /><entity name="惊骇之影" prob=".8"/>
+<entity name="殉道者" prob=".7"/>
+</append>
+
+<append xpath="/entitygroups/entitygroup[@name='ZombiesCrawlers']">
+<entity name="愚痴化身" prob=".15" /><entity name="浮游者" prob=".15" /><entity name="疯狂化身" prob=".1" /><entity name="猛毒渗透者" prob=".1" />
+<entity name="疫病魔犬" prob=".1" /><entity name="灼热恶魔" prob=".15" /><entity name="骸骨渗透者" prob=".2" /><entity name="黑山羊使者" prob=".1" />
+<entity name="臃肿寄生者" prob=".1" /><entity name="畸形浮游者" prob=".06" /><entity name="惊吓鬼魂" prob=".1" /><entity name="克苏鲁团块" prob=".2" />
+<entity name="殉道者" prob=".1"/>
+</append>
+
+<append xpath="/entitygroups/entitygroup[@name='ZombiesFeral']">
+<entity name="愚痴化身" prob=".15" /><entity name="浮游者" prob=".15" /><entity name="疯狂化身" prob=".1" /><entity name="猛毒渗透者" prob=".1" />
+<entity name="疫病魔犬" prob=".1" /><entity name="灼热恶魔" prob=".15" /><entity name="骸骨渗透者" prob=".2" /><entity name="黑山羊使者" prob=".1" />
+<entity name="臃肿寄生者" prob=".1" /><entity name="畸形浮游者" prob=".06" /><entity name="惊吓鬼魂" prob=".1" /><entity name="克苏鲁团块" prob=".2" />
+<entity name="殉道者" prob=".1"/>
+</append>
+<!-- Sleeper Spawns -->
+<insertAfter xpath="/entitygroups/entitygroup/entity[@name='zombieBoe']" >
+<entity name="愚痴化身" prob=".05" /><entity name="浮游者" prob=".05" /><entity name="疯狂化身" prob=".05" /><entity name="猛毒渗透者" prob=".1" />
+<entity name="疫病魔犬" prob=".1" /><entity name="灼热恶魔" prob=".1" /><entity name="骸骨渗透者" prob=".2" /><entity name="黑山羊使者" prob=".05" />
+<entity name="惊吓鬼魂" prob=".1" /><entity name="克苏鲁团块" prob=".2" /><entity name="殉道者" prob=".1"/>
+</insertAfter>
+
+<insertAfter xpath="/entitygroups/entitygroup/entity[@name='zombieBoeFeral']" >
+<entity name="愚痴化身" prob=".15" /><entity name="浮游者" prob=".15" /><entity name="疯狂化身" prob=".1" /><entity name="猛毒渗透者" prob=".1" />
+<entity name="疫病魔犬" prob=".2" /><entity name="灼热恶魔" prob=".15" /><entity name="骸骨渗透者" prob=".2" /><entity name="黑山羊使者" prob=".1" />
+<entity name="臃肿寄生者" prob=".1" /><entity name="畸形浮游者" prob=".06" /><entity name="惊吓鬼魂" prob=".1" /><entity name="克苏鲁团块" prob=".2" />
+<entity name="殉道者" prob=".1"/>
+</insertAfter>
+
+<!--<insertAfter xpath="/entitygroups/entitygroup/entity[@name='zombieCopRadiated']" >
+<entity name="愚痴化身" prob=".3" /><entity name="疯狂化身" prob=".2" />
+</insertAfter>-->
+
+<!--血月boss-->
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS54']">
+<entity name="愚痴化身"/><entity name="浮游者" prob=".5" /><entity name="疯狂化身" prob=".3" /><entity name="疫病魔犬" prob=".3" />
+<entity name="灼热恶魔" prob=".3" /><entity name="骸骨渗透者" prob=".3" /><entity name="猛毒渗透者" prob=".3" /><entity name="臃肿寄生者" prob=".3" />
+<entity name="畸形浮游者" prob=".1" /><entity name="克苏鲁团块" prob=".2" />
+</append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS59']">
+<entity name="愚痴化身"/><entity name="浮游者" prob=".5" /><entity name="疯狂化身" prob=".3" /><entity name="疫病魔犬" prob=".3" />
+<entity name="灼热恶魔" prob=".3" /><entity name="骸骨渗透者" prob=".3" /><entity name="猛毒渗透者" prob=".3" /><entity name="臃肿寄生者" prob=".3" />
+<entity name="畸形浮游者" prob=".1" /><entity name="克苏鲁团块" prob=".2" />
+</append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS64']">
+<entity name="愚痴化身"/><entity name="浮游者" prob=".5" /><entity name="疯狂化身" prob=".3" /><entity name="疫病魔犬" prob=".3" />
+<entity name="灼热恶魔" prob=".3" /><entity name="骸骨渗透者" prob=".3" /><entity name="猛毒渗透者" prob=".3" /><entity name="臃肿寄生者" prob=".3" />
+<entity name="畸形浮游者" prob=".1" /><entity name="克苏鲁团块" prob=".2" />
+</append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS69']">
+<entity name="愚痴化身"/><entity name="浮游者"/><entity name="疯狂化身" prob=".4" /><entity name="疫病魔犬" prob=".4" />
+<entity name="灼热恶魔" prob=".4" /><entity name="骸骨渗透者" prob=".4" /><entity name="猛毒渗透者" prob=".3" /><entity name="臃肿寄生者" prob=".3" />
+<entity name="畸形浮游者" prob=".1" /><entity name="克苏鲁团块" prob=".2" />
+</append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS74']">
+<entity name="愚痴化身"/><entity name="浮游者"/><entity name="疯狂化身" prob=".4" /><entity name="疫病魔犬" prob=".4" />
+<entity name="灼热恶魔" prob=".4" /><entity name="骸骨渗透者" prob=".4" /><entity name="猛毒渗透者" prob=".3" /><entity name="臃肿寄生者" prob=".3" />
+<entity name="畸形浮游者" prob=".1" /><entity name="克苏鲁团块" prob=".2" />
+</append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS80']">
+<entity name="愚痴化身"/><entity name="浮游者"/><entity name="疯狂化身" prob=".4" /><entity name="疫病魔犬" prob=".4" />
+<entity name="灼热恶魔" prob=".4" /><entity name="骸骨渗透者" prob=".4" /><entity name="猛毒渗透者" prob=".3" /><entity name="臃肿寄生者" prob=".3" />
+<entity name="畸形浮游者" prob=".1" /><entity name="克苏鲁团块" prob=".2" /><entity name="殉道者" prob=".2"/>
+</append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS85']">
+<entity name="愚痴化身"/><entity name="浮游者"/><entity name="疯狂化身" prob=".5" /><entity name="疫病魔犬" prob=".5" />
+<entity name="灼热恶魔" prob=".5" /><entity name="骸骨渗透者" prob=".5" /><entity name="猛毒渗透者" prob=".3" /><entity name="臃肿寄生者" prob=".3" />
+<entity name="畸形浮游者" prob=".1" /><entity name="克苏鲁团块" prob=".2" /><entity name="殉道者" prob=".2"/>
+</append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS91']">
+<entity name="愚痴化身"/><entity name="浮游者"/><entity name="疯狂化身" prob=".5" /><entity name="疫病魔犬" prob=".5" />
+<entity name="灼热恶魔" prob=".5" /><entity name="骸骨渗透者" prob=".5" /><entity name="猛毒渗透者" prob=".3" /><entity name="臃肿寄生者" prob=".3" />
+<entity name="畸形浮游者" prob=".1" /><entity name="克苏鲁团块" prob=".2" /><entity name="殉道者" prob=".2"/>
+</append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS97']">
+<entity name="愚痴化身"/><entity name="浮游者"/><entity name="疯狂化身" prob=".5" /><entity name="疫病魔犬" prob=".5" />
+<entity name="灼热恶魔" prob=".5" /><entity name="骸骨渗透者" prob=".5" /><entity name="猛毒渗透者" prob=".3" /><entity name="臃肿寄生者" prob=".3" />
+<entity name="畸形浮游者" prob=".1" /><entity name="克苏鲁团块" prob=".2" /><entity name="殉道者" prob=".2"/>
+</append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS103']">
+<entity name="愚痴化身"/><entity name="浮游者"/><entity name="疯狂化身" prob=".55" /><entity name="疫病魔犬" prob=".55" /><entity name="黑山羊使者" prob=".5" />
+<entity name="灼热恶魔" prob=".55" /><entity name="骸骨渗透者" prob=".6" /><entity name="猛毒渗透者" prob=".3" /><entity name="臃肿寄生者" prob=".3" />
+<entity name="畸形浮游者" prob=".1" /><entity name="克苏鲁团块" prob=".2" /><entity name="殉道者" prob=".2"/>
+</append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS109']">
+<entity name="愚痴化身"/><entity name="浮游者"/><entity name="疯狂化身" prob=".55" /><entity name="疫病魔犬" prob=".55" /><entity name="黑山羊使者" prob=".5" />
+<entity name="灼热恶魔" prob=".55" /><entity name="骸骨渗透者" prob=".6" /><entity name="猛毒渗透者" prob=".3" /><entity name="臃肿寄生者" prob=".3" />
+<entity name="畸形浮游者" prob=".1" /><entity name="克苏鲁团块" prob=".2" /><entity name="殉道者" prob=".2"/>
+</append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS115']">
+<entity name="愚痴化身"/><entity name="浮游者"/><entity name="疯狂化身" prob=".55" /><entity name="疫病魔犬" prob=".55" /><entity name="黑山羊使者" prob=".5" />
+<entity name="灼热恶魔" prob=".55" /><entity name="骸骨渗透者" prob=".6" /><entity name="猛毒渗透者" prob=".3" /><entity name="臃肿寄生者" prob=".3" />
+<entity name="畸形浮游者" prob=".1" /><entity name="克苏鲁团块" prob=".2" /><entity name="殉道者" prob=".2"/>
+</append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS121']">
+<entity name="愚痴化身"/><entity name="浮游者"/><entity name="疯狂化身" prob=".56" /><entity name="疫病魔犬" prob=".56" /><entity name="黑山羊使者" prob=".5" />
+<entity name="灼热恶魔" prob=".56" /><entity name="骸骨渗透者" prob=".6" /><entity name="猛毒渗透者" prob=".3" /><entity name="臃肿寄生者" prob=".3" />
+<entity name="畸形浮游者" prob=".1" /><entity name="克苏鲁团块" prob=".2" /><entity name="殉道者" prob=".2"/>
+</append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS127']">
+<entity name="愚痴化身"/><entity name="浮游者"/><entity name="疯狂化身" prob=".56" /><entity name="疫病魔犬" prob=".56" /><entity name="黑山羊使者" prob=".5" />
+<entity name="灼热恶魔" prob=".56" /><entity name="骸骨渗透者" prob=".6" /><entity name="猛毒渗透者" prob=".3" /><entity name="臃肿寄生者" prob=".3" />
+<entity name="畸形浮游者" prob=".1" /><entity name="克苏鲁团块" prob=".2" /><entity name="殉道者" prob=".2"/>
+</append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS133']">
+<entity name="愚痴化身"/><entity name="浮游者"/><entity name="疯狂化身" prob=".56" /><entity name="疫病魔犬" prob=".56" /><entity name="黑山羊使者" prob=".5" />
+<entity name="灼热恶魔" prob=".56" /><entity name="骸骨渗透者" prob=".6" /><entity name="猛毒渗透者" prob=".3" /><entity name="臃肿寄生者" prob=".3" />
+<entity name="畸形浮游者" prob=".1" /><entity name="克苏鲁团块" prob=".2" /><entity name="殉道者" prob=".2"/>
+</append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS140']">
+<entity name="愚痴化身"/><entity name="浮游者"/><entity name="疯狂化身" prob=".57" /><entity name="疫病魔犬" prob=".57" /><entity name="黑山羊使者" prob=".5" />
+<entity name="灼热恶魔" prob=".57" /><entity name="骸骨渗透者" prob=".6" /><entity name="猛毒渗透者" prob=".3" /><entity name="臃肿寄生者" prob=".3" />
+<entity name="畸形浮游者" prob=".1" /><entity name="克苏鲁团块" prob=".2" /><entity name="殉道者" prob=".2"/>
+</append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS147']">
+<entity name="愚痴化身"/><entity name="浮游者"/><entity name="疯狂化身" prob=".57" /><entity name="疫病魔犬" prob=".57" /><entity name="黑山羊使者" prob=".5" />
+<entity name="灼热恶魔" prob=".57" /><entity name="骸骨渗透者" prob=".6" /><entity name="猛毒渗透者" prob=".3" /><entity name="臃肿寄生者" prob=".3" />
+<entity name="畸形浮游者" prob=".1" /><entity name="克苏鲁团块" prob=".2" /><entity name="殉道者" prob=".2"/>
+</append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS153']">
+<entity name="愚痴化身"/><entity name="浮游者"/><entity name="疯狂化身" prob=".57" /><entity name="疫病魔犬" prob=".57" /><entity name="黑山羊使者" prob=".5" />
+<entity name="灼热恶魔" prob=".57" /><entity name="骸骨渗透者" prob=".6" /><entity name="猛毒渗透者" prob=".3" /><entity name="臃肿寄生者" prob=".3" /><entity name="克苏鲁团块" prob=".3" />
+<entity name="殉道者" prob=".2"/>
+</append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS160']">
+<entity name="愚痴化身"/><entity name="浮游者"/><entity name="疯狂化身" prob=".58" /><entity name="疫病魔犬" prob=".58" /><entity name="黑山羊使者" prob=".5" />
+<entity name="灼热恶魔" prob=".58" /><entity name="骸骨渗透者" prob=".6" /><entity name="猛毒渗透者" prob=".3" /><entity name="臃肿寄生者" prob=".3" /><entity name="克苏鲁团块" prob=".3" />
+<entity name="畸形浮游者" prob=".1" /><entity name="殉道者" prob=".2"/>
+</append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS167']">
+<entity name="愚痴化身"/><entity name="浮游者"/><entity name="疯狂化身" prob=".58" /><entity name="疫病魔犬" prob=".58" /><entity name="黑山羊使者" prob=".5" />
+<entity name="灼热恶魔" prob=".58" /><entity name="骸骨渗透者" prob=".6" /><entity name="猛毒渗透者" prob=".5" /><entity name="臃肿寄生者" prob=".5" /><entity name="克苏鲁团块" prob=".3" />
+<entity name="畸形浮游者" prob=".15" /><entity name="殉道者" prob=".2"/>
+</append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS174']">
+<entity name="愚痴化身"/><entity name="浮游者"/><entity name="疯狂化身" prob=".58" /><entity name="疫病魔犬" prob=".58" /><entity name="黑山羊使者" prob=".5" />
+<entity name="灼热恶魔" prob=".58" /><entity name="骸骨渗透者" prob=".6" /><entity name="猛毒渗透者" prob=".5" /><entity name="臃肿寄生者" prob=".5" /><entity name="克苏鲁团块" prob=".3" />
+<entity name="畸形浮游者" prob=".15" /><entity name="殉道者" prob=".2"/>
+</append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS181']">
+<entity name="愚痴化身"/><entity name="浮游者"/><entity name="疯狂化身" prob=".59" /><entity name="疫病魔犬" prob=".59" /><entity name="黑山羊使者" prob=".5" />
+<entity name="灼热恶魔" prob=".59" /><entity name="骸骨渗透者" prob=".6" /><entity name="猛毒渗透者" prob=".5" /><entity name="臃肿寄生者" prob=".5" /><entity name="克苏鲁团块" prob=".3" />
+<entity name="畸形浮游者" prob=".15" /><entity name="殉道者" prob=".2"/>
+</append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS188']">
+<entity name="愚痴化身"/><entity name="浮游者"/><entity name="疯狂化身" prob=".59" /><entity name="疫病魔犬" prob=".59" /><entity name="黑山羊使者" prob=".5" />
+<entity name="灼热恶魔" prob=".59" /><entity name="骸骨渗透者" prob=".6" /><entity name="猛毒渗透者" prob=".5" /><entity name="臃肿寄生者" prob=".5" /><entity name="克苏鲁团块" prob=".3" />
+<entity name="畸形浮游者" prob=".15" /><entity name="殉道者" prob=".2"/>
+</append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS195']">
+<entity name="愚痴化身"/><entity name="浮游者"/><entity name="疯狂化身" prob=".59" /><entity name="疫病魔犬" prob=".59" /><entity name="黑山羊使者" prob=".5" />
+<entity name="灼热恶魔" prob=".59" /><entity name="骸骨渗透者" prob=".6" /><entity name="猛毒渗透者" prob=".5" /><entity name="臃肿寄生者" prob=".5" /><entity name="克苏鲁团块" prob=".3" />
+<entity name="畸形浮游者" prob=".15" /><entity name="殉道者" prob=".2"/>
+</append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS202']">
+<entity name="愚痴化身"/><entity name="浮游者"/><entity name="疯狂化身" prob=".6" /><entity name="疫病魔犬" prob=".6" /><entity name="黑山羊使者" prob=".6" />
+<entity name="灼热恶魔" prob=".6" /><entity name="骸骨渗透者" prob=".6" /><entity name="猛毒渗透者" prob=".5" /><entity name="臃肿寄生者" prob=".5" />
+<entity name="畸形浮游者" prob=".15" /><entity name="克苏鲁团块" prob=".3" /><entity name="殉道者" prob=".2"/>
+</append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS210']">
+<entity name="愚痴化身"/><entity name="浮游者"/><entity name="疯狂化身" prob=".6" /><entity name="疫病魔犬" prob=".6" /><entity name="黑山羊使者" prob=".6" />
+<entity name="灼热恶魔" prob=".6" /><entity name="骸骨渗透者" prob=".6" /><entity name="猛毒渗透者" prob=".5" /><entity name="臃肿寄生者" prob=".5" />
+<entity name="畸形浮游者" prob=".15" /><entity name="克苏鲁团块" prob=".3" /><entity name="殉道者" prob=".2"/>
+</append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS217']">
+<entity name="愚痴化身"/><entity name="浮游者"/><entity name="疯狂化身" prob=".6" /><entity name="疫病魔犬" prob=".6" /><entity name="黑山羊使者" prob=".6" />
+<entity name="灼热恶魔" prob=".6" /><entity name="骸骨渗透者" prob=".6" /><entity name="猛毒渗透者" prob=".5" /><entity name="臃肿寄生者" prob=".5" />
+<entity name="畸形浮游者" prob=".15" /><entity name="克苏鲁团块" prob=".3" /><entity name="殉道者" prob=".2"/>
+</append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS225']">
+<entity name="愚痴化身"/><entity name="浮游者"/><entity name="疯狂化身" prob=".61" /><entity name="疫病魔犬" prob=".61" /><entity name="黑山羊使者" prob=".6" />
+<entity name="灼热恶魔" prob=".61" /><entity name="骸骨渗透者" prob=".6" /><entity name="猛毒渗透者" prob=".5" /><entity name="臃肿寄生者" prob=".5" />
+<entity name="畸形浮游者" prob=".15" /><entity name="克苏鲁团块" prob=".3" /><entity name="殉道者" prob=".2"/>
+</append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS232']">
+<entity name="愚痴化身"/><entity name="浮游者"/><entity name="疯狂化身" prob=".61" /><entity name="疫病魔犬" prob=".61" /><entity name="黑山羊使者" prob=".6" />
+<entity name="灼热恶魔" prob=".61" /><entity name="骸骨渗透者" prob=".61" /><entity name="猛毒渗透者" prob=".5" /><entity name="臃肿寄生者" prob=".5" />
+<entity name="畸形浮游者" prob=".15" /><entity name="克苏鲁团块" prob=".3" /><entity name="殉道者" prob=".2"/>
+</append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS240']">
+<entity name="愚痴化身"/><entity name="浮游者"/><entity name="疯狂化身" prob=".61" /><entity name="疫病魔犬" prob=".61" /><entity name="黑山羊使者" prob=".6" />
+<entity name="灼热恶魔" prob=".61" /><entity name="骸骨渗透者" prob=".61" /><entity name="猛毒渗透者" prob=".5" /><entity name="臃肿寄生者" prob=".5" />
+<entity name="畸形浮游者" prob=".15" /><entity name="克苏鲁团块" prob=".3" /><entity name="殉道者" prob=".3"/>
+</append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS247']">
+<entity name="愚痴化身"/><entity name="浮游者"/><entity name="疯狂化身" prob=".62" /><entity name="疫病魔犬" prob=".62" /><entity name="黑山羊使者" prob=".6" />
+<entity name="灼热恶魔" prob=".62" /><entity name="骸骨渗透者" prob=".61" /><entity name="猛毒渗透者" prob=".5" /><entity name="臃肿寄生者" prob=".5" />
+<entity name="畸形浮游者" prob=".15" /><entity name="克苏鲁团块" prob=".3" /><entity name="殉道者" prob=".3"/>
+</append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS255']">
+<entity name="愚痴化身"/><entity name="浮游者"/><entity name="疯狂化身" prob=".62" /><entity name="疫病魔犬" prob=".62" /><entity name="黑山羊使者" prob=".6" />
+<entity name="灼热恶魔" prob=".62" /><entity name="骸骨渗透者" prob=".61" /><entity name="猛毒渗透者" prob=".5" /><entity name="臃肿寄生者" prob=".5" />
+<entity name="畸形浮游者" prob=".15" /><entity name="克苏鲁团块" prob=".3" /><entity name="殉道者" prob=".3"/>
+</append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS263']">
+<entity name="愚痴化身"/><entity name="浮游者"/><entity name="疯狂化身" prob=".62" /><entity name="疫病魔犬" prob=".62" /><entity name="黑山羊使者" prob=".6" />
+<entity name="灼热恶魔" prob=".62" /><entity name="骸骨渗透者" prob=".61" /><entity name="猛毒渗透者" prob=".5" /><entity name="臃肿寄生者" prob=".5" />
+<entity name="畸形浮游者" prob=".15" /><entity name="克苏鲁团块" prob=".3" /><entity name="殉道者" prob=".3"/>
+</append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS271']">
+<entity name="愚痴化身"/><entity name="浮游者"/><entity name="疯狂化身" prob=".63" /><entity name="疫病魔犬" prob=".63" /><entity name="黑山羊使者" prob=".6" />
+<entity name="灼热恶魔" prob=".63" /><entity name="骸骨渗透者" prob=".65" /><entity name="猛毒渗透者" prob=".5" /><entity name="臃肿寄生者" prob=".5" />
+<entity name="畸形浮游者" prob=".15" /><entity name="克苏鲁团块" prob=".3" /><entity name="殉道者" prob=".3"/>
+</append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS279']">
+<entity name="愚痴化身"/><entity name="浮游者"/><entity name="疯狂化身" prob=".63" /><entity name="疫病魔犬" prob=".63" /><entity name="黑山羊使者" prob=".6" />
+<entity name="灼热恶魔" prob=".63" /><entity name="骸骨渗透者" prob=".65" /><entity name="猛毒渗透者" prob=".5" /><entity name="臃肿寄生者" prob=".5" /><entity name="殉道者" prob=".3"/>
+</append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS287']">
+<entity name="愚痴化身"/><entity name="浮游者"/><entity name="疯狂化身" prob=".63" /><entity name="疫病魔犬" prob=".63" /><entity name="黑山羊使者" prob=".6" />
+<entity name="灼热恶魔" prob=".63" /><entity name="骸骨渗透者" prob=".65" /><entity name="猛毒渗透者" prob=".5" /><entity name="臃肿寄生者" prob=".5" /><entity name="殉道者" prob=".3"/>
+<entity name="畸形浮游者" prob=".15" /><entity name="克苏鲁团块" prob=".3" />
+</append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS295']">
+<entity name="愚痴化身"/><entity name="浮游者"/><entity name="疯狂化身" prob=".64" /><entity name="疫病魔犬" prob=".64" /><entity name="黑山羊使者" prob=".6" />
+<entity name="灼热恶魔" prob=".64" /><entity name="骸骨渗透者" prob=".65" /><entity name="猛毒渗透者" prob=".5" /><entity name="臃肿寄生者" prob=".5" /><entity name="殉道者" prob=".3"/>
+<entity name="畸形浮游者" prob=".15" /><entity name="克苏鲁团块" prob=".3" />
+</append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS304']">
+<entity name="愚痴化身"/><entity name="浮游者"/><entity name="疯狂化身" prob=".64" /><entity name="疫病魔犬" prob=".64" /><entity name="黑山羊使者" prob=".6" />
+<entity name="灼热恶魔" prob=".64" /><entity name="骸骨渗透者" prob=".65" /><entity name="猛毒渗透者" prob=".5" /><entity name="臃肿寄生者" prob=".5" /><entity name="殉道者" prob=".3"/>
+<entity name="畸形浮游者" prob=".15" /><entity name="克苏鲁团块" prob=".3" />
+</append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS312']">
+<entity name="愚痴化身"/><entity name="浮游者"/><entity name="疯狂化身" prob=".64" /><entity name="疫病魔犬" prob=".64" /><entity name="黑山羊使者" prob=".65" />
+<entity name="灼热恶魔" prob=".64" /><entity name="骸骨渗透者" prob=".65" /><entity name="猛毒渗透者" prob=".5" /><entity name="臃肿寄生者" prob=".5" />
+<entity name="畸形浮游者" prob=".15" /><entity name="克苏鲁团块" prob=".3" />
+</append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS320']">
+<entity name="愚痴化身"/><entity name="浮游者"/><entity name="疯狂化身" prob=".65" /><entity name="疫病魔犬" prob=".65" /><entity name="黑山羊使者" prob=".65" />
+<entity name="灼热恶魔" prob=".65" /><entity name="骸骨渗透者" prob=".65" /><entity name="猛毒渗透者" prob=".5" /><entity name="臃肿寄生者" prob=".5" />
+<entity name="畸形浮游者" prob=".15" /><entity name="克苏鲁团块" prob=".3" /><entity name="殉道者" prob=".3"/>
+</append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS329']">
+<entity name="愚痴化身"/><entity name="浮游者"/><entity name="疯狂化身" prob=".65" /><entity name="疫病魔犬" prob=".65" /><entity name="黑山羊使者" prob=".65" />
+<entity name="灼热恶魔" prob=".65" /><entity name="骸骨渗透者" prob=".65" /><entity name="猛毒渗透者" prob=".5" /><entity name="臃肿寄生者" prob=".5" />
+<entity name="畸形浮游者" prob=".15" /><entity name="克苏鲁团块" prob=".3" /><entity name="殉道者" prob=".3"/>
+</append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS337']">
+<entity name="愚痴化身"/><entity name="浮游者"/><entity name="疯狂化身" prob=".65" /><entity name="疫病魔犬" prob=".65" /><entity name="黑山羊使者" prob=".65" />
+<entity name="灼热恶魔" prob=".65" /><entity name="骸骨渗透者" prob=".65" /><entity name="猛毒渗透者" prob=".5" /><entity name="臃肿寄生者" prob=".5" />
+<entity name="畸形浮游者" prob=".15" /><entity name="克苏鲁团块" prob=".3" /><entity name="殉道者" prob=".3"/>
+</append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS346']">
+<entity name="愚痴化身"/><entity name="浮游者"/><entity name="疯狂化身" prob=".66" /><entity name="疫病魔犬" prob=".66" /><entity name="黑山羊使者" prob=".65" />
+<entity name="灼热恶魔" prob=".66" /><entity name="骸骨渗透者" prob=".7" /><entity name="猛毒渗透者" prob=".5" /><entity name="臃肿寄生者" prob=".5" />
+<entity name="畸形浮游者" prob=".15" /><entity name="克苏鲁团块" prob=".3" /><entity name="殉道者" prob=".3"/>
+</append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS354']">
+<entity name="愚痴化身"/><entity name="浮游者"/><entity name="疯狂化身" prob=".66" /><entity name="疫病魔犬" prob=".66" /><entity name="黑山羊使者" prob=".65" />
+<entity name="灼热恶魔" prob=".66" /><entity name="骸骨渗透者" prob=".7" /><entity name="猛毒渗透者" prob=".5" /><entity name="臃肿寄生者" prob=".5" />
+<entity name="畸形浮游者" prob=".15" /><entity name="克苏鲁团块" prob=".3" /><entity name="殉道者" prob=".3"/>
+</append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS363']">
+<entity name="愚痴化身"/><entity name="浮游者"/><entity name="疯狂化身" prob=".66" /><entity name="疫病魔犬" prob=".66" /><entity name="黑山羊使者" prob=".65" />
+<entity name="灼热恶魔" prob=".66" /><entity name="骸骨渗透者" prob=".7" /><entity name="猛毒渗透者" prob=".5" /><entity name="臃肿寄生者" prob=".5" />
+<entity name="畸形浮游者" prob=".15" /><entity name="克苏鲁团块" prob=".3" /><entity name="殉道者" prob=".3"/>
+</append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS372']">
+<entity name="愚痴化身"/><entity name="浮游者"/><entity name="疯狂化身" prob=".67" /><entity name="疫病魔犬" prob=".67" /><entity name="黑山羊使者" prob=".65" />
+<entity name="灼热恶魔" prob=".67" /><entity name="骸骨渗透者" prob=".7" /><entity name="猛毒渗透者" prob=".5" /><entity name="臃肿寄生者" prob=".5" />
+<entity name="畸形浮游者" prob=".15" /><entity name="克苏鲁团块" prob=".3" /><entity name="殉道者" prob=".3"/>
+</append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS381']">
+<entity name="愚痴化身"/><entity name="浮游者"/><entity name="疯狂化身" prob=".67" /><entity name="疫病魔犬" prob=".67" /><entity name="黑山羊使者" prob=".65" />
+<entity name="灼热恶魔" prob=".67" /><entity name="骸骨渗透者" prob=".7" /><entity name="猛毒渗透者" prob=".5" /><entity name="臃肿寄生者" prob=".5" />
+<entity name="畸形浮游者" prob=".15" /><entity name="克苏鲁团块" prob=".3" /><entity name="殉道者" prob=".3"/>
+</append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS389']">
+<entity name="愚痴化身"/><entity name="浮游者"/><entity name="疯狂化身" prob=".67" /><entity name="疫病魔犬" prob=".67" /><entity name="黑山羊使者" prob=".65" />
+<entity name="灼热恶魔" prob=".67" /><entity name="骸骨渗透者" prob=".7" /><entity name="猛毒渗透者" prob=".5" /><entity name="臃肿寄生者" prob=".5" />
+<entity name="畸形浮游者" prob=".15" /><entity name="克苏鲁团块" prob=".3" /><entity name="殉道者" prob=".3"/>
+</append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS398']">
+<entity name="愚痴化身"/><entity name="浮游者"/><entity name="疯狂化身" prob=".68" /><entity name="疫病魔犬" prob=".68" /><entity name="黑山羊使者" prob=".65" />
+<entity name="灼热恶魔" prob=".68" /><entity name="骸骨渗透者" prob=".7" /><entity name="猛毒渗透者" prob=".5" /><entity name="臃肿寄生者" prob=".5" />
+<entity name="畸形浮游者" prob=".15" /><entity name="克苏鲁团块" prob=".3" /><entity name="殉道者" prob=".3"/>
+</append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS407']">
+<entity name="愚痴化身"/><entity name="浮游者"/><entity name="疯狂化身" prob=".68" /><entity name="疫病魔犬" prob=".68" /><entity name="黑山羊使者" prob=".65" />
+<entity name="灼热恶魔" prob=".68" /><entity name="骸骨渗透者" prob=".7" /><entity name="猛毒渗透者" prob=".5" /><entity name="臃肿寄生者" prob=".5" />
+<entity name="畸形浮游者" prob=".15" /><entity name="克苏鲁团块" prob=".3" /><entity name="殉道者" prob=".3"/>
+</append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS417']">
+<entity name="愚痴化身"/><entity name="浮游者"/><entity name="疯狂化身" prob=".68" /><entity name="疫病魔犬" prob=".68" /><entity name="黑山羊使者" prob=".65" />
+<entity name="灼热恶魔" prob=".68" /><entity name="骸骨渗透者" prob=".7" /><entity name="猛毒渗透者" prob=".5" /><entity name="臃肿寄生者" prob=".5" />
+<entity name="畸形浮游者" prob=".15" /><entity name="克苏鲁团块" prob=".3" /><entity name="殉道者" prob=".3"/>
+</append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS426']">
+<entity name="愚痴化身"/><entity name="浮游者"/><entity name="疯狂化身" prob=".69" /><entity name="疫病魔犬" prob=".69" /><entity name="黑山羊使者" prob=".65" />
+<entity name="灼热恶魔" prob=".69" /><entity name="骸骨渗透者" prob=".7" /><entity name="猛毒渗透者" prob=".55" /><entity name="臃肿寄生者" prob=".55" />
+<entity name="畸形浮游者" prob=".15" /><entity name="克苏鲁团块" prob=".3" /><entity name="殉道者" prob=".3"/><entity name="黄衣之主-哈萨斯" prob=".1"/>
+</append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS435']">
+<entity name="愚痴化身"/><entity name="浮游者"/><entity name="疯狂化身" prob=".69" /><entity name="疫病魔犬" prob=".69" /><entity name="黑山羊使者" prob=".65" />
+<entity name="灼热恶魔" prob=".69" /><entity name="骸骨渗透者" prob=".7" /><entity name="猛毒渗透者" prob=".55" /><entity name="臃肿寄生者" prob=".55" />
+<entity name="畸形浮游者" prob=".15" /><entity name="克苏鲁团块" prob=".3" /><entity name="殉道者" prob=".3"/><entity name="黄衣之主-哈萨斯" prob=".1"/>
+</append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS444']">
+<entity name="愚痴化身"/><entity name="浮游者"/><entity name="疯狂化身" prob=".69" /><entity name="疫病魔犬" prob=".69" /><entity name="黑山羊使者" prob=".65" />
+<entity name="灼热恶魔" prob=".69" /><entity name="骸骨渗透者" prob=".7" /><entity name="猛毒渗透者" prob=".55" /><entity name="臃肿寄生者" prob=".55" />
+<entity name="畸形浮游者" prob=".15" /><entity name="克苏鲁团块" prob=".3" /><entity name="殉道者" prob=".3"/><entity name="黄衣之主-哈萨斯" prob=".1"/>
+</append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS453']">
+<entity name="愚痴化身"/><entity name="浮游者"/><entity name="疯狂化身" prob=".69" /><entity name="疫病魔犬" prob=".69" /><entity name="黑山羊使者" prob=".65" />
+<entity name="灼热恶魔" prob=".69" /><entity name="骸骨渗透者" prob=".7" /><entity name="猛毒渗透者" prob=".55" /><entity name="臃肿寄生者" prob=".55" />
+<entity name="畸形浮游者" prob=".15" /><entity name="克苏鲁团块" prob=".3" /><entity name="殉道者" prob=".3"/>
+</append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS463']">
+<entity name="愚痴化身"/><entity name="浮游者"/><entity name="疯狂化身" prob=".69" /><entity name="疫病魔犬" prob=".69" /><entity name="黑山羊使者" prob=".65" />
+<entity name="灼热恶魔" prob=".69" /><entity name="骸骨渗透者" prob=".7" /><entity name="猛毒渗透者" prob=".55" /><entity name="臃肿寄生者" prob=".55" />
+<entity name="畸形浮游者" prob=".15" /><entity name="克苏鲁团块" prob=".3" /><entity name="殉道者" prob=".3"/>
+</append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS472']">
+<entity name="愚痴化身"/><entity name="浮游者"/><entity name="疯狂化身" prob=".69" /><entity name="疫病魔犬" prob=".69" /><entity name="黑山羊使者" prob=".65" />
+<entity name="灼热恶魔" prob=".69" /><entity name="骸骨渗透者" prob=".7" /><entity name="猛毒渗透者" prob=".6" /><entity name="臃肿寄生者" prob=".6" />
+<entity name="畸形浮游者" prob=".15" /><entity name="克苏鲁团块" prob=".3" /><entity name="殉道者" prob=".3"/>
+</append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS482']">
+<entity name="愚痴化身"/><entity name="浮游者"/><entity name="疯狂化身" prob=".69" /><entity name="疫病魔犬" prob=".69" /><entity name="黑山羊使者" prob=".65" />
+<entity name="灼热恶魔" prob=".69" /><entity name="骸骨渗透者" prob=".7" /><entity name="猛毒渗透者" prob=".6" /><entity name="臃肿寄生者" prob=".6" />
+<entity name="畸形浮游者" prob=".2" /><entity name="克苏鲁团块" prob=".3" /><entity name="殉道者" prob=".3"/>
+</append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS491']">
+<entity name="愚痴化身"/><entity name="浮游者"/><entity name="疯狂化身" prob=".69" /><entity name="疫病魔犬" prob=".69" /><entity name="黑山羊使者" prob=".65" />
+<entity name="灼热恶魔" prob=".69" /><entity name="骸骨渗透者" prob=".7" /><entity name="猛毒渗透者" prob=".6" /><entity name="臃肿寄生者" prob=".6" />
+<entity name="畸形浮游者" prob=".2" /><entity name="克苏鲁团块" prob=".3" /><entity name="殉道者" prob=".3"/>
+</append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS501']">
+<entity name="愚痴化身"/><entity name="浮游者"/><entity name="疯狂化身" prob=".69" /><entity name="疫病魔犬" prob=".69" /><entity name="黑山羊使者" prob=".65" />
+<entity name="灼热恶魔" prob=".69" /><entity name="骸骨渗透者" prob=".7" /><entity name="猛毒渗透者" prob=".6" /><entity name="臃肿寄生者" prob=".6" />
+<entity name="畸形浮游者" prob=".2" /><entity name="克苏鲁团块" prob=".3" /><entity name="殉道者" prob=".3"/>
+</append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS510']">
+<entity name="愚痴化身"/><entity name="浮游者"/><entity name="疯狂化身" prob=".69" /><entity name="疫病魔犬" prob=".69" /><entity name="黑山羊使者" prob=".65" />
+<entity name="灼热恶魔" prob=".69" /><entity name="骸骨渗透者" prob=".7" /><entity name="猛毒渗透者" prob=".6" /><entity name="臃肿寄生者" prob=".6" />
+<entity name="畸形浮游者" prob=".2" /><entity name="克苏鲁团块" prob=".3" /><entity name="殉道者" prob=".3"/>
+</append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS520']">
+<entity name="愚痴化身"/><entity name="浮游者"/><entity name="疯狂化身" prob=".69" /><entity name="疫病魔犬" prob=".69" /><entity name="黑山羊使者" prob=".65" />
+<entity name="灼热恶魔" prob=".69" /><entity name="骸骨渗透者" prob=".7" /><entity name="猛毒渗透者" prob=".6" /><entity name="臃肿寄生者" prob=".6" />
+<entity name="畸形浮游者" prob=".2" /><entity name="克苏鲁团块" prob=".3" /><entity name="殉道者" prob=".3"/>
+</append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS530']">
+<entity name="愚痴化身"/><entity name="浮游者"/><entity name="疯狂化身" prob=".69" /><entity name="疫病魔犬" prob=".69" /><entity name="黑山羊使者" prob=".65" />
+<entity name="灼热恶魔" prob=".69" /><entity name="骸骨渗透者" prob=".7" /><entity name="猛毒渗透者" prob=".6" /><entity name="臃肿寄生者" prob=".6" />
+<entity name="畸形浮游者" prob=".2" /><entity name="克苏鲁团块" prob=".3" /><entity name="殉道者" prob=".3"/>
+</append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS540']">
+<entity name="愚痴化身"/><entity name="浮游者"/><entity name="疯狂化身" prob=".69" /><entity name="疫病魔犬" prob=".69" /><entity name="黑山羊使者" prob=".65" />
+<entity name="灼热恶魔" prob=".69" /><entity name="骸骨渗透者" prob=".7" /><entity name="猛毒渗透者" prob=".6" /><entity name="臃肿寄生者" prob=".6" />
+<entity name="畸形浮游者" prob=".2" /><entity name="克苏鲁团块" prob=".3" /><entity name="殉道者" prob=".3"/><entity name="黄衣之主-哈萨斯" prob=".1"/>
+</append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS550']">
+<entity name="愚痴化身"/><entity name="浮游者"/><entity name="疯狂化身" prob=".69" /><entity name="疫病魔犬" prob=".69" /><entity name="黑山羊使者" prob=".65" />
+<entity name="灼热恶魔" prob=".69" /><entity name="骸骨渗透者" prob=".7" /><entity name="猛毒渗透者" prob=".6" /><entity name="臃肿寄生者" prob=".6" />
+<entity name="畸形浮游者" prob=".2" /><entity name="克苏鲁团块" prob=".3" /><entity name="殉道者" prob=".3"/><entity name="黄衣之主-哈萨斯" prob=".1"/>
+</append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS560']">
+<entity name="愚痴化身"/><entity name="浮游者"/><entity name="疯狂化身" prob=".69" /><entity name="疫病魔犬" prob=".69" /><entity name="黑山羊使者" prob=".65" />
+<entity name="灼热恶魔" prob=".69" /><entity name="骸骨渗透者" prob=".7" /><entity name="猛毒渗透者" prob=".6" /><entity name="臃肿寄生者" prob=".6" />
+<entity name="畸形浮游者" prob=".2" /><entity name="克苏鲁团块" prob=".3" /><entity name="殉道者" prob=".3"/><entity name="黄衣之主-哈萨斯" prob=".1"/>
+</append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS570']">
+<entity name="愚痴化身"/><entity name="浮游者"/><entity name="疯狂化身" prob=".69" /><entity name="疫病魔犬" prob=".69" /><entity name="黑山羊使者" prob=".65" />
+<entity name="灼热恶魔" prob=".69" /><entity name="骸骨渗透者" prob=".7" /><entity name="猛毒渗透者" prob=".6" /><entity name="臃肿寄生者" prob=".6" />
+<entity name="畸形浮游者" prob=".2" /><entity name="克苏鲁团块" prob=".3" /><entity name="殉道者" prob=".3"/>
+</append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS580']">
+<entity name="愚痴化身"/><entity name="浮游者"/><entity name="疯狂化身" prob=".7" /><entity name="疫病魔犬" prob=".7" /><entity name="黑山羊使者" prob=".7" />
+<entity name="灼热恶魔" prob=".7" /><entity name="骸骨渗透者" prob=".72" /><entity name="猛毒渗透者" prob=".65" /><entity name="臃肿寄生者" prob=".65" />
+<entity name="畸形浮游者" prob=".2" /><entity name="克苏鲁团块" prob=".3" /><entity name="殉道者" prob=".3"/>
+</append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS590']">
+<entity name="愚痴化身"/><entity name="浮游者"/><entity name="疯狂化身" prob=".7" /><entity name="疫病魔犬" prob=".7" /><entity name="黑山羊使者" prob=".7" />
+<entity name="灼热恶魔" prob=".7" /><entity name="骸骨渗透者" prob=".72" /><entity name="猛毒渗透者" prob=".65" /><entity name="臃肿寄生者" prob=".65" /><entity name="畸形浮游者" prob=".2" /><entity name="克苏鲁团块" prob=".3" />
+<entity name="殉道者" prob=".3"/>
+</append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS600']">
+<entity name="愚痴化身"/><entity name="浮游者"/><entity name="疯狂化身" prob=".7" /><entity name="疫病魔犬" prob=".7" /><entity name="黑山羊使者" prob=".7" />
+<entity name="灼热恶魔" prob=".7" /><entity name="骸骨渗透者" prob=".72" /><entity name="猛毒渗透者" prob=".65" /><entity name="臃肿寄生者" prob=".65" /><entity name="畸形浮游者" prob=".2" /><entity name="克苏鲁团块" prob=".3" />
+<entity name="殉道者" prob=".3"/>
+</append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS610']">
+<entity name="愚痴化身"/><entity name="浮游者"/><entity name="疯狂化身" prob=".7" /><entity name="疫病魔犬" prob=".7" /><entity name="黑山羊使者" prob=".7" /><entity name="黄衣之主-哈萨斯" prob=".1"/>
+<entity name="灼热恶魔" prob=".7" /><entity name="骸骨渗透者" prob=".72" /><entity name="猛毒渗透者" prob=".65" /><entity name="臃肿寄生者" prob=".65" /><entity name="畸形浮游者" prob=".2" /><entity name="克苏鲁团块" prob=".3" />
+<entity name="殉道者" prob=".3"/>
+</append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS620']">
+<entity name="愚痴化身"/><entity name="浮游者"/><entity name="疯狂化身" prob=".7" /><entity name="疫病魔犬" prob=".7" /><entity name="黑山羊使者" prob=".7" /><entity name="黄衣之主-哈萨斯" prob=".1"/>
+<entity name="灼热恶魔" prob=".7" /><entity name="骸骨渗透者" prob=".72" /><entity name="猛毒渗透者" prob=".65" /><entity name="臃肿寄生者" prob=".65" /><entity name="畸形浮游者" prob=".2" /><entity name="克苏鲁团块" prob=".3" />
+<entity name="殉道者" prob=".3"/>
+</append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS631']">
+<entity name="愚痴化身"/><entity name="浮游者"/><entity name="疯狂化身" prob=".7" /><entity name="疫病魔犬" prob=".7" /><entity name="黑山羊使者" prob=".7" /><entity name="黄衣之主-哈萨斯" prob=".1"/>
+<entity name="灼热恶魔" prob=".7" /><entity name="骸骨渗透者" prob=".72" /><entity name="猛毒渗透者" prob=".65" /><entity name="臃肿寄生者" prob=".65" /><entity name="畸形浮游者" prob=".2" /><entity name="克苏鲁团块" prob=".3" />
+<entity name="殉道者" prob=".3"/>
+</append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS641']">
+<entity name="愚痴化身"/><entity name="浮游者"/><entity name="疯狂化身" prob=".7" /><entity name="疫病魔犬" prob=".7" /><entity name="黑山羊使者" prob=".7" />
+<entity name="灼热恶魔" prob=".7" /><entity name="骸骨渗透者" prob=".72" /><entity name="猛毒渗透者" prob=".65" /><entity name="臃肿寄生者" prob=".65" /><entity name="畸形浮游者" prob=".2" /><entity name="克苏鲁团块" prob=".3" />
+<entity name="殉道者" prob=".3"/>
+</append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS651']">
+<entity name="愚痴化身"/><entity name="浮游者"/><entity name="疯狂化身" prob=".7" /><entity name="疫病魔犬" prob=".7" /><entity name="黑山羊使者" prob=".7" />
+<entity name="灼热恶魔" prob=".7" /><entity name="骸骨渗透者" prob=".72" /><entity name="猛毒渗透者" prob=".65" /><entity name="臃肿寄生者" prob=".65" /><entity name="畸形浮游者" prob=".2" /><entity name="克苏鲁团块" prob=".3" />
+<entity name="殉道者" prob=".3"/>
+</append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS662']">
+<entity name="愚痴化身"/><entity name="浮游者"/><entity name="疯狂化身" prob=".71" /><entity name="疫病魔犬" prob=".71" /><entity name="黑山羊使者" prob=".71" /><entity name="殉道者" prob=".3"/>
+<entity name="灼热恶魔" prob=".71" /><entity name="骸骨渗透者" prob=".72" /><entity name="猛毒渗透者" prob=".66" /><entity name="臃肿寄生者" prob=".66" /><entity name="畸形浮游者" prob=".2" /><entity name="克苏鲁团块" prob=".3" />
+</append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS672']">
+<entity name="愚痴化身"/><entity name="浮游者"/><entity name="疯狂化身" prob=".71" /><entity name="疫病魔犬" prob=".71" /><entity name="黑山羊使者" prob=".71" /><entity name="殉道者" prob=".3"/>
+<entity name="灼热恶魔" prob=".71" /><entity name="骸骨渗透者" prob=".72" /><entity name="猛毒渗透者" prob=".66" /><entity name="臃肿寄生者" prob=".66" /><entity name="畸形浮游者" prob=".2" /><entity name="克苏鲁团块" prob=".3" />
+</append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS683']">
+<entity name="愚痴化身"/><entity name="浮游者"/><entity name="疯狂化身" prob=".71" /><entity name="疫病魔犬" prob=".71" /><entity name="黑山羊使者" prob=".71" /><entity name="殉道者" prob=".3"/>
+<entity name="灼热恶魔" prob=".71" /><entity name="骸骨渗透者" prob=".72" /><entity name="猛毒渗透者" prob=".66" /><entity name="臃肿寄生者" prob=".66" /><entity name="畸形浮游者" prob=".2" /><entity name="克苏鲁团块" prob=".3" />
+</append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS693']">
+<entity name="愚痴化身"/><entity name="浮游者"/><entity name="疯狂化身" prob=".71" /><entity name="疫病魔犬" prob=".71" /><entity name="黑山羊使者" prob=".71" /><entity name="殉道者" prob=".3"/>
+<entity name="灼热恶魔" prob=".71" /><entity name="骸骨渗透者" prob=".72" /><entity name="猛毒渗透者" prob=".66" /><entity name="臃肿寄生者" prob=".66" /><entity name="畸形浮游者" prob=".2" /><entity name="克苏鲁团块" prob=".3" />
+</append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS704']">
+<entity name="愚痴化身"/><entity name="浮游者"/><entity name="疯狂化身" prob=".71" /><entity name="疫病魔犬" prob=".71" /><entity name="黑山羊使者" prob=".71" /><entity name="殉道者" prob=".3"/>
+<entity name="灼热恶魔" prob=".71" /><entity name="骸骨渗透者" prob=".72" /><entity name="猛毒渗透者" prob=".66" /><entity name="臃肿寄生者" prob=".66" /><entity name="畸形浮游者" prob=".2" /><entity name="克苏鲁团块" prob=".3" />
+</append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS715']">
+<entity name="愚痴化身"/><entity name="浮游者"/><entity name="疯狂化身" prob=".72" /><entity name="疫病魔犬" prob=".72" /><entity name="黑山羊使者" prob=".72" /><entity name="殉道者" prob=".3"/><entity name="黄衣之主-哈萨斯" prob=".1"/>
+<entity name="灼热恶魔" prob=".72" /><entity name="骸骨渗透者" prob=".73" /><entity name="猛毒渗透者" prob=".67" /><entity name="臃肿寄生者" prob=".67" /><entity name="畸形浮游者" prob=".2" /><entity name="克苏鲁团块" prob=".3" />
+</append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS726']">
+<entity name="愚痴化身"/><entity name="浮游者"/><entity name="疯狂化身" prob=".72" /><entity name="疫病魔犬" prob=".72" /><entity name="黑山羊使者" prob=".72" /><entity name="殉道者" prob=".3"/><entity name="黄衣之主-哈萨斯" prob=".1"/>
+<entity name="灼热恶魔" prob=".72" /><entity name="骸骨渗透者" prob=".73" /><entity name="猛毒渗透者" prob=".67" /><entity name="臃肿寄生者" prob=".67" /><entity name="畸形浮游者" prob=".2" /><entity name="克苏鲁团块" prob=".3" />
+</append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS736']">
+<entity name="愚痴化身"/><entity name="浮游者"/><entity name="疯狂化身" prob=".72" /><entity name="疫病魔犬" prob=".72" /><entity name="黑山羊使者" prob=".72" /><entity name="殉道者" prob=".3"/><entity name="黄衣之主-哈萨斯" prob=".1"/>
+<entity name="灼热恶魔" prob=".72" /><entity name="骸骨渗透者" prob=".73" /><entity name="猛毒渗透者" prob=".67" /><entity name="臃肿寄生者" prob=".67" /><entity name="畸形浮游者" prob=".2" /><entity name="克苏鲁团块" prob=".3" />
+</append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS747']">
+<entity name="愚痴化身"/><entity name="浮游者"/><entity name="疯狂化身" prob=".72" /><entity name="疫病魔犬" prob=".72" /><entity name="黑山羊使者" prob=".72" /><entity name="殉道者" prob=".3"/>
+<entity name="灼热恶魔" prob=".72" /><entity name="骸骨渗透者" prob=".73" /><entity name="猛毒渗透者" prob=".67" /><entity name="臃肿寄生者" prob=".67" /><entity name="畸形浮游者" prob=".2" /><entity name="克苏鲁团块" prob=".3" />
+</append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS758']">
+<entity name="愚痴化身"/><entity name="浮游者"/><entity name="疯狂化身" prob=".72" /><entity name="疫病魔犬" prob=".72" /><entity name="黑山羊使者" prob=".72" /><entity name="殉道者" prob=".3"/>
+<entity name="灼热恶魔" prob=".72" /><entity name="骸骨渗透者" prob=".73" /><entity name="猛毒渗透者" prob=".67" /><entity name="臃肿寄生者" prob=".67" /><entity name="畸形浮游者" prob=".2" /><entity name="克苏鲁团块" prob=".3" />
+</append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS769']">
+<entity name="愚痴化身"/><entity name="浮游者"/><entity name="疯狂化身" prob=".72" /><entity name="疫病魔犬" prob=".72" /><entity name="黑山羊使者" prob=".72" /><entity name="殉道者" prob=".3"/>
+<entity name="灼热恶魔" prob=".72" /><entity name="骸骨渗透者" prob=".73" /><entity name="猛毒渗透者" prob=".67" /><entity name="臃肿寄生者" prob=".67" /><entity name="畸形浮游者" prob=".2" /><entity name="克苏鲁团块" prob=".3" />
+</append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS780']">
+<entity name="愚痴化身"/><entity name="浮游者"/><entity name="疯狂化身" prob=".73" /><entity name="疫病魔犬" prob=".73" /><entity name="黑山羊使者" prob=".73" /><entity name="殉道者" prob=".3"/>
+<entity name="灼热恶魔" prob=".73" /><entity name="骸骨渗透者" prob=".74" /><entity name="猛毒渗透者" prob=".68" /><entity name="臃肿寄生者" prob=".68" /><entity name="畸形浮游者" prob=".2" /><entity name="克苏鲁团块" prob=".3" />
+</append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS791']">
+<entity name="愚痴化身"/><entity name="浮游者"/><entity name="疯狂化身" prob=".73" /><entity name="疫病魔犬" prob=".73" /><entity name="黑山羊使者" prob=".73" /><entity name="殉道者" prob=".3"/>
+<entity name="灼热恶魔" prob=".73" /><entity name="骸骨渗透者" prob=".74" /><entity name="猛毒渗透者" prob=".68" /><entity name="臃肿寄生者" prob=".68" /><entity name="畸形浮游者" prob=".2" /><entity name="克苏鲁团块" prob=".3" />
+</append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS802']">
+<entity name="愚痴化身"/><entity name="浮游者"/><entity name="疯狂化身" prob=".73" /><entity name="疫病魔犬" prob=".73" /><entity name="黑山羊使者" prob=".73" /><entity name="殉道者" prob=".3"/>
+<entity name="灼热恶魔" prob=".73" /><entity name="骸骨渗透者" prob=".74" /><entity name="猛毒渗透者" prob=".68" /><entity name="臃肿寄生者" prob=".68" /><entity name="畸形浮游者" prob=".2" /><entity name="克苏鲁团块" prob=".3" />
+</append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS813']">
+<entity name="愚痴化身"/><entity name="浮游者"/><entity name="疯狂化身" prob=".73" /><entity name="疫病魔犬" prob=".73" /><entity name="黑山羊使者" prob=".73" /><entity name="殉道者" prob=".3"/>
+<entity name="灼热恶魔" prob=".73" /><entity name="骸骨渗透者" prob=".74" /><entity name="猛毒渗透者" prob=".68" /><entity name="臃肿寄生者" prob=".68" /><entity name="畸形浮游者" prob=".2" /><entity name="克苏鲁团块" prob=".3" />
+</append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS824']">
+<entity name="愚痴化身"/><entity name="浮游者"/><entity name="疯狂化身" prob=".73" /><entity name="疫病魔犬" prob=".73" /><entity name="黑山羊使者" prob=".73" /><entity name="殉道者" prob=".3"/>
+<entity name="灼热恶魔" prob=".73" /><entity name="骸骨渗透者" prob=".74" /><entity name="猛毒渗透者" prob=".68" /><entity name="臃肿寄生者" prob=".68" /><entity name="畸形浮游者" prob=".2" /><entity name="克苏鲁团块" prob=".3" />
+</append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS836']">
+<entity name="愚痴化身"/><entity name="浮游者"/><entity name="疯狂化身" prob=".73" /><entity name="疫病魔犬" prob=".73" /><entity name="黑山羊使者" prob=".73" /><entity name="殉道者" prob=".3"/>
+<entity name="灼热恶魔" prob=".73" /><entity name="骸骨渗透者" prob=".74" /><entity name="猛毒渗透者" prob=".68" /><entity name="臃肿寄生者" prob=".68" /><entity name="畸形浮游者" prob=".2" /><entity name="克苏鲁团块" prob=".3" />
+</append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS847']">
+<entity name="愚痴化身"/><entity name="浮游者"/><entity name="疯狂化身" prob=".74" /><entity name="疫病魔犬" prob=".74" /><entity name="黑山羊使者" prob=".74" /><entity name="殉道者" prob=".3"/><entity name="黄衣之主-哈萨斯" prob=".1"/>
+<entity name="灼热恶魔" prob=".74" /><entity name="骸骨渗透者" prob=".74" /><entity name="猛毒渗透者" prob=".69" /><entity name="臃肿寄生者" prob=".69" /><entity name="畸形浮游者" prob=".2" /><entity name="克苏鲁团块" prob=".3" />
+</append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS858']">
+<entity name="愚痴化身"/><entity name="浮游者"/><entity name="疯狂化身" prob=".74" /><entity name="疫病魔犬" prob=".74" /><entity name="黑山羊使者" prob=".74" /><entity name="殉道者" prob=".3"/><entity name="黄衣之主-哈萨斯" prob=".1"/>
+<entity name="灼热恶魔" prob=".74" /><entity name="骸骨渗透者" prob=".74" /><entity name="猛毒渗透者" prob=".69" /><entity name="臃肿寄生者" prob=".69" /><entity name="畸形浮游者" prob=".3" /><entity name="克苏鲁团块" prob=".3" />
+</append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS870']">
+<entity name="愚痴化身"/><entity name="浮游者"/><entity name="疯狂化身" prob=".74" /><entity name="疫病魔犬" prob=".74" /><entity name="黑山羊使者" prob=".74" /><entity name="殉道者" prob=".3"/><entity name="黄衣之主-哈萨斯" prob=".1"/>
+<entity name="灼热恶魔" prob=".74" /><entity name="骸骨渗透者" prob=".74" /><entity name="猛毒渗透者" prob=".69" /><entity name="臃肿寄生者" prob=".69" /><entity name="畸形浮游者" prob=".3" /><entity name="克苏鲁团块" prob=".3" />
+</append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS881']">
+<entity name="愚痴化身"/><entity name="浮游者"/><entity name="疯狂化身" prob=".74" /><entity name="疫病魔犬" prob=".74" /><entity name="黑山羊使者" prob=".74" /><entity name="殉道者" prob=".3"/>
+<entity name="灼热恶魔" prob=".74" /><entity name="骸骨渗透者" prob=".74" /><entity name="猛毒渗透者" prob=".69" /><entity name="臃肿寄生者" prob=".69" /><entity name="畸形浮游者" prob=".3" /><entity name="克苏鲁团块" prob=".3" />
+</append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS893']">
+<entity name="愚痴化身"/><entity name="浮游者"/><entity name="疯狂化身" prob=".75" /><entity name="疫病魔犬" prob=".75" /><entity name="黑山羊使者" prob=".75" /><entity name="殉道者" prob=".3"/>
+<entity name="灼热恶魔" prob=".75" /><entity name="骸骨渗透者" prob=".74" /><entity name="猛毒渗透者" prob=".7" /><entity name="臃肿寄生者" prob=".7" /><entity name="畸形浮游者" prob=".3" /><entity name="克苏鲁团块" prob=".3" />
+</append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS904']">
+<entity name="愚痴化身"/><entity name="浮游者"/><entity name="疯狂化身" prob=".75" /><entity name="疫病魔犬" prob=".75" /><entity name="黑山羊使者" prob=".75" /><entity name="殉道者" prob=".3"/><entity name="黄衣之主-哈萨斯" prob=".1"/>
+<entity name="灼热恶魔" prob=".75" /><entity name="骸骨渗透者" prob=".74" /><entity name="猛毒渗透者" prob=".7" /><entity name="臃肿寄生者" prob=".7" /><entity name="畸形浮游者" prob=".3" /><entity name="克苏鲁团块" prob=".3" />
+</append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS916']">
+<entity name="愚痴化身"/><entity name="浮游者"/><entity name="疯狂化身" prob=".75" /><entity name="疫病魔犬" prob=".75" /><entity name="黑山羊使者" prob=".75" /><entity name="殉道者" prob=".3"/><entity name="黄衣之主-哈萨斯" prob=".1"/>
+<entity name="灼热恶魔" prob=".75" /><entity name="骸骨渗透者" prob=".74" /><entity name="猛毒渗透者" prob=".7" /><entity name="臃肿寄生者" prob=".7" /><entity name="畸形浮游者" prob=".3" /><entity name="克苏鲁团块" prob=".3" />
+</append>
+<append xpath="/entitygroups/entitygroup[@name='feralHordeStageGS927']">
+<entity name="愚痴化身"/><entity name="浮游者"/><entity name="疯狂化身" prob=".75" /><entity name="疫病魔犬" prob=".75" /><entity name="黑山羊使者" prob=".75" /><entity name="殉道者" prob=".3"/><entity name="黄衣之主-哈萨斯" prob=".1"/>
+<entity name="灼热恶魔" prob=".75" /><entity name="骸骨渗透者" prob=".74" /><entity name="猛毒渗透者" prob=".7" /><entity name="臃肿寄生者" prob=".7" /><entity name="畸形浮游者" prob=".3" /><entity name="克苏鲁团块" prob=".3" />
+</append>
+</configs>	

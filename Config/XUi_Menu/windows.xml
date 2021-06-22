@@ -1,0 +1,5 @@
+<configs>
+<!-- Adds a new Background Image and Logo-->
+<set xpath="/windows/window[@name='menuBackground']/texture[@name='bgTexture']/@texture">@modfolder:Images/backgroundv013.png</set>
+<set xpath="/windows/window[@name='mainMenuLogo']/texture[@name='gameLogo']/@texture">@modfolder:Images/logo.png</set>
+</configs>

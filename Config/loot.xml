@@ -1,0 +1,160 @@
+<configs>
+
+<append xpath="/lootcontainers/lootgroup[@name='groupQuestWeaponsRangedT1']"><!--高级任务奖励扩充-远程1-->
+	<item name="机械弩"/>
+	<item name="1911"/>
+	<item name="AN94"/>
+	<item name="AWM"/>
+</append>
+
+<append xpath="/lootcontainers/lootgroup[@name='groupQuestWeaponsRangedT2']"><!--高级任务奖励扩充-远程2-->
+	<item name="猎魔弩炮"/>
+	<item name="破晓审判"/>
+	<item name="圣花左轮"/>
+	<item name="汤姆逊冲锋枪"/>
+	<item name="M82"/>
+	<item name="M249"/>
+</append>
+
+<append xpath="/lootcontainers/lootgroup[@name='groupQuestWeaponsRangedT3']"><!--高级任务奖励扩充-远程3-->
+	<item name="Uzi"/>
+	<item name="M16"/>
+	<item name="M4A1"/>
+	<item name="SCAR"/>
+	<item name="Gatling gun"/>
+</append>
+
+<append xpath="/lootcontainers/lootgroup[@name='groupWeaponsT2_Melee']"><!--近战武器掉落扩充-->
+	<item name="方天画戟"/>
+	<item name="八面汉剑"/>
+	<item name="猎魔双刃"/>
+</append>
+
+<append xpath="/lootcontainers/lootgroup[@name='groupWeaponsT1_Machinegunner']"><!--机枪掉落扩充1-->
+	<item name="AN94"/>
+	<item name="M16"/>
+	<item name="5.56mm Bullet" count="6,25"/>
+</append>
+
+<append xpath="/lootcontainers/lootgroup[@name='groupWeaponsT2_Machinegunner']"><!--机枪掉落扩充2-->
+	<item name="SCAR"/>
+	<item name="M4A1"/>
+	<item name="5.56mm Bullet" count="6,25"/>
+</append>
+
+<append xpath="/lootcontainers/lootgroup[@name='groupWeaponsT3_Machinegunner']"><!--机枪掉落扩充3-->
+	<item name="Gatling gun"/>
+	<item name="M249"/>
+	<item name="ammo9mmBulletBall" count="6,25"/>
+	<item name="5.56mm Bullet" count="6,25"/>
+</append>
+
+<append xpath="/lootcontainers/lootgroup[@name='groupWeaponsT2_DeadEye']"><!--步枪掉落扩充T2-->
+	<item name="AWM"/>
+</append>
+
+<append xpath="/lootcontainers/lootgroup[@name='groupWeaponsT3_DeadEye']"><!--步枪掉落扩充T3-->
+	<item name="M82"/>
+</append>
+
+<append xpath="/lootcontainers/lootgroup[@name='groupWeaponsT1_Gunslinger']"><!--手枪掉落扩充T1-->
+	<item name="1911"/>
+</append>
+
+<append xpath="/lootcontainers/lootgroup[@name='groupWeaponsT2_Gunslinger']"><!--手枪掉落扩充T2-->
+	<item name="圣花左轮"/>
+</append>
+
+<append xpath="/lootcontainers/lootgroup[@name='groupWeaponsT3_Gunslinger01']"><!--手枪掉落扩充T3-->
+	<item name="Uzi"/>
+	<item name="汤姆逊冲锋枪"/>
+</append>
+
+<append xpath="/lootcontainers/lootgroup[@name='groupWeaponsT3_Archery02']"><!--弩掉落扩充Archery02-->
+	<item name="机械弩"/>
+	<item name="猎魔弩炮"/>
+	<item name="巨型钢弩箭" count="3,12"/>
+</append>
+
+<append xpath="/lootcontainers">	
+<lootcontainer id="200" count="2" size="6,3" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualPlus1Template">		
+	<item name="古神结晶" count="2,4"/>
+	<item name="死灵之书残页" count="4,10"/>
+	<item name="resourceForgedSteel" count="10,30"/>
+	<item name="resourceScrapBrass" count="80,240"/>
+	<item name="ammo762mmBulletAP" count="6,25"/>
+	<item name="ammo9mmBulletBall" count="6,25"/>
+	<item name="ammo44MagnumBulletBall" count="6,25"/>
+	<item name="5.56mm Bullet" count="6,25"/>
+	<item name="medicalFirstAidKit" count="1,2"/>
+</lootcontainer>
+
+<lootcontainer id="201" count="4" size="6,3" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualPlus1Template">		
+	<item name="古神结晶" count="10,20"/>
+	<item name="神圣粉末" count="150,300"/>
+	<item name="爆炎粉末" count="150,300"/>
+	<item name="雷鸣粉末" count="150,300"/>
+	<item name="浓缩黄衣之魂" count="1"/>
+</lootcontainer>
+
+<lootcontainer id="202" count="4" size="6,3" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualPlus1Template">		
+	<item name="古神结晶" count="10,20"/>
+	<item name="灵能粉末" count="150,300"/>
+	<item name="霜冻粉末" count="150,300"/>
+	<item name="猛毒粉末" count="150,300"/>
+	<item name="黑山羊之颅" count="1"/>
+</lootcontainer>
+
+<lootcontainer id="203" count="2" size="6" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="0.3" loot_quality_template="qualPlus1Template">		
+	<item name="黑曜石咒刃" count="1"/>
+	<item name="casinoCoin" count="10000"/>
+</lootcontainer>
+
+<lootcontainer id="204" count="2" size="6,3" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="0.3" loot_quality_template="qualPlus1Template">		
+	<item name="救赎之心" count="1"/>
+</lootcontainer>
+
+<lootcontainer id="205" count="4" size="6,3" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualPlus1Template">		
+	<item name="古神结晶" count="10,20"/>
+	<item name="霜冻粉末" count="150,300"/>
+	<item name="猛毒粉末" count="150,300"/>
+	<item name="血腥之颅" count="1"/>
+</lootcontainer>
+
+<lootcontainer id="206" count="4" size="6,3" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualPlus1Template">		
+	<item name="古神结晶" count="10,20"/>
+	<item name="霜冻粉末" count="150,300"/>
+	<item name="猛毒粉末" count="150,300"/>
+	<item name="湮灭之颅" count="1"/>
+</lootcontainer>
+
+<lootcontainer id="207" count="2" size="6,3" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualPlus1Template">		
+	<item name="古神结晶" count="4,8"/>
+	<item name="死灵之书残页" count="4,10"/>
+	<item name="梦魇精华" count="4,10"/>
+	<item name="灭活触须" count="4,10"/>
+</lootcontainer>
+
+<lootcontainer id="208" count="2" size="6,3" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualPlus1Template">		
+	<item name="古神结晶" count="4,8"/>
+	<item name="死灵之书残页" count="4,10"/>
+	<item name="梦魇精华" count="4,10"/>
+	<item name="诅咒的断手" count="4,10"/>
+</lootcontainer>
+
+<lootcontainer id="209" count="2" size="6,3" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualPlus1Template">		
+	<item name="古神结晶" count="2,4"/>
+	<item name="死灵之书残页" count="4,10"/>
+	<item name="梦魇精华" count="1,2"/>
+	<item name="腐烂之心" count="1"/>
+</lootcontainer>
+
+<lootcontainer id="210" count="2" size="6,3" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" loot_quality_template="qualPlus1Template">		
+	<item name="古神结晶" count="4,8"/>
+	<item name="死灵之书残页" count="4,10"/>
+	<item name="梦魇精华" count="4,10"/>
+	<item name="猛毒腺体" count="4,10"/>
+</lootcontainer>
+</append>		
+	
+</configs>

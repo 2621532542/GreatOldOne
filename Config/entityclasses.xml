@@ -1,0 +1,1049 @@
+<configs>
+<append xpath="/entity_classes/entity_class[@name='playerMale']">
+	<property name="ItemsOnEnterGame.GameModeSurvival" value="drinkJarBoiledWater,foodCanChili,medicalFirstAidBandage,meleeToolTorch,keystoneBlock,调查死因,禁忌之旅,黑曜石咒刃"/>
+	<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="drinkJarBoiledWater,foodCanChili,medicalFirstAidBandage,meleeToolTorch,keystoneBlock,调查死因,禁忌之旅,黑曜石咒刃"/>
+	<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="drinkJarBoiledWater,foodCanChili,medicalFirstAidBandage,meleeToolTorch,keystoneBlock,调查死因,禁忌之旅,黑曜石咒刃"/>
+</append>
+
+<append xpath="/entity_classes">
+
+<entity_class name="克苏鲁团块" extends="zombieTemplateMale">
+	<property name="Tags" value="entity,zombie,古神"/>
+	<property name="Mesh" value="#Entities/Zombies?Zombies/zombieStandardSpiderRagdoll.prefab"/>
+	<property name="AvatarController" value="AvatarZombie01Controller"/>
+	<property name="RootMotion" value="true"/>
+	<property name="HasDeathAnim" value="true"/>
+	<property name="ModelType" value="Standard"/>
+	<property name="WalkType" value="8"/>
+	<property name="Mass" value="150"/>
+	<property name="LookAtAngle" value="0"/>
+	<property name="PhysicsBody" value="CthulhuCluster"/>
+
+	<property name="SoundRandom" value="Enemies/Acid_Puking_Hulk/hulkroam"/>
+	<property name="SoundAlert" value="Enemies/Acid_Puking_Hulk/hulkalert"/>
+	<property name="SoundAttack" value="Enemies/Acid_Puking_Hulk/hulkattack"/>
+	<property name="SoundHurt" value="Enemies/Acid_Puking_Hulk/hulkpain"/>
+	<property name="SoundDeath" value="Enemies/Acid_Puking_Hulk/hulkdeath"/>
+	<property name="SoundSense" value="Enemies/Acid_Puking_Hulk/hulksense"/>
+
+	<property name="DismemberMultiplierHead" value="0"/>
+	<property name="DismemberMultiplierArms" value="0"/>
+	<property name="DismemberMultiplierLegs" value="0"/>
+	<property name="LegCrawlerThreshold" value="0"/>
+	<property name="LegCrippleThreshold" value="0"/>
+	<property name="KnockdownProneDamageThreshold" value="0"/>
+	<property name="KnockdownKneelDamageThreshold" value="0"/>
+	<property name="SizeScale" value="0.8"/>
+	<property name="Buffs" value="克苏鲁团块"/>
+	<property name="HandItem" value="寄生之触"/>
+
+	<property name="AINoiseSeekDist" value="3"/>
+	<property name="AIPathCostScale" value=".6, 1"/>
+	<property name="AITask-1" value="Leap"/>
+	<property name="AITask-2" value="BreakBlock"/>
+	<property name="AITask-3" value="DestroyArea"/>
+	<property name="AITask-4" value="Territorial"/>
+	<property name="AITask-5" value="ApproachDistraction"/>
+	<property name="AITask-6" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0"/>
+	<property name="AITask-7" value="ApproachSpot"/>
+	<property name="AITask-8" value="Look"/>
+	<property name="AITask-9" value="Wander"/>
+	<property name="AITask-10" value=""/>
+
+	<!-- Gameplay -->
+	<property name="MoveSpeed" value="0.08"/>
+	<property name="MoveSpeedAggro" value="0.2, 1.35"/>
+	<property name="MoveSpeedPanic" value="1.2"/>
+	<property name="SwimSpeed" value="1.3"/>
+	<property name="SwimStrokeRate" value="1.5,1.7"/>
+	<property name="CanClimbVertical" value="true"/>
+	<property name="JumpMaxDistance" value="9, 11"/>
+	<property name="LootDropProb" value="0.3"/>
+	<property name="LootDropEntityClass" value="疯狂战利品"/>
+	<property name="ExperienceGain" value="4000"/>
+
+	<effect_group name="Base Effects">
+		<passive_effect name="HealthMax" operation="base_set" value="2000"/>
+		<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
+	</effect_group>
+</entity_class>
+
+<entity_class name="殉道者" extends="zombieTemplateMale">
+	<property name="Tags" value="entity,zombie,古神"/>
+	<property name="Mesh" value="#Entities/Zombies?Zombies/zombieStandardFeralRagdoll.prefab"/>
+	<property name="AvatarController" value="AvatarZombie01Controller"/>
+	<property name="RootMotion" value="true"/>
+	<property name="HasDeathAnim" value="true"/>
+	<property name="ModelType" value="Standard"/>
+	<property name="WalkType" value="7"/>
+	<property name="Mass" value="150"/>
+	<property name="LookAtAngle" value="0"/>
+
+	<property name="SoundRandom" value="Enemies/Acid_Puking_Hulk/hulkroam"/>
+	<property name="SoundAlert" value="Enemies/Acid_Puking_Hulk/hulkalert"/>
+	<property name="SoundAttack" value="Enemies/Acid_Puking_Hulk/hulkattack"/>
+	<property name="SoundHurt" value="Enemies/Acid_Puking_Hulk/hulkpain"/>
+	<property name="SoundDeath" value="Enemies/Acid_Puking_Hulk/hulkdeath"/>
+	<property name="SoundSense" value="Enemies/Acid_Puking_Hulk/hulksense"/>
+
+	<property name="DismemberMultiplierHead" value="0"/>
+	<property name="DismemberMultiplierArms" value="0"/>
+	<property name="DismemberMultiplierLegs" value="0"/>
+	<property name="LegCrawlerThreshold" value="0"/>
+	<property name="LegCrippleThreshold" value="0"/>
+	<property name="KnockdownProneDamageThreshold" value="0"/>
+	<property name="KnockdownKneelDamageThreshold" value="0"/>
+	<property name="SizeScale" value="1"/>
+	<property name="Buffs" value="殉道者长袍"/>
+	<property name="HandItem" value="灵魂一击"/>
+
+	<property name="AINoiseSeekDist" value="3"/>
+	<property name="AIPathCostScale" value=".6, 1"/>
+	<property name="AITask-1" value="Leap"/>
+	<property name="AITask-2" value="BreakBlock"/>
+	<property name="AITask-3" value="DestroyArea"/>
+	<property name="AITask-4" value="Territorial"/>
+	<property name="AITask-5" value="ApproachDistraction"/>
+	<property name="AITask-6" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0"/>
+	<property name="AITask-7" value="ApproachSpot"/>
+	<property name="AITask-8" value="Look"/>
+	<property name="AITask-9" value="Wander"/>
+	<property name="AITask-10" value=""/>
+
+	<!-- Gameplay -->
+	<property name="MoveSpeed" value="0.08"/>
+	<property name="MoveSpeedAggro" value="0.2, 1.35"/>
+	<property name="MoveSpeedPanic" value="1.2"/>
+	<property name="SwimSpeed" value="1.3"/>
+	<property name="SwimStrokeRate" value="1.5,1.7"/>
+	<property name="CanClimbVertical" value="true"/>
+	<property name="JumpMaxDistance" value="4, 7"/>
+	<property name="LootDropProb" value="0.3"/>
+	<property name="LootDropEntityClass" value="邪恶战利品"/>
+	<drop event="Harvest" name="腐烂之心" tag="butcherHarvest" count="1"/>
+	<property name="ExperienceGain" value="5000"/>
+
+	<effect_group name="Base Effects">
+		<passive_effect name="HealthMax" operation="base_set" value="7000"/>
+		<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
+	</effect_group>
+</entity_class>
+
+<entity_class name="惊骇之影" extends="zombieTemplateMale">
+	<property name="Mesh" value="#@modfolder:Resources/QQ295242834.unity3d?QQ295242834"/>
+	<property name="Tags" value="entity,zombie,walker,古神"/> 
+		
+  	<property name="AvatarController" value="AvatarZombie01Controller"/>
+	<property name="RootMotion" value="true"/>
+	<property name="HasDeathAnim" value="false"/>
+	<property name="HasRagdoll" value="false"/>
+	<property name="TimeStayAfterDeath" value="120"/>
+	<property name="DeadBodyHitPoints" value="300"/>
+		
+ 	<property name="DismemberMultiplierHead" value="0"/>  
+	<property name="DismemberMultiplierArms" value="0"/>  
+	<property name="DismemberMultiplierLegs" value="0"/>  
+	<property name="LegCrippleScale" value="0"/> 
+ 		
+	 
+	<property name="SoundRandomTime" value="16.0"/> 
+	<property name="SoundRandom" value="crawler_roam"/>
+	<property name="SoundAlertTime" value="12.0"/> 
+	<property name="SoundAlert" value="crawler_alert"/>
+	<property name="SoundSense" value="crawler_sense"/>
+	<property name="SoundHurt" value="crawler_pain"/>
+	<property name="SoundDeath" value="crawler_death"/>
+	<property name="SoundAttack" value="crawler_attack"/>
+	<property name="SoundSleeperSense" value="sleepersense"/>
+	<property name="SoundSleeperBackToSleep" value="sleeperbacktosleep"/>
+		
+ 	<property name="WalkType" value="1"/>  
+	<property name="Mass" value="110"/> 
+		
+	<property name="PainResistPerHit" value="50"/> 
+	<property name="MoveSpeed" value="0.2"/>
+	<property name="MoveSpeedAggro" value="0.2,0.8"/>
+	<property name="SwimSpeed" value="0.4"/>
+	<property name="SwimStrokeRate" value="0.4,0.6"/>
+	<property name="Buffs" value="触手头"/>
+		
+	<property name="HandItem" value="湮灭重击"/> 
+	<property name="ExperienceGain" value="7000"/> 
+	<property name="LootDropProb" value="0.5"/>
+	<property name="LootDropEntityClass" value="疯狂战利品"/>
+	<drop event="Harvest" name="resourceIronFragment" tag="butcherHarvest" count="50"/>
+	<drop event="Harvest" name="恐怖血肉" tag="butcherHarvest" count="3"/>
+	<property name="SizeScale" value="3"/>
+    <effect_group name="Base Effects">
+	    <passive_effect name="HealthMax" operation="base_set" value="40000"/>
+	    <passive_effect name="HealthMax" operation="perc_set" value="1"/>
+	    <passive_effect name="PhysicalDamageResist" operation="base_set" value="30"/> 
+    </effect_group>
+</entity_class>
+
+<entity_class name="愚者之影" extends="zombieTemplateMale">
+	<property name="Tags" value="entity,zombie,古神"/>
+	<property name="Mesh" value="#Entities/Zombies?Zombies/zombieStandardCrawlerHDRagdoll.prefab"/>
+	<property name="AvatarController" value="AvatarZombie01Controller"/>
+	<property name="Mass" value="140"/>
+	<property name="Class" value="EntityZombie"/>
+	<property name="WalkType" value="3"/>
+	<property name="RotateToGround" value="true"/>
+	<property name="RootMotion" value="true"/>
+	<property name="TintMaterial2" value="10,10,10"/>
+	<property name="SoundRandomTime" value="16.0"/> <!-- It will play the roam every 30/15 seconds -->
+	<property name="SoundRandom" value="crawler_roam"/>
+	<property name="SoundAlertTime" value="12.0"/> <!-- It will play the alert every 20/10 seconds-->
+	<property name="SoundAlert" value="crawler_alert"/>
+	<property name="SoundSense" value="crawler_sense"/>
+	<property name="SoundHurt" value="crawler_pain"/>
+	<property name="SoundDeath" value="crawler_death"/>
+	<property name="SoundAttack" value="crawler_attack"/>
+	<property name="SoundSleeperSense" value="sleepersense"/>
+	<property name="SoundSleeperBackToSleep" value="sleeperbacktosleep"/>
+	<property name="DismemberMultiplierHead" value=".5"/><property name="DismemberMultiplierArms" value=".7"/><property name="DismemberMultiplierLegs" value=".7"/>
+	<property name="PainResistPerHit" value="20"/>
+	<property name="ExperienceGain" value="1000"/>
+	<property name="LootDropProb" value="1"/>
+	<property name="LootDropEntityClass" value="新手战利品"/>
+	<property name="Buffs" value="下级古神"/>
+
+	<!-- Gameplay -->
+	<property name="CanClimbLadders" value="false"/>
+	<property name="HandItem" value="meleeHandZombie02"/>
+	<property name="SizeScale" value="1.5"/>
+	<effect_group name="Base Effects">
+	    <passive_effect name="PhysicalDamageResist" operation="base_add" value="10"/>
+		<passive_effect name="HealthMax" operation="base_set" value="1200"/>
+		<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
+	</effect_group>
+</entity_class>
+
+<entity_class name="愚痴化身" extends="zombieTemplateMale">
+	<property name="Tags" value="entity,zombie,古神"/>
+	<property name="Mesh" value="#Entities/Zombies?Zombies/zombieStandardCrawlerHDRagdoll.prefab"/>
+	<property name="AvatarController" value="AvatarZombie01Controller"/>
+	<property name="Mass" value="140"/>
+	<property name="Class" value="EntityZombie"/>
+	<property name="WalkType" value="3"/>
+	<property name="RotateToGround" value="true"/>
+	<property name="RootMotion" value="true"/>
+	<property name="TintMaterial2" value="10,10,10"/>
+	<property name="SoundRandomTime" value="16.0"/> <!-- It will play the roam every 30/15 seconds -->
+	<property name="SoundRandom" value="crawler_roam"/>
+	<property name="SoundAlertTime" value="12.0"/> <!-- It will play the alert every 20/10 seconds-->
+	<property name="SoundAlert" value="crawler_alert"/>
+	<property name="SoundSense" value="crawler_sense"/>
+	<property name="SoundHurt" value="crawler_pain"/>
+	<property name="SoundDeath" value="crawler_death"/>
+	<property name="SoundAttack" value="crawler_attack"/>
+	<property name="SoundSleeperSense" value="sleepersense"/>
+	<property name="SoundSleeperBackToSleep" value="sleeperbacktosleep"/>
+	<property name="DismemberMultiplierHead" value=".5"/><property name="DismemberMultiplierArms" value=".7"/><property name="DismemberMultiplierLegs" value=".7"/>
+	<property name="PainResistPerHit" value="20"/>
+	<property name="ExperienceGain" value="3000"/>
+	<property name="LootDropProb" value="0.4"/>
+	<property name="LootDropEntityClass" value="疯狂战利品"/>
+	<property name="Buffs" value="下级古神"/>
+
+	<!-- Gameplay -->
+	<property name="CanClimbLadders" value="false"/>
+	<property name="HandItem" value="meleeHandZombie02"/>
+	<property name="SizeScale" value="1.5"/>
+	<effect_group name="Base Effects">
+	    <passive_effect name="PhysicalDamageResist" operation="base_add" value="10"/>
+		<passive_effect name="HealthMax" operation="base_set" value="2000"/>
+		<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
+	</effect_group>
+</entity_class>
+
+<entity_class name="浮游者" extends="愚痴化身">
+	<property name="TintMaterial2" value="1,2,4"/>
+	<property name="LootDropProb" value="0.4"/>
+	<property name="LootDropEntityClass" value="疯狂战利品"/>
+	<property name="Buffs" value="下级古神"/>
+</entity_class>
+
+<entity_class name="畸形浮游者" extends="animalZombieVulture">
+	<property name="Tags" value="entity,animal,zombie,hostile,vulture,古神"/>
+	<property name="Class" value="EntityVulture"/>
+	<property name="EntityType" value="Zombie"/>
+	<property name="AvatarController" value="AvatarAnimalController"/>
+	<property name="ModelType" value="Standard"/>
+	<property name="HasRagdoll" value="true"/>
+	<property name="Mass" value="140"/>
+	<property name="Mesh" value="Animals/Vulture/animalVultureStandardRagdoll"/>
+	<property name="Buffs" value="畸形生物飞行"/>
+	<property name="SizeScale" value="4"/>
+
+	<!--<property name="AITask-1" value="BreakBlock"/>
+	<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityNPC,20,EntityPlayer,20"/>-->
+	<property name="AITask-1" value=""/>
+	<property name="AITarget-1" value="SetAsTargetIfHurt"/>
+	<property name="AITask-6" value="RangedAttackTarget" data="itemType=1;cooldown=1;duration=5"/>
+	<!--<property name="AITask-3" value="ApproachSpot"/>
+	<property name="AITask-4" value="Look"/>
+	<property name="AITask-5" value="Wander"/>
+	<property name="AITarget-2" value="BlockIf" data="condition=alert e 0"/>
+	<property name="AITarget-3" value="BlockingTargetTask"/>
+	<property name="AITarget-4" value="SetNearestEntityAsTarget" data="class=EntityPlayer,20,15,EntityNPC,15,10"/>-->
+
+	<property name="SoundRandom" value="Animals/Vulture/vultureroam"/>
+	<property name="SoundAlert" value="Animals/Vulture/vulturealert"/>
+	<property name="SoundHurt" value="Animals/Vulture/vulturepain"/>
+	<property name="SoundDeath" value="Animals/Vulture/vulturedeath"/>
+	<property name="SoundAttack" value="Animals/Vulture/vultureattack"/>
+	<property name="SoundSense" value="Animals/Vulture/vulturesense"/>
+	<property name="SoundGiveUp" value="Animals/Vulture/vulturegiveup"/>
+
+	<!-- Stealth -->
+	<property name="SightRange" value="70"/>
+
+	<!-- Gameplay -->
+	<property name="MoveSpeed" value="1"/>
+	<property name="MoveSpeedAggro" value="1.1, 1.1"/> <!-- Used when player in vehicle -->
+	<property name="MaxTurnSpeed" value="190"/>
+
+	<property name="HandItem" value="冰霜攻击"/>
+	<property name="Immunity" value="sickness;disease;wellness"/> <!-- bleeding; -->
+
+	<property name="DismemberMultiplierLegs" value="0"/>
+	<property name="PainResistPerHit" value="10"/> <!-- no pain -->
+	<property name="ExperienceGain" value="4000"/>
+	<property name="LootDropProb" value="0.7"/>
+	<property name="LootDropEntityClass" value="疯狂战利品"/>
+
+	<property name="DeadBodyHitPoints" value="175"/>
+	<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
+	<drop event="Harvest" name="foodRottingFlesh" tag="butcherHarvest" count="4"/> <!-- animalZombieVulture -->
+	<drop event="Harvest" name="resourceFeather" tag="butcherHarvest" count="30"/>
+	<drop event="Harvest" name="极冰之喉" tag="butcherHarvest" count="1"/>
+	<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="6"/>
+	<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="3"/>
+	<drop event="Harvest" name="foodRottingFlesh" count="1" tag="WasteTreasuresCompleteHarvest"/>
+	<drop event="Harvest" name="resourceLeather" count="1" tag="WasteTreasuresCompleteHarvest"/>
+	<drop event="Harvest" name="resourceBone" count="1" tag="WasteTreasuresCompleteHarvest"/>
+
+	<effect_group name="Base Effects">
+		<passive_effect name="HealthMax" operation="base_set" value="7000"/>
+		<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
+	</effect_group>
+</entity_class>
+
+<entity_class name="黑山羊使者" extends="zombieTemplateMale">
+	<property name="Tags" value="entity,zombie,walker,古神"/>
+	<property name="Mesh" value="#Entities/Zombies?Zombies/zombieStandardFeralRagdoll.prefab"/>
+	<property name="SoundRandom" value="Enemies/Base_Zombie_Female/zombiefemaleroam"/>
+	<property name="SoundAlert" value="Enemies/Base_Zombie_Female/zombiefemalealert"/>
+	<property name="SoundAttack" value="Enemies/Base_Zombie_Female/zombiefemaleattack"/>
+	<property name="SoundHurt" value="Enemies/Base_Zombie_Female/zombiefemalepain"/>
+	<property name="SoundDeath" value="Enemies/Base_Zombie_Female/zombiefemaledeath"/>
+	<property name="SoundSense" value="Enemies/Base_Zombie_Female/zombiefemalesense"/>
+	<property name="AvatarController" value="AvatarZombie01Controller"/>
+	<property name="ModelType" value="Standard"/>
+	<property name="WalkType" value="1"/>
+	<property name="Mass" value="225"/>
+	<property name="RootMotion" value="true"/>
+	<property name="HasDeathAnim" value="true"/>
+	<property name="Buffs" value="黑山羊附身"/>
+	<property name="ExperienceGain" value="7000"/>
+	<property name="AIPathCostScale" value=".5, .65"/>
+	<property name="LootDropProb" value="0.5"/>
+	<property name="LootDropEntityClass" value="疯狂战利品"/>
+
+	<!-- Gameplay -->
+	<property name="HandItem" value="黑山羊之爪"/>
+	<drop event="Harvest" name="黑山羊断指" tag="butcherHarvest" count="1"/>
+	<effect_group name="Base Effects">
+	    <passive_effect name="PhysicalDamageResist" operation="base_add" value="20"/>
+		<passive_effect name="HealthMax" operation="base_set" value="8000"/>
+		<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
+	</effect_group>
+</entity_class>
+
+<entity_class name="黑山羊子嗣" extends="zombieTemplateMale">
+	<property name="Tags" value="entity,zombie,walker,古神"/>
+	<property name="Mesh" value="#Entities/Zombies?Zombies/zombieStandardFeralRagdoll.prefab"/>
+	<property name="SoundRandom" value="Enemies/Base_Zombie_Female/zombiefemaleroam"/>
+	<property name="SoundAlert" value="Enemies/Base_Zombie_Female/zombiefemalealert"/>
+	<property name="SoundAttack" value="Enemies/Base_Zombie_Female/zombiefemaleattack"/>
+	<property name="SoundHurt" value="Enemies/Base_Zombie_Female/zombiefemalepain"/>
+	<property name="SoundDeath" value="Enemies/Base_Zombie_Female/zombiefemaledeath"/>
+	<property name="SoundSense" value="Enemies/Base_Zombie_Female/zombiefemalesense"/>
+	<property name="AvatarController" value="AvatarZombie01Controller"/>
+	<property name="ModelType" value="Standard"/>
+	<property name="WalkType" value="1"/>
+	<property name="Mass" value="225"/>
+	<property name="MoveSpeed" value="0.8"/>
+	<property name="MoveSpeedAggro" value="0.8, 2.35"/>
+	<property name="MoveSpeedPanic" value="3.1"/>
+	<property name="RootMotion" value="true"/>
+	<property name="HasDeathAnim" value="true"/>
+	<property name="Buffs" value="黑山羊附身"/>
+	<property name="DismemberMultiplierHead" value=".2"/><property name="DismemberMultiplierArms" value=".3"/><property name="DismemberMultiplierLegs" value=".3"/>
+	<property name="ExperienceGain" value="10000"/>
+	<property name="AIPathCostScale" value=".5, .65"/>
+	<property name="LootDropProb" value="1"/>
+	<property name="LootDropEntityClass" value="古神遗物·混乱"/>
+	<property name="SizeScale" value="2"/>
+	<property name="PainResistPerHit" value="30"/>
+
+	<!-- Gameplay -->
+	<property name="HandItem" value="黑山羊之爪"/>
+	<effect_group name="Base Effects">
+	    <passive_effect name="PhysicalDamageResist" operation="base_add" value="20"/>
+		<passive_effect name="HealthMax" operation="base_set" value="30000"/>
+		<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
+	</effect_group>
+</entity_class>
+
+<entity_class name="血腥之子-克苏托亚" extends="zombieTemplateMale">
+	<property name="Tags" value="entity,zombie,walker,古神"/>
+	<property name="Mesh" value="#Entities/Zombies?Zombies/zombieStandardFeralRagdoll.prefab"/>
+	<!--<property name="PhysicsBody" value="CthulhuStandard"/>-->
+	<property name="SoundRandom" value="Enemies/Base_Zombie_Female/zombiefemaleroam"/>
+	<property name="SoundAlert" value="Enemies/Base_Zombie_Female/zombiefemalealert"/>
+	<property name="SoundAttack" value="Enemies/Base_Zombie_Female/zombiefemaleattack"/>
+	<property name="SoundHurt" value="Enemies/Base_Zombie_Female/zombiefemalepain"/>
+	<property name="SoundDeath" value="Enemies/Base_Zombie_Female/zombiefemaledeath"/>
+	<property name="SoundSense" value="Enemies/Base_Zombie_Female/zombiefemalesense"/>
+	<property name="AvatarController" value="AvatarZombie01Controller"/>
+	<property name="ModelType" value="Standard"/>
+	<property name="WalkType" value="8"/>
+	<property name="Mass" value="150"/>
+	<property name="RootMotion" value="true"/>
+	<property name="HasDeathAnim" value="true"/>
+	<property name="Buffs" value="克苏鲁附身"/>
+	<property name="DismemberMultiplierHead" value="0"/>
+	<property name="DismemberMultiplierArms" value="0"/>
+	<property name="DismemberMultiplierLegs" value="0"/>
+	<property name="ExperienceGain" value="10000"/>
+	<property name="AIPathCostScale" value=".5, .65"/>
+	<property name="MoveSpeed" value="0.2"/>
+	<property name="MoveSpeedAggro" value="0.3, 1.35"/>
+	<property name="MoveSpeedPanic" value="1.1"/>
+	<property name="SwimSpeed" value="1.3"/>
+	<property name="SwimStrokeRate" value="1.5,1.7"/>
+	<property name="CanClimbVertical" value="true"/>
+	<property name="JumpMaxDistance" value="7, 9"/>
+	<property name="LootDropProb" value="1"/>
+	<property name="LootDropEntityClass" value="古神遗物·血腥"/>
+	<property name="SizeScale" value="3"/>
+	<property name="PainResistPerHit" value="30"/>
+	
+	<property name="AINoiseSeekDist" value="3"/>
+	<property name="AIPathCostScale" value=".6, 1"/>
+	<property name="AITask-1" value="Leap"/>
+	<property name="AITask-2" value="BreakBlock"/>
+	<property name="AITask-3" value="DestroyArea"/>
+	<property name="AITask-4" value="Territorial"/>
+	<property name="AITask-5" value="ApproachDistraction"/>
+	<property name="AITask-6" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0"/>
+	<property name="AITask-7" value="ApproachSpot"/>
+	<property name="AITask-8" value="Look"/>
+	<property name="AITask-9" value="Wander"/>
+	<property name="AITask-10" value=""/>
+
+	<!-- Gameplay -->
+	<property name="HandItem" value="凶残克苏鲁打击"/>
+	<effect_group name="Base Effects">
+	    <passive_effect name="PhysicalDamageResist" operation="base_add" value="20"/>
+		<passive_effect name="HealthMax" operation="base_set" value="600000"/>
+		<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
+	</effect_group>
+</entity_class>
+
+ <entity_class name="湮灭之子-克苏提斯" extends="zombieTemplateMale">
+	<property name="Mesh" value="#@modfolder:Resources/QQ295242834.unity3d?QQ295242834"/>
+	<property name="Tags" value="entity,zombie,walker,古神"/> 
+		
+  	<property name="AvatarController" value="AvatarZombie01Controller"/>
+	<property name="RootMotion" value="true"/>
+	<property name="HasDeathAnim" value="false"/>
+	<property name="HasRagdoll" value="false"/>
+	<property name="TimeStayAfterDeath" value="15"/>
+	<property name="DeadBodyHitPoints" value="300"/>
+		
+ 	<property name="DismemberMultiplierHead" value="0"/>  
+	<property name="DismemberMultiplierArms" value="0"/>  
+	<property name="DismemberMultiplierLegs" value="0"/>  
+	<property name="LegCrippleScale" value="0"/> 
+ 		
+	 
+	<property name="SoundRandomTime" value="16.0"/> 
+	<property name="SoundRandom" value="crawler_roam"/>
+	<property name="SoundAlertTime" value="12.0"/> 
+	<property name="SoundAlert" value="crawler_alert"/>
+	<property name="SoundSense" value="crawler_sense"/>
+	<property name="SoundHurt" value="crawler_pain"/>
+	<property name="SoundDeath" value="crawler_death"/>
+	<property name="SoundAttack" value="crawler_attack"/>
+	<property name="SoundSleeperSense" value="sleepersense"/>
+	<property name="SoundSleeperBackToSleep" value="sleeperbacktosleep"/>
+		
+ 	<property name="WalkType" value="1"/>  
+	<property name="Mass" value="110"/> 
+		
+	<property name="PainResistPerHit" value="20"/> 
+	<property name="MoveSpeed" value="0.7"/>
+	<property name="MoveSpeedAggro" value="0.7,1.1"/>
+	<property name="Buffs" value="湮灭克苏鲁附身"/>
+		
+	<property name="HandItem" value="湮灭克苏鲁打击"/> 
+	<property name="ExperienceGain" value="10000"/> 
+	<property name="LootDropProb" value="1"/>
+	<property name="LootDropEntityClass" value="古神遗物·湮灭"/>
+	<property name="SizeScale" value="2"/>
+    <effect_group name="Base Effects">
+	    <passive_effect name="HealthMax" operation="base_set" value="900000"/>
+	    <passive_effect name="HealthMax" operation="perc_set" value="1"/>
+	    <passive_effect name="PhysicalDamageResist" operation="base_set" value="10"/> 
+    </effect_group>
+</entity_class>	
+
+<entity_class name="疯狂化身" extends="zombieTemplateMale">
+	<property name="Tags" value="entity,zombie,古神"/>
+	<property name="Mesh" value="#Entities/Zombies?Zombies/zombieStandardCrawlerHDRagdoll.prefab"/>
+	<property name="AvatarController" value="AvatarZombie01Controller"/>
+	<property name="Mass" value="140"/>
+	<property name="Class" value="EntityZombie"/>
+	<property name="WalkType" value="3"/>
+	<property name="RotateToGround" value="true"/>
+	<property name="RootMotion" value="true"/>
+	<property name="TintMaterial2" value="5,5,30"/>
+	<property name="SoundRandomTime" value="16.0"/> <!-- It will play the roam every 30/15 seconds -->
+	<property name="SoundRandom" value="crawler_roam"/>
+	<property name="SoundAlertTime" value="12.0"/> <!-- It will play the alert every 20/10 seconds-->
+	<property name="SoundAlert" value="crawler_alert"/>
+	<property name="SoundSense" value="crawler_sense"/>
+	<property name="SoundHurt" value="crawler_pain"/>
+	<property name="SoundDeath" value="crawler_death"/>
+	<property name="SoundAttack" value="crawler_attack"/>
+	<property name="SoundSleeperSense" value="sleepersense"/>
+	<property name="SoundSleeperBackToSleep" value="sleeperbacktosleep"/>
+	<property name="DismemberMultiplierHead" value=".5"/><property name="DismemberMultiplierArms" value=".6"/><property name="DismemberMultiplierLegs" value=".6"/>
+	<property name="PainResistPerHit" value="20"/>
+	<property name="ExperienceGain" value="10000"/>
+	<property name="Buffs" value="古神化"/>
+	<property name="LootDropProb" value="1"/>
+	<property name="LootDropEntityClass" value="疯狂战利品"/>
+	<drop event="Harvest" name="疯狂之眼" tag="butcherHarvest" count="1"/>
+
+	<!-- Gameplay -->
+	<property name="CanClimbLadders" value="false"/>
+	<property name="HandItem" value="OldGodhand01"/>
+	<property name="SizeScale" value="2.5"/>
+	<effect_group name="Base Effects">
+		<passive_effect name="HealthMax" operation="base_set" value="8000"/>
+		<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
+		<passive_effect name="PhysicalDamageResist" operation="base_add" value="20"/>
+	</effect_group>
+</entity_class>
+
+<entity_class name="疫病魔犬" extends="animalWolf">
+	<property name="Tags" value="entity,animal,zombie,hostile,dog,古神"/>
+	<property name="Prefab" value="/Entities/Animals/Wolf/animalStandardDogZombieRagdoll"/>
+	<property name="Class" value="EntityZombieDog"/>
+
+	<property name="SoundRandomTime" value="45.0"/>
+	<property name="SoundAlertTime" value="25.0"/>
+	<property name="SoundRandom" value="Enemies/Zombie_Dogs/zombiedogroam"/>
+	<property name="SoundAlert" value="Enemies/Zombie_Dogs/zombiedogalert"/>
+	<property name="SoundHurt" value="Enemies/Zombie_Dogs/zombiedogpain"/>
+	<property name="SoundDeath" value="Enemies/Zombie_Dogs/zombiedogdeath"/>
+	<property name="SoundAttack" value="Enemies/Zombie_Dogs/zombiedogattack"/>
+	<property name="SoundSense" value="Enemies/Zombie_Dogs/zombiedogsense"/>
+	<property name="SoundGiveUp" value="Enemies/Zombie_Dogs/zombiedoggiveup"/>
+
+	<property name="AITask-1" value="BreakBlock"/>
+	<property name="AITask-2" value="Territorial"/>
+	<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityPlayer,20,EntityNPC,20"/>
+	<property name="AITask-4" value="ApproachSpot"/>
+	<property name="AITask-5" value="Look"/>
+	<property name="AITask-6" value="Wander"/>
+	<property name="AITask-7" value=""/>
+	<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityNPC,EntityPlayer"/>
+	<property name="AITarget-2" value="BlockingTargetTask"/>
+	<property name="AITarget-3" value="SetNearestCorpseAsTarget" data="class=EntityPlayer"/>
+	<property name="AITarget-4" value="SetNearestEntityAsTarget" data="class=EntityPlayer,20,0,EntityNPC,0,0"/>
+	<property name="AITarget-5" value=""/>
+
+	<!-- Stealth -->
+	<property name="SleeperSmellSenseThreshold" value="5,30"/> <!-- Indiv.Random. smell capability - "I smell something" player smell value -->
+	<property name="SleeperSmellWakeThreshold" value="10,40"/>
+	<property name="SmellAlertThreshold" value="5"/> <!-- for awake zombies -->
+
+	<!-- Gameplay -->
+	<property name="MoveSpeed" value=".3"/>
+	<property name="MoveSpeedNight" value=".25"/>
+	<property name="MoveSpeedAggro" value="0.7, 0.9"/>
+	<property name="MoveSpeedPanic" value="1.0"/>
+	<property name="SizeScale" value="3"/>
+
+	<property name="HandItem" value="疫病撕咬"/>
+
+	<property name="Immunity" value="sickness;disease;wellness"/> <!-- bleeding; -->
+	<property name="PainResistPerHit" value="30"/>
+	<property name="DismemberMultiplierHead" value=".7"/>
+	<property name="LootDropProb" value="0.4"/>
+	<property name="LootDropEntityClass" value="疯狂战利品"/>
+	<property name="ExperienceGain" value="3000"/>
+	<property name="Buffs" value="疫病生物"/>
+
+	<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
+	<drop event="Harvest" name="foodRottingFlesh" tag="butcherHarvest" count="10"/> <!-- animalZombieDog -->
+	<drop event="Harvest" name="resourceLeather" tag="butcherHarvest" count="8"/>
+	<drop event="Harvest" name="瘟疫獠牙" tag="butcherHarvest" count="1"/>
+	<drop event="Harvest" name="resourceAnimalFat" tag="butcherHarvest" count="1"/>
+	<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="15"/>
+	<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="5"/>
+	<drop event="Harvest" name="foodRottingFlesh" count="1" tag="WasteTreasuresCompleteHarvest"/>
+	<drop event="Harvest" name="resourceLeather" count="1" tag="WasteTreasuresCompleteHarvest"/>
+	<drop event="Harvest" name="resourceBone" count="1" tag="WasteTreasuresCompleteHarvest"/>
+	<!-- <drop event="Destroy" name="resourceAnimalFat" tag="butcherHarvest" count="2"/> -->
+	<effect_group name="Base Effects">
+		<passive_effect name="HealthMax" operation="base_set" value="4000"/>
+		<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
+		<passive_effect name="PhysicalDamageResist" operation="base_add" value="10"/>
+	</effect_group>
+</entity_class>
+
+<entity_class name="臃肿寄生者" extends="zombieTemplateMale">
+	<property name="Tags" value="entity,zombie,walker,古神"/>
+	<property name="Mesh" value="#Entities/Zombies?Zombies/zombieStandardBigMamaHDRagdoll.prefab"/>
+	<property name="SoundRandom" value="Enemies/Base_Zombie_Female2/zombiefemale2roam"/>
+	<property name="SoundAlert" value="Enemies/Base_Zombie_Female2/zombiefemale2alert"/>
+	<property name="SoundAttack" value="Enemies/Base_Zombie_Female2/zombiefemale2attack"/>
+	<property name="SoundHurt" value="Enemies/Base_Zombie_Female2/zombiefemale2pain"/>
+	<property name="SoundDeath" value="Enemies/Base_Zombie_Female2/zombiefemale2death"/>
+	<property name="SoundSense" value="Enemies/Base_Zombie_Female2/zombiefemale2sense"/>
+	<property name="SoundFootstepModifier" value="Animals/Bear/bear_footstep"/>
+	<property name="AvatarController" value="AvatarZombie01Controller"/>
+	<property name="ModelType" value="Standard"/>
+	<property name="WalkType" value="1"/>
+	<property name="Mass" value="260"/>
+	<property name="PhysicsBody" value="zombieFemaleFat"/>
+	<property name="RootMotion" value="true"/>
+	<property name="HasDeathAnim" value="true"/>
+	<property name="TintMaterial2" value="64,63,62"/>
+	<property name="Buffs" value="寄生生物"/>
+	<property name="PainResistPerHit" value="20"/>
+	<property name="DismemberMultiplierHead" value=".5"/><property name="DismemberMultiplierArms" value=".6"/><property name="DismemberMultiplierLegs" value=".6"/>
+
+	<!-- Stealth -->
+	<property name="SleeperSmellWakeThreshold" value="20,50"/>
+	<property name="SmellAlertThreshold" value="20"/> <!-- for awake zombies -->
+
+	<!-- Gameplay -->
+	<property name="CanClimbLadders" value="true"/>
+	<property name="HandItem" value="meleeHandZombieStrong"/>
+	<property name="JumpMaxDistance" value=".5, .6"/>
+	<property name="ExperienceGain" value="4750"/> <!-- XP grunt feral -->
+	<property name="LootDropProb" value="0.5"/>
+	<property name="LootDropEntityClass" value="疯狂战利品"/>
+	<drop event="Harvest" name="灭活触须" tag="butcherHarvest" count="1"/>
+	<effect_group name="Base Effects">
+		<passive_effect name="HealthMax" operation="base_set" value="5000"/>
+		<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
+		<passive_effect name="PhysicalDamageResist" operation="base_add" value="10"/>
+	</effect_group>
+</entity_class>
+
+<entity_class name="梦魇寄生者" extends="zombieTemplateMale">
+	<property name="Tags" value="entity,zombie,walker,古神"/>
+	<property name="Mesh" value="#Entities/Zombies?Zombies/zombieStandardBigMamaHDRadiatedRagdoll.prefab"/>
+	<property name="SoundRandom" value="Enemies/Base_Zombie_Female2/zombiefemale2roam"/>
+	<property name="SoundAlert" value="Enemies/Base_Zombie_Female2/zombiefemale2alert"/>
+	<property name="SoundAttack" value="Enemies/Base_Zombie_Female2/zombiefemale2attack"/>
+	<property name="SoundHurt" value="Enemies/Base_Zombie_Female2/zombiefemale2pain"/>
+	<property name="SoundDeath" value="Enemies/Base_Zombie_Female2/zombiefemale2death"/>
+	<property name="SoundSense" value="Enemies/Base_Zombie_Female2/zombiefemale2sense"/>
+	<property name="SoundFootstepModifier" value="Animals/Bear/bear_footstep"/>
+	<property name="AvatarController" value="AvatarZombie01Controller"/>
+	<property name="ModelType" value="Standard"/>
+	<property name="WalkType" value="1"/>
+	<property name="Mass" value="260"/>
+	<property name="PhysicsBody" value="zombieFemaleFat"/>
+	<property name="RootMotion" value="true"/>
+	<property name="HasDeathAnim" value="true"/>
+	<property name="TintMaterial2" value="64,63,62"/>
+	<property name="Buffs" value="梦魇寄生生物"/>
+	<property name="PainResistPerHit" value="20"/>
+	<property name="DismemberMultiplierHead" value=".5"/><property name="DismemberMultiplierArms" value=".6"/><property name="DismemberMultiplierLegs" value=".6"/>
+
+	<!-- Stealth -->
+	<property name="SleeperSmellWakeThreshold" value="20,50"/>
+	<property name="SmellAlertThreshold" value="20"/> <!-- for awake zombies -->
+
+	<!-- Gameplay -->
+	<property name="CanClimbLadders" value="true"/>
+	<property name="HandItem" value="meleeHandZombieStrong"/>
+	<property name="JumpMaxDistance" value="5, 7"/>
+	<property name="ExperienceGain" value="7000"/> <!-- XP grunt feral -->
+	<property name="LootDropProb" value="1"/>
+	<property name="LootDropEntityClass" value="寄生战利品"/>
+	<drop event="Harvest" name="灭活触须" tag="butcherHarvest" count="10"/>
+	<effect_group name="Base Effects">
+		<passive_effect name="HealthMax" operation="base_set" value="140000"/>
+		<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
+		<passive_effect name="PhysicalDamageResist" operation="base_add" value="20"/>
+	</effect_group>
+</entity_class>
+
+<entity_class name="灼热恶魔" extends="zombieTemplateMale">
+	<property name="Tags" value="entity,zombie,walker,古神"/>
+	<property name="Mesh" value="#Entities/Zombies?Zombies/ZombieStandardBurntRagdoll.prefab"/>
+	<property name="WalkType" value="7"/>
+	<property name="Mass" value="160"/>
+	<property name="SoundRandom" value="Enemies/Burnt_Zombie/zombieburntroam"/>
+  <property name="SoundSpawn" value="Ambient_Loops/a_fire_embersmoke_sm_lp"/>
+	<property name="SoundAlert" value="Enemies/Burnt_Zombie/zombieburntalert"/>
+	<property name="SoundAttack" value="Enemies/Burnt_Zombie/zombieburntattack"/>
+	<property name="SoundHurt" value="Enemies/Burnt_Zombie/zombieburntpain"/>
+	<property name="SoundDeath" value="Enemies/Burnt_Zombie/zombieburntdeath"/>
+	<property name="SoundSense" value="Enemies/Burnt_Zombie/zombieburntsense"/>
+	<property name="SoundFootstepModifier" value="Enemies/Burnt_Zombie/zombieburntfootstep"/>
+	<property name="PainResistPerHit" value="10"/>
+	<property name="ExperienceGain" value="7000"/>
+	<property name="DismemberMultiplierHead" value=".5"/>
+	<property name="Buffs" value="恶魔翼"/>
+	<property name="LootDropProb" value="0.5"/>
+	<property name="LootDropEntityClass" value="疯狂战利品"/>
+	<drop event="Harvest" name="灼热之舌" tag="butcherHarvest" count="1"/>
+	<property name="SizeScale" value="2"/>
+	
+	<property name="AITask-1" value="BreakBlock"/>
+	<property name="AITask-2" value="RangedAttackTarget" data="itemType=1;cooldown=4;duration=5"/>
+	<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityEnemyAnimal,0,EntityPlayer"/>
+	<property name="AITask-4" value="ApproachSpot"/>
+	<property name="AITask-5" value="Look"/>
+	<property name="AITask-6" value="Wander"/>
+	<property name="AITask-7" value=""/><!-- Marks end, so we don't inheirit -->
+
+	<!-- Gameplay -->
+	<property name="HandItem" value="灼热吐息"/>
+	<property name="HandItemCrawler" value="灼热吐息"/>
+	<effect_group name="Base Effects">
+		<passive_effect name="HealthMax" operation="base_set" value="7000"/>
+		<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
+		<passive_effect name="PhysicalDamageResist" operation="base_add" value="20"/>
+		<!--
+		<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="other" buff="buffBurningWeapon">
+			<requirement name="RandomRoll" seed_type="Random" target="self" min_max="0,100" operation="LTE" value="20"/>
+			<requirement name="HoldingItemHasTags" target="other" tags="melee"/>
+		</triggered_effect>
+		-->
+	</effect_group>
+</entity_class>
+
+<entity_class name="骸骨渗透者" extends="zombieTemplateMale">
+	<property name="Tags" value="entity,zombie,walker,feral,古神"/>
+	<property name="Mesh" value="#Entities/Zombies?Zombies/zombieStandardFeralRagdoll.prefab"/>
+	<property name="SoundRandom" value="Enemies/Feral_Zombie/zombieferalroam"/>
+	<property name="SoundAlert" value="Enemies/Feral_Zombie/zombieferalalert"/>
+	<property name="SoundAttack" value="Enemies/Feral_Zombie/zombieferalattack"/>
+	<property name="SoundHurt" value="Enemies/Feral_Zombie/zombieferalpain"/>
+	<property name="SoundDeath" value="Enemies/Feral_Zombie/zombieferaldeath"/>
+	<property name="SoundSense" value="Enemies/Feral_Zombie/zombieferalsense"/>
+	<property name="SoundFootstepModifier" value="Enemies/Feral_Zombie/zombieferalfootstep"/>
+	<property name="WalkType" value="2"/>
+	<property name="Mass" value="210"/>
+
+	<property name="DismemberMultiplierHead" value=".7"/><property name="DismemberMultiplierArms" value=".7"/><property name="DismemberMultiplierLegs" value=".7"/><!-- Feral -->
+	<property name="PainResistPerHit" value=".7"/><!-- Feral -->
+	<property name="SizeScale" value="0.23"/>
+
+	<!-- Gameplay -->
+	<property name="MoveSpeedAggro" value="1, 2"/>
+	<property name="HandItem" value="骸骨打击"/>
+	<property name="JumpMaxDistance" value="4.6, 5"/>
+	<property name="Buffs" value="下级古神"/>
+
+	<property name="ExperienceGain" value="3000"/> <!-- XP strong -->
+	<property name="LootDropProb" value="0.5"/> <!-- Feral -->
+	<property name="LootDropEntityClass" value="疯狂战利品"/>
+	<drop event="Harvest" name="风干小鬼颅" tag="butcherHarvest" count="1"/>
+
+	<effect_group name="Base Effects">
+		<passive_effect name="DistractionResistance" operation="base_set" value="0,0"/>
+		<passive_effect name="HealthMax" operation="base_set" value="4000"/>
+		<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
+		<!--<passive_effect name="EntityDamage" operation="perc_add" value="0"/>--> <!-- Feral damage -->
+	</effect_group>
+</entity_class>
+
+<entity_class name="猛毒渗透者" extends="zombieTemplateMale">
+	<property name="Tags" value="entity,zombie,walker,feral,古神"/>
+	<property name="Mesh" value="#Entities/Zombies?Zombies/zombieStandardFeralRagdoll.prefab"/>
+	<property name="SoundRandom" value="Enemies/Feral_Zombie/zombieferalroam"/>
+	<property name="SoundAlert" value="Enemies/Feral_Zombie/zombieferalalert"/>
+	<property name="SoundAttack" value="Enemies/Feral_Zombie/zombieferalattack"/>
+	<property name="SoundHurt" value="Enemies/Feral_Zombie/zombieferalpain"/>
+	<property name="SoundDeath" value="Enemies/Feral_Zombie/zombieferaldeath"/>
+	<property name="SoundSense" value="Enemies/Feral_Zombie/zombieferalsense"/>
+	<property name="SoundFootstepModifier" value="Enemies/Feral_Zombie/zombieferalfootstep"/>
+	<property name="WalkType" value="2"/>
+	<property name="Mass" value="210"/>
+
+	<property name="DismemberMultiplierHead" value=".7"/><property name="DismemberMultiplierArms" value=".7"/><property name="DismemberMultiplierLegs" value=".7"/><!-- Feral -->
+	<property name="PainResistPerHit" value=".7"/><!-- Feral -->
+	<property name="SizeScale" value="0.75"/>
+
+	<!-- Gameplay -->
+	<property name="MoveSpeedAggro" value="0.8,1.1"/>
+	<property name="HandItem" value="猛毒骸骨打击"/>
+	<property name="JumpMaxDistance" value="4.6,5"/>
+	<property name="Buffs" value="毒雾单位"/>
+
+	<property name="ExperienceGain" value="4000"/> <!-- XP strong -->
+	<property name="LootDropProb" value="0.5"/> <!-- Feral -->
+	<property name="LootDropEntityClass" value="疯狂战利品"/>
+	<drop event="Harvest" name="猛毒腺体" tag="butcherHarvest" count="1"/>
+
+	<effect_group name="Base Effects">
+		<passive_effect name="DistractionResistance" operation="base_set" value="0,0"/>
+		<passive_effect name="HealthMax" operation="base_set" value="4000"/>
+		<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
+		<!--<passive_effect name="EntityDamage" operation="perc_add" value="0"/>--> <!-- Feral damage -->
+	</effect_group>
+</entity_class>
+
+<entity_class name="猛毒污染者" extends="zombieTemplateMale">
+	<property name="Tags" value="entity,zombie,walker,feral,古神"/>
+	<property name="Mesh" value="#Entities/Zombies?Zombies/zombieStandardFeralRagdoll.prefab"/>
+	<property name="ReplaceMaterial0" value="#Entities/Zombies?Zombies/Materials/feral_radiated.mat"/>
+	<property name="ReplaceMaterial1" value="#Entities/Zombies?Zombies/Materials/rad_eye.mat"/>
+	<property name="SoundRandom" value="Enemies/Feral_Zombie/zombieferalroam"/>
+	<property name="SoundAlert" value="Enemies/Feral_Zombie/zombieferalalert"/>
+	<property name="SoundAttack" value="Enemies/Feral_Zombie/zombieferalattack"/>
+	<property name="SoundHurt" value="Enemies/Feral_Zombie/zombieferalpain"/>
+	<property name="SoundDeath" value="Enemies/Feral_Zombie/zombieferaldeath"/>
+	<property name="SoundSense" value="Enemies/Feral_Zombie/zombieferalsense"/>
+	<property name="SoundFootstepModifier" value="Enemies/Feral_Zombie/zombieferalfootstep"/>
+	<property name="WalkType" value="2"/>
+	<property name="Mass" value="210"/>
+
+	<property name="DismemberMultiplierHead" value=".7"/><property name="DismemberMultiplierArms" value=".7"/><property name="DismemberMultiplierLegs" value=".7"/><!-- Feral -->
+	<property name="PainResistPerHit" value="10"/><!-- Feral -->
+	<property name="SizeScale" value="0.75"/>
+
+	<!-- Gameplay -->
+	<property name="MoveSpeedAggro" value="1,1.5"/>
+	<property name="HandItem" value="猛毒骸骨打击"/>
+	<property name="JumpMaxDistance" value="4.6,5"/>
+	<property name="Buffs" value="毒雾单位"/>
+
+	<property name="ExperienceGain" value="7000"/> <!-- XP strong -->
+	<property name="LootDropProb" value="1"/> <!-- Feral -->
+	<property name="LootDropEntityClass" value="猛毒战利品"/>
+	<drop event="Harvest" name="猛毒腺体" tag="butcherHarvest" count="10"/>
+
+	<effect_group name="Base Effects">
+		<passive_effect name="DistractionResistance" operation="base_set" value="0,0"/>
+		<passive_effect name="HealthMax" operation="base_set" value="40000"/>
+		<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
+		<!--<passive_effect name="EntityDamage" operation="perc_add" value="0"/>--> <!-- Feral damage -->
+	</effect_group>
+</entity_class>
+
+<entity_class name="惊吓鬼魂" extends="zombieTemplateMale">
+	<property name="Tags" value="entity,zombie,walker,古神"/>
+	<property name="Mesh" value="#Entities/Zombies?Zombies/zombieStandardScreamerRagdoll.prefab"/>
+	<property name="SoundRandom" value="Enemies/Base_Zombie_Female/zombiefemalescoutroam"/>
+	<property name="SoundAlert" value="Enemies/Scout_Zombie/zombiefemalescoutalert"/>
+	<property name="SoundAttack" value="Enemies/Base_Zombie_Female/zombiefemalescoutattack"/>
+	<property name="SoundHurt" value="Enemies/Base_Zombie_Female/zombiefemalescoutpain"/>
+	<property name="SoundDeath" value="Enemies/Base_Zombie_Female/zombiefemalescoutdeath"/>
+	<property name="SoundSense" value="Enemies/Base_Zombie_Female/zombiefemalescoutsense"/>
+	<property name="AvatarController" value="AvatarZombie01Controller"/>
+	<property name="ModelType" value="Standard"/>
+	<property name="WalkType" value="3"/>
+	<property name="Mass" value="110"/>
+	<property name="RootMotion" value="true"/>
+	<property name="HasDeathAnim" value="true"/>
+	<property name="AIPathCostScale" value=".5, .6"/>
+	<property name="Buffs" value="惊吓鬼魂"/>
+	<property name="ExperienceGain" value="3000"/> <!-- XP strong -->
+	<property name="LootDropProb" value="0.5"/> <!-- Feral -->
+	<property name="LootDropEntityClass" value="疯狂战利品"/>
+	<drop event="Harvest" name="诅咒的断手" tag="butcherHarvest" count="1"/>
+
+	<!-- Gameplay -->
+	<property name="HandItem" value="灵魂撕裂"/>
+
+	<effect_group name="Base Effects">
+		<passive_effect name="HealthMax" operation="base_set" value="500"/>
+		<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
+	</effect_group>
+</entity_class>
+
+<entity_class name="折磨幽魂" extends="zombieTemplateMale">
+	<property name="Tags" value="entity,zombie,walker,古神"/>
+	<property name="Mesh" value="#Entities/Zombies?Zombies/zombieStandardScreamerRagdoll.prefab"/>
+	<property name="ReplaceMaterial0" value="#Entities/Zombies?Zombies/Materials/screamer_radiated.mat"/>
+	<property name="SoundRandom" value="Enemies/Base_Zombie_Female/zombiefemalescoutroam"/>
+	<property name="SoundAlert" value="Enemies/Scout_Zombie/zombiefemalescoutalert"/>
+	<property name="SoundAttack" value="Enemies/Base_Zombie_Female/zombiefemalescoutattack"/>
+	<property name="SoundHurt" value="Enemies/Base_Zombie_Female/zombiefemalescoutpain"/>
+	<property name="SoundDeath" value="Enemies/Base_Zombie_Female/zombiefemalescoutdeath"/>
+	<property name="SoundSense" value="Enemies/Base_Zombie_Female/zombiefemalescoutsense"/>
+	<property name="AvatarController" value="AvatarZombie01Controller"/>
+	<property name="ModelType" value="Standard"/>
+	<property name="WalkType" value="3"/>
+	<property name="Mass" value="110"/>
+	<property name="RootMotion" value="true"/>
+	<property name="HasDeathAnim" value="true"/>
+	<property name="AIPathCostScale" value=".5, .6"/>
+	<property name="Buffs" value="折磨幽魂"/>
+	<property name="ExperienceGain" value="7000"/> <!-- XP strong -->
+	<property name="LootDropProb" value="1"/> <!-- Feral -->
+	<property name="LootDropEntityClass" value="冤魂战利品"/>
+	<drop event="Harvest" name="诅咒的断手" tag="butcherHarvest" count="10"/>
+
+	<!-- Gameplay -->
+	<property name="HandItem" value="灵魂撕裂"/>
+
+	<effect_group name="Base Effects">
+		<passive_effect name="HealthMax" operation="base_set" value="5000"/>
+		<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
+	</effect_group>
+</entity_class>
+
+<entity_class name="黄衣之主-哈萨斯" extends="zombieTemplateMale">
+	<property name="Tags" value="entity,zombie,walker,古神"/>
+	<property name="Mesh" value="#Entities/Zombies?Zombies/ZombieStandardBurntRagdoll.prefab"/>
+	<property name="WalkType" value="7"/>
+	<property name="Mass" value="800"/>
+	<property name="SoundRandom" value="Enemies/Burnt_Zombie/zombieburntroam"/>
+  <property name="SoundSpawn" value="Ambient_Loops/a_fire_embersmoke_sm_lp"/>
+	<property name="SoundAlert" value="Enemies/Burnt_Zombie/zombieburntalert"/>
+	<property name="SoundAttack" value="Enemies/Burnt_Zombie/zombieburntattack"/>
+	<property name="SoundHurt" value="Enemies/Burnt_Zombie/zombieburntpain"/>
+	<property name="SoundDeath" value="Enemies/Burnt_Zombie/zombieburntdeath"/>
+	<property name="SoundSense" value="Enemies/Burnt_Zombie/zombieburntsense"/>
+	<property name="SoundFootstepModifier" value="Enemies/Burnt_Zombie/zombieburntfootstep"/>
+	<property name="MoveSpeed" value=".3"/>
+	<property name="MoveSpeedNight" value=".3"/>
+	<property name="MoveSpeedAggro" value="0.3, 0.4"/>
+	<property name="MoveSpeedPanic" value="1.1"/>
+	<property name="PainResistPerHit" value="50"/>
+	<property name="ExperienceGain" value="10000"/>
+	<property name="DismemberMultiplierHead" value=".1"/><property name="DismemberMultiplierArms" value=".2"/><property name="DismemberMultiplierLegs" value=".2"/><!-- Radiated Cop -->
+	<property name="KnockdownProneDamageThreshold" value="0"/>
+	<property name="KnockdownKneelDamageThreshold" value="0"/>
+	<property name="LootDropProb" value="1"/>
+	<property name="LootDropEntityClass" value="古神遗物·秩序"/>
+	<property name="Buffs" value="黄衣"/>
+	<property name="SizeScale" value="6"/>
+	
+	<property name="AITask-1" value="BreakBlock"/>
+	<property name="AITask-2" value="RangedAttackTarget" data="itemType=1;cooldown=4;duration=5"/>
+	<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityEnemyAnimal,0,EntityPlayer"/>
+	<property name="AITask-4" value="ApproachSpot"/>
+	<property name="AITask-5" value="Look"/>
+	<property name="AITask-6" value="Wander"/>
+	<property name="AITask-7" value=""/><!-- Marks end, so we don't inheirit -->
+
+	<!-- Gameplay -->
+	<property name="HandItem" value="灼热吐息1"/>
+	<property name="HandItemCrawler" value="灼热吐息1"/>
+	<effect_group name="Base Effects">
+		<passive_effect name="HealthMax" operation="base_set" value="50000"/>
+		<passive_effect name="HealthMax" operation="perc_set" value="1"/>
+		<passive_effect name="PhysicalDamageResist" operation="base_add" value="20"/>
+	</effect_group>
+</entity_class>
+
+<!--<entity_class name="外神-阿撒托斯" extends="animalTemplateHostile">
+	<property name="Tags" value="entity,animal,zombie,hostile,vulture"/>
+	<property name="Class" value="EntityVulture"/>
+	<property name="EntityType" value="Zombie"/>
+	<property name="AvatarController" value="AvatarAnimalController"/>
+	<property name="ModelType" value="Standard"/>
+	<property name="HasRagdoll" value="true"/>
+	<property name="PhysicsBody" value="vulture"/>
+	<property name="Mass" value="35"/>
+	<property name="Mesh" value="#@modfolder:Resources/boss01.unity3d?boss01.prefab"/>
+	<property name="SizeScale" value="2"/>
+
+	<property name="AITask-1" value=""/>
+	<property name="AITarget-1" value=""/>
+
+	<property name="SoundRandom" value="Animals/Vulture/vultureroam"/>
+	<property name="SoundAlert" value="Animals/Vulture/vulturealert"/>
+	<property name="SoundHurt" value="Animals/Vulture/vulturepain"/>
+	<property name="SoundDeath" value="Animals/Vulture/vulturedeath"/>
+	<property name="SoundAttack" value="Animals/Vulture/vultureattack"/>
+	<property name="SoundSense" value="Animals/Vulture/vulturesense"/>
+	<property name="SoundGiveUp" value="Animals/Vulture/vulturegiveup"/>
+
+	<property name="SightRange" value="70"/>
+
+	<property name="MoveSpeed" value="0.7"/>
+	<property name="MoveSpeedAggro" value="0.7, 0.9"/>
+	<property name="MaxTurnSpeed" value="190"/>
+
+	<property name="HandItem" value="meleeHandAnimalZombieVulture"/>
+	<property name="Immunity" value="sickness;disease;wellness"/>
+
+	<property name="DismemberMultiplierLegs" value="0"/>
+	<property name="PainResistPerHit" value="-1"/>
+
+	<property name="DeadBodyHitPoints" value="175"/>
+	<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
+	<drop event="Harvest" name="foodRottingFlesh" tag="butcherHarvest" count="4"/>
+	<drop event="Harvest" name="resourceFeather" tag="butcherHarvest" count="30"/>
+	<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="6"/>
+	<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="3"/>
+	<drop event="Harvest" name="foodRottingFlesh" count="1" tag="WasteTreasuresCompleteHarvest"/>
+	<drop event="Harvest" name="resourceLeather" count="1" tag="WasteTreasuresCompleteHarvest"/>
+	<drop event="Harvest" name="resourceBone" count="1" tag="WasteTreasuresCompleteHarvest"/>
+
+	<effect_group name="Base Effects">
+		<passive_effect name="HealthMax" operation="base_set" value="30"/>
+		<passive_effect name="HealthMax" operation="perc_set" value="1"/>
+	</effect_group>
+</entity_class>-->
+
+<entity_class name="新手战利品" extends="EntityLootContainerStrong">	
+	<property name="LootListOnDeath" value="204"/>	
+</entity_class>
+
+<entity_class name="疯狂战利品" extends="EntityLootContainerStrong">	
+	<property name="LootListOnDeath" value="200"/>	
+</entity_class>
+
+<entity_class name="古神遗物·秩序" extends="EntityLootContainerStrong">	
+	<property name="LootListOnDeath" value="201"/>	
+</entity_class>
+
+<entity_class name="古神遗物·混乱" extends="EntityLootContainerStrong">	
+	<property name="LootListOnDeath" value="202"/>	
+</entity_class>
+
+<entity_class name="古神遗物·血腥" extends="EntityLootContainerStrong">	
+	<property name="LootListOnDeath" value="205"/>	
+</entity_class>
+<entity_class name="古神遗物·湮灭" extends="EntityLootContainerStrong">	
+	<property name="LootListOnDeath" value="206"/>	
+</entity_class>
+
+
+<entity_class name="寄生战利品" extends="EntityLootContainerStrong">	
+	<property name="LootListOnDeath" value="207"/>	
+</entity_class>
+
+<entity_class name="冤魂战利品" extends="EntityLootContainerStrong">	
+	<property name="LootListOnDeath" value="208"/>	
+</entity_class>
+
+<entity_class name="邪恶战利品" extends="EntityLootContainerStrong">	
+	<property name="LootListOnDeath" value="209"/>	
+</entity_class>
+
+<entity_class name="猛毒战利品" extends="EntityLootContainerStrong">	
+	<property name="LootListOnDeath" value="210"/>	
+</entity_class>
+
+</append>
+</configs>
